@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: SSH Commands
+      uses: appleboy/ssh-action@v0.0.2
+      with:
+        host: umbchvz.com
+        username: www-data
+        password: C3JL47XZe3Oc
+        script: cd /var/www && git pull

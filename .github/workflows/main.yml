@@ -11,7 +11,7 @@ jobs:
     - name: SSH Commands
       uses: appleboy/ssh-action@v0.0.2
       with:
-        host: umbchvz.com
-        username: www-data
-        password: C3JL47XZe3Oc
-        script: cd /var/www && git pull
+        host: "umbchvz.com"
+        username: "www-data"
+        password: ${{ secrets.WWW_DATA_PASSWORD }}
+        script: "cd /var/www && git pull"

@@ -6,7 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    name: Update umbchvz.com
     steps:
     - name: SSH Commands
       uses: appleboy/ssh-action@v0.0.2

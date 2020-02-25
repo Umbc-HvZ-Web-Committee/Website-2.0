@@ -9,7 +9,7 @@ jobs:
     name: Update umbchvz.com
     steps:
     - name: SSH Commands
-      uses: appleboy/ssh-action@v0.0.2
+      uses: appleboy/ssh-action@v0.0.7
       with:
         host: "umbchvz.com"
         username: "www-data"

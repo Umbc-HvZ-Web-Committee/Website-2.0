@@ -30,6 +30,13 @@ out/
 # Editor-based Rest Client
 .idea/httpRequests
 
+# Other things Hiccup has on the server that shouldn't get committed
+hpc/
+hs/
+magbeta/
+magfest/
+snake/
+
 # Actual code-specific ignores
 /config.txt
 /images/profilePictures/*

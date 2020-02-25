@@ -1,0 +1,16 @@
+<Files config.txt>
+order deny,allow
+deny from all
+</Files>
+<Files .*>
+order deny,allow
+deny from all
+</Files>
+
+# MAINTENANCE-PAGE REDIRECT
+ErrorDocument 403 /maintenance.php
+<Files playerList.php>
+	order deny,allow
+	allow from all
+	allow from 130.85.249.54
+</Files>

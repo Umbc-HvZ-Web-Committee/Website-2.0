@@ -13,6 +13,7 @@ require_once('pageIncludes/home.inc.php');
 <?php htmlHeader(); ?>
 </head>
 <body>
+<!--Hey there, if you can see this then the auto-update action is working! Feel free to delete this at any time.-->
 <a name="top"></a>
 <div id="wrapper">
 	<?php pageHeader(); ?>

@@ -41,7 +41,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 					$qury = mysql_query($sql);
 					while($ret = mysql_fetch_assoc($qury)){
 						$para = $ret['ozParagraph'];
-						$para = preg_replace("/\\\\+('|\")/","\\1",$para);
+						//$para = preg_replace("/\\\\+('|\")/","\\1",$para);
 						echo "<tr>";
 						if($ret['state'] == 2) {
 							echo "<td><b>OZ</b></td>";

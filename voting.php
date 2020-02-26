@@ -183,7 +183,7 @@ $settings = get_settings();
 					//If user is an officer/web committee, show a complete, anonymized count of votes
 					//I hope you like this vote counter, because I stayed up late during Thanksgiving vacation in Florida to make it work
 					//With this counter, web committee does NOT need to actually look at who voted for who to do their job
-					//This counter also makes it harder to fix an election, since multiple have continuous action to its live results
+					//This counter also makes it harder to fix an election, since multiple have continuous access to its live results
 					//YOU SHOULD BE SUSPICIOUS OF ANYONE WHO WANTS/TRIES TO REMOVE THIS FUNCTIONALITY FOR ANY REASON
 					//IF ANYONE TRIES TO KILL THIS FUNCTIONALITY, LET ALL (OTHER) OFFICERS, (OTHER) WEB COMMITTE MEMBERS, AND HICCUP KNOW RIGHT AWAY 
 					//ALSO MAYBE TELL ME (KYLE) SO I CAN COME BACK AND YELL AT SOMEONE

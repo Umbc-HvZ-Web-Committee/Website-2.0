@@ -18,12 +18,26 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 	<div id="page" class="container">
 		<div id="content">
 			<?php if($_SESSION['isAdmin'] >= 2){ ?>
-				<h2>E</h2>
+				<h2>Sidebar settings</h2>
+				<form action="" method="post">
+				<label for="baseSlides"><input type="radio" name="setSlides" value="no"/>Display one-night slides on the sidebar</label></br>
+				<label for="longSlides"><input type="radio" name="setSlides" value="yes"/>Display weeklong slides on the sidebar</label></br>
+				<input type="submit" name="slides" value="Set slides"/></br>
+				</form><br/>
+			
+				<h2>Monday Slides</h2>
+				<p>Select a set of slides to display under Monday's slides:</p>
+				<form action="" method="post">
+				<label for="hvz101"><input type="radio" name="mondaySlides" value="hvz101"/>HvZ 101</label></br>
+				<label for="hvz102"><input type="radio" name="mondaySlides" value="hvz102"/>HvZ 102</label></br>
+				<label for="underConstruction"><input type="radio" name="mondaySlides" value="underConstruction"/>Under Construction</label></br>
+				<label for="end"><input type="radio" name="mondaySlides" value="end"/>End of Semester</label></br>
+				<?echo "<br>Other: <input name=customMondaySlides".($test?"":" value=\"{$customMondaySlide}\"")."><br><br>";?>
+				<input type="submit" name="mondaySlides" value="Set slides"/></br>
+				</form><br/>
 			<?}else{ ?>
 				<h2>Hey, you're not an admin, get out of here!</h2>
 			<? } ?>
-
-		</div>
 		</div>
 		<?php printSidebar(); 
 		?>

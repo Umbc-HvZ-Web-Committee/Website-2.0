@@ -17,9 +17,13 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 	<?php pageHeader(); ?>
 	<div id="page" class="container">
 		<div id="content">
-			<?php 
-				echo "E";
-			?>
+			<?php if($_SESSION['isAdmin'] >= 2){ ?>
+				<h2>E</h2>
+			<?}else{ ?>
+				<h2>Hey, you're not an admin, get out of here!</h2>
+			<? } ?>
+
+		</div>
 		</div>
 		<?php printSidebar(); 
 		?>

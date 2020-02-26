@@ -1,5 +1,5 @@
 <?php
-require_once('pageIncludes/PAGE_NAME.inc.php');
+require_once('pageIncludes/editSidebar.inc.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,7 +19,11 @@ require_once('pageIncludes/PAGE_NAME.inc.php');
 	<div id="page" class="container">
 		<div id="content">
 
-		{YOUR CODE GOES HERE}
+		<?php if($_SESSION['isAdmin'] >= 2){ ?>
+			<h2>Yeet</h2>
+		<?}else{ ?>
+			<h2>Hey, you're not an admin, get out of here!</h2>
+		<? } ?>
 
 		</div>
 		<?php printSidebar(); 

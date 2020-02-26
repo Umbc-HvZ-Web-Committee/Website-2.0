@@ -21,7 +21,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 		<?php 
 		$display = false;
 		
-		if($_SESSION['isAdmin'] == 2){ 
+		if($_SESSION['isAdmin'] >= 2){ 
 			$display = true;
 			?>
 			<h2>Admin Panel</h2><br/>
@@ -32,11 +32,11 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<h3><a href="addfaq.php">FAQ Editor</a></h3>
 			<h3><a href="pollManagement.php">Poll Editor</a></h3>
 			<h3><a href="viewVotingMembers.php">View Voting Members</a></h3>
+			<h3><a href="sidebarSettings.php">Sidebar Editor</a></h3>
 			<br/>
 			<?php
 		}
-		
-		if($_SESSION['isAdmin'] == 1){ 
+		else if($_SESSION['isAdmin'] >= 1){ 
 			$display = true;
 			?>
 			<h2>Admin Panel</h2><br/>
@@ -46,7 +46,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<?php
 		}
 			
-		if($playerData['isLongGameAuthed'] == 2){
+		if($playerData['isLongGameAuthed'] >= 2){
 			$display = true;
 			?>
 			<h2>Long Game Utilities</h2><br/>
@@ -55,8 +55,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<h3><a href="ozSelect.php">OZ viewing &amp; selection</a></h3>
 			<?php 
 		}
-		
-		if($playerData['isLongGameAuthed'] == 1){
+		else if($playerData['isLongGameAuthed'] >= 1){
 			$display = true;
 			?>
 			<h2>Long Game Utilities</h2><br/>

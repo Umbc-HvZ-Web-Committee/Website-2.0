@@ -32,7 +32,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<h3><a href="addfaq.php">FAQ Editor</a></h3>
 			<h3><a href="pollManagement.php">Poll Editor</a></h3>
 			<h3><a href="viewVotingMembers.php">View Voting Members</a></h3>
-			<h3><a href="sidebarSettings.php">Sidebar Editor</a></h3>
+			<h3><a href="editSidebar.php">Sidebar Editor</a></h3>
 			<br/>
 			<?php
 		}

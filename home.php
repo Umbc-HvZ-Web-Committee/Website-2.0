@@ -49,7 +49,6 @@ require_once('pageIncludes/home.inc.php');
 		<br/>
 		First mission of the semester: Monday, February 3rd<br/>
 		Last mission of the semester: Monday, May 11th<br/>
-		This is a test<br/>
 		</p>
 		<br/>
 		<p>

@@ -12,4 +12,5 @@ if($_SESSION['isAdmin']>=2){
 		$mondaySlides = requestVar('mondaySlides');
 		echo "Acknowledged action to set slides to ".$mondaySlides."<br/>";
 	}
+}
 ?>

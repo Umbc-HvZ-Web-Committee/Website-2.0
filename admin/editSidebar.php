@@ -18,12 +18,11 @@ require_once('includes/update.php');
 	<?php pageHeader(); ?>
 	<div id="page" class="container">
 		<div id="content">
-			<?php
 			<?php if($_SESSION['isAdmin'] >= 2){ ?>
-			<h2>Yeet</h2>
-		<?}else{ ?>
-			<h2>Big oof</h2>
-		<? } ?>
+				<h2>Yeet</h2>
+			<?}else{ ?>
+				<h2>Big oof</h2>
+			<? } ?>
 		</div>
 		<?php printSidebar(); 
 		?>

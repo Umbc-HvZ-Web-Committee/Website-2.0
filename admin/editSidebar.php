@@ -18,11 +18,7 @@ require_once('pageIncludes/editSidebar.inc.php');
 	<div id="page" class="container">
 		<div id="content">
 			<?php 
-				if($_SESSION['isAdmin'] >= 2){ 
-					echo "Yeet";
-				}else{
-					echo "Big oof";
-				}
+				echo "Yeet";
 			?>
 		</div>
 		<?php printSidebar(); 

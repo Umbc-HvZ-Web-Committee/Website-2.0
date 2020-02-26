@@ -38,9 +38,9 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<label for="fiveNight"><input type="radio" name="mondaySlides" value="fiveNight"/>HvZ 102</label></br>
 				<label for="underConstruction"><input type="radio" name="mondaySlides" value="underConstruction"/>Under Construction</label></br>
 				<label for="endSemester"><input type="radio" name="mondaySlides" value="endSemester"/>End of Semester</label></br>
-				Specify Monday slide: <input type="text" name="customMondaySlide" id="customMondaySlide"/>
+				Specify Monday slide: <input type="text" name="mondaySlides" id="customMondaySlide"/></br>
 				
-				<?echo "<br>Other: <input name=customMondaySlides".($test?"":" value=\"{$customMondaySlide}\"")."><br><br>";?>
+				<?//echo "<br>Other: <input name=customMondaySlides".($test?"":" value=\"{$customMondaySlide}\"")."><br><br>";?>
 				<input type="submit" name="mondaySlides" value="Set slides"/></br>
 				</form><br/>
 			<?}else{ ?>

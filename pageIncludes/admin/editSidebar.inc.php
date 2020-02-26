@@ -7,6 +7,9 @@ if(!isset($_SESSION)) session_start();
 if(!isset($loginUpdate)) require_once('../includes/loginUpdate.php');
 $settings = get_settings();
 
-//{YOUR CODE GOES HERE}
-
+if($_SESSION['isAdmin']>=2){
+	if(isset($_REQUEST['mondaySlide'])){
+		$mondaySlides = requestVar('mondaySlides');
+		echo "Acknowledged action to set slides to ".$mondaySlides."<br/>";
+	}
 ?>

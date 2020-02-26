@@ -41,7 +41,7 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				Specify Monday slide: <input type="text" name="customMondaySlides" id="customMondaySlide"/></br>
 				
 				<?//echo "<br>Other: <input name=customMondaySlides".($test?"":" value=\"{$customMondaySlide}\"")."><br><br>";?>
-				<input type="submit" name="mondaySlides" value="Set Monday Slides"/></br>
+				<input type="submit" name="submit" value="Set Monday Slides"/></br>
 				</form><br/>
 			<?}else{ ?>
 				<h2>Hey, you're not an admin, get out of here!</h2>

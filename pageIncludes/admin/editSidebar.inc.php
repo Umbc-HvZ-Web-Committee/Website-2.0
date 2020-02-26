@@ -8,10 +8,14 @@ if(!isset($loginUpdate)) require_once('../includes/loginUpdate.php');
 $settings = get_settings();
 
 if($_SESSION['isAdmin']>=2) {
-	if(isset($_REQUEST['mondaySlides'])) {
-		$mondaySlides = requestVar('mondaySlides');
-		$customMondaySlides = requestVar('customMondaySlides');
-		echo $mondaySlides."<br/>".$customMondaySlides;
+	if(isset($_REQUEST['submit'])) {
+		$func = $_REQUEST['submit'];
+		echo($func);
+		if($func=="Sign Monday Slides"){
+			$mondaySlides = requestVar('mondaySlides');
+			$customMondaySlides = requestVar('customMondaySlides');
+			echo "<br/>".$mondaySlides."<br/>".$customMondaySlides;
+		}
 	}
 }
 ?>

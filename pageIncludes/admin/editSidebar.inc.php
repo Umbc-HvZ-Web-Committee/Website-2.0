@@ -14,7 +14,26 @@ if($_SESSION['isAdmin'] >= 2) {
 		if($func=="Set Monday Slides"){
 			$mondaySlides = requestVar('mondaySlides');
 			$customMondaySlides = requestVar('customMondaySlides');
-			echo "<br/>".$mondaySlides."<br/>".$customMondaySlides;
+			//echo "<br/>".$mondaySlides."<br/>".$customMondaySlides;
+			
+			if($mondaySlides != NULL && $customMondaySlides != NULL) {
+				echo "Could not update slides; Multiple options selected<br/>";
+			}
+			else if ($mondaySlides != NULL && $customMondaySlides == NULL) {
+				//Preset slides being used
+				echo "Preset slides being used: ".$mondaySlides."<br/>";
+			}
+			else if ($mondaySlides == NULL && $customMondaySlides != NULL) {
+				//Custom slides being used
+				echo "Custom slides being used: ".$customMondaySlides."<br/>";
+			}
+			else if ($mondaySlides == NULL && $customMondaySlides == NULL) {
+				//No slides were specified
+				echo "Could not update slides; No option selected<br/>";
+			}
+			else {
+				echo "Your if cases are bad and you should feel bad<br/>";
+			}
 		}
 	}
 }

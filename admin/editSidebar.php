@@ -20,8 +20,9 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 			<?php if($_SESSION['isAdmin'] >= 2){ ?>
 			
 				<b>WARNING: Nothing on thispage has any functionaliy yet. Please do not interact with this unless you have been directed to do so by the web committee or it actually works properly now and I just forgot to clean this warning up</b><br/>
-				<h2>Sidebar settings</h2>
+				
 				<? /*
+				<h2>Sidebar settings</h2>
 				<form action="" method="post">
 				<label for="baseSlides"><input type="radio" name="setSlides" value="no"/>Display one-night slides on the sidebar</label></br>
 				<label for="longSlides"><input type="radio" name="setSlides" value="yes"/>Display weeklong slides on the sidebar</label></br>

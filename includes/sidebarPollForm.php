@@ -60,11 +60,11 @@ else
 			$name = $playerData['fname']." ".$playerData['lname'];
 			if($curVote != -1)
 			{
-				mysql_oneline("UPDATE `poll_votes` SET `OID`=$OID, `option`='$optionName' WHERE `UID`='$uid' AND `QID`='$QID';");
+				mysql_query("UPDATE `poll_votes` SET `OID`=$OID, `option`='$optionName' WHERE `UID`='$uid' AND `QID`='$QID';");
 			}
 			else
 			{
-				mysql_oneline("INSERT INTO `poll_votes`(`QID`, `OID`, `option`, `UID`, `name`) VALUES ('$QID','$OID','$optionName','$uid','$name');");
+                mysql_query("INSERT INTO `poll_votes`(`QID`, `OID`, `option`, `UID`, `name`) VALUES ('$QID','$OID','$optionName','$uid','$name');");
 			}
 			$voted = true;
 		}

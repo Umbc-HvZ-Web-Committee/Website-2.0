@@ -20,9 +20,9 @@ function setDeathTimer($gameID, $uid, $hoursFromMidnight, $newKill){
 	$weeklongStart = $ret['startDate'];
 	
 	$weeklongStart = date('Y-m-d H:i:s', strtotime($weeklongStart));
-	
-	
-	mysql_oneline("UPDATE `long_players` SET `deathTime`='$deathTime' WHERE `gameID`='$gameID' AND `playerID`='$uid'");
+
+
+	mysql_query("UPDATE `long_players` SET `deathTime`='$deathTime' WHERE `gameID`='$gameID' AND `playerID`='$uid'");
 	//echo mysql_error();
 	//echo "UPDATE `long_players` SET `deathTime`='$deathTime' WHERE `gameID`='$gameID' AND `playerID`='$uid'";
 	

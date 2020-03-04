@@ -29,7 +29,7 @@ if($_SESSION['isAdmin'] >= 2) {
 					//Preset slides being used
 					echo "Preset slides being used: ".$mondaySlides." - ID#";
 					$slides_row = mysql_oneline("SELECT * FROM mission_slides WHERE name = $mondaySlides;");
-					echo $slides_row['id'];
+					echo $slides_row['id']." - Name: \"".$slides_row['name']."\" - URL: ".\"".$slides_row['url']."\"";
 					echo "<br/>";
 				}
 			}

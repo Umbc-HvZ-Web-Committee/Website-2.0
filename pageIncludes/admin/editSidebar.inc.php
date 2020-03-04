@@ -10,7 +10,7 @@ $settings = get_settings();
 if($_SESSION['isAdmin'] >= 2) {
 	if(isset($_REQUEST['submit'])) {
 		$func = $_REQUEST['submit'];
-		echo($func);
+		//echo($func."<br/>");
 		if($func=="Set Monday Slides"){
 			$mondaySlides = requestVar('mondaySlides');
 			$customMondaySlides = requestVar('customMondaySlides');
@@ -19,13 +19,19 @@ if($_SESSION['isAdmin'] >= 2) {
 			if($mondaySlides != NULL && $customMondaySlides != NULL) {
 				echo "Could not update slides; Multiple options selected<br/>";
 			}
-			else if ($mondaySlides != NULL && $customMondaySlides == NULL) {
-				//Preset slides being used
-				echo "Preset slides being used: ".$mondaySlides."<br/>";
-			}
-			else if ($mondaySlides == NULL && $customMondaySlides != NULL) {
-				//Custom slides being used
-				echo "Custom slides being used: ".$customMondaySlides."<br/>";
+			else if (($mondaySlides != NULL && $customMondaySlides == NULL) || ($mondaySlides == NULL && $customMondaySlides != NULL)) {
+				if($mondaySlides == NULL && $customMondaySlides != NULL) {
+					//Custom slides being used
+					echo "Custom slides being used: ".$customMondaySlides."<br/>";
+					
+					mysql_query("UPDATE mission_slides SET url = '$customMondaySlides' WHERE name = 'mondayMission'");
+				}else {
+					//Preset slides being used
+					echo "Preset slides being used: ".$mondaySlides." - ID#";
+					$slides_row = mysql_oneline("SELECT * FROM mission_slides WHERE name = $mondaySlides;");
+					echo $slides_row['id'];
+					echo "<br/>";
+				}
 			}
 			else if ($mondaySlides == NULL && $customMondaySlides == NULL) {
 				//No slides were specified

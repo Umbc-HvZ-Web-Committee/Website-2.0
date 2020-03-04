@@ -14,7 +14,7 @@ if($_SESSION['isAdmin'] >= 2) {
 		if($func=="Set Monday Slides"){
 			$mondaySlides = requestVar('mondaySlides');
 			$customMondaySlides = requestVar('customMondaySlides');
-			//echo "<br/>".$mondaySlides."<br/>".$customMondaySlides;
+			echo "<br/>".$mondaySlides."<br/>".$customMondaySlides;
 			
 			if($mondaySlides != NULL && $customMondaySlides != NULL) {
 				echo "Could not update slides; Multiple options selected<br/>";

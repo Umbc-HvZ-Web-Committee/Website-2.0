@@ -34,7 +34,7 @@ require_once('pageIncludes/rules.inc.php');
 			7.) No vehicles during gameplay.<br/></p><br/>
 			
 			<h3><b>The Constitution</b></h3><br/>
-			<p><a href="https://docs.google.com/document/d/1kB_4Hw8BFD1u9SiTQoElnB3e6vlZejyLYUy6_HenJpQ/edit">Link to the offical Constitution.</a></p><br/>
+			<p><a href="https://docs.google.com/document/d/1_tbFVQ-ZEgjQ7mbFIR7wbtmtrdhmCuP88CK1fNhuyhQ">Link to the offical Constitution.</a></p><br/>
 			
 			<h3><b>Bylaws</b></h3><br/>
 			<p><a href="https://docs.google.com/document/d/1SB-TVgLYPipo_C6HWNIRJ4fEEH_KG40GnVFaOGXB1sY/edit?usp=sharing">Link to the offical HvZ bylaws.</a></p><br/>

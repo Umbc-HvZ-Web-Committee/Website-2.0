@@ -27,16 +27,26 @@ if($_SESSION['isAdmin'] >= 2) {
 					mysql_query("UPDATE mission_slides SET url = '$customMondaySlides' WHERE name = 'mondayMission'");
 				}else {
 					//Preset slides being used
-					echo "Preset slides being used: ".$mondaySlides."(END_SLIDE_NAME)";
-					if($monday_slides != "hvz101") {
-						echo "<br/>This is not hvz 101!<br/>";
-					}
-					$slides_row = mysql_query("SELECT * FROM `mission_slides` WHERE `name` = '$mondaySlides';");
-					/*switch($mondaySlides) {
+					
+					//THIS QUERY DOESN'T WORK BECAUSE STUPID YAY
+					//$slides_row = mysql_query("SELECT * FROM `mission_slides` WHERE `name` = '$mondaySlides';");
+					switch($mondaySlides) {
 						case "hvz101":
 						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'hvz101'");
 						break;
-					}*/
+						case "hvz102":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'hvz102'");
+						break;
+						case "hvz202":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'hvz202'");
+						break;
+						case "endSemester":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'endSemester'");
+						break;
+						case "fiveNight":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'fiveNight'");
+						break;
+					}
 					echo " - ID#".$slides_row['id']." - URL = ".$slides_row['url'];
 					echo "END<br/>";
 				}

@@ -31,7 +31,7 @@ if($_SESSION['isAdmin'] >= 2) {
 					//$slides_row = mysql_query("SELECT * FROM mission_slides WHERE name = '$mondaySlides';");
 					switch($mondaySlides) {
 						case "hvz101":
-						$slides_row = mysql_query("SELECT * FROM mission_slides WHERE name = 'hvz101';");
+						$slides_row = mysql_query("SELECT * FROM `mission_slides` WHERE `name` = 'hvz101'");
 						break;
 					}
 					echo " - ID#".$slides_row['id']." - URL = ".$slides_row['url'];

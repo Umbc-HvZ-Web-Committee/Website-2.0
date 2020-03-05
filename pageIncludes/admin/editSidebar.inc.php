@@ -40,6 +40,9 @@ if($_SESSION['isAdmin'] >= 2) {
 						case "hvz202":
 						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'hvz202'");
 						break;
+						case "underConstruction":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'underConstruction'");
+						break;
 						case "endSemester":
 						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'endSemester'");
 						break;

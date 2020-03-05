@@ -27,7 +27,7 @@ if($_SESSION['isAdmin'] >= 2) {
 					mysql_query("UPDATE mission_slides SET url = '$customMondaySlides' WHERE name = 'mondayMission'");
 				}else {
 					//Preset slides being used
-					echo "Preset slides being used: ".$mondaySlides;
+					echo "Preset slides being used: ".$mondaySlides."(END_SLIDE_NAME)";
 					if($monday_slides != "hvz101") {
 						echo "<br/>This is not hvz 101!<br/>";
 					}

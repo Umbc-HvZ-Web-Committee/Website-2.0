@@ -50,8 +50,11 @@ if($_SESSION['isAdmin'] >= 2) {
 						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'fiveNight'");
 						break;
 					}
-					echo " - ID#".$slides_row['id']." - URL = ".$slides_row['url'];
-					echo "END<br/>";
+					//echo " - ID#".$slides_row['id']." - URL = ".$slides_row['url'];
+					//echo "END<br/>";
+					
+					$url = $slides_row['url'];
+					mysql_query("UPDATE mission_slides SET url = '$url' WHERE name = 'mondayMission'");
 				}
 			}
 			else if ($mondaySlides == NULL && $customMondaySlides == NULL) {

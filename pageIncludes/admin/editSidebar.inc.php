@@ -28,6 +28,9 @@ if($_SESSION['isAdmin'] >= 2) {
 				}else {
 					//Preset slides being used
 					echo "Preset slides being used: ".$mondaySlides;
+					if($monday_slides != "hvz101") {
+						echo "<br/>This is not hvz 101!<br/>";
+					}
 					$slides_row = mysql_query("SELECT * FROM `mission_slides` WHERE `name` = '$mondaySlides';");
 					/*switch($mondaySlides) {
 						case "hvz101":

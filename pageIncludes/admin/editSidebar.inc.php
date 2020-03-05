@@ -27,10 +27,15 @@ if($_SESSION['isAdmin'] >= 2) {
 					mysql_query("UPDATE mission_slides SET url = '$customMondaySlides' WHERE name = 'mondayMission'");
 				}else {
 					//Preset slides being used
-					echo "Preset slides being used: ".$mondaySlides." - ID#";
-					$slides_row = mysql_query("SELECT * FROM mission_slides WHERE name = '$mondaySlides';");
-					echo $slides_row['id'];
-					echo "<br/>";
+					echo "Preset slides being used: ".$mondaySlides;
+					//$slides_row = mysql_query("SELECT * FROM mission_slides WHERE name = '$mondaySlides';");
+					switch($mondaySlides) {
+						case "hvz101":
+						$slides_row = mysql_query("SELECT * FROM mission_slides WHERE name = 'hvz101';");
+						break;
+					}
+					echo " - ID#".$slides_row['id']." - URL = ".$slides_row['url'];
+					echo "END<br/>";
 				}
 			}
 			else if ($mondaySlides == NULL && $customMondaySlides == NULL) {

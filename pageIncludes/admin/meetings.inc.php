@@ -125,7 +125,7 @@ if($_SESSION['isAdmin']>=1){
 							$longGamePlayer = mysql_oneline("SELECT * FROM `long_players` WHERE `gameID`='{$curLongGame['gameID']}' AND `playerID`='$uid';");
 							$missionsPlayed = $longGamePlayer['missionsPlayed'];
 							$missionsPlayed = $missionsPlayed + 1;
-							mysql_oneline("UPDATE `long_players` SET `missionsPlayed`='$missionsPlayed' WHERE `gameID`='{$curLongGame['gameID']}' AND `playerID`='$uid';");
+                            mysql_query("UPDATE `long_players` SET `missionsPlayed`='$missionsPlayed' WHERE `gameID`='{$curLongGame['gameID']}' AND `playerID`='$uid';");
 						}
 					}else{
 						//update user sign in
@@ -299,25 +299,25 @@ if($_SESSION['isAdmin']>=1){
 				$query2 = mysql_query($sql2);
 				//while($ret2 = mysql_fetch_assoc($query2)) {
 					$ret3 = mysql_oneline("SELECT * FROM `meeting_list` WHERE `meetingID` = '$meetingID';");
-					mysql_oneline("UPDATE `users` SET `appearancesTotal`=`appearancesTotal`-1 WHERE `UID`='$uid';");
-					mysql_oneline("UPDATE `users` SET `appearancesThisTerm`=`appearancesThisTerm`-1 WHERE `UID`='$uid';");
+					mysql_query("UPDATE `users` SET `appearancesTotal`=`appearancesTotal`-1 WHERE `UID`='$uid';");
+					mysql_query("UPDATE `users` SET `appearancesThisTerm`=`appearancesThisTerm`-1 WHERE `UID`='$uid';");
 					if($ret3['missionType'] == 0) {
 						if($ret['startState'] == $HUMAN_TAG) {
-							mysql_oneline("UPDATE `users` SET `humanStartsTotal`=`humanStartsTotal`-1 WHERE `UID`='$uid';");
-							mysql_oneline("UPDATE `users` SET `humanStartsThisTerm`=`humanStartsTerm`-1 WHERE `UID`='$uid';");
+							mysql_query("UPDATE `users` SET `humanStartsTotal`=`humanStartsTotal`-1 WHERE `UID`='$uid';");
+							mysql_query("UPDATE `users` SET `humanStartsThisTerm`=`humanStartsTerm`-1 WHERE `UID`='$uid';");
 						} 
 						elseif($ret['startState'] == $OZ_HIDDEN_TAG || $ret['startState'] == $ZOMBIE_TAG || $ret['startState'] == $OZ_TAG) {
-							mysql_oneline("UPDATE `users` SET `zombieStartsTotal`=`zombieStartsTotal`-1 WHERE `UID`='$uid';");
-							mysql_oneline("UPDATE `users` SET `zombieStartsThisTerm`=`zombieStartsThisTerm`-1 WHERE `UID`='$uid';");
+							mysql_query("UPDATE `users` SET `zombieStartsTotal`=`zombieStartsTotal`-1 WHERE `UID`='$uid';");
+							mysql_query("UPDATE `users` SET `zombieStartsThisTerm`=`zombieStartsThisTerm`-1 WHERE `UID`='$uid';");
 						}
 						elseif($ret['startState'] == $MODERATOR_TAG) {
-							mysql_oneline("UPDATE `users` SET `gamesModdedTotal`=`gamesModdedTotal`-1 WHERE `UID`='$uid';");
-							mysql_oneline("UPDATE `users` SET `gamesModdedThisTerm`=`gamesModdedThisTerm`-1 WHERE `UID`='$uid';");
+							mysql_query("UPDATE `users` SET `gamesModdedTotal`=`gamesModdedTotal`-1 WHERE `UID`='$uid';");
+							mysql_query("UPDATE `users` SET `gamesModdedThisTerm`=`gamesModdedThisTerm`-1 WHERE `UID`='$uid';");
 						}
 					}
 					elseif ($ret['missionType'] == 1) {
-						mysql_oneline("UPDATE `users` SET `adminMeetingsTotal`=`adminMeetingsTotal`-1 WHERE `UID`='$uid';");
-						mysql_oneline("UPDATE `users` SET `adminMeetingsThisTerm`=`adminMeetingsThisTerm`-1 WHERE `UID`='$uid';");
+						mysql_query("UPDATE `users` SET `adminMeetingsTotal`=`adminMeetingsTotal`-1 WHERE `UID`='$uid';");
+						mysql_query("UPDATE `users` SET `adminMeetingsThisTerm`=`adminMeetingsThisTerm`-1 WHERE `UID`='$uid';");
 					}
 				//}
 			}

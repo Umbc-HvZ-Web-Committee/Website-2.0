@@ -46,7 +46,7 @@ function quietGiveAchieve($aid, $uid) {
 	// Check to see if achievement has been earned
 	if(!hasAchieve($aid, $uid)) {
 		// If not
-		mysql_oneline("INSERT INTO `userAchieveLink_new` (`AID`, `UID`) VALUES ('$aid', '$uid');");
+        mysql_query("INSERT INTO `userAchieveLink_new` (`AID`, `UID`) VALUES ('$aid', '$uid');");
 	}
 }
 

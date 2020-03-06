@@ -6,24 +6,24 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 if(isset($_POST['clearYear']))
 {
 	// Switch to next semester
-	mysql_oneline("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `appearancesThisTerm` = '0' WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `zombieStartsThisTerm` = '0' WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `humanStartsThisTerm` = '0' WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `gamesModdedThisTerm` = '0' WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `adminMeetingsThisTerm` = '0' WHERE 1;");
+    mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
+    mysql_query("UPDATE `users` SET `appearancesThisTerm` = '0' WHERE 1;");
+    mysql_query("UPDATE `users` SET `zombieStartsThisTerm` = '0' WHERE 1;");
+    mysql_query("UPDATE `users` SET `humanStartsThisTerm` = '0' WHERE 1;");
+    mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = '0' WHERE 1;");
+    mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = '0' WHERE 1;");
 	// Reset waiver info because those expire by the year
-	mysql_oneline("UPDATE `users` SET `hasTurnedInWaiver`= '0' WHERE 1;");
+    mysql_query("UPDATE `users` SET `hasTurnedInWaiver`= '0' WHERE 1;");
 }
 if(isset($_POST['clearSemester']))
 {
 	// Switch to next semester
-	mysql_oneline("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `appearancesThisTerm` = 0 WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `zombieStartsThisTerm` = 0 WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `humanStartsThisTerm` = 0 WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `gamesModdedThisTerm` = 0 WHERE 1;");
-	mysql_oneline("UPDATE `users` SET `adminMeetingsThisTerm` = 0 WHERE 1;");
+    mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
+    mysql_query("UPDATE `users` SET `appearancesThisTerm` = 0 WHERE 1;");
+    mysql_query("UPDATE `users` SET `zombieStartsThisTerm` = 0 WHERE 1;");
+    mysql_query("UPDATE `users` SET `humanStartsThisTerm` = 0 WHERE 1;");
+    mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = 0 WHERE 1;");
+    mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = 0 WHERE 1;");
 }
 
 

@@ -43,9 +43,9 @@ function longGameRegSelect($uid){
 			echo '<form action="" method="post"><input type="hidden" name="gameID" value="'.$id.'"><input type="submit" name="removeReg" value="Unregister"></form>';
 			echo "<br/>";
 		}
+	    if(!$firstLoop) echo "<br/>";
 	}
-	if(!$firstLoop) echo "<br/>";
-	
+
 	//THIS STATEMENT IS CONFUSING SO LET ME EXPLAIN
 	//Subselect first.  So, pick every game that has you already registered in it.  Then left join that with every game.
 	//This gives you every game, with the UID set if you've registered, and NULL if you haven't. So just pull out the NULLs,
@@ -53,7 +53,11 @@ function longGameRegSelect($uid){
 	$qret = mysql_query("SELECT * FROM `long_games` NATURAL LEFT JOIN (SELECT * FROM `long_players` WHERE `playerID` = '$uid') ".
 	                    "WHERE `playerID` IS NULL AND CURRENT_TIMESTAMP < `startDate` ORDER BY startDate DESC;");					
 	echo $qret;
-	echo $ret;
+    if (isset($ret)) {
+        echo $ret;
+    } else {
+        echo 'no $ret';
+    }
 	if($qret && $ret == mysql_fetch_assoc($qret)){
 		echo '<select name="longGameSelect"/>';
 		$id = $ret['gameID'];
@@ -316,45 +320,51 @@ function displayFavAchievement() {//500 error here
 	$sql = "SELECT name, description, class, alignment, image FROM `achievements_new` INNER JOIN `userAchieveLink_new` ON `achievements_new`.`AID`=`userAchieveLink_new`.`AID` AND `userAchieveLink_new`.`isFavorite`=1 WHERE `UID`='$uid';";
 	$ret = mysql_query($sql);
 	$ret = mysql_fetch_assoc($ret);
-	
-	$image = $ret['image'];
-	$ret['image'] = "<center><img class=\"smallImg\" src=\"$image\"></img></center>";
-	
-	switch($ret['class']) {
-		case "e":
-			$ret['class'] = "Basic";
-			break;
-		case "m":
-			$ret['class'] = "Recruit";
-			break;
-		case "h":
-			$ret['class'] = "Veteran";
-			break;
-		case "l":
-			$ret['class'] = "Legendary";
-			break;
-		case "r":
-			$ret['class'] = "Retired";
-			break;
-	}
-	
-	switch($ret['alignment']) {
-		case "h":
-			$ret['alignment'] = "Human";
-			break;
-		case "z":
-			$ret['alignment'] = "Zombie";
-			break;
-		case "n":
-			$ret['alignment'] = "Neutral";
-			break;
-		case "m":
-			$ret['alignment'] = "Moderator";
-			break;
-		case "r":
-			$ret['alignment'] = "Retired";
-			break;
-	}
+
+    if (isset($ret['image'])) {
+        $image = $ret['image'];
+	    $ret['image'] = "<center><img class=\"smallImg\" src=\"$image\"></img></center>";
+    }
+
+    if (isset($ret['class'])) {
+        switch($ret['class']) {
+            case "e":
+                $ret['class'] = "Basic";
+                break;
+            case "m":
+                $ret['class'] = "Recruit";
+                break;
+            case "h":
+                $ret['class'] = "Veteran";
+                break;
+            case "l":
+                $ret['class'] = "Legendary";
+                break;
+            case "r":
+                $ret['class'] = "Retired";
+                break;
+        }
+    }
+
+    if (isset($ret['alignment'])) {
+        switch($ret['alignment']) {
+            case "h":
+                $ret['alignment'] = "Human";
+                break;
+            case "z":
+                $ret['alignment'] = "Zombie";
+                break;
+            case "n":
+                $ret['alignment'] = "Neutral";
+                break;
+            case "m":
+                $ret['alignment'] = "Moderator";
+                break;
+            case "r":
+                $ret['alignment'] = "Retired";
+                break;
+        }
+    }
 	
 	echo "<table align='center' border='1' cellspacing='1' cellpadding='3'>";
 	echo "<tr bgcolor='#800000'><th><font color='white'>Achievement</font></th><th><font color='white'>Description</font></th><th><font color='white'>Class</font></th><th><font color='white'>Affiliation</font></th><th><font color='white'>Image</font></th></tr>";
@@ -422,42 +432,46 @@ function printAchieveTable() {
 }
 
 function printLine(array $values){
-	
-	switch($values['class']) {
-		case "e":
-			$values['class'] = "Basic";
-			break;
-		case "m":
-			$values['class'] = "Recruit";
-			break;
-		case "h":
-			$values['class'] = "Veteran";
-			break;
-		case "l":
-			$values['class'] = "Legendary";
-			break;
-		case "r":
-			$values['class'] = "Retired";
-			break;
-	}
-	
-	switch($values['alignment']) {
-		case "h":
-			$values['alignment'] = "Human";
-			break;
-		case "z":
-			$values['alignment'] = "Zombie";
-			break;
-		case "n":
-			$values['alignment'] = "Neutral";
-			break;
-		case "m":
-			$values['alignment'] = "Moderator";
-			break;
-		case "r":
-			$values['alignment'] = "Retired";
-			break;
-	}
+
+    if (isset($values['class'])) {
+        switch($values['class']) {
+            case "e":
+                $values['class'] = "Basic";
+                break;
+            case "m":
+                $values['class'] = "Recruit";
+                break;
+            case "h":
+                $values['class'] = "Veteran";
+                break;
+            case "l":
+                $values['class'] = "Legendary";
+                break;
+            case "r":
+                $values['class'] = "Retired";
+                break;
+        }
+    }
+
+    if (isset($values['alignment'])) {
+        switch($values['alignment']) {
+            case "h":
+                $values['alignment'] = "Human";
+                break;
+            case "z":
+                $values['alignment'] = "Zombie";
+                break;
+            case "n":
+                $values['alignment'] = "Neutral";
+                break;
+            case "m":
+                $values['alignment'] = "Moderator";
+                break;
+            case "r":
+                $values['alignment'] = "Retired";
+                break;
+        }
+    }
 	$image = $values['image'];
 	$values['image'] = "<center><img class=\"smallImg\" src=\"$image\"></img></center>";
 	

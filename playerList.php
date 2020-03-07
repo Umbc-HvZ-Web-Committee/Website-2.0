@@ -1,7 +1,12 @@
 <?php
 require_once('pageIncludes/playerList.inc.php');
-$UID = $_SESSION['UID'];
-$playerData = mysql_oneline("SELECT * FROM `users` WHERE `UID`='$UID'");
+if (isset($_SESSION['UID'])) {
+    $UID = $_SESSION['UID'];
+    $playerData = mysql_oneline("SELECT * FROM `users` WHERE `UID`='$UID'");
+} else {
+    $UID = null;
+    $playerData = array();
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

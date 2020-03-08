@@ -439,8 +439,8 @@ function longGameSelect(){
 //Only the one-night slide vars should be changing week-by-week
 function retrieveSlides(){
 	//One Night Slides
-	$mondaySlide = "https://docs.google.com/presentation/d/1WjSWAaWsLGysCqm5wr8aV7iFnH9YANOxaB_t9nvoTJU/embed?start=false&loop=false&delayms=10000";
-	$thursdaySlide = "https://docs.google.com/presentation/d/1fIJMbblfDjS7M7KlUJ07relLMoQGte8-FYuqQdRom7Y/embed?start=false&loop=false&delayms=10000";	
+	$mondaySlide = "https://docs.google.com/presentation/d/1NYaiSTM46o78JzED7P8XI8Jho6DzYm9gSwpPTktJGZc/embed?start=false&loop=false&delayms=10000";
+	$thursdaySlide = "https://docs.google.com/presentation/d/1jawTart8F26jstwp-ewT1Svdb8TTJqBYNRM0DzNSHGc/embed?start=false&loop=false&delayms=10000";	
 	
 	//Start of Semester Slides
 	//$mondaySlide = "https://docs.google.com/presentation/d/1YnyDdnIM6lu5R71R1zCgcPe34gdebh_3LPCENH8mj9I/embed?start=false&loop=false&delayms=10000"; HVZ 101

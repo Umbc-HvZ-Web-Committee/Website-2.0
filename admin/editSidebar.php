@@ -30,7 +30,9 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				</form><br/>
 				*/ ?>
 				
-				<h2>Monday Slides</h2>
+				<h2>Mission Slides</h2>
+				
+				<h3>Monday</h3>
 				<p>Select a set of slides to display under Monday's slides:</p>
 				<form action="" method="post">
 				<label for="hvz101"><input type="radio" name="mondaySlides" value="hvz101"/>HvZ 101</label></br>
@@ -38,12 +40,24 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<label for="hvz202"><input type="radio" name="mondaySlides" value="hvz202"/>HvZ 202</label></br>
 				<label for="underConstruction"><input type="radio" name="mondaySlides" value="underConstruction"/>Under Construction</label></br>
 				<label for="endSemester"><input type="radio" name="mondaySlides" value="endSemester"/>End of Semester</label></br>
-				<label for="fiveNight"><input type="radio" name="mondaySlides" value="fiveNight"/>Five Night</label></br>
+				<label for="fiveNight"><input type="radio" name="mondaySlides" value="fiveNight"/>Five Night</label></br><br/>
 				Specify Monday slide: <input type="text" name="customMondaySlides" id="customMondaySlide"/></br>
 				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br>
-				
-				<?//echo "<br>Other: <input name=customMondaySlides".($test?"":" value=\"{$customMondaySlide}\"")."><br><br>";?>
 				<input type="submit" name="submit" value="Set Monday Slides"/></br>
+				</form><br/>
+				
+				<h3>Thursday</h3>
+				<p>Select a set of slides to display under Thursday's slides:</p>
+				<form action="" method="post">
+				<label for="hvz101"><input type="radio" name="thursdaySlides" value="hvz101"/>HvZ 101</label></br>
+				<label for="hvz102"><input type="radio" name="thursdaySlides" value="hvz102"/>HvZ 102</label></br>
+				<label for="hvz202"><input type="radio" name="thursdaySlides" value="hvz202"/>HvZ 202</label></br>
+				<label for="underConstruction"><input type="radio" name="thursdaySlides" value="underConstruction"/>Under Construction</label></br>
+				<label for="endSemester"><input type="radio" name="thursdaySlides" value="endSemester"/>End of Semester</label></br>
+				<label for="fiveNight"><input type="radio" name="thursdaySlides" value="fiveNight"/>Five Night</label></br><br/>
+				Specify Thursday slide: <input type="text" name="customThursdaySlides" id="customThursdaySlide"/></br>
+				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br>
+				<input type="submit" name="submit" value="Set Thursday Slides"/></br>
 				</form><br/>
 				
 				

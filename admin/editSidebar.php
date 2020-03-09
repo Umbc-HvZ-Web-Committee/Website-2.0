@@ -40,10 +40,13 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<label for="endSemester"><input type="radio" name="mondaySlides" value="endSemester"/>End of Semester</label></br>
 				<label for="fiveNight"><input type="radio" name="mondaySlides" value="fiveNight"/>Five Night</label></br>
 				Specify Monday slide: <input type="text" name="customMondaySlides" id="customMondaySlide"/></br>
+				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br>
 				
 				<?//echo "<br>Other: <input name=customMondaySlides".($test?"":" value=\"{$customMondaySlide}\"")."><br><br>";?>
 				<input type="submit" name="submit" value="Set Monday Slides"/></br>
 				</form><br/>
+				
+				
 			<?}else{ ?>
 				<h2>Hey, you're not an admin, get out of here!</h2>
 			<? } ?>

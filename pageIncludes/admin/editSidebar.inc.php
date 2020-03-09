@@ -28,7 +28,7 @@ if($_SESSION['isAdmin'] >= 2) {
 					//Custom slides being used
 					//echo "Custom slides being used: ".$customMondaySlides."<br/>";
 					
-					mysql_query("UPDATE mission_slides SET url = '$customMondaySlides' AND startingSlideNumber = '$startingSlideNumber' WHERE name = 'mondayMission'");
+					mysql_query("UPDATE mission_slides SET url = '$customMondaySlides', startingSlideNumber = '$startingSlideNumber' WHERE name = 'mondayMission'");
 				}else {
 					//Preset slides being used
 					
@@ -58,7 +58,7 @@ if($_SESSION['isAdmin'] >= 2) {
 					//echo "END<br/>";
 					
 					$url = $slides_row['url'];
-					mysql_query("UPDATE mission_slides SET url = '$url' AND startingSlideNumber = '$startingSlideNumber' WHERE name = 'mondayMission'");
+					mysql_query("UPDATE mission_slides SET url = '$url', startingSlideNumber = '$startingSlideNumber' WHERE name = 'mondayMission'");
 				}
 			}
 			else if ($mondaySlides == NULL && $customMondaySlides == NULL) {

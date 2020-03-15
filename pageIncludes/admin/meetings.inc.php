@@ -154,7 +154,12 @@ if($_SESSION['isAdmin']>=1){
 				$meetingName = "[Mission] ";
 				$type = "0";
 			}
-			$meetingName = $meetingName.requestVar('meetingName');
+			if(requestVar('meetingName') == "") {
+				$meetingName = $meetingName."Unnamed Meeting";
+			}
+			else {
+				$meetingName = $meetingName.requestVar('meetingName');
+			}
 			$meetingID = getNextHighestID('meeting_list', 'meetingID', 'ME');
 			mysql_query("INSERT INTO meeting_list(meetingID,meetingName,creationDate,meetingType) VALUES ('$meetingID','$meetingName',CURDATE(),'$type');");
 			//Uncomment if there are problems

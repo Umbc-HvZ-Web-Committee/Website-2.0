@@ -18,9 +18,6 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 	<div id="page" class="container">
 		<div id="content">
 			<?php if($_SESSION['isAdmin'] >= 2){ ?>
-			
-				<b>WARNING: Nothing on thispage has any functionaliy yet. Please do not interact with this unless you have been directed to do so by the web committee or it actually works properly now and I just forgot to clean this warning up</b><br/>
-				
 				<? /*
 				<h2>Sidebar settings</h2>
 				<form action="" method="post">
@@ -30,7 +27,9 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				</form><br/>
 				*/ ?>
 				
-				<h2>Monday Slides</h2>
+				<h2>Mission Slides</h2>
+				<br/><br/>
+				<h3>Monday</h3>
 				<p>Select a set of slides to display under Monday's slides:</p>
 				<form action="" method="post">
 				<label for="hvz101"><input type="radio" name="mondaySlides" value="hvz101"/>HvZ 101</label></br>
@@ -38,12 +37,27 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<label for="hvz202"><input type="radio" name="mondaySlides" value="hvz202"/>HvZ 202</label></br>
 				<label for="underConstruction"><input type="radio" name="mondaySlides" value="underConstruction"/>Under Construction</label></br>
 				<label for="endSemester"><input type="radio" name="mondaySlides" value="endSemester"/>End of Semester</label></br>
-				<label for="fiveNight"><input type="radio" name="mondaySlides" value="fiveNight"/>Five Night</label></br>
-				Specify Monday slide: <input type="text" name="customMondaySlides" id="customMondaySlide"/></br>
-				
-				<?//echo "<br>Other: <input name=customMondaySlides".($test?"":" value=\"{$customMondaySlide}\"")."><br><br>";?>
-				<input type="submit" name="submit" value="Set Monday Slides"/></br>
+				<label for="fiveNight"><input type="radio" name="mondaySlides" value="fiveNight"/>Five Night</label></br><br/>
+				Specify Monday slide: <input type="text" name="customMondaySlides" id="customMondaySlide"/></br><br/>
+				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br><br/>
+				<input type="submit" name="submit" value="Set Monday Slides"/></br><br/>
 				</form><br/>
+				<br/>
+				<h3>Thursday</h3>
+				<p>Select a set of slides to display under Thursday's slides:</p>
+				<form action="" method="post">
+				<label for="hvz101"><input type="radio" name="thursdaySlides" value="hvz101"/>HvZ 101</label></br>
+				<label for="hvz102"><input type="radio" name="thursdaySlides" value="hvz102"/>HvZ 102</label></br>
+				<label for="hvz202"><input type="radio" name="thursdaySlides" value="hvz202"/>HvZ 202</label></br>
+				<label for="underConstruction"><input type="radio" name="thursdaySlides" value="underConstruction"/>Under Construction</label></br>
+				<label for="endSemester"><input type="radio" name="thursdaySlides" value="endSemester"/>End of Semester</label></br>
+				<label for="fiveNight"><input type="radio" name="thursdaySlides" value="fiveNight"/>Five Night</label></br><br/>
+				Specify Thursday slide: <input type="text" name="customThursdaySlides" id="customThursdaySlide"/></br><br/>
+				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br><br/>
+				<input type="submit" name="submit" value="Set Thursday Slides"/></br>
+				</form><br/>
+				
+				
 			<?}else{ ?>
 				<h2>Hey, you're not an admin, get out of here!</h2>
 			<? } ?>

@@ -251,13 +251,13 @@ require_once('includes/update.php');
 					//Long game preregistering
 					//TODO field population code
 					?>
-					<h3>Register for a long game</h3>
+					<!--<h3>Register for a long game </h3>
 					<div><form action="" method="post">
-						<?php
-							longGameRegSelect($uid);
+						<?php 
+							//longGameRegSelect($uid);
 						?>
-					</form></div><br/>
-
+					</form></div><br/>-->
+					
 					<!-- Profile Pictures -->
 					<br/><h2><i>Change Your Profile Picture</i></h2><br/>
 					<h3>Upload photo</h3>

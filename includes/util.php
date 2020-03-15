@@ -247,6 +247,8 @@ function printSidebar() {
 	//displayActivePoll();
 	echo "<br/></div><div class=\"section4\">";
 	retrieveSlides();
+	//displayWeather();
+	//retrieveSlidesNew();
 	echo "</div></div>";
 }
 
@@ -439,8 +441,8 @@ function longGameSelect(){
 //Only the one-night slide vars should be changing week-by-week
 function retrieveSlides(){
 	//One Night Slides
-	$mondaySlide = "https://docs.google.com/presentation/d/1WjSWAaWsLGysCqm5wr8aV7iFnH9YANOxaB_t9nvoTJU/embed?start=false&loop=false&delayms=10000";
-	$thursdaySlide = "https://docs.google.com/presentation/d/1fIJMbblfDjS7M7KlUJ07relLMoQGte8-FYuqQdRom7Y/embed?start=false&loop=false&delayms=10000";	
+	$mondaySlide = "https://docs.google.com/presentation/d/1NYaiSTM46o78JzED7P8XI8Jho6DzYm9gSwpPTktJGZc/embed?start=false&loop=false&delayms=10000";
+	$thursdaySlide = "https://docs.google.com/presentation/d/1jawTart8F26jstwp-ewT1Svdb8TTJqBYNRM0DzNSHGc/embed?start=false&loop=false&delayms=10000";	
 	
 	//Start of Semester Slides
 	//$mondaySlide = "https://docs.google.com/presentation/d/1YnyDdnIM6lu5R71R1zCgcPe34gdebh_3LPCENH8mj9I/embed?start=false&loop=false&delayms=10000"; HVZ 101
@@ -498,6 +500,53 @@ function retrieveSlides(){
 		echo "<br/><h3>Thursday</h3>";
 		echo "<iframe src=\"$thursdaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>";
 	}
+}
+
+//Function to retrieve slides but not the manual way
+//Still a WIP
+function retrieveSlidesNew() {
+	$curGame = mysql_oneline("SELECT value FROM `settings` WHERE `key` = 'displayLongGameSlides';");
+	$curGame = $curGame['value'];
+	
+	$missionHeader = "";
+	$mondayHeader = "";
+	$thursdayHeader = "";
+	$pointHeader = "";
+	$mondaySlide = "";
+	$thursdaySlide = "";
+	$pointSlide = "";
+	
+	if ($curGame == "no") {
+		$missionHeader = "This Week's Missions";
+		$mondayHeader = "Monday";
+		$thursdayHeader = "Thursday";
+		$pointHeader = "IGNORE";
+		
+		$mondaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'mondaySlides'");
+		$mondaySlide = $mondaySlides['url'];
+		$mondaySlide = $mondaySlide."embed?start=false&loop=false&delayms=10000&slide=";
+		$mondaySlide = $mondaySlides.$mondaySlide['startingSlideNumber'];
+		
+		$thursdaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'thursdaySlides'");
+		$thursdaySlide = $thursdaySlides['url'];
+		$thursdaySlide = $thursdaySlide."embed?start=false&loop=false&delayms=10000&slide=";
+		$thursdaySlide = $thursdaySlides.$thursdaySlide['startingSlideNumber'];
+		
+		$pointSlide = "IGNORE";
+	} else if ($curGame == "yes") {
+		$missionHeader = "Weeklong Rules";
+		$mondayHeader = "Generic Rules (HvZ 202)";
+		$thursdayHeader = "Weeklong-Specific Rules";
+	} else {
+		echo "SLIDE MODE UNSPECIFIED<br/>";
+	}
+}
+
+//Weather part of the slides. Currently integrated into retrieveSlides() but will not be in retrieveSlidesNew()
+function displayWeather() {
+	$weather = "https://forecast.io/embed/#lat=39.254755&lon=-76.710972&name=UMBC";
+	echo "<br/><h2>Today's Weather</h2>";
+	echo "<iframe src=\"$weather\" frameborder=\"0\" height=\"200\" width=\"330\"></iframe>";
 }
 
 function placeTabIcon() {

@@ -19,11 +19,11 @@ require_once('includes/update.php');
 	<div id="page" class="container">
 		<div id="content">
 			<?php
-			if($_SESSION['isAdmin'] >= -1) { //This is here to easily restrict access to the page. Just change the -1 to 1 or 2 to restrict.
+			if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] >= -1) { //This is here to easily restrict access to the page. Just change the -1 to 1 or 2 to restrict.
 				if($playerData){
 					if(isset($GLOBALS['profileMessage']) && $GLOBALS['profileMessage']!="") echo "<h3>".$GLOBALS['profileMessage']."</h3>";
 					echo "<h2><b>Hi, {$playerData['fname']}!</h2><hr style=\"display: block;\"></b><br/>";
-					
+
 					//temporary one-time block of code to set data right in database
 					//leaving it here for reference and in case similar code is needed
 					/*
@@ -56,7 +56,7 @@ require_once('includes/update.php');
 						mysql_query("UPDATE `users` SET `gamesModdedTotal`='$modCount' WHERE `UID` = '$uid';");
 						mysql_query("UPDATE `users` SET `appearancesTotal`='$totalCount' WHERE `UID` = '$uid';");
 						mysql_query("UPDATE `users` SET `adminMeetingsTotal`='$adminCount' WHERE `UID` = '$uid';");
-					
+
 						$chars = array();
 						array_push($chars, "-");
 						for($i=0; $i<10; $i++){
@@ -90,8 +90,8 @@ require_once('includes/update.php');
 						echo "Attached";
 						echo "<br/>";
 					}*/
-					
-					
+
+
 					/*
 					$uid = "US0000-";
 					while($uid != "US003q-") {
@@ -117,7 +117,7 @@ require_once('includes/update.php');
 						mysql_query("UPDATE `users` SET `humanStartsThisTerm`='$humanCount' WHERE `UID` = '$uid';");
 						mysql_query("UPDATE `users` SET `gamesModdedThisTerm`='$modCount' WHERE `UID` = '$uid';");
 						mysql_query("UPDATE `users` SET `appearancesThisTerm`='$totalCount' WHERE `UID` = '$uid';");
-					
+
 						$chars = array();
 						array_push($chars, "-");
 						for($i=0; $i<10; $i++){
@@ -152,12 +152,12 @@ require_once('includes/update.php');
 						echo "<br/>";
 					}
 					*/
-					
+
 					$uid = $_SESSION['uid'];
 					$ret = mysql_oneline("SELECT * FROM `users` WHERE `UID` = '$uid';");
-					
+
 					echo "<h2><i>Game & Attendance Statistics</i></h2><br/>";
-					
+
 					echo "<h3>This Semester's Attendance</h3></br>";
 					$total = $ret['appearancesThisTerm'];
 					$zombie = $ret['zombieStartsThisTerm'];
@@ -169,7 +169,7 @@ require_once('includes/update.php');
 					echo "Missions Started Human: $human </br>";
 					echo "Missions Moderated: $mod </br>";
 					echo "Officer Meetings Attended: $admins </br>";
-					
+
 					echo "</br><h3>Cumulative Attendance</h3></br>";
 					$total = $ret['appearancesTotal'];
 					$zombie = $ret['zombieStartsTotal'];
@@ -182,9 +182,9 @@ require_once('includes/update.php');
 					echo "Missions Moderated: $mod </br>";
 					echo "Officer Meetings Attended (Since January 2019): $admins </br>";
 					echo "<br/><b>NOTE:</b> Data regarding starting side may not be accurate with round-based missions or missions with random OZs. Mission attendance was also not accurately tracked until 2017. Therefore, these numbers may not be 100% accurate. It is impossible to retroactively correct every attendance error from the past. However, if you believe there is an error in your attendance records regarding a recent meeting, please contact an officer.</br></br>";
-					
+
 					echo "If you have 5/25/50/100 missions but do not have the corresponding achievement, when you are signed in to your next meeting, the achievement should be awarded.<br/>";
-					
+
 					echo "</br><h3>Membership Status</h3></br>";
 					//Club members can vote. Nobody else can.
 					if(canVote($uid)) {
@@ -198,9 +198,9 @@ require_once('includes/update.php');
 					$lastSemesterCount = $ret['appearancesLastTerm'];
 					$sum = $currentSemesterCount + $lastSemesterCount;
 					echo "You have attended $currentSemesterCount meetings this semester and $lastSemesterCount meetings last semester for a total of $sum.<br/>";
-					
+
 					echo "<br/><h2><i>Long game settings</i></h2><br/>";
-					
+
 					if($curLongGame){
 						$title = $curLongGame['title'];
 						if($longPlayerData){
@@ -211,18 +211,18 @@ require_once('includes/update.php');
 							//echo "<h3><a href=\"images/debit_card.png\">Click here for the debit card template</a></h3>";
 						}
 					}
-					
+
 					//Populate the OZ opt in field
 					?>
 					<h3>OZ Opt-In</h3>
 					<form action="" method="post">
 						<label for="ozIn"><input type="radio" name="ozOpt" value="in" id="ozIn"<?php if($playerData['ozOptIn']==1) echo ' checked="checked"' ?>/>Yes, I want to be in the OZ pool</label>
 						<label for="ozOut"><input type="radio" name="ozOpt" value="out" id="ozOut"<?php if($playerData['ozOptIn']==0) echo ' checked="checked"' ?>/>No, I do not want to be in the OZ pool</label>
-						
+
 						<br/>
 						<br/><b>Please provide a brief reason for why you want to be an OZ below:</b>
 						<br/><i>Leaving this field blank will <u>disqualify</u> you as an OZ</i>
-						
+
 						<textarea name="ozText" style="width: 410px; height: 100px;"><?php echo preg_replace("/\\\\*'/","'",$playerData['ozParagraph']);?></textarea>
 						<br/>
 						<input type="submit" name="ozSubmit" value="Update OZ Preferences"/>
@@ -233,7 +233,7 @@ require_once('includes/update.php');
 					<br/>
 					<br/>
 					<?php
-					//iDied button 
+					//iDied button
 					if($longPlayerData && $longPlayerData['state']>0){
 						?>
 						<h3>iDied</h3>
@@ -253,11 +253,11 @@ require_once('includes/update.php');
 					?>
 					<h3>Register for a long game</h3>
 					<div><form action="" method="post">
-						<?php 
-							longGameRegSelect($uid); 
+						<?php
+							longGameRegSelect($uid);
 						?>
 					</form></div><br/>
-					
+
 					<!-- Profile Pictures -->
 					<br/><h2><i>Change Your Profile Picture</i></h2><br/>
 					<h3>Upload photo</h3>
@@ -274,16 +274,16 @@ require_once('includes/update.php');
 					</p>
 					<form method="post" enctype="multipart/form-data">
 					<input type="file" name="image" id="image"/><br/>
-					<input type="submit" name="profilePicture" value="Submit"/> 
+					<input type="submit" name="profilePicture" value="Submit"/>
 					</form>
 					<br/>
-					
+
 					<!-- Select Favorite Achievement possible 500 error location -->
 					<br/><h2><i>Achievements</i></h2><br/>
 					<h3>Select favorite achievement.</h3>
 					<form action="/myProfile.php" method="post">
 					Achievement: <select name="achieve">
-						<?php 
+						<?php
 						generateList();
 						?>
 					</select><br/>
@@ -291,15 +291,15 @@ require_once('includes/update.php');
 					</form>
 					<br/>
 					<br/>
-					
+
 					<h3>Current favorite achievement</h3>
 					<?php displayFavAchievement(); ?>
 					<br/>
-					
+
 					<br/>
 					<h3>Currently Earned Achievements</h3>
 					<?php printAchieveTable();?>
-					
+
 				<?php
 				}else{
 					echo "Please sign in to see your profile.";

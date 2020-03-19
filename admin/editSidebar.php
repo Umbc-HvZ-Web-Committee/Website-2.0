@@ -29,7 +29,7 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				
 				<h2>Mission Slides</h2>
 				<br/><br/>
-				<h3>Monday</h3>
+				<h3>Monday Slides</h3>
 				<p>Select a set of slides to display under Monday's slides:</p>
 				<form action="" method="post">
 				<label for="hvz101"><input type="radio" name="mondaySlides" value="hvz101"/>HvZ 101</label></br>
@@ -43,7 +43,7 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<input type="submit" name="submit" value="Set Monday Slides"/></br><br/>
 				</form><br/>
 				<br/>
-				<h3>Thursday</h3>
+				<h3>Thursday Slides</h3>
 				<p>Select a set of slides to display under Thursday's slides:</p>
 				<form action="" method="post">
 				<label for="hvz101"><input type="radio" name="thursdaySlides" value="hvz101"/>HvZ 101</label></br>
@@ -56,7 +56,16 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br><br/>
 				<input type="submit" name="submit" value="Set Thursday Slides"/></br>
 				</form><br/>
-				
+				<br/>
+				<h3>Mission Slide Headers</h3>
+				<p>Enter a heading in one of the text boxes below to update the corresponding heading (leave blank for no change)</p>
+				<form action="" method="post">
+				Main Heading: <input type="text" name="mainHeading" id="mainHeading"/></br><br/>
+				First Slides: <input type="text" name="firstSlides" id="firstSlides"/></br><br/>
+				Second Slides: <input type="text" name="secondSlides" id="secondSlides"/></br><br/>
+				Third Slides (Enter "IGNORE" to clear) <input type="text" name="thirdSlides" id="thirdSlides"/></br><br/>
+				<input type="submit" name="submit" value="Update Headings"/></br>
+				</form><br/>
 				
 			<?}else{ ?>
 				<h2>Hey, you're not an admin, get out of here!</h2>

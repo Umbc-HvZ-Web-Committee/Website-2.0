@@ -128,6 +128,10 @@ if($_SESSION['isAdmin'] >= 2) {
 				echo "Your if cases are bad and you should feel bad<br/>";
 			}
 		}
+		
+		if($func == "Update Headings") {
+			
+		}
 	}
 }
 ?>

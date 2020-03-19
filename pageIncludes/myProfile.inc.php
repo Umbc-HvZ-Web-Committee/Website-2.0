@@ -6,7 +6,11 @@ if(!isset($_SESSION)) session_start();
 if(!isset($loginUpdate)) require_once('includes/loginUpdate.php');
 $settings = get_settings();
 
-$uid = $_SESSION['uid'];
+if (isset($_SESSION['uid'])) {
+    $uid = $_SESSION['uid'];
+} else {
+    $uid = "";
+}
 
 //Get variables
 $playerData = mysql_oneline("SELECT * FROM users WHERE UID='$uid'");

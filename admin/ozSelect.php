@@ -54,7 +54,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 							echo "<td>Human</td>";
 						}
 						echo "<td>{$ret['fname']} {$ret['lname']}</td>";
-						echo "<td>$para</td>";
+						echo "<td>$para<br/>test</td>";
 						echo "<tr>";
 					}
 				?>

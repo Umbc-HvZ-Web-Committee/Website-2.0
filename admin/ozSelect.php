@@ -40,8 +40,8 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 					."ORDER BY long_players.playerID";
 					$qury = mysql_query($sql);
 					while($ret = mysql_fetch_assoc($qury)){
-						$para = preg_replace("/\\\\*'/","'",$ret['ozParagraph']);
-						//$para = preg_replace("/\\\\+('|\")/","\\1",$para);
+						$para = $ret['ozParagraph'];
+						$para = preg_replace("/\\\\+('|\")/","\\1",$para);
 						echo "<tr>";
 						if($ret['state'] == 2) {
 							echo "<td><b>OZ</b></td>";

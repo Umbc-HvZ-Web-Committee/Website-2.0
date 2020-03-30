@@ -60,12 +60,12 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 				?>
 			</table>
 			<br/><br/>
-			<?
+			<?php
 				echo "Un-selection of an OZ can only happen manually in the database. Selection of an OZ requires a long game admin level of 2.";
 			?>
-		<? }else{ ?>
+		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? } ?>
+		<?php } ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">

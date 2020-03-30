@@ -70,7 +70,7 @@ function load(){
 				<input type="submit" name="submit" value="View Attendance"/>
 			</p></form>
 				<div><?php //echo $innerHTML; //I think this isn't doing anything; should delete this ?></div>
-		<? }else if ($_SESSION['isAdmin'] >= 1){ ?>
+		<?php }else if ($_SESSION['isAdmin'] >= 1){ ?>
 			<h2>Meeting Sign In</h2>
 			<form action="" method="post"><p>
 				Meeting to sign into: <?php meetingSelect(); ?><br/>
@@ -94,9 +94,9 @@ function load(){
 				<?php }?>
 				<input type="submit" name="submit" value="Sign player in"/>
 			</p></form>
-		<? }else{ ?>
+		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? } ?>
+		<?php } ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">

@@ -37,7 +37,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 				
 		} else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? } ?>
+		<?php } ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">

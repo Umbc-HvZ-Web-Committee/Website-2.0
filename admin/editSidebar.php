@@ -18,7 +18,7 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 	<div id="page" class="container">
 		<div id="content">
 			<?php if($_SESSION['isAdmin'] >= 2){ ?>
-				<? /*
+				<?php /*
 				<h2>Sidebar settings</h2>
 				<form action="" method="post">
 				<label for="baseSlides"><input type="radio" name="setSlides" value="no"/>Display one-night slides on the sidebar</label></br>
@@ -67,9 +67,9 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<input type="submit" name="submit" value="Update Headings"/></br>
 				</form><br/>
 				
-			<?}else{ ?>
+			<?php }else{ ?>
 				<h2>Hey, you're not an admin, get out of here!</h2>
-			<? } ?>
+			<?php } ?>
 		</div>
 		<?php printSidebar(); 
 		?>

@@ -21,9 +21,9 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 		<?php if($_SESSION['isAdmin'] >= 2){ ?>
 			<h2>FAQ Editor</h2><br/>
 			<?php $faqEditor->showTable(); ?>
-		<? }else{ ?>
+		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? } ?>
+		<?php } ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">

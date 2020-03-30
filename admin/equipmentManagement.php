@@ -44,9 +44,9 @@ function load(){
 			QR Code, username, email address, or UMBC ID: <input type="text" name="playerID" id="signInID"/><br/>
 			<input type="submit" name="playerEquipment" value="Get player information"/>
 			</p></form>
-		<? }else{ ?>
+		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? } ?>
+		<?php } ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">

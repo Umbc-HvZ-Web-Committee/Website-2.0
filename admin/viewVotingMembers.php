@@ -119,7 +119,7 @@ function confirmDeleteTerm()
 				<input type="submit" value="End Semester" name="clearTerm" id="clearTerm"/>
 				</form>
 				<br/><br/>
-				<?
+				<?php
 			}
 			
 			$count = mysql_oneline("SELECT COUNT(*) cnt FROM `users` WHERE `appearancesThisTerm` + `appearancesLastTerm` >= 5;");

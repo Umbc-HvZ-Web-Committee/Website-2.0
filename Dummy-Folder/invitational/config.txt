@@ -1,0 +1,10 @@
+# Debug mode?
+debug=0
+
+# Where in the web directory is this located?
+folder=/invitational/
+
+# mySQL Settings 
+mysql_user=hvzUser
+mysql_pass=PEFm7uUS6JMaNaN3
+mysql_db=hvzInvitational

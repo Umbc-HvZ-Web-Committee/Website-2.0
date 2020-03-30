@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rexpfd>
+    <destination path="Red-Death.server:/home/benharris5"/>
+    <options createDirectoryStructure="true" createSelectedOnly="true" descriptionFilePath="/HvZServer/export.rexpfd" overWriteExistingFiles="true" reviewSynchronize="false" saveSettings="true"/>
+    <selectedElements>
+        <folder path="/HvZServer/invitational"/>
+    </selectedElements>
+</rexpfd>

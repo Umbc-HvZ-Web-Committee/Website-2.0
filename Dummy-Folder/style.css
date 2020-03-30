@@ -1,0 +1,325 @@
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+html, body {
+	height: 100%;
+}
+img.smallImg {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url(images/bg01.jpg);
+	font-family: 'Oxygen', sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	font-family: 'Oxygen', sans-serif;
+	font-weight: normal;
+	color: #2D2D2D;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+p, ol, ul {
+	margin-top: 0;
+	line-height: 200%;
+	text-align: justify;
+}
+
+strong {
+}
+
+a {
+	color: #B40000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+img.border {
+}
+
+img.alignleft {
+	float: left;
+}
+
+img.alignright {
+	float: right;
+}
+
+img.aligncenter {
+	margin: 0 auto;
+}
+
+hr {
+	display: none;
+}
+
+/* Wrapper */
+
+#wrapper {
+	background: url(images/bg02.jpg) repeat-x;
+}
+
+#page {
+	min-height: 600px;
+}
+
+.container {
+	width: 965px;
+	margin: 0 auto;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* Header */
+
+#header {
+	/*height: 162px;*/
+	height: 183px;
+	
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 375px;
+	height: 162px;
+	padding-left: 40px;
+}
+
+#logo h1 {
+	padding-top: 80px;
+}
+
+#logo p {
+	padding-left: 2px;
+	font-family: 'Oxygen', sans-serif;
+	color: #919191;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #2D2D2D;
+}
+
+/* Menu */
+
+#menu {
+	height: 99px;
+	float: right;
+	width: 550px;
+	height: 183px;
+	background: url(images/bg04_edit.png) no-repeat;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 99px 0 0 54px;
+	list-style: none;
+	line-height: normal;
+	font-family: 'Oxygen', sans-serif;
+}
+
+#menu li {
+	float: left;
+	width: 121px;
+	height: 20px;
+	margin: 0 16px 0 0;
+	padding: 8px 0 0 16px;
+}
+
+#menu a {
+	text-decoration: none;
+	color: #2D2D2D;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+}
+
+#menu li.active {
+	background: #8E0000 url(images/homepage01.jpg) repeat-x;
+}
+
+#menu li.active a {
+	color: #FFFFFF;
+}
+
+/** PAGE */
+
+#page {
+	background: url(images/bg05.jpg) repeat-y;
+}
+
+/** CONTENT */
+
+#content {
+	float: left;
+	width: 442px;
+	padding: 0px 26px 32px 82px;
+	/*padding: 48px 26px 32px 82px;*/
+	background: url(images/bg06.jpg) no-repeat;
+}
+
+.photo {
+}
+
+.photo .caption {
+	height: 36px;
+	margin: 0;
+	padding: 6px 0 0 0;
+	line-height: normal;
+	background: #500;
+	color: #fff;
+	text-align: center;
+}
+
+.photo .caption a {
+	color: #fff;
+}
+
+.post {
+	padding: 48px 0 0 0;
+}
+
+.post .title {
+}
+
+.post .title h2 {
+	padding: 0 0 8px 16px;
+}
+
+.post .title p {
+	margin: 0;
+	padding: 8px 16px;
+	background: url(images/homepage03.jpg) no-repeat;
+	line-height: normal;
+}
+
+.post .entry {
+	padding: 16px;
+}
+
+.post img{
+	max-width: 450px;
+}
+
+.post .meta {
+	padding: 0 16px;
+	line-height: normal;
+}
+
+.post .meta .more {
+	padding: 0 32px 0 20px;
+	background: url(images/homepage04.gif) no-repeat 0 50%;
+}
+
+.post .meta .comments {
+	padding-left: 20px;
+	background: url(images/homepage05.gif) no-repeat 0 50%;
+}
+
+/** SIDEBAR */
+
+#sidebar {
+	float: right;
+	width: 330px;
+	padding: 48px 58px 0 27px;
+	background: url(images/bg07.jpg) no-repeat;
+}
+
+#sidebar h2 {
+	padding-bottom: 25px;
+	font-size: 18px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar .section1 {
+}
+
+#sidebar .section1 h2 {
+	background: url(images/homepage06.jpg) no-repeat 0 100%;
+}
+#sidebar .section4 {
+}
+
+#sidebar .section4 h2 {
+	background: url(images/homepage06.jpg) no-repeat 0 100%;
+}
+#sidebar .section2, #sidebar .section3 {
+	float: left;
+	width: 148px;
+}
+
+#sidebar .section2 h2, #sidebar .section3 h2 {
+	padding-top: 136px;
+	background: url(images/homepage07.jpg) no-repeat 0 100%;
+}
+
+#sidebar .section2 {
+}
+
+#sidebar .section3 {
+	margin-left: 32px;
+}
+
+/** FOOTER */
+
+#footer {
+	height: 125px;
+	background: url(images/bg08.jpg) no-repeat;
+}
+
+#footer p {
+	margin: 0;
+	padding: 50px 0 0 0;
+	text-align: center;
+	color: #919191;
+}
+
+#footer .legal {
+	text-align: right;
+	font-size: 50%;
+	color: #000000;
+}
+
+#footer .links {
+	
+}
+
+#footer a {
+	color: #919191;
+}

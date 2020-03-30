@@ -30,7 +30,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 				<div style="overflow: auto; height: 300px;">
 				<?php echo $pointsLog; ?>
 				</div>
-				<? if ($playerData['isLongGameAuthed'] >= 2) {?>
+				<?php if ($playerData['isLongGameAuthed'] >= 2) {?>
 					<h3>Give points out</h3>
 					For complex point additions (i.e. all humans/zombies at a mission), contact someone with database access; they can do it much faster than you can and will be glad to help.<br/>
 					<form action="" method="post">
@@ -41,13 +41,13 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 						</table>
 						<input type="submit" name="submit" value="Submit"/>
 					</form>
-				<? }?>
+				<?php }?>
 			<?php }else{ ?>
 				Sorry, a long game isn't in progress, so you cannot give players points.
 			<?php }?>
-		<? }else{ ?>
+		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? } ?>
+		<?php } ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">

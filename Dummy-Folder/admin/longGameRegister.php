@@ -78,7 +78,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 				<input type="submit" name="slides" value="Set slides"/></br>
 			</form>
 			</br>
-		<? }else if($playerData['isLongGameAuthed'] >= 1) {
+		<?php }else if($playerData['isLongGameAuthed'] >= 1) {
 			?>
 			<h2>Register for a long game</h2>
 			<form action="" method="post">
@@ -107,9 +107,9 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<br/>
 			<?php echo "$html";?>
 			<br/>
-		<?}else{ ?>
+		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? } ?>
+		<?php } ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">

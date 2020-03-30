@@ -67,9 +67,9 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 		?>
 		
 			
-		<? if(!$display) { ?>
+		<?php if(!$display) { ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
-		<? }else{
+		<?php }else{
 			echo "<br/><br/>";
 			echo "Your basic admin level is ";
 			echo $_SESSION['isAdmin'];

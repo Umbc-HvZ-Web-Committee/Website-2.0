@@ -12,7 +12,7 @@ require_once('pageIncludes/home.inc.php');
 <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
 <?php htmlHeader(); ?>
 </head>
-<body>{
+<body>
 <a name="top"></a>
 <div id="wrapper">
 	<?php pageHeader(); ?>

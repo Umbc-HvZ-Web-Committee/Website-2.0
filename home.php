@@ -1,4 +1,4 @@
-{<?php
+<?php
 require_once('pageIncludes/home.inc.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -12,7 +12,7 @@ require_once('pageIncludes/home.inc.php');
 <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
 <?php htmlHeader(); ?>
 </head>
-<body>
+<body>{
 <a name="top"></a>
 <div id="wrapper">
 	<?php pageHeader(); ?>

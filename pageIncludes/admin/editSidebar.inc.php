@@ -208,6 +208,7 @@ if($_SESSION['isAdmin'] >= 2) {
 				mysql_query("UPDATE mission_slide_headings SET headingName = 'NULL';");
 				echo "done.";
 			}else if($thirdSlide != NULL) {
+				echo $thirdSlide;
 				mysql_query("UPDATE mission_slide_headings SET headingName = '$thirdSlide';");
 			}
 		}

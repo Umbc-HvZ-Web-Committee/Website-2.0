@@ -198,10 +198,10 @@ if($_SESSION['isAdmin'] >= 2) {
 				mysql_query("UPDATE mission_slide_headings SET headingName = '$mainHeading' WHERE headingTitle = 'mainHeading';");
 			}
 			if($firstSlides != NULL) {
-				mysql_query("UPDATE mission_slide_headings SET headingName = '$firstSlide'; WHERE headingTitle = 'firstSlides'");
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$firstSlides'; WHERE headingTitle = 'firstSlides'");
 			}
 			if($secondSlides != NULL) {
-				mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlide'; WHERE headingTitle = 'secondSlides'");
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlides'; WHERE headingTitle = 'secondSlides'");
 			}
 			if($thirdSlides == "IGNORE") {
 				echo "point slide will be nulled... ";
@@ -209,7 +209,7 @@ if($_SESSION['isAdmin'] >= 2) {
 				echo "done.";
 			}else if($thirdSlides != NULL) {
 				echo $thirdSlides;
-				mysql_query("UPDATE mission_slide_headings SET headingName = '$thirdSlide' WHERE headingTitle = 'thirdSlides';");
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$thirdSlides' WHERE headingTitle = 'thirdSlides';");
 			}
 		}
 	}

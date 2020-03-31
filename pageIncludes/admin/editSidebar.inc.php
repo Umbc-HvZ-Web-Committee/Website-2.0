@@ -198,10 +198,10 @@ if($_SESSION['isAdmin'] >= 2) {
 				mysql_query("UPDATE mission_slide_headings SET headingName = '$mainHeading' WHERE headingTitle = 'mainHeading';");
 			}
 			if($firstSlides != NULL) {
-				mysql_query("UPDATE mission_slide_headings SET headingName = '$firstSlides'; WHERE headingTitle = 'firstSlides';");
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$firstSlides' WHERE headingTitle = 'firstSlides';");
 			}
 			if($secondSlides != NULL) {
-				mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlides'; WHERE headingTitle = 'secondSlides';");
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlides' WHERE headingTitle = 'secondSlides';");
 			}
 			if($thirdSlides == "IGNORE") {
 				mysql_query("UPDATE mission_slide_headings SET headingName = NULL WHERE headingTitle = 'thirdSlides';");

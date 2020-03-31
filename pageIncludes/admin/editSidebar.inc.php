@@ -190,9 +190,9 @@ if($_SESSION['isAdmin'] >= 2) {
 		
 		if($func == "Update Headings") {
 			$mainHeading = requestVar('mainHeading');
-			$firstSlides = requestVar('firstSlides');
-			$secondSlides = requestVar('secondSlides');
-			$thirdSlides = requestVar('thirdSlides');
+			$firstSlide = requestVar('firstSlides');
+			$secondSlide = requestVar('secondSlides');
+			$thirdSlide = requestVar('thirdSlides');
 			
 			if($mainHeading != NULL) {
 				mysql_query("UPDATE mission_slide_headings SET headingName = '$mainHeading' WHERE headingTitle = 'mainHeading';");

@@ -29,8 +29,8 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				
 				<h2>Mission Slides</h2>
 				<br/><br/>
-				<h3>Monday Slides</h3>
-				<p>Select a set of slides to display under Monday's slides:</p>
+				<h3>First Slides</h3>
+				<p>Select a set of slides to display under the first slides (usually Monday slides):</p>
 				<form action="" method="post">
 				<label for="hvz101"><input type="radio" name="mondaySlides" value="hvz101"/>HvZ 101</label></br>
 				<label for="hvz102"><input type="radio" name="mondaySlides" value="hvz102"/>HvZ 102</label></br>
@@ -38,13 +38,13 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<label for="underConstruction"><input type="radio" name="mondaySlides" value="underConstruction"/>Under Construction</label></br>
 				<label for="endSemester"><input type="radio" name="mondaySlides" value="endSemester"/>End of Semester</label></br>
 				<label for="fiveNight"><input type="radio" name="mondaySlides" value="fiveNight"/>Five Night</label></br><br/>
-				Specify Monday slide: <input type="text" name="customMondaySlides" id="customMondaySlide"/></br><br/>
+				Specify slide: <input type="text" name="customMondaySlides" id="customMondaySlide"/></br><br/>
 				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br><br/>
-				<input type="submit" name="submit" value="Set Monday Slides"/></br><br/>
+				<input type="submit" name="submit" value="Set First Slides"/></br><br/>
 				</form><br/>
 				<br/>
-				<h3>Thursday Slides</h3>
-				<p>Select a set of slides to display under Thursday's slides:</p>
+				<h3>Second Slides</h3>
+				<p>Select a set of slides to display under the second slides (usually Thursday slides):</p>
 				<form action="" method="post">
 				<label for="hvz101"><input type="radio" name="thursdaySlides" value="hvz101"/>HvZ 101</label></br>
 				<label for="hvz102"><input type="radio" name="thursdaySlides" value="hvz102"/>HvZ 102</label></br>
@@ -52,9 +52,23 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<label for="underConstruction"><input type="radio" name="thursdaySlides" value="underConstruction"/>Under Construction</label></br>
 				<label for="endSemester"><input type="radio" name="thursdaySlides" value="endSemester"/>End of Semester</label></br>
 				<label for="fiveNight"><input type="radio" name="thursdaySlides" value="fiveNight"/>Five Night</label></br><br/>
-				Specify Thursday slide: <input type="text" name="customThursdaySlides" id="customThursdaySlide"/></br><br/>
+				Specify slide: <input type="text" name="customThursdaySlides" id="customThursdaySlide"/></br><br/>
 				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br><br/>
-				<input type="submit" name="submit" value="Set Thursday Slides"/></br>
+				<input type="submit" name="submit" value="Set Second Slides"/></br>
+				</form><br/>
+				<br/>
+				<h3>Third Slides</h3>
+				<p>Select a set of slides to display under the third slides (usually point slides):</p>
+				<form action="" method="post">
+				<label for="hvz101"><input type="radio" name="pointSlides" value="hvz101"/>HvZ 101</label></br>
+				<label for="hvz102"><input type="radio" name="pointSlides" value="hvz102"/>HvZ 102</label></br>
+				<label for="hvz202"><input type="radio" name="pointSlides" value="hvz202"/>HvZ 202</label></br>
+				<label for="underConstruction"><input type="radio" name="pointSlides" value="underConstruction"/>Under Construction</label></br>
+				<label for="endSemester"><input type="radio" name="pointSlides" value="endSemester"/>End of Semester</label></br>
+				<label for="fiveNight"><input type="radio" name="pointSlides" value="fiveNight"/>Five Night</label></br><br/>
+				Specify slide: <input type="text" name="customPointSlides" id="customPointSlide"/></br><br/>
+				Starting Slide Number (Default is first slide): <input type="text" name="startingSlideNumber" id="startingSlideNumber"/></br><br/>
+				<input type="submit" name="submit" value="Set Third Slides"/></br>
 				</form><br/>
 				<br/>
 				<h3>Mission Slide Headers</h3>

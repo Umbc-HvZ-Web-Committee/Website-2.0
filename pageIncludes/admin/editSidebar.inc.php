@@ -11,7 +11,7 @@ if($_SESSION['isAdmin'] >= 2) {
 	if(isset($_REQUEST['submit'])) {
 		$func = $_REQUEST['submit'];
 		//echo($func."<br/>");
-		if($func=="Set Monday Slides"){
+		if($func=="Set First Slides"){
 			$mondaySlides = requestVar('mondaySlides');
 			$customMondaySlides = requestVar('customMondaySlides');
 			$startingSlideNumber = requestVar('startingSlideNumber');
@@ -70,7 +70,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			}
 		}
 		
-		if($func=="Set Thursday Slides"){
+		if($func=="Set Second Slides"){
 			$thursdaySlides = requestVar('thursdaySlides');
 			$customThursdaySlides = requestVar('customThursdaySlides');
 			$startingSlideNumber = requestVar('startingSlideNumber');
@@ -129,8 +129,85 @@ if($_SESSION['isAdmin'] >= 2) {
 			}
 		}
 		
-		if($func == "Update Headings") {
+		if($func=="Set Third Slides"){
+			$pointSlides = requestVar('pointSlides');
+			$customPointSlides = requestVar('customPointSlides');
+			$startingSlideNumber = requestVar('startingSlideNumber');
+			if($startingSlideNumber == "") {
+				$startingSlideNumber = 1;
+			}
+			//echo "<br/>".$thursdaySlides."<br/>".$customthursdaySlides;
 			
+			if($thursdaySlides != NULL && $customThursdaySlides != NULL) {
+				echo "Could not update slides; Multiple options selected<br/>";
+			}
+			else if (($pointSlides != NULL && $customPointSlides == NULL) || ($pointSlides == NULL && $customPointSlides != NULL)) {
+				if($pointSlides == NULL && $customPointSlides != NULL) {
+					//Custom slides being used
+					//echo "Custom slides being used: ".$customPointSlides."<br/>";
+					
+					mysql_query("UPDATE mission_slides SET url = '$customPointSlides', startingSlideNumber = '$startingSlideNumber' WHERE name = 'pointSlide'");
+				}else {
+					//Preset slides being used
+					
+					//THIS QUERY DOESN'T WORK BECAUSE STUPID YAY
+					//$slides_row = mysql_query("SELECT * FROM `mission_slides` WHERE `name` = '$pointSlide';");
+					switch($pointSlides) {
+						case "hvz101":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'hvz101'");
+						break;
+						case "hvz102":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'hvz102'");
+						break;
+						case "hvz202":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'hvz202'");
+						break;
+						case "underConstruction":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'underConstruction'");
+						break;
+						case "endSemester":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'endSemester'");
+						break;
+						case "fiveNight":
+						$slides_row = mysql_oneline("SELECT * FROM `mission_slides` WHERE `name` = 'fiveNight'");
+						break;
+					}
+					//echo " - ID#".$slides_row['id']." - URL = ".$slides_row['url'];
+					//echo "END<br/>";
+					
+					$url = $slides_row['url'];
+					mysql_query("UPDATE mission_slides SET url = '$url', startingSlideNumber = '$startingSlideNumber' WHERE name = 'pointSlide'");
+				}
+			}
+			else if ($pointSlides == NULL && $customPointSlides == NULL) {
+				//No slides were specified
+				echo "Could not update slides; No option selected<br/>";
+			}
+			else {
+				echo "Your if cases are bad and you should feel bad<br/>";
+			}
+		}
+		
+		if($func == "Update Headings") {
+			$mainHeading = requestVar('mainHeading');
+			$firstSlides = requestVar('firstSlides');
+			$secondSlides = requestVar('secondSlides');
+			$thirdSlides = requestVar('thirdSlides');
+			
+			if($mainHeading != NULL) {
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$mainHeading';");
+			}
+			if($firstSlide != NULL) {
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$firstSlide';");
+			}
+			if($secondSlide != NULL) {
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlide';");
+			}
+			if($thirdSlide == "IGNORE") {
+				mysql_query("UPDATE mission_slide_headings SET headingName = NULL;");
+			}else if($thirdSlide != NULL) {
+				mysql_query("UPDATE mission_slide_headings SET headingName = '$thirdSlide';");
+			}
 		}
 	}
 }

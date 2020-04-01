@@ -505,28 +505,48 @@ function retrieveSlides(){
 //Function to retrieve slides but not the manual way
 //Still a WIP
 function retrieveSlidesNew() {
-	$curGame = mysql_oneline("SELECT value FROM `settings` WHERE `key` = 'displayLongGameSlides';");
-	$curGame = $curGame['value'];
+	displayWeather();
 	
-	$missionHeader = ""; //Change to SQL query
-	$mondayHeader = ""; //Change to SQL Query
-	$thursdayHeader = ""; //Change to SQL Query
-	$pointHeader = ""; //Change to SQL Query
-	$mondaySlide = "";
-	$thursdaySlide = "";
-	$pointSlide = "";
+	//Load slide headings
+	$mainHeading = mysql_oneline("SELECT * FROM mission_slide_headings WHERE headingTitle = 'mainHeading'");
+	$mainHeading = $mainHeading['headingName'];
+	$firstHeading = mysql_oneline("SELECT * FROM mission_slide_headings WHERE headingTitle = 'firstSlides'");
+	$firstHeading = $firstHeading['headingName'];
+	$secondHeading = mysql_oneline("SELECT * FROM mission_slide_headings WHERE headingTitle = 'secondSlides'");
+	$secondHeading = $secondHeading['headingName'];
+	$thirdHeading = mysql_oneline("SELECT * FROM mission_slide_headings WHERE headingTitle = 'thirdSlides'");
+	$thirdHeading = $thirdHeading['headingName'];
 	
-	$mondaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'mondaySlides'");
+	//Load slide URLs
+	$mondaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'mondayMission'");
 	$mondaySlide = $mondaySlides['url'];
 	$mondaySlide = $mondaySlide."embed?start=false&loop=false&delayms=10000&slide=";
 	$mondaySlide = $mondaySlides.$mondaySlide['startingSlideNumber'];
-		
-	$thursdaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'thursdaySlides'");
+	
+	$thursdaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'thursdayMission'");
 	$thursdaySlide = $thursdaySlides['url'];
 	$thursdaySlide = $thursdaySlide."embed?start=false&loop=false&delayms=10000&slide=";
 	$thursdaySlide = $thursdaySlides.$thursdaySlide['startingSlideNumber'];
+	
+	echo "<h2>".$mainHeading."</h2>";
+	echo "<h3>".$firstHeading."</h3>";
+	echo "<iframe src=\"$mondaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
+	echo "<br/><h3>".$secondHeading."</h3>";
+	echo "<iframe src=\"$thursdaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>";
+
+	
+	if($thirdHeading != NULL) {
+		//Load info for third set of slides
+		$pointSlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'pointSlide'");
+		$pointSlide = $pointSlides['url'];
+		$pointSlide = $pointSlide."embed?start=false&loop=false&delayms=10000&slide=";
+		$pointSlide = $pointSlides.$pointSlide['startingSlideNumber'];
 		
-	$pointSlide = "IGNORE";
+		echo "<h3>".$thirdHeading."</h3>";
+		echo "<iframe src=\"$pointSlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
+	
+	}
+	
 }
 
 //Weather part of the slides. Currently integrated into retrieveSlides() but will not be in retrieveSlidesNew()

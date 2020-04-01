@@ -542,7 +542,7 @@ function retrieveSlides() {
 		$pointSlide = $pointSlide."embed?start=false&loop=false&delayms=10000&slide=";
 		$pointSlide = $pointSlide.$pointSlide['startingSlideNumber'];
 		
-		echo "<h3>".$thirdHeading."</h3>";
+		echo "<br/><h3>".$thirdHeading."</h3>";
 		echo "<iframe src=\"$pointSlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
 	
 	}

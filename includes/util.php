@@ -528,6 +528,11 @@ function retrieveSlides() {
 	$thursdaySlide = $thursdaySlide."embed?start=false&loop=false&delayms=10000&slide=";
 	$thursdaySlide = $thursdaySlides.$thursdaySlide['startingSlideNumber'];
 	
+	echo $mondaySlide;
+	echo "<br/>";
+	echo $thursdaySlide;
+	echo "<br>";
+	
 	echo "<h2>".$mainHeading."</h2>";
 	echo "<h3>".$firstHeading."</h3>";
 	echo "<iframe src=\"$mondaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
@@ -541,6 +546,9 @@ function retrieveSlides() {
 		$pointSlide = $pointSlides['url'];
 		$pointSlide = $pointSlide."embed?start=false&loop=false&delayms=10000&slide=";
 		$pointSlide = $pointSlides.$pointSlide['startingSlideNumber'];
+		
+		echo $pointSlide;
+		echo "<br>";
 		
 		echo "<h3>".$thirdHeading."</h3>";
 		echo "<iframe src=\"$pointSlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";

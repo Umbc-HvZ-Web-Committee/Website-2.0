@@ -439,7 +439,7 @@ function longGameSelect(){
 //Web committee needs to update these every week after each officer meeting at the latest so they are updated throughout the week
 //Use under construction slides as placeholders for secret or in-progress missions
 //Only the one-night slide vars should be changing week-by-week
-function retrieveSlides(){
+function retrieveSlidesOld(){
 	//One Night Slides
 	$mondaySlide = "https://docs.google.com/presentation/d/1NYaiSTM46o78JzED7P8XI8Jho6DzYm9gSwpPTktJGZc/embed?start=false&loop=false&delayms=10000";
 	$thursdaySlide = "https://docs.google.com/presentation/d/1jawTart8F26jstwp-ewT1Svdb8TTJqBYNRM0DzNSHGc/embed?start=false&loop=false&delayms=10000";	
@@ -504,7 +504,7 @@ function retrieveSlides(){
 
 //Function to retrieve slides but not the manual way
 //Still a WIP
-function retrieveSlidesNew() {
+function retrieveSlides() {
 	displayWeather();
 	
 	//Load slide headings

@@ -35,8 +35,8 @@ require_once('pageIncludes/home.inc.php');
 		<!-- <i><h4><center>~To order a club T-shirt, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eRuP4zEuLcLSC1bXqZ9GzF8ZDZn1QHjSR_pS8lH6lHtsmQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To submit invitational feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSAfolSJBRFTghMTa3onH7dMgtcM94CWpcbJLT6tz8uqkTwQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To suggest features for the new website, <a href="https://docs.google.com/forms/d/e/1FAIpQLScKT4b50vOXx9j27lBiHEuiwlocDsEsMWFnCVVj0YmIuke0nw/viewform">click here</a>~</center></h4></i>
-		<i><h4><center>~To apply to be a Subofficer in the upcoming semester, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkAhWd5px2AqJIc6qgHsfo67o-eqJDljcuO3HQaEJnt9kMwQ/viewform">click here</a>~</center></h4></i> 
-		<i><h4><center>~To apply to be on the Web Committee in the upcoming semester, email the officer board.<!--<a href="https://docs.google.com/forms/d/e/1FAIpQLScHvljlBGteoJ5tcVYDVDDl0iLo8X7b7l47q00n5gbol_BsJA/viewform">click here~</a></center></h4></i>-->
+		<i><h4><center>~To apply to be a Subofficer in the upcoming semester, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkAhWd5px2AqJIc6qgHsfo67o-eqJDljcuO3HQaEJnt9kMwQ/viewform">click here</a>~</center></h4></i> -->
+		<i><h4><center>~To apply to be on the Web Committee in the upcoming semester, email the officer board.<a href="https://drive.google.com/open?id=1e_mzBN0uI7mbdW-3IWyCJ_KapFDEBo11ib43skbVJg0/viewform">click here~</a></center></h4></i>
 		<!-- <i><h4><center>~To register for our annual invitational game, <a href="invitational/index.php">click here</a>~</center></h4></i> -->
 		<!--<i><h4><center>~To submit weeklong feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXxzvZDpIYisvHp0rphLwblbtqUEony5MH1dN55niz8wxn6Q/viewform">click here</a>~</center></h4></i>-->
 		<br/>
@@ -46,8 +46,7 @@ require_once('pageIncludes/home.inc.php');
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>
-		First mission of the semester: Monday, February 3rd<br/>
-		Last mission of the semester: Monday, May 11th<br/>
+		As a result of the COVID-19 outbreak, UMBC Campus is closed, and as a student organization at UMBC, we are also closed. We will not be holding any events until UMBC reopens. For more information about what UMBC is doing in response to the COVID-19 outbreak, visit <a href='https://covid19.umbc.edu'>this</a> page.<br/>
 		</p>
 		<br/>
 		<p>

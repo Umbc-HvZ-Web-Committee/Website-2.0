@@ -532,7 +532,7 @@ function retrieveSlides() {
 	echo "<h3>".$firstHeading."</h3>";
 	echo "<iframe src=\"$mondaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
 	echo "<br/><h3>".$secondHeading."</h3>";
-	echo "<iframe src=\"$thursdaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>";
+	echo "<iframe src=\"$thursdaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
 
 	
 	if($thirdHeading != NULL) {

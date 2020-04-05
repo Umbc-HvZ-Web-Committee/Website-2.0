@@ -1,5 +1,5 @@
 <?php
-require_once('../pageIncludes/admin/PAGE_NAME.inc.php'); //MAKE SURE THIS FILE PATH IS ACTUALLY CORRECT
+require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE PATH IS ACTUALLY CORRECT
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

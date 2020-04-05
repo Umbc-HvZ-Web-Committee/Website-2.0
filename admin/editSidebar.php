@@ -34,7 +34,7 @@ require_once('../pageIncludes/admin/editSidebar.inc.php');
 				<p>Select the slides to display on the sidebar with the radio buttons below. 
 				If the set of slides you want to display is not there, 
 				copy-paste the url of the google slides. Remove everything including and after "edit#slide", 
-				and make sure the url ends with "/". The buttons to set slides onlyapply to ONE of the slideshows on the sidebar. 
+				and make sure the url ends with "/". The buttons to set slides only apply to ONE of the slideshows on the sidebar. 
 				If you are updating multiple slideshows, you will have to update each one individually. 
 				You can also use this to change the slideshow headings. Most of the time, the headings should read 
 				"This Week's Missions", "Monday", "Thursday", "IGNORE" (from top text bar to bottom text bar)

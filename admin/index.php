@@ -28,11 +28,12 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<h3><a href="meetings.php">Meeting utilities (sign in/creation/resolution)</a></h3>
 			<h3><a href="blogPost.php">Create a blog post.</a></h3>
 			<h3><a href="awardAchieves.php">Award an Achievement</a></h3>
-			<h3><a href="equipmentManagement.php">Equipment Management</a></h3>
-			<h3><a href="addfaq.php">FAQ Editor</a></h3>
-			<h3><a href="pollManagement.php">Poll Editor</a></h3>
+			<h3><a href="equipmentManagement.php"><strike>Equipment Management</strike></a></h3>
+			<h3><a href="addfaq.php"><strike>FAQ Editor<strike></a></h3>
+			<h3><a href="pollManagement.php"><strike>Poll Editor</strike></a></h3>
 			<h3><a href="viewVotingMembers.php">View Voting Members</a></h3>
 			<h3><a href="editSidebar.php">Sidebar Editor</a></h3>
+			<h3><a href="editVoting.php">Election Editor</a></h3>
 			<br/>
 			<?php
 		}
@@ -41,6 +42,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			?>
 			<h2>Admin Panel</h2><br/>
 			<h3><a href="meetings.php">Meeting utilities (sign in/creation/resolution)</a></h3>
+			<h3><a href="awardAchieves.php">Award an Achievement</a></h3>
 			<h3><a href="viewVotingMembers.php">View Voting Members</a></h3>
 			<br/>
 			<?php

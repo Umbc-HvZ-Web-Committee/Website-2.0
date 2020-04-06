@@ -28,35 +28,35 @@ require_once('includes/update.php');
 					//leaving it here for reference and in case similar code is needed
 					
 					$uid = "US0000-";
-					while($uid != "US003oj") {
+					while($uid != "US003q5") {
 						echo $uid;
 						echo " ";
-						$totalCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid';");
+						$totalCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid';");
 						$totalCount = $totalCount['cnt'];
 						echo $totalCount;
 						echo " ";
-						$termCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `creationDate` > '2020-01-01';");
+						$termCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `creationDate` > '2020-01-01';");
 						$termCount = $termCount['cnt'];
 						echo $termCount;
 						/*echo " ";
-						$humanCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '1';");
+						$humanCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '1';");
 						$humanCount = $humanCount['cnt'];
 						echo $humanCount;
 						echo " ";
-						$zombieCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND (`startState` < '0' OR `startState` = '2');");
+						$zombieCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND (`startState` < '0' OR `startState` = '2');");
 						$zombieCount = $zombieCount['cnt'];
 						echo $zombieCount;
 						echo " ";
-						$modCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '4';");
+						$modCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '4';");
 						$modCount = $modCount['cnt'];
 						echo $modCount;*/
 						echo " ";
-						$adminCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
+						$adminCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
 						`UID` = '$uid' AND `meetingType` = '1';");
 						$adminCount = $adminCount['cnt'];
 						echo $adminCount;
 						echo " ";
-						$adminTerm = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
+						$adminTerm = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
 						`UID` = '$uid' AND `meetingType` = '1' AND `creationDate` > '2020-01-01';");
 						$adminTerm = $adminTerm['cnt'];
 						echo $adminTerm;

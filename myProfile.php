@@ -26,36 +26,51 @@ require_once('includes/update.php');
 
 					//temporary one-time block of code to set data right in database
 					//leaving it here for reference and in case similar code is needed
-					/*
+					
 					$uid = "US0000-";
 					while($uid != "US003oj") {
 						echo $uid;
 						echo " ";
-						$totalCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid';");
+						$totalCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid';");
 						$totalCount = $totalCount['cnt'];
 						echo $totalCount;
 						echo " ";
-						$humanCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '1';");
+						$termCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `creationDate` > '2020-01-01';");
+						$termCount = $termCount['cnt'];
+						echo $termCount;
+						/*echo " ";
+						$humanCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '1';");
 						$humanCount = $humanCount['cnt'];
 						echo $humanCount;
 						echo " ";
-						$zombieCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND (`startState` < '0' OR `startState` = '2');");
+						$zombieCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND (`startState` < '0' OR `startState` = '2');");
 						$zombieCount = $zombieCount['cnt'];
 						echo $zombieCount;
 						echo " ";
-						$modCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '4';");
+						$modCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '4';");
 						$modCount = $modCount['cnt'];
-						echo $modCount;
+						echo $modCount;*/
 						echo " ";
-						$adminCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE `UID` = '$uid' AND `meetingType` = '1';");
+						$adminCount = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
+						`UID` = '$uid' AND `meetingType` = '1';");
 						$adminCount = $adminCount['cnt'];
 						echo $adminCount;
+						echo " ";
+						$adminTerm = mysql_query("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
+						`UID` = '$uid' AND `meetingType` = '1' AND `creationDate` > '2020-01-01';");
+						$adminTerm = $adminTerm['cnt'];
+						echo $adminTerm;
 						echo "<br/>";
-						mysql_query("UPDATE `users` SET `zombieStartsTotal`='$zombieCount' WHERE `UID` = '$uid';");
-						mysql_query("UPDATE `users` SET `humanStartsTotal`='$humanCount' WHERE `UID` = '$uid';");
-						mysql_query("UPDATE `users` SET `gamesModdedTotal`='$modCount' WHERE `UID` = '$uid';");
-						mysql_query("UPDATE `users` SET `appearancesTotal`='$totalCount' WHERE `UID` = '$uid';");
+						
+						//mysql_query("UPDATE `users` SET `zombieStartsTotal`='$zombieCount' WHERE `UID` = '$uid';");
+						//mysql_query("UPDATE `users` SET `humanStartsTotal`='$humanCount' WHERE `UID` = '$uid';");
+						//mysql_query("UPDATE `users` SET `gamesModdedTotal`='$modCount' WHERE `UID` = '$uid';");
+						
 						mysql_query("UPDATE `users` SET `adminMeetingsTotal`='$adminCount' WHERE `UID` = '$uid';");
+						mysql_query("UPDATE `users` SET `adminMeetingsThisTerm`='$adminTerm' WHERE `UID` = '$uid';");
+						
+						mysql_query("UPDATE `users` SET `appearancesTotal`='$totalCount' WHERE `UID` = '$uid';");
+						mysql_query("UPDATE `users` SET `appearancesThisTerm`='$termCount' WHERE `UID` = '$uid';");
 
 						$chars = array();
 						array_push($chars, "-");
@@ -89,7 +104,7 @@ require_once('includes/update.php');
 						$uid = "US".implode($id);
 						echo "Attached";
 						echo "<br/>";
-					}*/
+					}
 
 
 					/*

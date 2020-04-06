@@ -203,7 +203,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			if($secondSlides != NULL) {
 				mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlides' WHERE headingTitle = 'secondSlides';");
 			}
-			if($thirdSlides == "IGNORE") {
+			if($thirdSlides == "IGNORE" or $thirdSlides == "\"IGNORE\"") {
 				mysql_query("UPDATE mission_slide_headings SET headingName = NULL WHERE headingTitle = 'thirdSlides';");
 			}else if($thirdSlides != NULL) {
 				mysql_query("UPDATE mission_slide_headings SET headingName = '$thirdSlides' WHERE headingTitle = 'thirdSlides';");

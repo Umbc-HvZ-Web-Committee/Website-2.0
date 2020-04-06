@@ -26,19 +26,20 @@ require_once('includes/update.php');
 
 					//temporary one-time block of code to set data right in database
 					//leaving it here for reference and in case similar code is needed
-					
+					/*
 					$uid = "US0000-";
-					while($uid != "US003q5") {
+					while($uid != "US003q5") { //UPDATE THIS TO NEWEST USER AS NEEDED
 						echo $uid;
 						echo " ";
 						$totalCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid';");
 						$totalCount = $totalCount['cnt'];
 						echo $totalCount;
 						echo " ";
+						//UPDATE THIS FOR FUTURE USE
 						$termCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `creationDate` > '2020-01-01';");
 						$termCount = $termCount['cnt'];
 						echo $termCount;
-						/*echo " ";
+						echo " ";
 						$humanCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '1';");
 						$humanCount = $humanCount['cnt'];
 						echo $humanCount;
@@ -49,13 +50,14 @@ require_once('includes/update.php');
 						echo " ";
 						$modCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '4';");
 						$modCount = $modCount['cnt'];
-						echo $modCount;*/
+						echo $modCount;
 						echo " ";
 						$adminCount = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
 						`UID` = '$uid' AND `meetingType` = '1';");
 						$adminCount = $adminCount['cnt'];
 						echo $adminCount;
 						echo " ";
+						//UPDATE THIS FOR FUTURE USE
 						$adminTerm = mysql_oneline("SELECT COUNT(*) cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
 						`UID` = '$uid' AND `meetingType` = '1' AND `creationDate` > '2020-01-01';");
 						$adminTerm = $adminTerm['cnt'];
@@ -104,7 +106,7 @@ require_once('includes/update.php');
 						$uid = "US".implode($id);
 						echo "Attached";
 						echo "<br/>";
-					}
+					}*/
 
 
 					/*

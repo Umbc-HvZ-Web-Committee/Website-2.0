@@ -29,7 +29,7 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<h3>Inserting Bios</h3>
 			<br/><br/>
 			<form action="" method="post">
-			<select name=\"positions\">
+			<select name=\"position\">
 			<option value=\"pres\">President</option>
 			<option value=\"vp\">VP</option>
 			<option value=\"sec\">Secretary</option>
@@ -67,7 +67,7 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<br/>
 			<input type="submit" name="submit" value="Update Settings"/></br>
 			</form><br/>
-			
+			<br/>
 			<h3>Fun Buttons<h3>
 			<input type="submit" name="clearBios" value="Clear All Bios"/>
 			<input type="submit" name="clearVotes" value="Clear All Votes"/>

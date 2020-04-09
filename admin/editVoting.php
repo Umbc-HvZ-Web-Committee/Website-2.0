@@ -37,8 +37,8 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<option value=\"pr\">PR</option>
 			<option value=\"web\">Web Committee</option>
 			</select><br/>
-			Name: <input type="text" name="candidateName" id="candidateName"/></br>
-			Bio: <input type="text" name="candidateBio" id="candidateBio"/></br>
+			Name: <input type="text" name="candidateName" id="candidateName"/></br><br/>
+			Bio: <input type="text" name="candidateBio" id="candidateBio"/></br><br/>
 			<input type="submit" name="submit" value="Insert Bio"/></br><br/>
 			</form><br/>
 			<br/>
@@ -73,7 +73,7 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<input type="submit" name="clearVotes" value="Clear All Votes"/>
 			<input type="submit" name="clear" value="Clear Election"/>
 			<input type="submit" name="end" value="End Election"/>
-			</br/><br/><p>"Clear Election" will clear all bios and all votes. "End Election" will do that and will email the results to the officers</p>
+			</br/><br/>"Clear Election" will clear all bios and all votes. "End Election" will do that and will email the results to the officers
 			
 		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>

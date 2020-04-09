@@ -36,7 +36,7 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<option value=\"tr\">Treasurer</option>
 			<option value=\"pr\">PR</option>
 			<option value=\"web\">Web Committee</option>
-			</select><br/>
+			</select><br/><br/>
 			Name: <input type="text" name="candidateName" id="candidateName"/></br><br/>
 			Bio: <input type="text" name="candidateBio" id="candidateBio"/></br><br/>
 			<input type="submit" name="submit" value="Insert Bio"/></br><br/>

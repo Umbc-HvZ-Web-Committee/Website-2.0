@@ -72,10 +72,10 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			</form><br/>
 			<br/>
 			<h3>Fun Buttons<h3>
-			<input type="submit" name="submit" value="Clear All Bios"/>
-			<input type="submit" name="submit" value="Clear All Votes"/>
-			<input type="submit" name="submit" value="Clear Election"/>
-			<input type="submit" name="submit" value="End Election"/>
+			<input type="submit" name="clearBios" value="Clear All Bios"/>
+			<input type="submit" name="clearVotes" value="Clear All Votes"/>
+			<input type="submit" name="clear" value="Clear Election"/>
+			<input type="submit" name="end" value="End Election"/>
 			</br/><br/>"Clear Election" will clear all bios and all votes. "End Election" will do that and will email the results to the officers
 			
 		<?php }else{ ?>

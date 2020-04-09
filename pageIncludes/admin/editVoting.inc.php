@@ -19,8 +19,8 @@ if($_SESSION['isAdmin'] >= 2) {
 		}
 		
 		if($func=="Insert Voting Option"){
-			$prompt = requestVar('prompt');
-			$response = requestVar('response');
+			$prompt = requestVar('votePrompt');
+			$response = requestVar('voteResponse');
 			echo "Acknowledged INSERT_VOTING_OPTION(".$prompt.", ".$response.")<br/>";
 		}
 		
@@ -30,22 +30,21 @@ if($_SESSION['isAdmin'] >= 2) {
 			$voteLock = requestVar('voteLock');
 			echo "Acknowledged UPDATE_SETTINGS(".$writeInThresh.", ".$voteLink.", ".$voteLock.")<br/>";
 		}
-		
-		if($func=="End Election"){
-			echo "Acknowledged END_ELECTION<br/>";
-		}
-		
-		if($func=="Clear Election" or $func=="End Election"){
-			echo "Acknowledged CLEAR_ELECTION<br/>";
-		}
-		
-		if($func=="Clear Votes" or $func=="Clear Election" or $func=="End Election"){
-			echo "Acknowledged CLEAR_VOTES<br/>";
-		}
-		
-		if($func=="Clear Bios" or $func=="Clear Election" or $func=="End Election"){
-			echo "Acknowledged CLEAR_BIOS<br/>";
-		}
+	}
+	if($_REQUEST["End Election"]){
+		echo "Acknowledged END_ELECTION<br/>";
+	}
+	
+	if($_REQUEST["Clear Election"] or $_REQUEST["End Election"]){
+		echo "Acknowledged CLEAR_ELECTION<br/>";
+	}
+	
+	if($_REQUEST["Clear Votes"] or $_REQUEST["Clear Election"] or $_REQUEST["End Election"]){
+		echo "Acknowledged CLEAR_VOTES<br/>";
+	}
+	
+	if($_REQUEST["Clear Bios"] or $_REQUEST["Clear Election"] or $_REQUEST["End Election"]){
+		echo "Acknowledged CLEAR_BIOS<br/>";
 	}
 }
 

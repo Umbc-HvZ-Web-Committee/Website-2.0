@@ -37,14 +37,14 @@ $settings = get_settings();
 			//VOTING CONSTANTS
 			
 			//Default value used for dummy votes to create a candidate
-			$defaultUID = "OZ00000"; 
+			$defaultUID = $settings['nullUID']; 
 			
 			//Number of votes needed for a "dummy" vote to be created for the option and make said option a candidate
 			//If a write-in doesn't reach this threshold, it will not be counted by the vote counter
-			$writeInThreshold = 3; 
+			$writeInThreshold = $settings['writeInThreshold']; 
 			
 			//Number of votes required to show voting results to sub-admin accounts
-			$showVotesThreshold = 5; 
+			$showVotesThreshold = $settings['showVotesThreshold']; 
 			
 			echo "<h1 style='text-align:center; margin-top: 10px;'><b>Meet the Candidates!</b></h1><br/>";
 			//echo "<h1 style='text-align:center; margin-top: 10px;'><b>Constitution Voting</b></h1><br/>";
@@ -176,9 +176,12 @@ $settings = get_settings();
 							echo "<br/><br/>";
 						}
 					}
-					echo '<input type="submit" name="submit" value="Submit vote"></form>';
 					
- 					//echo "<h2 style=\"text-align:center\">Voting is currently closed.</h2>";
+					if($settings['lockVoting'] == "no") {
+						echo '<input type="submit" name="submit" value="Submit vote"></form>';
+					} else {
+						echo "<h2 style=\"text-align:center\">Voting has been locked by an administrator.</h2>";
+					}
 					
 					//If user is an officer/web committee, show a complete, anonymized count of votes
 					//I hope you like this vote counter, because I stayed up late during Thanksgiving vacation in Florida to make it work

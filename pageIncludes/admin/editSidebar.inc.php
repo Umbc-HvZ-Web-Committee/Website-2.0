@@ -15,7 +15,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			$mondaySlides = requestVar('mondaySlides');
 			$customMondaySlides = requestVar('customMondaySlides');
 			$startingSlideNumber = requestVar('startingSlideNumber');
-			if($startingSlideNumber == "") {
+			if($startingSlideNumber == "" or filter_var($startingSlideNumber, FILTER_VALIDATE_INT) === true or $startingSlideNumber <= 0) {
 				$startingSlideNumber = 1;
 			}
 			//echo "<br/>".$mondaySlides."<br/>".$customMondaySlides;
@@ -74,7 +74,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			$thursdaySlides = requestVar('thursdaySlides');
 			$customThursdaySlides = requestVar('customThursdaySlides');
 			$startingSlideNumber = requestVar('startingSlideNumber');
-			if($startingSlideNumber == "") {
+			if($startingSlideNumber == "" or filter_var($startingSlideNumber, FILTER_VALIDATE_INT) === true or $startingSlideNumber <= 0) {
 				$startingSlideNumber = 1;
 			}
 			//echo "<br/>".$thursdaySlides."<br/>".$customthursdaySlides;
@@ -133,7 +133,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			$pointSlides = requestVar('pointSlides');
 			$customPointSlides = requestVar('customPointSlides');
 			$startingSlideNumber = requestVar('startingSlideNumber');
-			if($startingSlideNumber == "") {
+			if($startingSlideNumber == "" or filter_var($startingSlideNumber, FILTER_VALIDATE_INT) === true or $startingSlideNumber <= 0) {
 				$startingSlideNumber = 1;
 			}
 			//echo "<br/>".$thursdaySlides."<br/>".$customthursdaySlides;

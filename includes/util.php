@@ -269,10 +269,30 @@ function displayLoginForm(){
 
 function displayVotingLink() {
 	echo "<h2>Elections</h2>";
+	
+	$settings = get_settings();
+	$voteLink = $settings['showVotingLink'];
+	if($voteLink == "soonOpen" or $voteLink == "soonClosed") {
+		echo "<center><font size='4'><b>Voting opening soon</b></font></center>";
+	} else if($voteLink == "open") {
+		echo "<center><font size='3'><b>Voting is now open!</b></font></center>";
+	}
+	
+	if($voteLink == "soonOpen" or $voteLink == "open") {
+		echo "<center><a href='voting.php'>Voting page</a></center>";
+	}else if($voteLink == "closed") {
+		echo "<center><font size='4'><b>No elections in progress</b></font></center>";
+	} else { //Aaaaaaaaaaaaaaaaaa
+		echo "<center><font size='4'><b>Unknown status of elections</b></font></center>";
+	}
+	
+	/* The old way
+	echo "<h2>Elections</h2>";
 	//echo "<center><font size='4'><b>Voting opening soon</b></font></center>";
 	//echo "<center><font size='3'><b>Voting is now open!</b></font></center>";
 	//echo "<center><a href='voting.php'>Voting page</a></center>";
 	echo "<center><font size='4'><b>No elections in progress</b></font></center>";
+	*/
 }
 
 function displayActivePoll(){

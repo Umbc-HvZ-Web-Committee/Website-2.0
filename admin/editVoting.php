@@ -18,7 +18,6 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 	<?php pageHeader(); ?>
 	<div id="page" class="container">
 		<div id="content">
-
 		<?php if($_SESSION['isAdmin'] >= 2){ ?>
 			<h2>Election Editor</h2>
 			<br/><br/>
@@ -26,13 +25,14 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<h4><b>WARNING: This page is not operational. Do not touch anything on this page if you don't know what it does!</b></h4>
 			<br/><br/>
 		
+			<?php if($GLOBALS['submitMessage']!="") echo "<h4><b>${GLOBALS['submitMessage']}</b></h4>" ?>
+			
 			<h3>Inserting Bios</h3>
 			<br/><br/>
+			
 			<form action="" method="post">
-			
-			<!-- '<select name="meetingSelect" id="sel'.$rand.'" onchange="updateStats'.$rand.'()"/>';-->
-			
 			<select name="position" id="position">
+			<option value='none'></option>
 			<option value="pres">President</option>
 			<option value="vp">VP</option>
 			<option value="sec">Secretary</option>
@@ -48,6 +48,7 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			
 			<h3>Inserting Voting Options (Candidates)</h3>
 			<br/><br/>
+			
 			<form action="" method="post">
 			Voting Prompt (Position): <input type="text" name="votePrompt" id="votePrompt"/></br><br/>
 			Voting Response (Candidate): <input type="text" name="voteReponse" id="voteResponse"/></br><br/>
@@ -56,27 +57,86 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<br/>
 			
 			<h3>Voting Settings</h3>
+			<br/><br/>
+			
 			<form action="" method="post">
-			Write-In Threshold (Minimum number of votes to count write-in options): <input type="text" name="writeInThresh" id="writeInThresh"/></br><br/>
+			Write-In Threshold (Minimum number of votes to count write-in options): <input type="text" name="writeInThreshold" id="writeInThreshold"/></br><br/>
 			Voting Link: <br/>
-			<label for="voteLink"><input type="radio" name="voteLink" value="closed"/>No elections in progress</label></br>
+			<label for="voteLink"><input type="radio" name="voteLink" value="closed" checked="checked"/>No elections in progress</label></br>
 			<label for="voteLink"><input type="radio" name="voteLink" value="soonClosed"/>Election happening soon</label></br>
 			<label for="voteLink"><input type="radio" name="voteLink" value="soonOpen"/>Elections happening soon (show link)</label></br>
 			<label for="voteLink"><input type="radio" name="voteLink" value="open"/>Election in progress (show link)</label></br>
 			<br/>
 			Vote Locking: <br/>
 			<label for="voteLock"><input type="radio" name="voteLock" value="lock"/>Lock the election</label></br>
-			<label for="voteLock"><input type="radio" name="voteLock" value="unlock"/>Unlock the election</label></br>
+			<label for="voteLock"><input type="radio" name="voteLock" value="unlock" checked="checked"/>Unlock the election</label></br>
 			<br/>
 			<input type="submit" name="submit" value="Update Settings"/></br>
 			</form><br/>
 			<br/>
+			
 			<h3>Fun Buttons<h3>
+			<br/><br/>
+			
 			<input type="submit" name="clearBios" value="Clear All Bios"/>
 			<input type="submit" name="clearVotes" value="Clear All Votes"/>
 			<input type="submit" name="clear" value="Clear Election"/>
-			<input type="submit" name="end" value="End Election"/>
-			</br/><br/>"Clear Election" will clear all bios and all votes. "End Election" will do that and will email the results to the officers
+			<input type="submit" name="send" value="Send Election Results"/>
+			</br/><br/>"Clear Election" will lock voting and clear all bios and votes.<br/><br/>
+			<br/>
+			
+			<h2>Voting Results</h2>
+			<br/><br/>
+			
+			<?php
+			
+			$fullResults = "";
+		
+			//load these three arrays
+			$curVote = array();
+			$positions = array();
+			$candidates = array();
+						
+			//Prepare this array for displaying actual positions to vote ON
+			$qury = mysql_query("SELECT position FROM election_votes GROUP BY position ORDER BY position ASC;");
+			while($ret = mysql_fetch_assoc($qury)){
+				$curVote[$ret['position']] = "";
+				$positions[] = $ret['position'];
+			}
+			
+			//Prepare this array for displaying actual "candidates" to vote FOR
+			$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes GROUP BY position, voteFor;");
+			//$qury = mysql_query("SELECT position FROM election_candidates GROUP BY position, name ORDER BY RAND();");
+			while($ret = mysql_fetch_assoc($qury)){
+				if(!array_key_exists($ret['position'], $candidates)) $candidates[$ret['position']] = array();
+				$candidates[$ret['position']][] = $ret['name'];
+			}
+			
+			$fullResults = $fullResults."<br><br><b>Voting results:</b><br><br>";
+			$blankVotes = array();
+			$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$defaultUID';");
+			while($ret = mysql_fetch_assoc($qury)){
+				if(!array_key_exists($ret['position'], $blankVotes)) $blankVotes[$ret['position']] = array();
+					$blankVotes[$ret['position']][] = $ret['name'];
+			}
+			foreach($positions as $curPos){
+				$fullResults = $fullResults."<u>$curPos</u><br>";
+				foreach($blankVotes[$curPos] as $curCan) {
+					$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '$curCan';");
+					$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote
+					if($numVotes != 1) {
+						$fullResults = $fullResults."'".$curCan."' has ".$numVotes." votes";
+					}else {
+						$fullResults = $fullResults."'".$curCan."' has 1 vote";
+					}
+					$fullResults = $fullResults."<br>";
+				}
+				$fullResults = $fullResults."<br><br>";
+			}
+			$fullResults = $fullResults."<br><br>";
+			
+			echo $fullResults;
+			?>
 			
 		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>

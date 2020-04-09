@@ -29,13 +29,16 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<h3>Inserting Bios</h3>
 			<br/><br/>
 			<form action="" method="post">
-			<select name=\"position\">
-			<option value=\"pres\">President</option>
-			<option value=\"vp\">VP</option>
-			<option value=\"sec\">Secretary</option>
-			<option value=\"tr\">Treasurer</option>
-			<option value=\"pr\">PR</option>
-			<option value=\"web\">Web Committee</option>
+			
+			<!-- '<select name="meetingSelect" id="sel'.$rand.'" onchange="updateStats'.$rand.'()"/>';-->
+			
+			<select name="position" id="position">
+			<option value="pres">President</option>
+			<option value="vp">VP</option>
+			<option value="sec">Secretary</option>
+			<option value="tr">Treasurer</option>
+			<option value="pr">PR</option>
+			<option value="web">Web Committee</option>
 			</select><br/><br/>
 			Name: <input type="text" name="candidateName" id="candidateName"/></br><br/>
 			Bio: <input type="text" name="candidateBio" id="candidateBio"/></br><br/>
@@ -46,8 +49,8 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<h3>Inserting Voting Options (Candidates)</h3>
 			<br/><br/>
 			<form action="" method="post">
-			Voting Prompt (Position): <input type="text" name="votePrompt" id="candidateName"/></br><br/>
-			Voting Response (Candidate): <input type="text" name="voteReponse" id="candidateBio"/></br><br/>
+			Voting Prompt (Position): <input type="text" name="votePrompt" id="votePrompt"/></br><br/>
+			Voting Response (Candidate): <input type="text" name="voteReponse" id="voteResponse"/></br><br/>
 			<input type="submit" name="submit" value="Insert Voting Option"/></br><br/>
 			</form><br/>
 			<br/>
@@ -69,10 +72,10 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			</form><br/>
 			<br/>
 			<h3>Fun Buttons<h3>
-			<input type="submit" name="clearBios" value="Clear All Bios"/>
-			<input type="submit" name="clearVotes" value="Clear All Votes"/>
-			<input type="submit" name="clear" value="Clear Election"/>
-			<input type="submit" name="end" value="End Election"/>
+			<input type="submit" name="submit" value="Clear All Bios"/>
+			<input type="submit" name="submit" value="Clear All Votes"/>
+			<input type="submit" name="submit" value="Clear Election"/>
+			<input type="submit" name="submit" value="End Election"/>
 			</br/><br/>"Clear Election" will clear all bios and all votes. "End Election" will do that and will email the results to the officers
 			
 		<?php }else{ ?>

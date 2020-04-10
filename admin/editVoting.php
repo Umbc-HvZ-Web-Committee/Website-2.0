@@ -85,7 +85,7 @@ $settings = get_settings();
 			<input type="submit" name="clearBios" value="Clear All Bios"/><br/><br/>
 			<input type="submit" name="clearVotes" value="Clear All Votes"/><br/><br/>
 			<input type="submit" name="clear" value="Clear Election"/><br/><br/>
-			<input type="submit" name="send" value="Send Election Results"/><br/><br/>
+			<input type="submit" name="submit" value="Send Election Results"/><br/><br/>
 			</br/><br/>"Clear Election" will lock voting and clear all bios and votes.<br/><br/>
 			<br/>
 			

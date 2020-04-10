@@ -26,7 +26,7 @@ $settings = get_settings();
 			<h4><b>WARNING: This page is not operational. Do not touch anything on this page if you don't know what it does!</b></h4>
 			<br/><br/>
 		
-			<?php if($GLOBALS['submitMessage']!="") echo "<h4><b>${GLOBALS['submitMessage']}</b></h4>" ?>
+			<?php if($GLOBALS['submitMessage']!="") echo "<h4><b>${GLOBALS['submitMessage']}</b></h4><br/><br/>" ?>
 			
 			<h3>Inserting Bios</h3>
 			<br/><br/>
@@ -34,12 +34,12 @@ $settings = get_settings();
 			<form action="" method="post">
 			<select name="position" id="position">
 			<option value='none'></option>
-			<option value="pres">President</option>
-			<option value="vp">VP</option>
-			<option value="sec">Secretary</option>
-			<option value="tr">Treasurer</option>
-			<option value="pr">PR</option>
-			<option value="web">Web Committee</option>
+			<option value="President">President</option>
+			<option value="Vice President">Vice President</option>
+			<option value="Secretary">Secretary</option>
+			<option value="Treasurer">Treasurer</option>
+			<option value="Recruitment & Advertising/PR">Recruitment & Advertising/PR</option>
+			<option value="Web Committee">Web Committee</option>
 			</select><br/><br/>
 			Name: <input type="text" name="candidateName" id="candidateName"/></br><br/>
 			Bio: <input type="text" name="candidateBio" id="candidateBio"/></br><br/>

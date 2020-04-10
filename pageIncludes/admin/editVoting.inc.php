@@ -26,10 +26,10 @@ if($_SESSION['isAdmin'] >= 2) {
 				$GLOBALS['submitMessage'] = "Cannot insert bio left blank. Enter \"".$blankBio."\" to give candidate a blank bio";
 			} else {
 				if($bio == $blankBio) {
-					mysql_query("INSERT INTO `election_candidates`(`position`, `name`, `bio`) VALUES ('$position', '$name', '');");
+					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '');");
 					$GLOBALS['submitMessage'] = "Added candidate with a blank bio";
 				} else {
-					mysql_query("INSERT INTO `election_candidates`(`position`, `name`, `bio`) VALUES ('$position', '$name', '$bio');");
+					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '$bio');");
 					$GLOBALS['submitMessage'] = "Added candidate and bio";
 				}
 			}
@@ -38,6 +38,8 @@ if($_SESSION['isAdmin'] >= 2) {
 		if($func=="Insert Voting Option"){
 			$prompt = requestVar('votePrompt');
 			$response = requestVar('voteResponse');
+			
+			echo $prompt." ".$response;
 			
 			if($prompt == "" || $response == "") {
 				$GLOBALS['submitMessage'] = "Cannot insert voting option. Voting prompt and/or response was left blank";
@@ -65,7 +67,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			}
 		}
 	}
-	if($_REQUEST["send"]){
+	if(isset($_REQUEST["send"])){
 		echo "Acknowledged SEND_ELECTION_RESULTS<br/>";
 		
 		$fullResults = "";
@@ -92,7 +94,7 @@ if($_SESSION['isAdmin'] >= 2) {
 		
 		$fullResults = $fullResults."<br><br><b>Voting results:</b><br><br>";
 		$blankVotes = array();
-		$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$defaultUID';");
+		$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$nullUID';");
 		while($ret = mysql_fetch_assoc($qury)){
 			if(!array_key_exists($ret['position'], $blankVotes)) $blankVotes[$ret['position']] = array();
 				$blankVotes[$ret['position']][] = $ret['name'];
@@ -116,14 +118,14 @@ if($_SESSION['isAdmin'] >= 2) {
 		echo $fullResults;
 	}
 	
-	if($_REQUEST["clear"]){
+	if(isset($_REQUEST["clear"])){
 		echo "Acknowledged CLEAR_ELECTION<br/>";
 		
 		mysql_query("UPDATE `settings` SET `value` = 'lock' WHERE `key` = 'lockVoting';");
 		mysql_query("UPDATE `settings` SET `value` = 'closed' WHERE `key` = 'showVotingLink';");
 	}
 	
-	if($_REQUEST["clear_votes"] or $_REQUEST["clear"]){
+	if(isset($_REQUEST["clear_votes"]) || isset($_REQUEST["clear"])){
 		echo "Acknowledged CLEAR_VOTES<br/>";
 		
 		/* Commenting this section out until buttons are actually tested
@@ -131,7 +133,7 @@ if($_SESSION['isAdmin'] >= 2) {
 		*/
 	}
 	
-	if($_REQUEST["clear_votes"] or $_REQUEST["clear"]){
+	if(isset($_REQUEST["clear_votes"]) || isset($_REQUEST["clear"])){
 		echo "Acknowledged CLEAR_BIOS<br/>";
 		
 		/* Commenting this section out until buttons are actually tested

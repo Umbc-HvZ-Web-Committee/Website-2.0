@@ -119,7 +119,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			echo $user['uname']." ";
 			$name = $user['fname']." ".$user['lname'];
 			echo $name;
-			/*
+			
 			$msg = <<<EOF
 Hello officer board!
 		
@@ -144,7 +144,7 @@ Happy officering!
 THIS IS AN AUTOMATED MESSAGE.
 EOF;
 			
-			mail("mosier1@umbc.edu", "Election Results", $msg);*/
+			mail("mosier1@umbc.edu", "Election Results", $msg);
 		}
 		
 		if($func == "Clear Election"){

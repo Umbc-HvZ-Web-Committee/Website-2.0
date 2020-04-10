@@ -61,16 +61,19 @@ $settings = get_settings();
 			<br/><br/>
 			
 			<form action="" method="post">
-			Write-In Threshold (Minimum votes to count write-ins, currently set to <?php echo $settings['writeInThreshold']; ?>): <input type="text" name="writeInThreshold" id="writeInThreshold"/></br><br/>
+			Write-In Threshold<br/> 
+			Minimum votes to count write-ins (currently set to <?php echo $settings['writeInThreshold']; ?>)
+			Enter number below, or leave blank for no change: 
+			<input type="text" name="writeInThreshold" id="writeInThreshold"/></br><br/>
 			Voting Link: <br/>
-			<label for="voteLink"><input type="radio" name="voteLink" value="closed" checked="checked"/>No elections in progress</label></br>
+			<label for="voteLink"><input type="radio" name="voteLink" value="closed"/>No elections in progress</label></br>
 			<label for="voteLink"><input type="radio" name="voteLink" value="soonClosed"/>Election happening soon</label></br>
 			<label for="voteLink"><input type="radio" name="voteLink" value="soonOpen"/>Elections happening soon (show link)</label></br>
 			<label for="voteLink"><input type="radio" name="voteLink" value="open"/>Election in progress (show link)</label></br>
 			<br/>
 			Vote Locking: <br/>
 			<label for="voteLock"><input type="radio" name="voteLock" value="lock"/>Lock the election</label></br>
-			<label for="voteLock"><input type="radio" name="voteLock" value="unlock" checked="checked"/>Unlock the election</label></br>
+			<label for="voteLock"><input type="radio" name="voteLock" value="unlock"/>Unlock the election</label></br>
 			<br/>
 			<input type="submit" name="submit" value="Update Settings"/></br>
 			</form><br/>

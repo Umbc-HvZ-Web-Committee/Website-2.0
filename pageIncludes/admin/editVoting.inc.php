@@ -66,8 +66,10 @@ if($_SESSION['isAdmin'] >= 2) {
 				$GLOBALS['submitMessage'] = "Updated vote locking and vote link";
 			}
 		}
+		
+		
 	}
-	if(isset($_REQUEST["send"])){
+	if($func == "Send Election Results"){
 		echo "Acknowledged SEND_ELECTION_RESULTS<br/>";
 		
 		$fullResults = "";

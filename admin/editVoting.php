@@ -32,7 +32,7 @@ $settings = get_settings();
 			<br/><br/>
 			
 			<form action="" method="post">
-			<select name="position" id="position">
+			Position: <select name="position" id="position">
 			<option value='none'></option>
 			<option value="President">President</option>
 			<option value="Vice President">Vice President</option>
@@ -52,7 +52,7 @@ $settings = get_settings();
 			
 			<form action="" method="post">
 			Voting Prompt (Position): <input type="text" name="votePrompt" id="votePrompt"/></br><br/>
-			Voting Response (Candidate): <input type="text" name="voteReponse" id="voteResponse"/></br><br/>
+			Voting Response (Candidate): <input type="text" name="voteResponse" id="voteResponse"/></br><br/>
 			<input type="submit" name="submit" value="Insert Voting Option"/></br><br/>
 			</form><br/>
 			<br/>

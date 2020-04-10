@@ -61,9 +61,9 @@ $settings = get_settings();
 			<br/><br/>
 			
 			<form action="" method="post">
-			Write-In Threshold<br/> 
-			Minimum votes to count write-ins (currently set to <?php echo $settings['writeInThreshold']; ?>)
-			Enter number below, or leave blank for no change: 
+			Write-In Threshold:<br/> 
+			Minimum votes to count write-ins (currently set to <?php echo $settings['writeInThreshold']; ?>)<br/>
+			Enter number below, or leave blank for no change<br/> 
 			<input type="text" name="writeInThreshold" id="writeInThreshold"/></br><br/>
 			Voting Link: <br/>
 			<label for="voteLink"><input type="radio" name="voteLink" value="closed"/>No elections in progress</label></br>

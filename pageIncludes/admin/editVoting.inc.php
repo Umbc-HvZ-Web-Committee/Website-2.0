@@ -114,7 +114,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			//echo $fullResults;
 			
 			$uid = $_SESSION['uid'];
-			$user = mysql_query("SELECT * FROM users WHERE UID = '$uid';");
+			$user = mysql_query("SELECT * FROM `users` WHERE `UID` = '$uid';");
 			$name = $user['fname']." ".$user['lname'];
 		
 			$msg = <<<EOF
@@ -145,28 +145,16 @@ EOF;
 		}
 		
 		if($func == "Clear Election"){
-			echo "Acknowledged CLEAR_ELECTION<br/>";
-		
-			/*
 			mysql_query("UPDATE `settings` SET `value` = 'lock' WHERE `key` = 'lockVoting';");
 			mysql_query("UPDATE `settings` SET `value` = 'closed' WHERE `key` = 'showVotingLink';");
-			*/
 		}
 		
 		if ($func == "Clear All Votes" || $func == "Clear Election"){
-			echo "Acknowledged CLEAR_VOTES<br/>";
-			
-			/* Commenting this section out until buttons are actually tested
 			mysql_query("DELETE FROM `election_votes` WHERE 1");
-			*/
 		}
 		
 		if ($func == "Clear All Bios" || $func == "Clear Election"){
-			echo "Acknowledged CLEAR_BIOS<br/>";
-			
-			/* Commenting this section out until buttons are actually tested
 			mysql_query("DELETE FROM `election_candidates` WHERE 1");
-			*/
 		}
 	}
 }

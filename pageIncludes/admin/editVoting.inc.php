@@ -112,12 +112,11 @@ if($_SESSION['isAdmin'] >= 2) {
 			$fullResults = $fullResults."<br><br>";
 			
 			echo $fullResults;
-			/*
 			
 			$uid = $_SESSION['uid'];
 			$user = mysql_query("SELECT * FROM `users` WHERE `UID` = '$uid';");
 			$name = $user['fname']." ".$user['lname'];
-		
+			/*
 			$msg = <<<EOF
 Hello officer board!
 		

@@ -114,7 +114,9 @@ if($_SESSION['isAdmin'] >= 2) {
 			echo $fullResults;
 			
 			$uid = $_SESSION['uid'];
+			echo $uid." ";
 			$user = mysql_query("SELECT * FROM `users` WHERE `UID` = '$uid';");
+			echo $user['uname']." ";
 			$name = $user['fname']." ".$user['lname'];
 			echo $name;
 			/*

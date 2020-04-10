@@ -111,13 +111,14 @@ if($_SESSION['isAdmin'] >= 2) {
 			}
 			$fullResults = $fullResults."<br><br>";
 			
-			//echo $fullResults;
+			echo $fullResults;
+			/*
 			
 			$uid = $_SESSION['uid'];
 			$user = mysql_query("SELECT * FROM `users` WHERE `UID` = '$uid';");
 			$name = $user['fname']." ".$user['lname'];
 		
-			/*$msg = <<<EOF
+			$msg = <<<EOF
 Hello officer board!
 		
 This is a test of the new tool in the admin panel to send election results to the officer board. Make sure to change the address to send from this to the officer email so they can get the real thing in the future.
@@ -139,9 +140,9 @@ Happy officering!
 
 ~ The Website ~
 THIS IS AN AUTOMATED MESSAGE.
-EOF;*/
+EOF;
 			
-			mail("mosier1@umbc.edu", "Election Results", "Test");
+			mail("mosier1@umbc.edu", "Election Results", $msg);*/
 		}
 		
 		if($func == "Clear Election"){

@@ -82,10 +82,12 @@ $settings = get_settings();
 			<h3>Fun Buttons<h3>
 			<br/><br/>
 			
+			<form action="" method="post">
 			<input type="submit" name="clearBios" value="Clear All Bios"/><br/><br/>
 			<input type="submit" name="clearVotes" value="Clear All Votes"/><br/><br/>
 			<input type="submit" name="clear" value="Clear Election"/><br/><br/>
 			<input type="submit" name="submit" value="Send Election Results"/><br/><br/>
+			</form>
 			</br/><br/>"Clear Election" will lock voting and clear all bios and votes.<br/><br/>
 			<br/>
 			

@@ -39,7 +39,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			$prompt = requestVar('votePrompt');
 			$response = requestVar('voteResponse');
 			
-			if($prompt == "" or $response == "") {
+			if($prompt == "" || $response == "") {
 				$GLOBALS['submitMessage'] = "Cannot insert voting option. Voting prompt and/or response was left blank";
 			} else {
 				$nullUID = $settings['nullUID'];
@@ -53,17 +53,15 @@ if($_SESSION['isAdmin'] >= 2) {
 			$voteLink = requestVar('voteLink');
 			$voteLock = requestVar('voteLock');
 			
-			if($writeInTreshold != "" and filter_var($writeInThreshold, FILTER_VALIDATE_INT) === true and $writeInThreshold > 0) { 
+			if($writeInTreshold != "" && $writeInThreshold > 0) { 
 				mysql_query("UPDATE `settings` SET `value` = '$writeInThreshold' WHERE `key` = 'writeInThreshold';");
 				mysql_query("UPDATE `settings` SET `value` = '$voteLink' WHERE `key` = 'showVotingLink';");
 				mysql_query("UPDATE `settings` SET `value` = '$voteLock' WHERE `key` = 'lockVoting';");
-				$GLOBALS['submitMessage'] = "Updated settings";
-			} else if (filter_var($variable, FILTER_VALIDATE_INT) === false){
-				$GLOBALS['submitMessage'] = "You must enter a positive integer for the write-in threshold";
+				$GLOBALS['submitMessage'] = "Updated all settings";
 			} else {
 				mysql_query("UPDATE `settings` SET `value` = '$voteLink' WHERE `key` = 'showVotingLink';");
 				mysql_query("UPDATE `settings` SET `value` = '$voteLock' WHERE `key` = 'lockVoting';");
-				$GLOBALS['submitMessage'] = "Updated settings";
+				$GLOBALS['submitMessage'] = "Updated vote locking and vote link";
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 <?php
 require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE PATH IS ACTUALLY CORRECT
+$settings = get_settings();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -60,7 +61,7 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<br/><br/>
 			
 			<form action="" method="post">
-			Write-In Threshold (Minimum number of votes to count write-in options): <input type="text" name="writeInThreshold" id="writeInThreshold"/></br><br/>
+			Write-In Threshold (Minimum votes to count write-ins, currently set to <?php echo $settings['writeInThreshold']; ?>): <input type="text" name="writeInThreshold" id="writeInThreshold"/></br><br/>
 			Voting Link: <br/>
 			<label for="voteLink"><input type="radio" name="voteLink" value="closed" checked="checked"/>No elections in progress</label></br>
 			<label for="voteLink"><input type="radio" name="voteLink" value="soonClosed"/>Election happening soon</label></br>
@@ -78,10 +79,10 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			<h3>Fun Buttons<h3>
 			<br/><br/>
 			
-			<input type="submit" name="clearBios" value="Clear All Bios"/>
-			<input type="submit" name="clearVotes" value="Clear All Votes"/>
-			<input type="submit" name="clear" value="Clear Election"/>
-			<input type="submit" name="send" value="Send Election Results"/>
+			<input type="submit" name="clearBios" value="Clear All Bios"/><br/><br/>
+			<input type="submit" name="clearVotes" value="Clear All Votes"/><br/><br/>
+			<input type="submit" name="clear" value="Clear Election"/><br/><br/>
+			<input type="submit" name="send" value="Send Election Results"/><br/><br/>
 			</br/><br/>"Clear Election" will lock voting and clear all bios and votes.<br/><br/>
 			<br/>
 			
@@ -96,6 +97,7 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 			$curVote = array();
 			$positions = array();
 			$candidates = array();
+			$nullUID = $settings['nullUID'];
 						
 			//Prepare this array for displaying actual positions to vote ON
 			$qury = mysql_query("SELECT position FROM election_votes GROUP BY position ORDER BY position ASC;");
@@ -112,9 +114,8 @@ require_once('../pageIncludes/admin/editVoting.inc.php'); //MAKE SURE THIS FILE 
 				$candidates[$ret['position']][] = $ret['name'];
 			}
 			
-			$fullResults = $fullResults."<br><br><b>Voting results:</b><br><br>";
 			$blankVotes = array();
-			$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$defaultUID';");
+			$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$nullUID';");
 			while($ret = mysql_fetch_assoc($qury)){
 				if(!array_key_exists($ret['position'], $blankVotes)) $blankVotes[$ret['position']] = array();
 					$blankVotes[$ret['position']][] = $ret['name'];

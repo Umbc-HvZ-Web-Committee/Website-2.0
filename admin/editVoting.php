@@ -6,7 +6,7 @@ $settings = get_settings();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><?php placeTabIcon(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>UMBC HvZ</title>
+<title>UMBC HvZ - Admin Panel</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -83,12 +83,12 @@ $settings = get_settings();
 			<br/><br/>
 			
 			<form action="" method="post">
-			<input type="submit" name="clearBios" value="Clear All Bios"/><br/><br/>
-			<input type="submit" name="clearVotes" value="Clear All Votes"/><br/><br/>
-			<input type="submit" name="clear" value="Clear Election"/><br/><br/>
+			<input type="submit" name="submit" value="Clear All Bios"/><br/><br/>
+			<input type="submit" name="submit" value="Clear All Votes"/><br/><br/>
+			<input type="submit" name="submit" value="Clear Election"/><br/><br/>
 			<input type="submit" name="submit" value="Send Election Results"/><br/><br/>
 			</form>
-			</br/><br/>"Clear Election" will lock voting and clear all bios and votes.<br/><br/>
+			"Clear Election" will lock voting and clear all bios and votes.<br/><br/>
 			<br/>
 			
 			<h2>Voting Results</h2>

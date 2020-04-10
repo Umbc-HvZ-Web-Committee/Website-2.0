@@ -67,8 +67,6 @@ if($_SESSION['isAdmin'] >= 2) {
 		}
 		
 		if($func == "Send Election Results"){
-			echo "Acknowledged SEND_ELECTION_RESULTS<br/>";
-			
 			$fullResults = "";
 			
 			//load these three arrays
@@ -91,7 +89,6 @@ if($_SESSION['isAdmin'] >= 2) {
 				$candidates[$ret['position']][] = $ret['name'];
 			}
 			
-			$fullResults = $fullResults."<br><br><b>Voting results:</b><br><br>";
 			$blankVotes = array();
 			$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$nullUID';");
 			while($ret = mysql_fetch_assoc($qury)){
@@ -114,32 +111,63 @@ if($_SESSION['isAdmin'] >= 2) {
 			}
 			$fullResults = $fullResults."<br><br>";
 			
-			echo $fullResults;
+			//echo $fullResults;
+			
+			$uid = $_SESSION['uid'];
+			$user = mysql_query("SELECT * FROM users WHERE UID = '$uid';");
+			$name = $user['fname']." ".$user['lname'];
+		
+			$msg = <<<EOF
+Hello officer board!
+		
+This is a test of the new tool in the admin panel to send election results to the officer board. Make sure to change the address to send from this to the officer email so they can get the real thing in the future.
+ 		
+$name has triggered a request to send the results of the current election to the officers. Below you can find the total count of votes casted for each candidate, including write-in options that passed the threshold to be counted. If this is the end of the election, you should check the "Election Editor" page on the admin panel to make sure that $name or some other administrator has not already locked voting so that votes cannot be changed anymore. 
+
+If for any reason any of you suspect that there may have been foul play with the election, whether it be website tampering or something else, make sure to consider the following: 
+
+- Make sure that NOBODY clears the election results until this situation has been resolved
+- Your best chance at finding answers is to work with everyone that has website access
+- Accusations of tampering with the election or any other foul play are very serious and should not be made without evidence
+- Emergency access-revoke for web committee exists for a reason. Any individual officer can call for this.
+
+Here are the results for the election:
+
+$fullResults
+
+Happy officering!
+
+~ The Website ~
+THIS IS AN AUTOMATED MESSAGE.
+EOF;
+			
+			mail("mosier1@umbc.edu", "Election Results", $msg);
 		}
-	}
-	
-	
-	if(isset($_REQUEST["clear"])){
-		echo "Acknowledged CLEAR_ELECTION<br/>";
 		
-		mysql_query("UPDATE `settings` SET `value` = 'lock' WHERE `key` = 'lockVoting';");
-		mysql_query("UPDATE `settings` SET `value` = 'closed' WHERE `key` = 'showVotingLink';");
-	}
-	
-	if(isset($_REQUEST["clear_votes"]) || isset($_REQUEST["clear"])){
-		echo "Acknowledged CLEAR_VOTES<br/>";
+		if($func == "Clear Election"){
+			echo "Acknowledged CLEAR_ELECTION<br/>";
 		
-		/* Commenting this section out until buttons are actually tested
-		mysql_query("DELETE FROM `election_votes` WHERE 1");
-		*/
-	}
-	
-	if(isset($_REQUEST["clear_votes"]) || isset($_REQUEST["clear"])){
-		echo "Acknowledged CLEAR_BIOS<br/>";
+			/*
+			mysql_query("UPDATE `settings` SET `value` = 'lock' WHERE `key` = 'lockVoting';");
+			mysql_query("UPDATE `settings` SET `value` = 'closed' WHERE `key` = 'showVotingLink';");
+			*/
+		}
 		
-		/* Commenting this section out until buttons are actually tested
-		mysql_query("DELETE FROM `election_candidates` WHERE 1");
-		*/
+		if ($func == "Clear All Votes" || $func == "Clear Election"){
+			echo "Acknowledged CLEAR_VOTES<br/>";
+			
+			/* Commenting this section out until buttons are actually tested
+			mysql_query("DELETE FROM `election_votes` WHERE 1");
+			*/
+		}
+		
+		if ($func == "Clear All Bios" || $func == "Clear Election"){
+			echo "Acknowledged CLEAR_BIOS<br/>";
+			
+			/* Commenting this section out until buttons are actually tested
+			mysql_query("DELETE FROM `election_candidates` WHERE 1");
+			*/
+		}
 	}
 }
 

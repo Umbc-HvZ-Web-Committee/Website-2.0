@@ -279,7 +279,7 @@ function displayVotingLink() {
 	}
 	
 	if($voteLink == "soonOpen" or $voteLink == "open") {
-		echo "<center><a href='voting.php'>Voting page</a></center>";
+		echo "<center><a href='https://umbchvz.com/voting.php'>Voting page</a></center>";
 	}else if($voteLink == "closed") {
 		echo "<center><font size='4'><b>No elections in progress</b></font></center>";
 	} else { //Aaaaaaaaaaaaaaaaaa

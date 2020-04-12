@@ -180,7 +180,7 @@ $settings = get_settings();
 					if($settings['lockVoting'] == "unlock") {
 						echo '<input type="submit" name="submit" value="Submit vote"></form>';
 					} else {
-						echo "<h2 style=\"text-align:center\">Voting has been locked by an administrator.</h2>";
+						echo "<h2 style=\"text-align:center\">Voting is currently closed.</h2>";
 					}
 					
 					//If user is an officer/web committee, show a complete, anonymized count of votes

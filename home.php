@@ -29,6 +29,8 @@ require_once('pageIncludes/home.inc.php');
 		<h3><b>UMBC HvZ does not meet when campus is closed!</b></h3></br></center></p>
 		<p> -->
 		
+		<?php //This is a test ?>
+		
 		<i><h4><center>~We have an official Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i>
 		<i><h4><center>~We have an official Discord server <a href="https://discord.gg/MCfXax2">here</a>~</center></h4></i>
 		<i><h4><center>~To submit mission feedback, <a href="https://forms.gle/qKJs7QMqenMD6F8L9">click here</a>~</center></h4></i>

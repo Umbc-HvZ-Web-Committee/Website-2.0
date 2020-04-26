@@ -23,7 +23,7 @@ $settings = get_settings();
 			<h2>Election Editor</h2>
 			<br/><br/>
 			
-			<h4><b>WARNING: This page is not operational. Do not touch anything on this page if you don't know what it does!</b></h4>
+			<h4>WARNING: This page is not well-tested for input validation and is still kinda buggy. Please be careful not to blow anything up while interacting with this page.</h4>
 			<br/><br/>
 		
 			<?php if($GLOBALS['submitMessage']!="") echo "<h4><b>${GLOBALS['submitMessage']}</b></h4><br/><br/>" ?>

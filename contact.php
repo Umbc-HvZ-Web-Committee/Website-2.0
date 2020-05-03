@@ -63,7 +63,7 @@ require_once('pageIncludes/contact.inc.php');
 			<td>(301)-792-0763</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td><font>NicK Hestnes</font></td>
+			<td><font>Nick Hestnes</font></td>
 			<td><font>nhestn1@umbc.edu</font></td>
  			<td><font>(410)-202-9131</font></td></tr>
 		

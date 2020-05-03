@@ -132,11 +132,11 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Travis Amtower</td><td>Andrew Nilles</td><td>Chris Goodwin</td></tr>
+			<td>Travis Amtower</td><td></td><td></td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
 			<td>Nancy Bolton</td><td>Dexter Kong</td><td>Joe Fusco</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Jack Burnett</td><td></td><td>Charlie Fox</td></tr>
+			<td>Jack Burnett</td><td></td><td></td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
 			<!--<td></td><td></td><td></td></tr>
 			<tr bgcolor="#FFFFFF" align="center">

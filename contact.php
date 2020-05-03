@@ -58,29 +58,29 @@ require_once('pageIncludes/contact.inc.php');
 			<th><font color="white">Email</font></th><th><font color="white">Cell Phone Number</font></th></tr>
 
 			<tr bgcolor="#C0C0C0" align="center"><td>President</td>
-			<td>Alexis Mincolelli</td>
-			<td>alemic1@umbc.edu</td>
-			<td>(973) 715-7825</td></tr>
+			<td>Charlie Fox</td>
+			<td>charfox1@umbc.edu</td>
+			<td>(301)-792-0763</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td><font>Ryan Gutzat</font></td>
-			<td><font>gury1@umbc.edu</font></td>
- 			<td><font>(302) 276-5851</font></td></tr>
+			<td><font>NicK Hestnes</font></td>
+			<td><font>nhestn1@umbc.edu</font></td>
+ 			<td><font>(410)-202-9131</font></td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Ryan Kwak</td>
-			<td>rykwak1@umbc.edu</td>
-			<td>(240) 888-7721</td></tr>
+			<td>Andrew Nilles</td>
+			<td>anilles1@umbc.edu</td>
+			<td>(443)-537-0724</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
-			<td>Nicholas Schaffer</td>
-			<td>nschaff1@umbc.edu</td>
-			<td>(240) 409-4448</td></tr>
+			<td>Luke Basom</td>
+			<td>basoml1@umbc.edu</td>
+			<td>(410)-707-4673</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
-			<td>Caroline Cocca</td>
-			<td>ccocca1@umbc.edu</td>
-			<td>(484) 269-9862</td></tr>
+			<td>Chris Goodwin</td>
+			<td>c180@umbc.edu</td>
+			<td>(301)-401-6073</td></tr>
 			</table><br/><br/>
 		
 			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->
@@ -160,7 +160,7 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Charlie Fox</td></tr>
+			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Patrick Gomes</td></tr>
 			</table>
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->

@@ -165,7 +165,7 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->
 			
-			<br/><b>The Web Committee is currently run by our secretary, Nicholas Schaffer.</b><br/>
+			<br/><b>The acting officer liaison to Web Committee is our President, Charlie Fox.</b><br/>
 			
 			<br/><i>The Web Committee is responsible for maintaining and developing our club's website.
 			For technical help, please contact a web committee member (if you are in contact with them) or the officers.</i><br/>

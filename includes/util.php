@@ -541,12 +541,12 @@ function retrieveSlides() {
 	$mondaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'mondayMission'");
 	$mondaySlide = $mondaySlides['url'];
 	$mondaySlide = $mondaySlide."embed?start=false&loop=false&delayms=10000&slide=";
-	$mondaySlide = $mondaySlide.$mondaySlide['startingSlideNumber'];
+	$mondaySlide = $mondaySlide.$mondaySlides['startingSlideNumber'];
 	
 	$thursdaySlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'thursdayMission'");
 	$thursdaySlide = $thursdaySlides['url'];
 	$thursdaySlide = $thursdaySlide."embed?start=false&loop=false&delayms=10000&slide=";
-	$thursdaySlide = $thursdaySlide.$thursdaySlide['startingSlideNumber'];
+	$thursdaySlide = $thursdaySlide.$thursdaySlides['startingSlideNumber'];
 	
 	echo "<h2>".$mainHeading."</h2>";
 	echo "<h3>".$firstHeading."</h3>";
@@ -560,7 +560,7 @@ function retrieveSlides() {
 		$pointSlides = mysql_oneline("SELECT * FROM mission_slides WHERE name = 'pointSlide'");
 		$pointSlide = $pointSlides['url'];
 		$pointSlide = $pointSlide."embed?start=false&loop=false&delayms=10000&slide=";
-		$pointSlide = $pointSlide.$pointSlide['startingSlideNumber'];
+		$pointSlide = $pointSlide.$pointSlides['startingSlideNumber'];
 		
 		echo "<br/><h3>".$thirdHeading."</h3>";
 		echo "<iframe src=\"$pointSlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";

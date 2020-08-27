@@ -42,7 +42,7 @@ require_once('pageIncludes/home.inc.php');
 		<!-- <i><h4><center>~To register for our annual invitational game, <a href="invitational/index.php">click here</a>~</center></h4></i> -->
 		<!--<i><h4><center>~To submit weeklong feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXxzvZDpIYisvHp0rphLwblbtqUEony5MH1dN55niz8wxn6Q/viewform">click here</a>~</center></h4></i>-->
 		<br/>
-		<b><font size="4">Mission Info:</font></b><br/>
+		<!--<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - Sherman 003<br/>
 		Thursdays - 7:00 pm - Meyerhoff 030<br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
@@ -54,7 +54,7 @@ require_once('pageIncludes/home.inc.php');
 		<br/>
 		<p>
 		<b><font size="4">Open Officer Meeting Info:</font></b><br/>
-		Every Sunday (while spring & fall classes are in session) at 1:00 pm - Fine Arts 006<br/>
+		<!--Every Sunday (while spring & fall classes are in session) at 1:00 pm - Fine Arts 006--> Held online via our Discord, keep an eye out for more details in the club emails.<br/>
 		</p>
 		<p>
 		<b><font size="4">Premise:</font></b><br/>

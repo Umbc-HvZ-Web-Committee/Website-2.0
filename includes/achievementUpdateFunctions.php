@@ -78,6 +78,15 @@ function specialMission($uid, $event) {
 	}
 }
 
+function holidayMission($uid, $event) {
+	//make sure to change key to proper achievement
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='holidayCheer';")); 
+	$aid = $aid['AID'];
+	if($event == "holidayMission") {
+		giveAchieve($aid, $uid);
+	}
+}
+
 //This needs to be deactivated if for some strange reason a mission with zombie->human "curing mechanics"
 //is run (which should never, ever happen anyway, but that is beside the point)
 function patientZero($uid, $event) {

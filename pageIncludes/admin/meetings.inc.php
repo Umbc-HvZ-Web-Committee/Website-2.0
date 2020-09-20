@@ -84,6 +84,11 @@ if($_SESSION['isAdmin']>=1){
 						mysql_query("UPDATE `users` SET `attendedPregame`= 1 WHERE `UID` = '$uid';");
 					}
 					
+					$isHoliday = requestVar('holiday');
+					if($isHoliday) {
+						updateAchieves($uid, null, "holidayMission");
+					}
+					
 					if($ret['cnt']==0){
 						//add user to meeting
 						mysql_query("INSERT INTO meeting_log(meetingID, UID, startState) VALUES ('$meeting','$uid',$state);");

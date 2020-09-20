@@ -126,11 +126,11 @@ require_once('pageIncludes/contact.inc.php');
 			<br/><br/>
 			<p/>
 			
-			<h2 style="text-align:center;">Current Subofficers</h2><br/>
-			
+			<!--<h2 style="text-align:center;">Current Subofficers</h2><br/>-->
+			<h2 style="text-align:center;">Due to the currrent situation, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/>
 			<!-- BEGIN TABLE CREATION FOR SUBOFFICERS -->
 			
-			<table align="center" border="1" cellspacing="1" cellpadding="3">
+			<!--<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
 			<td></td><td>Travis Amtower</td><td></td></tr>
 			<tr bgcolor="#C0C0C0" align="center">

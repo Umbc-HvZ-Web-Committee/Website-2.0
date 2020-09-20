@@ -15,4 +15,3 @@ jobs:
         username: "www-data"
         password: ${{ secrets.WWW_DATA_PASSWORD }}
         script: "cd /var/www && git pull"
-

@@ -45,7 +45,7 @@ $settings = get_settings();
 			<p>A guide on how the website can be used to administer the club's elections</p>
 			
 		
-		<?php }else if($_SESSION['isAdmin'] >= 3){ ?>
+		<?php }if($_SESSION['isAdmin'] >= 3){ ?>
 			<h2>Additional Resources (Web Committee Only)</h2>
 
 			<a href="https://www.youtube.com/watch?v=Qskm9MTz2V4"><h3>Web Committee GitHub and Database Access</h3></a>

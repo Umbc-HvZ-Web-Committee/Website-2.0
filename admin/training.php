@@ -29,24 +29,24 @@ $settings = get_settings();
 			
 			<a href="https://www.youtube.com/watch?v=TSN0s06Ip_8"><h3>Basic <strike>Normie</strike> Website Walkthrough</h3></a>
 			<p>An introduction to the Humans vs Zombies Website, 
-			looking through the pages that are available to general users who have an account</p>
+			looking through the pages that are available to general users who have an account</p><br/><br/>
 			
 			<a href="https://www.youtube.com/watch?v=tUPAEv9ZMSU"><h3>Admin Panel Walkthrough</h3></a>
 			<p>An introduction to the Admin Panel, a series of pages available exclusively to the officers and the web committee for 
-			manipulating the settings of the website and viewing restricted information</p>
+			manipulating the settings of the website and viewing restricted information</p><br/><br/>
 			
 			
 			<!-- The yt links are shitpost placeholders for future content to be put here -->
 			
 			<a href="https://www.youtube.com/watch?v=6Dh-RL__uN4"><h3>Weeklong Logistics Walkthrough</h3></a>
-			<p>A look through the various website pages that relate to weeklongs and a guide for weeklong moderators in using them</p>
+			<p>A look through the various website pages that relate to weeklongs and a guide for weeklong moderators in using them</p><br/><br/>
 			
 			<a href="https://www.youtube.com/watch?v=U06jlgpMtQs"><h3>Election Logistics Walkthrough</h3></a>
-			<p>A guide on how the website can be used to administer the club's elections</p>
+			<p>A guide on how the website can be used to administer the club's elections</p><br/><br/>
 			
 		
 		<?php }if($_SESSION['isAdmin'] >= 3){ ?>
-			<h2>Additional Resources (Web Committee Only)</h2>
+			<br/><br/><h2>Additional Resources (Web Committee Only)</h2><br/><br/>
 
 			<a href="https://www.youtube.com/watch?v=Qskm9MTz2V4"><h3>Web Committee GitHub and Database Access</h3></a>
 			<p>A tutorial for new web committee members on how to access and modify the GitHub repository for the website's source code 

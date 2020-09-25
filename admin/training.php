@@ -28,10 +28,10 @@ $settings = get_settings();
 			to this page so these resources can serve as website training for them.</p>
 			
 			<h3>Basic <strike>Normie</strike> Website Walkthrough</h3>
-			<embed src="https://www.youtube.com/watch?v=TSN0s06Ip_8" width="1440" height="858" scale="aspect" controller="true">
+			<embed src="https://www.youtube.com/watch?v=TSN0s06Ip_8" width="240" height="156" scale="aspect" controller="true">
 			
 			<h3>Admin Panel Walkthrough</h3>
-			<embed src="https://www.youtube.com/watch?v=B6UVxGpAp48" width="1440" height="858" scale="aspect" controller="true">
+			<embed src="https://www.youtube.com/watch?v=B6UVxGpAp48" width="240" height="156" scale="aspect" controller="true">
 			
 			<!-- The yt links are shitpost placeholders for future content to be put here -->
 			

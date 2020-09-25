@@ -48,7 +48,9 @@ require_once('pageIncludes/home.inc.php');
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>
-		<h4><b>As a result of the COVID-19 outbreak, UMBC Campus is closed, and as a student organization at UMBC, we are also closed. We will not be holding any events until UMBC reopens. For more information about what UMBC is doing in response to the COVID-19 outbreak, visit <a href='https://covid19.umbc.edu'>this</a> page.<br/>
+		<h4><b>As a result of the COVID-19 outbreak, UMBC Campus is closed, and as a student organization at UMBC, we are also closed. 
+		We will not be holding any events until UMBC reopens. For more information about what UMBC is doing in response to the 
+		COVID-19 outbreak, visit <a href='https://covid19.umbc.edu'>this</a> page.<br/>
 		</b></h4>
 		</p>
 		<br/>

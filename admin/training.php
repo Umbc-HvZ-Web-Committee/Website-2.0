@@ -19,7 +19,7 @@ $settings = get_settings();
 	<?php pageHeader(); ?>
 	<div id="page" class="container">
 		<div id="content">
-		<?php if($_SESSION['isAdmin'] >= 2){ ?>
+		<?php if($_SESSION['isAdmin'] >= 2) { ?>
 			<h2>Officer & Web Committee Website Guide</h2>
 			
 			<p>This page is for resources for the Officer Board & Web Committee to familiarize themselves 
@@ -45,15 +45,14 @@ $settings = get_settings();
 			<p>A guide on how the website can be used to administer the club's elections</p><br/><br/>
 			
 		
-		<?php }if($_SESSION['isAdmin'] >= 3){ ?>
-			<br/><br/><h2>Additional Resources (Web Committee Only)</h2><br/><br/>
+			<?php if($_SESSION['isAdmin'] >= 3) { ?>
+				<br/><br/><h2>Additional Resources (Web Committee Only)</h2><br/><br/>
 
-			<a href="https://www.youtube.com/watch?v=Qskm9MTz2V4"><h3>Web Committee GitHub and Database Access</h3></a>
-			<p>A tutorial for new web committee members on how to access and modify the GitHub repository for the website's source code 
-			and on how to access and modify the club's database through PHPMyAdmin</p>
-
-			
-		<?php }else{ ?>
+				<a href="https://www.youtube.com/watch?v=Qskm9MTz2V4"><h3>Web Committee GitHub and Database Access</h3></a>
+				<p>A tutorial for new web committee members on how to access and modify the GitHub repository for the website's source code 
+				and on how to access and modify the club's database through PHPMyAdmin</p>
+			<?php } 
+		} else { ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php } ?>
 		</div>

@@ -56,8 +56,8 @@ if($_SESSION['isAdmin']>=1){
 			$meetingType = mysql_oneline("SELECT * FROM `meeting_list` WHERE `meetingID` = '$meeting'");
 			$meetingType = $meetingType['meetingType'];
 			//echo $meetingType;
-			if ($meetingType == 1) { 
-				//If the meeting is an officer meeting, there is no need for differentiation between states
+			if ($meetingType != 0) { 
+				//If the meeting is not a mission, there is no need for differentiation between states
 				//so the state for everyone will be 0
 				//echo "Hi lol";
 				$state = $OTHER_TAG;
@@ -159,6 +159,10 @@ if($_SESSION['isAdmin']>=1){
 				$meetingName = "[Mission] ";
 				$type = "0";
 			}
+			else if($meetingType == "other") {
+				$meetingName = "[Other] ";
+				$type = "2";
+			}
 			if(requestVar('meetingName') == "") {
 				$meetingName = $meetingName."Unnamed Meeting";
 			}
@@ -248,14 +252,17 @@ if($_SESSION['isAdmin']>=1){
 								mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = `gamesModdedThisTerm` + 1 WHERE `UID`='$UID';");
 							}
 						}
-						if ($ret3['meetingType'] == 1) {
+						else if ($ret3['meetingType'] == 1) {
 							$meetingsTotal = $ret2['adminMeetingsTotal'];
 							$meetingsTotal = $meetingsTotal + 1;
 							$meetingsTerm = $ret2['adminMeetingsThisTerm'];
 							$meetingsTerm = $meetingsTerm + 1;
 							mysql_query("UPDATE `users` SET `adminMeetingsTotal` = `adminMeetingsTotal` + 1 WHERE `UID`='$UID';");
 							mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = `adminMeetingsThisTerm` + 1 WHERE `UID`='$UID';");
-						}					
+						}
+						else if ($ret3['meetingType'] == 2) {
+							continue;
+						}
 					//}
 				}
 				if($ctr == $HUMAN_TAG) { //1

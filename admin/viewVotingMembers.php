@@ -78,6 +78,7 @@ function confirmDeleteTerm()
 			echo "<table border=1>";
 		
 			echo "<tr>";
+			echo "<td>Username</td>";
 			echo "<td>Name</td>";
 			echo "<td>Total Appearances</td>";
 			echo "<td>Appearances This Term</td>";
@@ -86,6 +87,8 @@ function confirmDeleteTerm()
 			
 			$ret = mysql_query("SELECT * FROM `users` WHERE `appearancesThisTerm` + `appearancesLastTerm` >= 5 ORDER BY `appearancesThisTerm` + `appearancesLastTerm` DESC");
 			while($row = mysql_fetch_assoc($ret)) {
+				$uname = $row['uname'];
+				echo "<td>$uname</td>";
 				$fname = $row['fname'];
 				$lname = $row['lname'];
 				echo "<td>$fname $lname</td>";

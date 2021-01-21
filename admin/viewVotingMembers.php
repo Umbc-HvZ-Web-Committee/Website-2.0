@@ -18,14 +18,13 @@ if(isset($_REQUEST['submit'])) {
 		mysql_query("UPDATE `users` SET `hasTurnedInWaiver`= '0' WHERE 1;");
 	}
 	if($func=="End Semester"){
-		mail("mosier1@umbc.edu", "Success!", "Action triggered");
 		// Switch to next semester
-		/*mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
+		mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
 		mysql_query("UPDATE `users` SET `appearancesThisTerm` = 0 WHERE 1;");
 		mysql_query("UPDATE `users` SET `zombieStartsThisTerm` = 0 WHERE 1;");
 		mysql_query("UPDATE `users` SET `humanStartsThisTerm` = 0 WHERE 1;");
 		mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = 0 WHERE 1;");
-		mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = 0 WHERE 1;");*/
+		mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = 0 WHERE 1;");
 	}
 }
 

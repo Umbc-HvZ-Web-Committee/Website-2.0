@@ -115,11 +115,11 @@ function confirmDeleteTerm()
 				?>
 				<br/><br/>
 				<form action="" method="post" onsubmit="return confirmDeleteYear();">
-				<input type="submit" value="End Year" name="clearYear" id="clearYear"/>
+				<input type="submit" value="End Year" name="submit"/>
 				</form>
 				<br/>
 				<form action="" method="post" onsubmit="return confirmDeleteTerm();">
-				<input type="submit" value="End Semester" name="clearTerm" id="clearTerm"/>
+				<input type="submit" value="End Semester" name="submit"/>
 				</form>
 				<br/><br/>
 				<?php

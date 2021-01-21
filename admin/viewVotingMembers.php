@@ -26,7 +26,7 @@ if(isset($_REQUEST['submit'])) {
 		mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = 0 WHERE 1;");
 		mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = 0 WHERE 1;");
 	}
-
+}
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -6,7 +6,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 if(isset($_REQUEST['submit'])) {
 	$func = $_REQUEST['submit'];
 	//echo($func."<br/>");
-	if($func=="clearYear"){
+	if($func=="End Year"){
 		// Switch to next semester
 		mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
 		mysql_query("UPDATE `users` SET `appearancesThisTerm` = '0' WHERE 1;");
@@ -17,7 +17,7 @@ if(isset($_REQUEST['submit'])) {
 		// Reset waiver info because those expire by the year
 		mysql_query("UPDATE `users` SET `hasTurnedInWaiver`= '0' WHERE 1;");
 	}
-	if($func=="clearTerm"){
+	if($func=="End Term"){
 		// Switch to next semester
 		mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
 		mysql_query("UPDATE `users` SET `appearancesThisTerm` = 0 WHERE 1;");

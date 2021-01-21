@@ -15,7 +15,7 @@ if(isset($_POST['clearYear']))
 	// Reset waiver info because those expire by the year
     mysql_query("UPDATE `users` SET `hasTurnedInWaiver`= '0' WHERE 1;");
 }
-if(isset($_POST['clearSemester']))
+if(isset($_POST['clearTerm']))
 {
 	// Switch to next semester
     mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");

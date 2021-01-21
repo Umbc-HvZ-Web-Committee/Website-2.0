@@ -2,29 +2,30 @@
 require_once('../pageIncludes/admin/blogPost.inc.php');
 $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'");
 
-// Code for Clear Records
-if(isset($_POST['clearYear']))
-{
-	// Switch to next semester
-    mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
-    mysql_query("UPDATE `users` SET `appearancesThisTerm` = '0' WHERE 1;");
-    mysql_query("UPDATE `users` SET `zombieStartsThisTerm` = '0' WHERE 1;");
-    mysql_query("UPDATE `users` SET `humanStartsThisTerm` = '0' WHERE 1;");
-    mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = '0' WHERE 1;");
-    mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = '0' WHERE 1;");
-	// Reset waiver info because those expire by the year
-    mysql_query("UPDATE `users` SET `hasTurnedInWaiver`= '0' WHERE 1;");
-}
-if(isset($_POST['clearTerm']))
-{
-	// Switch to next semester
-    mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
-    mysql_query("UPDATE `users` SET `appearancesThisTerm` = 0 WHERE 1;");
-    mysql_query("UPDATE `users` SET `zombieStartsThisTerm` = 0 WHERE 1;");
-    mysql_query("UPDATE `users` SET `humanStartsThisTerm` = 0 WHERE 1;");
-    mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = 0 WHERE 1;");
-    mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = 0 WHERE 1;");
-}
+
+if(isset($_REQUEST['submit'])) {
+	$func = $_REQUEST['submit'];
+	//echo($func."<br/>");
+	if($func=="clearYear"){
+		// Switch to next semester
+		mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
+		mysql_query("UPDATE `users` SET `appearancesThisTerm` = '0' WHERE 1;");
+		mysql_query("UPDATE `users` SET `zombieStartsThisTerm` = '0' WHERE 1;");
+		mysql_query("UPDATE `users` SET `humanStartsThisTerm` = '0' WHERE 1;");
+		mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = '0' WHERE 1;");
+		mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = '0' WHERE 1;");
+		// Reset waiver info because those expire by the year
+		mysql_query("UPDATE `users` SET `hasTurnedInWaiver`= '0' WHERE 1;");
+	}
+	if($func=="clearTerm"){
+		// Switch to next semester
+		mysql_query("UPDATE `users` SET `appearancesLastTerm` = `appearancesThisTerm` WHERE 1;");
+		mysql_query("UPDATE `users` SET `appearancesThisTerm` = 0 WHERE 1;");
+		mysql_query("UPDATE `users` SET `zombieStartsThisTerm` = 0 WHERE 1;");
+		mysql_query("UPDATE `users` SET `humanStartsThisTerm` = 0 WHERE 1;");
+		mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = 0 WHERE 1;");
+		mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = 0 WHERE 1;");
+	}
 
 
 ?>

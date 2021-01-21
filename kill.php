@@ -20,13 +20,16 @@ require_once('pageIncludes/kill.inc.php');
 			<?php
 			if(isset($GLOBALS['killNotification']) && $GLOBALS['killNotification']!="") echo $GLOBALS['killNotification']."<br/>";
 			if(isLoggedIn()){
-			?>
-			<form action="" method="post">
-			Kill ID: <input name="killID"></input>
-			<input type="submit" name="submit" value="Submit"/>
-			</form>
+				?>
+				<form action="" method="post">
+				Kill ID: <input name="killID"></input>
+				<br/><br/>
+				Optionally, include a description of the location of this kill in the box below. Be as detailed as you'd like.<br/>
+				<textarea name="killLocation" style="width: 410px; height: 100px;"></textarea>
+				<input type="submit" name="submit" value="Submit"/>
+				</form>
 			<?php }else{?>
-			<h3>Please log in to log your kill.</h3>
+				<h3>Please log in to log your kill.</h3>
 			<?php }?>
 		</div>
 		<div id="sidebar">

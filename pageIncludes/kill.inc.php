@@ -82,7 +82,12 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			break;
 		}
 		
+		//Log the location of the kill if it is specified
+		$killLocation = requestVar("killLocation");
+		mysql_query("UPDATE `long_players` SET `killLocation` = '$killLocation' WHERE `playerID`='$uid' AND `gameID`='$gameID';");
 		
+		
+		/*
 		//This gets the time of feed, or sets it to now if it hasn't been logged yet.
 		$ret = mysql_oneline("SELECT COUNT(*) AS cnt, `timeOfKill` FROM `long_feeds` WHERE `whoDied`='$uid' AND `gameID`='$gameID' GROUP BY `timeOfKill`;");
 		if($ret['cnt']>0){
@@ -94,6 +99,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			$freshlyDead = true;
 		}
 		$tofDate = strtotime($timeOfFeed);
+		*/
 		
 		//This does a lot.  It:
 		// - verifies that the given kill code is valid
@@ -193,7 +199,8 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		}
 		$notes = "";
 		//And finally, commit all that.
-		/*mysql_query("INSERT INTO `long_feeds` (`gameID`, whoDied`, `whoFed`, `timeOfKill`, `wasMainKill`, `hoursGiven`, `notes`) "
+		/*
+		mysql_query("INSERT INTO `long_feeds` (`gameID`, whoDied`, `whoFed`, `timeOfKill`, `wasMainKill`, `hoursGiven`, `notes`) "
 		."VALUES ('$gameID', '$uid', '$me', '$timeOfFeed', $mainKill, $hoursGiven, '$notes')");
 		
 		//Give points if applicable
@@ -204,7 +211,8 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			}else{
 				//mysql_query("INSERT INTO long_points(gameID, playerID, pointsGiven, reason) VALUES ('$gameID', '$me', $pointsToGive, 'Killed {$ret['name']}')");
 			}
-		}*/
+		}
+		*/
 		
 		echo "your kill has been logged";
 		

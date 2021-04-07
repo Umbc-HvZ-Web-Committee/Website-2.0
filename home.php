@@ -29,10 +29,8 @@ require_once('pageIncludes/home.inc.php');
 		<h3><b>UMBC HvZ does not meet when campus is closed!</b></h3></br></center></p>
 		<p> -->
 		
-		<?php //This is a test ?>
-		
-		<i><h4><center>~We have an official Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i>
-		<i><h4><center>~We have an official Discord server <a href="https://discord.gg/MCfXax2">here</a>~</center></h4></i>
+		<i><h4><center>~Check out our Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i>
+		<i><h4><center>~Check out our Discord server <a href="https://discord.gg/MCfXax2">here</a>~</center></h4></i>
 		<i><h4><center>~To submit mission feedback, <a href="https://forms.gle/qKJs7QMqenMD6F8L9">click here</a>~</center></h4></i>
 		<!-- <i><h4><center>~To order a club T-shirt, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eRuP4zEuLcLSC1bXqZ9GzF8ZDZn1QHjSR_pS8lH6lHtsmQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To submit invitational feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSAfolSJBRFTghMTa3onH7dMgtcM94CWpcbJLT6tz8uqkTwQ/viewform">click here</a>~</center></h4></i> -->
@@ -48,8 +46,11 @@ require_once('pageIncludes/home.inc.php');
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>
-		<h4><b>As a result of the COVID-19 outbreak, UMBC Campus is closed, and as a student organization at UMBC, we are also closed. 
-		We will not be holding any events until UMBC reopens. For more information about what UMBC is doing in response to the 
+		<h4><b>As a result of the COVID-19 outbreak, UMBC student organization activities have been restricted to 
+		virtual-only for the time being. We will not be holding any in-person events until this changes. 
+		For more information about our virtual events, check out our discord server 
+		<a href='https://discord.gg/MCfXax2'>here</a>.
+		For more information about what UMBC is doing in response to the 
 		COVID-19 outbreak, visit <a href='https://covid19.umbc.edu'>this</a> page.<br/>
 		</b></h4>
 		</p>

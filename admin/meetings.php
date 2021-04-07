@@ -51,10 +51,12 @@ function load(){
 			</p></form>
 			<h2>Meeting Creation</h2>
 			<form action="" method="post"><p>
-				Remember that today's date is appended to the meeting name. Meetings will have "[Mission]", "[Admin]", or "[Other]" at the beginning of the name.<br/>
+				Remember that today's date is appended to the meeting name. Meetings will have their category (e.g. "[Mission] ") added to the beginning of the name.<br/><br/> 
+				Note: Nominal meetings will not count towards the total number of appearances but can be used to count towards the required semester total for membership<br/><br>
 				Name for meeting: <input type="text" name="meetingName"/><br/>
 				<label for="mission"><input type="radio" name="meetingType" value="mission" id="mission" checked="checked"/>HvZ Mission</label>
 				<label for="admin"><input type="radio" name="meetingType" value="admin" id="admin"/>Admin Meeting</label>
+				<label for="admin"><input type="radio" name="meetingType" value="nominal" id="nominal"/>Nominal Meeting</label>
 				<label for="mission"><input type="radio" name="meetingType" value="other" id="other"/>Other Meeting</label>
 				<br/>
 				<input type="submit" name="submit" value="Create new meeting"/>

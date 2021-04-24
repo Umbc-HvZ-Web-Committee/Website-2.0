@@ -98,7 +98,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			foreach($positions as $curPos){
 				$fullResults = $fullResults."<u>$curPos</u><br>";
 				foreach($blankVotes[$curPos] as $curCan) {
-					$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '$curCan';");
+					$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '{$curCan}';");
 					$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote
 					if($numVotes != 1) {
 						$fullResults = $fullResults."'".$curCan."' has ".$numVotes." votes";

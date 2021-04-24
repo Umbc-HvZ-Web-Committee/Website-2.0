@@ -232,6 +232,7 @@ $settings = get_settings();
 							$highestNumVotes = 0;
 							$hasTie = false;
 							foreach($blankVotes[$curPos] as $curCan) {
+								$postPos = preg_replace("/ /","_",$curPos);
 								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '{$curCan}';");
 								$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote, but count everything else
 								if($numVotes > $highestNumVotes) {

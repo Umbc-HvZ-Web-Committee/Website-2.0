@@ -199,9 +199,11 @@ $settings = get_settings();
 							$blankVotes[$ret['position']][] = $ret['name'];
 						}
 						foreach($positions as $curPos){
-							echo "<u>$curPos</u><br>";
+							$fullResults = $fullResults."<u>$curPos</u><br>";
+							$escapedCurPos = mysql_real_escape_string($curPos);
 							foreach($blankVotes[$curPos] as $curCan) {
-								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '$curCan';");
+								$escapedCurCan = mysql_real_escape_string($curCan);
+								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$escapedCurPos' AND voteFor = '$escapedCurCan';");
 								$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote
 								if($numVotes != 1) {
 									echo "'".$curCan."' has ".$numVotes." votes";
@@ -231,9 +233,10 @@ $settings = get_settings();
 							$leadingCan = "";
 							$highestNumVotes = 0;
 							$hasTie = false;
+							$escapedCurPos = mysql_real_escape_string($curPos);
 							foreach($blankVotes[$curPos] as $curCan) {
-								$postPos = preg_replace("/ /","_",$curPos);
-								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '{$curCan}';");
+								$escapedCurCan = mysql_real_escape_string($curCan);
+								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$escapedCurPos' AND voteFor = '$escapedCurCan';");
 								$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote, but count everything else
 								if($numVotes > $highestNumVotes) {
 									$highestNumVotes = $numVotes;

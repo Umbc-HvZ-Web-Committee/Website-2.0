@@ -199,6 +199,7 @@ $settings = get_settings();
 							$blankVotes[$ret['position']][] = $ret['name'];
 						}
 						foreach($positions as $curPos){
+							echo "<u>$curPos</u><br>";
 							$fullResults = $fullResults."<u>$curPos</u><br>";
 							$escapedCurPos = mysql_real_escape_string($curPos);
 							foreach($blankVotes[$curPos] as $curCan) {

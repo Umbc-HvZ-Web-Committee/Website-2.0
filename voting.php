@@ -152,7 +152,7 @@ $settings = get_settings();
 					
 					//reload candidates
 					$candidates = array();
-					$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes GROUP BY position, voteFor;");
+					$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes GROUP BY position, voteFor ORDER BY voteFor;");
 					while($ret = mysql_fetch_assoc($qury)){
 						if(!array_key_exists($ret['position'], $candidates)) $candidates[$ret['position']] = array();
 						$candidates[$ret['position']][] = $ret['name'];
@@ -232,7 +232,7 @@ $settings = get_settings();
 							$highestNumVotes = 0;
 							$hasTie = false;
 							foreach($blankVotes[$curPos] as $curCan) {
-								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '$curCan';");
+								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '{$curCan}';");
 								$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote, but count everything else
 								if($numVotes > $highestNumVotes) {
 									$highestNumVotes = $numVotes;

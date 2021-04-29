@@ -215,7 +215,19 @@ $settings = get_settings();
 							}
 							echo "<br><br>";
 						}
-						echo "<br><br>";
+						
+						$numVoters = mysql_oneline("SELECT COUNT(*) as cnt FROM (SELECT uid FROM `election_votes` WHERE 1 GROUP BY `uid`) as voters WHERE `uid` != 'OZ00000' AND `uid` != '';");
+						$numVoters = $numVoters['cnt'];
+			
+						$totalVotes = mysql_oneline("SELECT COUNT(*) as cnt FROM election_votes WHERE `uid` != 'OZ00000' AND `uid` != '';");
+						$totalVotes = $totalVotes['cnt'];
+			
+						$fullResults = $fullResults."Total number of unique voters: ".$numVoters."<br><br>";
+						$fullResults = $fullResults."Total number of votes cast: ".$totalVotes."<br><br>";
+			
+						$fullResults = $fullResults."<br><br>";
+						
+						echo $fullResults;
 					}
 					
 					//Show count of votes, but hide the stats. Only show which voting options are "winning"

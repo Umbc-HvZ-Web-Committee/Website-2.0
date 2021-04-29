@@ -143,6 +143,17 @@ $settings = get_settings();
 			}
 			$fullResults = $fullResults."<br><br>";
 			
+			$numVoters = mysql_query("SELECT COUNT(*) as cnt FROM (SELECT uid FROM `election_votes` WHERE `uid` != '$nullUID' AND `uid` != '' GROUP BY `uid`) as voters WHERE 1;");
+			$numVoters = $numVoters['cnt'];
+			
+			$totalVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE 1;");
+			$totalVotes = $totalVotes['cnt'];
+			
+			$fullResults = $fullResults."Total number of unique voters: ".$numVoters."<br><br>";
+			$fullResults = $fullResults."Total number of votes cast: ".$totalVotes."<br><br>";
+			
+			$fullResults = $fullResults."<br><br>";
+			
 			echo $fullResults;
 			?>
 			

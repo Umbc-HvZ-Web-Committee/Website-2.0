@@ -200,7 +200,7 @@ $settings = get_settings();
 						}
 						foreach($positions as $curPos){
 							echo "<u>$curPos</u><br>";
-							$fullResults = $fullResults."<u>$curPos</u><br>";
+							//$fullResults = $fullResults."<u>$curPos</u><br>";
 							$escapedCurPos = mysql_real_escape_string($curPos);
 							foreach($blankVotes[$curPos] as $curCan) {
 								$escapedCurCan = mysql_real_escape_string($curCan);

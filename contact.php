@@ -78,8 +78,8 @@ require_once('pageIncludes/contact.inc.php');
 			<td>(443)-690-3362</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
-			<td>Chris Goodwin</td>
-			<td>dgaiano@umbc.edu</td>
+			<td>David Gaiano</td>
+			<td>dgaiano1@umbc.edu</td>
 			<td>(443)-632-5900</td></tr>
 			</table><br/><br/>
 		

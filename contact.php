@@ -58,68 +58,32 @@ require_once('pageIncludes/contact.inc.php');
 			<th><font color="white">Email</font></th><th><font color="white">Cell Phone Number</font></th></tr>
 
 			<tr bgcolor="#C0C0C0" align="center"><td>President</td>
-			<td>Charlie Fox</td>
-			<td>charfox1@umbc.edu</td>
-			<td>(301)-792-0763</td></tr>
-		
-			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td><font>Nick Hestnes</font></td>
-			<td><font>nhestn1@umbc.edu</font></td>
- 			<td><font>(410)-202-9131</font></td></tr>
-		
-			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Andrew Nilles</td>
-			<td>anilles1@umbc.edu</td>
-			<td>(443)-537-0724</td></tr>
-		
-			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
-			<td>Luke Basom</td>
-			<td>basoml1@umbc.edu</td>
-			<td>(410)-707-4673</td></tr>
-		
-			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
 			<td>Chris Goodwin</td>
 			<td>c180@umbc.edu</td>
 			<td>(301)-401-6073</td></tr>
+		
+			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
+			<td>Nick Hestnes</td>
+			<td>nhestn1@umbc.edu</td>
+ 			<td>(410)-202-9131</td></tr>
+		
+			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
+			<td>Adam Fu</td>
+			<td>afu2@umbc.edu</td>
+			<td>(410)-564-6491</td></tr>
+		
+			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
+			<td>Henry Denny</td>
+			<td>hdenny1@umbc.edu</td>
+			<td>(443)-690-3362</td></tr>
+		
+			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
+			<td>Chris Goodwin</td>
+			<td>dgaiano@umbc.edu</td>
+			<td>(443)-632-5900</td></tr>
 			</table><br/><br/>
 		
 			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->
-
-			<!-- </br><h2 style="text-align:center;">2019-2020 Officer Board (Takes over on 5/1)</h2></br>
-			
-			<table align="center" border="1" cellspacing="1" cellpadding="3">
-
-			<tr bgcolor="#800000"><th><font color="white">Position</font></th><th><font color="white">Person</font></th>
-			<th><font color="white">Email</font></th><th><font color="white">Cell Phone Number</font></th></tr>
-
-			<tr bgcolor="#C0C0C0" align="center"><td>President</td>
-			<td>Alexis Mincolelli</td>
-			<td>alemic1@umbc.edu</td>
-			<td>(973) 715-7825</td></tr>
-		
-			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td><font>Ryan Gutzat</font></td>
-			<td><font>gury1@umbc.edu</font></td>
- 			<td><font>(302) 276-5851</font></td></tr>
-		
-			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Ryan Kwak</td>
-			<td>rykwak1@umbc.edu</td>
-			<td>(240) 888-7721</td></tr>
-		
-			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
-			<td>Nicholas Schaffer</td>
-			<td>nschaff1@umbc.edu</td>
-			<td>(240) 409-4448</td></tr>
-		
-			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
-			<td>Caroline Cocca</td>
-			<td>ccocca1@umbc.edu</td>
-			<td>(484) 269-9862</td></tr>
-			</table>-->
-		
-			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->
-			
 			
 			<br/>
 			<i>For general help, email the officers at <a href="mailto:umbchvzofficers@gmail.com">umbchvzofficers@gmail.com</a></i>

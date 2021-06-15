@@ -12,13 +12,9 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		$qr = requestVar("killID");
 		$uid = "";
 		$mainKill = 0;
-		$timeOfFeed = "";
-		$hoursGiven = "0";
 		$gameID = getCurrentLongGame();
 		$gameID = $gameID['gameID'];
-		$newKill = false;
 
-// 		$settings = get_settings(); //I don't think this is necessary... Whoever said this was right. Check line 7!
 		$me = $_SESSION['uid'];
 		$ret = mysql_oneline("SELECT `state` from `long_players` WHERE `playerID`='$me' AND `gameID`='$gameID';");
 		
@@ -37,8 +33,8 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		}
 
 		//Check QR validity
-		if(substr($qr, 0, 2)!="MK" && substr($qr, 0, 2)!="FK"){
-			$GLOBALS['killNotification'] = "That's not a valid code. Valid codes start with 'MK' or 'FK', yours started with '".substr($eid, 0, 2)."'.<br>";
+		if(substr($qr, 0, 2)!="MK"){
+			$GLOBALS['killNotification'] = "That's not a valid code. Valid codes start with 'MK', yours started with '".substr($eid, 0, 2)."'.<br>";
 			break;
 		}
 		
@@ -82,35 +78,22 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			break;
 		}
 		
-		//Log the location of the kill if it is specified
-		$killLocation = requestVar("killLocation");
-		mysql_query("UPDATE `long_players` SET `killLocation` = '$killLocation' WHERE `playerID`='$uid' AND `gameID`='$gameID';");
-		
-		
-		/*
-		//This gets the time of feed, or sets it to now if it hasn't been logged yet.
-		$ret = mysql_oneline("SELECT COUNT(*) AS cnt, `timeOfKill` FROM `long_feeds` WHERE `whoDied`='$uid' AND `gameID`='$gameID' GROUP BY `timeOfKill`;");
-		if($ret['cnt']>0){
-			//all should have same time, doesn't matter which one we pull
-			$timeOfFeed = $ret['timeOfFeed'];
-			$freshlyDead = false;
-		}else{
-			$timeOfFeed = date_create()->format('Y-m-d H:i:s');
-			$freshlyDead = true;
-		}
+		//This gets the time of kill in UTC (Not US Eastern Standard/Daylight Time)
+		$timeOfFeed = date_create()->format('Y-m-d H:i:s');
 		$tofDate = strtotime($timeOfFeed);
-		*/
+
+		//Log the kill time and the location of the kill if it is specified
+		$killLocation = requestVar("killLocation");
+		mysql_query("UPDATE `long_players` SET `killLocation` = '$killLocation', `deathTime` = '$timeOfFeed' WHERE `playerID`='$uid' AND `gameID`='$gameID';");
+		//TODO: Time zone conversion from UTC into US EDT and EST
 		
 		//This does a lot.  It:
 		// - verifies that the given kill code is valid
 		// - pulls the UID of the valid player
-		// - if it's the main kill, gives kill credit to the logger
-		// - sets the hours to give to the player (based on kill type)
+		// - gives kill credit to the logger
 		// - remove that kill code so it can't be used again
 		$GLOBALS['killNotification'] .= "<h3>Kill logged.</h3><br>";
 		$ret = mysql_oneline("SELECT COUNT(*) AS cnt, `playerID`, `state`, isOnHitlist FROM `long_players` WHERE `mainKill`='$qr' AND `gameID`='$gameID' GROUP BY `playerID`, `state`, `isOnHitlist`;");
-		$pointsToGive = 0;
-		$hitlist = false;
 		if($ret['state']==1) {
 			$newKill = true;
 		}
@@ -120,35 +103,9 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 				$hoursGiven = $settings['hoursPerMedkit'];
 				mysql_query("UPDATE `long_players` SET `mainKill`='' WHERE `playerID`='$uid' AND `gameID`='$gameID';");
 			}else{
-				//Commenting out point-based and hitlist-based code
-				/*
-				$mainKill = 1;
-				//For a main kill, give half the human's points or 2, whichever is greater.
-				$pointsToGive = 2;
-				$cur = mysql_oneline("SELECT SUM(pointsGiven) points FROM long_points WHERE playerID='$uid'");
-				$points = $cur['points'];
-				if($points/2>$pointsToGive) $pointsToGive=$points/2;
-				
-				//If the person killed is on the hitlist, and this is a main feed, then notify the admins
-				if($ret['isOnHitlist']==1){
-					$tmp = mysql_oneline("SELECT fname, lname FROM users WHERE UID='$me'");
-					$killerName = $tmp['fname']." ".$tmp['lname'];
-					$cur = mysql_oneline("SELECT fname, lname FROM users WHERE UID='$uid'");
-					$deadName = "{$cur['fname']} {$cur['lname']}";
-					$cur = mysql_oneline("SELECT SUM(pointsGiven) points FROM long_points WHERE playerID='$uid'");
-					$points = $cur['points'];
-					mail("benharris5@gmail.com", "$killerName killed $deadName, who was on the hitlist!", "$killerName just killed $deadName, who was on the hitlist with $points points when they died.  Congrats to them!\n\nThis is an automated notice, please yell at Ben if you think this is wrong/spam.");
-					mail("umbchvzofficers@gmail.com", "$killerName killed $deadName, who was on the hitlist!", "$killerName just killed $deadName, who was on the hitlist with $points points when they died.  Congrats to them!\n\nThis is an automated notice, please yell at Ben if you think this is wrong/spam.");
-					$GLOBALS['killNotification'] = "<h3>Kill logged. You bagged a human on the hitlist, congrats!</h3><br>";
-					$pointsToGive += 1;
-					$hitlist = true;
-				}
-				*/
-				
 				mysql_query("UPDATE `long_players` SET `kills`=`kills`+1 WHERE `playerID`='$me' AND `gameID`='$gameID';");
 				mysql_query("UPDATE `users` SET `lifetimeKills`=`lifetimeKills`+1 WHERE `uid`='$me';");
 				mysql_query("UPDATE `long_players` SET `killerID`='$me' WHERE `playerID`='$uid' AND `gameID`='$gameID';"); 
-				//$hoursGiven = $settings['hoursPerMainFeed'];
 				mysql_query("UPDATE `long_players` SET `mainKill`='', `state`= -1 WHERE `playerID`='$uid' AND `gameID`='$gameID';");
 			}
 		}else{
@@ -162,14 +119,6 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 					$hoursGiven = $settings['hoursPerFeed'];
 					mysql_query("UPDATE `long_players` SET `feedKill1`='', `state`=-1 WHERE `playerID`='$uid' AND `gameID`='$gameID';");
 					$pointsToGive = 1;
-					//If the person killed is on the hitlist, then give a bonus point and a pat on the back
-					/*
-					if($ret['isOnHitlist']==1){
-						$GLOBALS['killNotification'] = "<h3>Kill logged. You bagged a human on the hitlist, congrats!</h3><br>";
-						$pointsToGive += 1;
-						$hitlist = true;
-					}
-					*/
 				}
 			}else{
 				$ret = mysql_oneline("SELECT COUNT(*) AS cnt, `playerID`, `state`, isOnHitlist FROM `long_players` WHERE `feedKill2`='$qr' AND `gameID`='$gameID' GROUP BY `playerID`, `state`, `isOnHitlist`;");
@@ -178,18 +127,6 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 						//medkit
 						$GLOBALS['killNotification'] .= "LOL THAT'S A DUMMY MEDKIT CODE, ENJOY YOUR FAKE BRAIN!<br>";
 						break;
-					}else{
-						/*
-						mysql_query("UPDATE `long_players` SET `feedKill2`='', `state`=-1 WHERE `playerID`='$uid' AND `gameID`='$gameID';");
-						$hoursGiven = $settings['hoursPerFeed'];
-						$pointsToGive = 1;
-						//If the person killed is on the hitlist, then give a bonus point and a pat on the back
-						if($ret['isOnHitlist']==1){
-							$GLOBALS['killNotification'] = "<h3>Kill logged. You bagged a human on the hitlist, congrats!</h3><br>";
-							$pointsToGive += 1;
-							$hitlist = true;
-						}
-						*/
 					}
 				}else{
 					$GLOBALS['killNotification'] .= "That isn't a valid kill code, or that killcode has already been claimed.<br>";
@@ -198,37 +135,11 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			}
 		}
 		$notes = "";
-		//And finally, commit all that.
-		/*
-		mysql_query("INSERT INTO `long_feeds` (`gameID`, whoDied`, `whoFed`, `timeOfKill`, `wasMainKill`, `hoursGiven`, `notes`) "
-		."VALUES ('$gameID', '$uid', '$me', '$timeOfFeed', $mainKill, $hoursGiven, '$notes')");
-		
-		//Give points if applicable
-		if($pointsToGive>0){
-			$ret = mysql_oneline("SELECT CONCAT(fname, ' ', lname) name FROM users WHERE UID='$uid'");
-			if($hitlist){
-				//mysql_query("INSERT INTO long_points(gameID, playerID, pointsGiven, reason) VALUES ('$gameID', '$me', $pointsToGive, 'Killed {$ret['name']} + hitlist bonus')");
-			}else{
-				//mysql_query("INSERT INTO long_points(gameID, playerID, pointsGiven, reason) VALUES ('$gameID', '$me', $pointsToGive, 'Killed {$ret['name']}')");
-			}
-		}
-		*/
-		
 		echo "your kill has been logged";
 		
 		//Now update the two affected players.
 		update($uid, $gameID, "killed");
 		if($mainKill==1) update($me, $gameID, "madeKill");
-		//else update($me, $gameID, "fed");
-		
-		//Update the death timer of the person who was fed, and set it for the killed if they're freshly dead.
-		
-		// Uncomment this line only for starve based games 
-		// **THIS FUNCTION HAS NOT BEEN UPDATED AND WILL SCREW UP THE 'longest Day Survived' COLUMN IF USED AS IS
-		//setDeathTimer($gameID, $me, $hoursGiven);
-		if($freshlyDead){
-			//setDeathTimer($gameID, $uid, $settings['hoursTillStarve'], $newKill);
-		}
 		
 		$qr = "";
 		$notes = "";

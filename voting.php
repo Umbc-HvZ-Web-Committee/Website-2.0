@@ -36,9 +36,6 @@ $settings = get_settings();
 			
 			//VOTING CONSTANTS
 			
-			//Default value used for dummy votes to create a candidate
-			$defaultUID = $settings['nullUID']; 
-			
 			//Number of votes needed for a "dummy" vote to be created for the option and make said option a candidate
 			//If a write-in doesn't reach this threshold, it will not be counted by the vote counter
 			$writeInThreshold = $settings['writeInThreshold']; 

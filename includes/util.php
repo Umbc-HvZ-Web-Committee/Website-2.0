@@ -505,6 +505,9 @@ function getVotingResults() {
 	//ALSO MAYBE TELL ME (KYLE) SO I CAN COME BACK AND YELL AT SOMEONE
 	
 	$fullResults = "";
+	
+	//Default value used for dummy votes to create a candidate
+	$nullUID = $settings['nullUID']; 
 		
 	//load these three arrays
 	$curVote = array();

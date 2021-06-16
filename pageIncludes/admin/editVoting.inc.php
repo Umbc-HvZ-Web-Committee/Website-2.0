@@ -67,51 +67,9 @@ if($_SESSION['isAdmin'] >= 2) {
 		}
 		
 		if($func == "Send Election Results"){
-			$fullResults = "";
-			
-			//load these three arrays
-			$curVote = array();
-			$positions = array();
-			$candidates = array();
-						
-			//Prepare this array for displaying actual positions to vote ON
-			$qury = mysql_query("SELECT position FROM election_votes GROUP BY position ORDER BY position ASC;");
-			while($ret = mysql_fetch_assoc($qury)){
-				$curVote[$ret['position']] = "";
-				$positions[] = $ret['position'];
-			}
-			
-			//Prepare this array for displaying actual "candidates" to vote FOR
-			$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes GROUP BY position, voteFor;");
-			//$qury = mysql_query("SELECT position FROM election_candidates GROUP BY position, name ORDER BY RAND();");
-			while($ret = mysql_fetch_assoc($qury)){
-				if(!array_key_exists($ret['position'], $candidates)) $candidates[$ret['position']] = array();
-				$candidates[$ret['position']][] = $ret['name'];
-			}
-			
-			$blankVotes = array();
-			$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$nullUID';");
-			while($ret = mysql_fetch_assoc($qury)){
-				if(!array_key_exists($ret['position'], $blankVotes)) $blankVotes[$ret['position']] = array();
-					$blankVotes[$ret['position']][] = $ret['name'];
-			}
-			foreach($positions as $curPos){
-				$fullResults = $fullResults."<u>$curPos</u><br>";
-				foreach($blankVotes[$curPos] as $curCan) {
-					$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$curPos' AND voteFor = '{$curCan}';");
-					$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote
-					if($numVotes != 1) {
-						$fullResults = $fullResults."'".$curCan."' has ".$numVotes." votes";
-					}else {
-						$fullResults = $fullResults."'".$curCan."' has 1 vote";
-					}
-					$fullResults = $fullResults."<br>";
-				}
-				$fullResults = $fullResults."<br><br>";
-			}
-			$fullResults = $fullResults."<br><br>";
-			
-			echo $fullResults;
+			echo "<br><br><b>Voting results:</b><br><br>";
+			$electionResults = getVotingResults();
+			echo $electionResults;
 			
 			$uid = $_SESSION['uid'];
 			echo $uid." ";
@@ -136,7 +94,7 @@ If for any reason any of you suspect that there may have been foul play with the
 
 Here are the results for the election:
 
-$fullResults
+$electionResults
 
 Happy officering!
 

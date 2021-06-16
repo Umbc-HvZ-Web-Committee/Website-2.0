@@ -495,6 +495,74 @@ function placeTabIcon() {
 	echo '<link rel="icon" type="image/png" href="https://umbchvz.com/images/hvzLogo.png"/>';
 }
 
+function getVotingResults() {
+	//If user is an officer/web committee, show a complete, anonymized count of votes
+	//I hope you like this vote counter, because I stayed up late during Thanksgiving vacation in Florida to make it work
+	//With this counter, web committee does NOT need to actually look at who voted for who to do their job
+	//This counter also makes it harder to fix an election, since multiple have continuous access to its live results
+	//YOU SHOULD BE SUSPICIOUS OF ANYONE WHO WANTS/TRIES TO REMOVE THIS FUNCTIONALITY FOR ANY REASON
+	//IF ANYONE TRIES TO KILL THIS FUNCTIONALITY, LET ALL (OTHER) OFFICERS, (OTHER) WEB COMMITTE MEMBERS, AND HICCUP KNOW RIGHT AWAY 
+	//ALSO MAYBE TELL ME (KYLE) SO I CAN COME BACK AND YELL AT SOMEONE
+	
+	$fullResults = "";
+		
+	//load these three arrays
+	$curVote = array();
+	$positions = array();
+	$candidates = array();
+	$nullUID = $settings['nullUID'];
+						
+	//Prepare this array for displaying actual positions to vote ON
+	$qury = mysql_query("SELECT position FROM election_votes GROUP BY position ORDER BY position ASC;");
+	while($ret = mysql_fetch_assoc($qury)){
+		$curVote[$ret['position']] = "";
+		$positions[] = $ret['position'];
+	}
+			
+	//Prepare this array for displaying actual "candidates" to vote FOR
+	$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes GROUP BY position, voteFor;");
+	while($ret = mysql_fetch_assoc($qury)){
+		if(!array_key_exists($ret['position'], $candidates)) $candidates[$ret['position']] = array();
+		$candidates[$ret['position']][] = $ret['name'];
+	}
+			
+	$blankVotes = array();
+	$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$nullUID';");
+	while($ret = mysql_fetch_assoc($qury)){
+		if(!array_key_exists($ret['position'], $blankVotes)) $blankVotes[$ret['position']] = array();
+			$blankVotes[$ret['position']][] = $ret['name'];
+	}
+    foreach($positions as $curPos){
+        $fullResults = $fullResults."<u>$curPos</u><br>";
+        $escapedCurPos = mysql_real_escape_string($curPos);
+        foreach($blankVotes[$curPos] as $curCan) {
+            $escapedCurCan = mysql_real_escape_string($curCan);
+            $numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$escapedCurPos' AND voteFor = '$escapedCurCan';");
+			$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote
+			if($numVotes != 1) {
+				$fullResults = $fullResults."'".$curCan."' has ".$numVotes." votes";
+			}else {
+				$fullResults = $fullResults."'".$curCan."' has 1 vote";
+			}
+			$fullResults = $fullResults."<br>";
+		}
+		$fullResults = $fullResults."<br><br>";
+	}
+	$fullResults = $fullResults."<br><br>";
+			
+	$numVoters = mysql_oneline("SELECT COUNT(*) as cnt FROM (SELECT uid FROM `election_votes` WHERE 1 GROUP BY `uid`) as voters WHERE `uid` != 'OZ00000' AND `uid` != '';");
+	$numVoters = $numVoters['cnt'];
+			
+	$totalVotes = mysql_oneline("SELECT COUNT(*) as cnt FROM election_votes WHERE `uid` != 'OZ00000' AND `uid` != '';");
+	$totalVotes = $totalVotes['cnt'];
+			
+	$fullResults = $fullResults."Total number of unique voters: ".$numVoters."<br><br>";
+	$fullResults = $fullResults."Total number of votes cast: ".$totalVotes."<br><br>";
+			
+	$fullResults = $fullResults."<br><br>";
+	
+	return $fullResults;
+}
 
 //MySQL compatability fix for PHP 7
 $MYSQL_MOST_RECENT_CON = null;

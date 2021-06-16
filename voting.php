@@ -183,93 +183,9 @@ $settings = get_settings();
 						echo "<h2 style=\"text-align:center\">Voting is currently closed.</h2>";
 					}
 					
-					//If user is an officer/web committee, show a complete, anonymized count of votes
-					//I hope you like this vote counter, because I stayed up late during Thanksgiving vacation in Florida to make it work
-					//With this counter, web committee does NOT need to actually look at who voted for who to do their job
-					//This counter also makes it harder to fix an election, since multiple have continuous access to its live results
-					//YOU SHOULD BE SUSPICIOUS OF ANYONE WHO WANTS/TRIES TO REMOVE THIS FUNCTIONALITY FOR ANY REASON
-					//IF ANYONE TRIES TO KILL THIS FUNCTIONALITY, LET ALL (OTHER) OFFICERS, (OTHER) WEB COMMITTE MEMBERS, AND HICCUP KNOW RIGHT AWAY 
-					//ALSO MAYBE TELL ME (KYLE) SO I CAN COME BACK AND YELL AT SOMEONE
-					if($_SESSION['isAdmin'] >= 2) {
-						echo "<br><br><b>Voting results:</b><br><br>";
-						$blankVotes = array();
-						$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$defaultUID';");
-						while($ret = mysql_fetch_assoc($qury)){
-							if(!array_key_exists($ret['position'], $blankVotes)) $blankVotes[$ret['position']] = array();
-							$blankVotes[$ret['position']][] = $ret['name'];
-						}
-						foreach($positions as $curPos){
-							echo "<u>$curPos</u><br>";
-							//$fullResults = $fullResults."<u>$curPos</u><br>";
-							$escapedCurPos = mysql_real_escape_string($curPos);
-							foreach($blankVotes[$curPos] as $curCan) {
-								$escapedCurCan = mysql_real_escape_string($curCan);
-								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$escapedCurPos' AND voteFor = '$escapedCurCan';");
-								$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote
-								if($numVotes != 1) {
-									echo "'".$curCan."' has ".$numVotes." votes";
-								}else {
-									echo "'".$curCan."' has 1 vote";
-								}
-								echo "<br>";
-							}
-							echo "<br><br>";
-						}
-						
-						$numVoters = mysql_oneline("SELECT COUNT(*) as cnt FROM (SELECT uid FROM `election_votes` WHERE 1 GROUP BY `uid`) as voters WHERE `uid` != 'OZ00000' AND `uid` != '';");
-						$numVoters = $numVoters['cnt'];
-			
-						$totalVotes = mysql_oneline("SELECT COUNT(*) as cnt FROM election_votes WHERE `uid` != 'OZ00000' AND `uid` != '';");
-						$totalVotes = $totalVotes['cnt'];
-			
-						$fullResults = $fullResults."Total number of unique voters: ".$numVoters."<br><br>";
-						$fullResults = $fullResults."Total number of votes cast: ".$totalVotes."<br><br>";
-			
-						$fullResults = $fullResults."<br><br>";
-						
-						echo $fullResults;
-					}
-					
-					//Show count of votes, but hide the stats. Only show which voting options are "winning"
-					//Make sure you keep the else below, or you'll be printing redundant information
-					else if($_SESSION['isAdmin'] >= 1) {
-						echo "<br><br>Your admin level is not high enough to see the exact vote counts of this election"; //Lol git gud
-						echo "<br><br><b>Voting results:</b><br><br>";
-						$blankVotes = array();
-						$qury = mysql_query("SELECT position, voteFor AS name FROM election_votes WHERE uid = '' OR uid = '$defaultUID';");
-						while($ret = mysql_fetch_assoc($qury)){
-							if(!array_key_exists($ret['position'], $blankVotes)) $blankVotes[$ret['position']] = array();
-							$blankVotes[$ret['position']][] = $ret['name'];
-						}
-						foreach($positions as $curPos){
-							echo "<u>$curPos</u><br>";
-							$leadingCan = "";
-							$highestNumVotes = 0;
-							$hasTie = false;
-							$escapedCurPos = mysql_real_escape_string($curPos);
-							foreach($blankVotes[$curPos] as $curCan) {
-								$escapedCurCan = mysql_real_escape_string($curCan);
-								$numVotes = mysql_oneline("SELECT COUNT(*) cnt FROM election_votes WHERE position = '$escapedCurPos' AND voteFor = '$escapedCurCan';");
-								$numVotes = $numVotes['cnt'] - 1; //Don't count the dummy as a vote, but count everything else
-								if($numVotes > $highestNumVotes) {
-									$highestNumVotes = $numVotes;
-									$leadingCan = "'".$curCan."'";
-								}elseif ($numVotes == $highestNumVotes and $leadingCan != "") {
-									$leadingCan = $leadingCan." and '".$curCan."'";
-									$hasTie = true;
-								}
-								echo "<br>";
-							}
-							if(highestNumVotes <= $showVotesThreshold) {
-								echo "Not enough votes have been cast to display any results"; //Lol git gud
-							} elseif ($hasTie == false) {
-								echo $curCan." has the most votes";
-							} else {
-								echo "The candidates ".$curCan." are tied for having the most votes"; //Uh oh. Hopefully the election doesn't end this way...
-							} 
-						}
-						echo "<br><br>";
-					}
+					echo "<br><br><b>Voting results:</b><br><br>";
+					$electionResults = getVotingResults();
+					echo $electionResults;
 				}
 			}
 			?>

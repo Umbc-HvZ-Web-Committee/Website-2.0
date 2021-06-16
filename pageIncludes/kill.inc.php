@@ -79,12 +79,32 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		}
 		
 		//This gets the time of kill in UTC (Not US Eastern Standard/Daylight Time)
-		$timeOfFeed = date_create()->format('Y-m-d H:i:s');
-		$tofDate = strtotime($timeOfFeed);
+		$deathTime = date_create()->format('Y-m-d H:i:s');
+	
+		$sql = "SELECT `startDate` FROM `long_games` WHERE `gameID`='$gameID';";
+		$ret = mysql_oneline($sql);
+		$weeklongStart = $ret['startDate'];
+		$weeklongStart = date('Y-m-d H:i:s', strtotime($weeklongStart));
+
+		mysql_query("UPDATE `long_players` SET `deathTime`='$deathTime' WHERE `gameID`='$gameID' AND `playerID`='$uid'");
+		
+		if($newKill) {
+			// Check to see if they've lived longer than they have before
+			$dayDead = date('N', strtotime($deathTime));
+			$weeklongStart = date('N', strtotime($weeklongStart)) - 1;
+			$nowDead = $dayDead - $weeklongStart;
+			
+			$ret = mysql_oneline("SELECT `longestDaySurvived` FROM `users` WHERE UID='$uid';");
+			$currentDayDead = $ret['longestDaySurvived'];
+			
+			if($nowDead > $currentDayDead) {
+				mysql_query("UPDATE `users` SET longestDaySurvived='$nowDead' WHERE UID='$uid';");
+			}
+		}
 
 		//Log the kill time and the location of the kill if it is specified
 		$killLocation = requestVar("killLocation");
-		mysql_query("UPDATE `long_players` SET `killLocation` = '$killLocation', `deathTime` = '$timeOfFeed' WHERE `playerID`='$uid' AND `gameID`='$gameID';");
+		mysql_query("UPDATE `long_players` SET `killLocation` = '$killLocation', `deathTime` = '$deathTime' WHERE `playerID`='$uid' AND `gameID`='$gameID';");
 		//TODO: Time zone conversion from UTC into US EDT and EST
 		
 		//This does a lot.  It:

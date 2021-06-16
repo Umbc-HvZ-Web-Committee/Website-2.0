@@ -174,14 +174,11 @@ function getMembershipDateRange(){
 }
 
 function getMeetingsAttendedInMembershipRange($uid){
-	//$dates = getMembershipDateRange();
-	//$ret = mysql_oneline("SELECT COUNT(*) AS cnt FROM (SELECT * FROM meeting_log WHERE UID='$uid') AS meeting_log NATURAL JOIN (SELECT * FROM meeting_list WHERE creationDate < '{$dates['endDate']}' AND creationDate > '{$dates['startDate']}') AS meeting_list");
 	$ret = mysql_oneline("SELECT * FROM `users` WHERE `UID`='$uid'");
 	return $ret['appearancesThisTerm'] + $ret['appearancesLastTerm'];
 }
 
 function canVote($uid){
-	//return getMeetingsAttendedInMembershipRange($uid)>= 5;
 	$ret = mysql_oneline("SELECT * FROM `users` WHERE `UID`='$uid'");
 	return $ret['appearancesThisTerm'] + $ret['appearancesLastTerm'] >= 5;
 }
@@ -247,8 +244,6 @@ function printSidebar() {
 	//displayActivePoll();
 	echo "<br/></div><div class=\"section4\">";
 	retrieveSlides();
-	//displayWeather();
-	//retrieveSlidesNew();
 	echo "</div></div>";
 }
 
@@ -285,14 +280,6 @@ function displayVotingLink() {
 	} else { //Aaaaaaaaaaaaaaaaaa
 		echo "<center><font size='4'><b>Unknown status of elections</b></font></center>";
 	}
-	
-	/* The old way
-	echo "<h2>Elections</h2>";
-	//echo "<center><font size='4'><b>Voting opening soon</b></font></center>";
-	//echo "<center><font size='3'><b>Voting is now open!</b></font></center>";
-	//echo "<center><a href='voting.php'>Voting page</a></center>";
-	echo "<center><font size='4'><b>No elections in progress</b></font></center>";
-	*/
 }
 
 function displayActivePoll(){
@@ -452,78 +439,6 @@ function longGameSelect(){
 	echo '</select>';
 }
 
-//TODO: Possibly make this UI-accessible under the admin panel as a new page called "sidebar settings"
-//Currently, the slides on the sidebar are updated by updating these hard-coded variables
-//DO NOT EVER get rid of the embed & loop areas of the links. the length of the string vars should not change when updating these slides
-//Uncomment the appropriate lines of code to display the correct slides on the sidebar
-//Web committee needs to update these every week after each officer meeting at the latest so they are updated throughout the week
-//Use under construction slides as placeholders for secret or in-progress missions
-//Only the one-night slide vars should be changing week-by-week
-function retrieveSlidesOld(){
-	//One Night Slides
-	//$mondaySlide = "https://docs.google.com/presentation/d/1NYaiSTM46o78JzED7P8XI8Jho6DzYm9gSwpPTktJGZc/embed?start=false&loop=false&delayms=10000";
-	//$thursdaySlide = "https://docs.google.com/presentation/d/1jawTart8F26jstwp-ewT1Svdb8TTJqBYNRM0DzNSHGc/embed?start=false&loop=false&delayms=10000";	
-	
-	//Start of Semester Slides
-	//$mondaySlide = "https://docs.google.com/presentation/d/1YnyDdnIM6lu5R71R1zCgcPe34gdebh_3LPCENH8mj9I/embed?start=false&loop=false&delayms=10000"; HVZ 101
-	//$thursdaySlide = "https://docs.google.com/presentation/d/1P_-P7Fl5daol3sW0G4h2Ni0EmbuaXEXCXJTfpKj3d3s/embed?start=false&loop=false&delayms=10000"; HVZ 102
-	
-	// UNDER CONSTRUCTION SLIDES - UNCOMMENT TO DISPLAY
-	//$mondaySlide = "https://docs.google.com/presentation/d/1DMBUJ0EEm1NLoOElgdHCLbGJyOGzLxLvzBw58g5iYWY/embed?start=false&loop=false&delayms=10000";
-	//$thursdaySlide = "https://docs.google.com/presentation/d/1DMBUJ0EEm1NLoOElgdHCLbGJyOGzLxLvzBw58g5iYWY/embed?start=false&loop=false&delayms=10000";
-	
-	// FIVE-NIGHT PLACEHOLDER SLIDES
-	//$mondaySlide = "https://docs.google.com/presentation/d/1oZDA_kaOqYOMF22FJMoV7Z-V_MtPlbOS2cWp-ndmNLE/embed?start=false&loop=false&delayms=10000";
-	//$thursdaySlide = "https://docs.google.com/presentation/d/1oZDA_kaOqYOMF22FJMoV7Z-V_MtPlbOS2cWp-ndmNLE/embed?start=false&loop=false&delayms=10000";
-		
-	// END OF SEMESTER SLIDES
-	$mondaySlide = "https://docs.google.com/presentation/d/1bTrgmAlCTxQl3ryPz-k2PQ_erGQL1GVyslZComk7MyI/embed?start=false&loop=false&delayms=10000";	
-	$thursdaySlide = "https://docs.google.com/presentation/d/1bTrgmAlCTxQl3ryPz-k2PQ_erGQL1GVyslZComk7MyI/embed?start=false&loop=false&delayms=10000";	
-	
-	
-	$weather = "https://forecast.io/embed/#lat=39.254755&lon=-76.710972&name=UMBC";
-	echo "<br/><h2>Today's Weather</h2>";
-	echo "<iframe src=\"$weather\" frameborder=\"0\" height=\"200\" width=\"330\"></iframe>";
-	
-	// This was hard coded as the rules should be displayed before the weeklong starts
-	// Maybe set to auto display the rules on the Friday prior to the weeklong
-	// There is currently a setting in LONG GAME SETTINGS in the admin panel to toggle between this
-	
-	$curGame = mysql_oneline("SELECT value FROM `settings` WHERE `key` = 'displayLongGameSlides';");
-	$curGame = $curGame['value'];
-	
-	if($curGame == "yes")
-	{
-		// Don't change, link to generic pregame rules
-		$mondaySlide = "https://docs.google.com/presentation/d/11OleDh9nToAe7dqs1SzXTaBHXnJcwFO5i7jrUYYL5Y0/embed?start=false&loop=false&delayms=10000";
-
-		//$pointSlide = "https://docs.google.com/presentation/d/1DDwUX7tTlU7mYGxvqhJUZG-tArUQhzMf8Z8gozU78XU/embed?start=false&loop=false&delayms=10000";
-	
-		// Specific pregame rules go below
-		$thursdaySlide = "https://docs.google.com/presentation/d/1TRiaGlFwcq-LJ5e9LMUaZ-M_fpunDCw0yDedW7modjM/embed?start=false&loop=false&delayms=10000&slide=24";
-
-		echo "<h2>Weeklong Rules</h2>";
-		//Uncomment for point shop or if some other 3rd set of slides are needed
-		//Note from The Last Webmaster: Don't use a point shop it's bad reward design most of the time
-		//echo "<h3>Points Shop</h3>";
-		//echo "<iframe src=\"$pointSlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
-		echo "<h3>Generic Rules</h3>";
-		echo "<iframe src=\"$mondaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
-		echo "<br/><h3>Weeklong-Specific Rules</h3>";
-		echo "<iframe src=\"$thursdaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>";
-	}
-	else 
-	{
-		echo "<h2>This Week's Missions</h2>";
-		echo "<h3>Monday</h3>";
-		echo "<iframe src=\"$mondaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe><br/>";
-		echo "<br/><h3>Thursday</h3>";
-		echo "<iframe src=\"$thursdaySlide\" frameborder=\"0\" width=\"330\" height=\"330\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>";
-	}
-}
-
-//Function to retrieve slides but not the manual way
-//Still a WIP
 function retrieveSlides() {
 	displayWeather();
 	

@@ -39,20 +39,22 @@ require_once('pageIncludes/home.inc.php');
 		<!-- <i><h4><center>~To apply to be on the Web Committee in the upcoming semester, <a href="https://drive.google.com/open?id=1e_mzBN0uI7mbdW-3IWyCJ_KapFDEBo11ib43skbVJg0/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To register for our annual invitational game, <a href="invitational/index.php">click here</a>~</center></h4></i> -->
 		<!--<i><h4><center>~To submit weeklong feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXxzvZDpIYisvHp0rphLwblbtqUEony5MH1dN55niz8wxn6Q/viewform">click here</a>~</center></h4></i>-->
+		<i><h4><center>~For information on UMBC's reponse to the ongoing pandemic, <a href="https://covid19.umbc.edu'">click here</a>~</center></h4></i>
+		
 		<br/>
-		<!--<b><font size="4">Mission Info:</font></b><br/>
-		Mondays - 7:00 pm - Sherman 003<br/>
-		Thursdays - 7:00 pm - Meyerhoff 030<br/>
+		<b><font size="4">Mission Info:</font></b><br/>
+		Mondays - 7:00 pm - TBD<br/>
+		Thursdays - 7:00 pm - TBD<br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>
-		<h4><b>As a result of the COVID-19 outbreak, UMBC student organization activities have been restricted to 
+		<!--<h4><b>As a result of the COVID-19 outbreak, UMBC student organization activities have been restricted to 
 		virtual-only for the time being. We will not be holding any in-person events until this changes. 
 		For more information about our virtual events, check out our discord server 
 		<a href='https://discord.gg/MCfXax2'>here</a>.
 		For more information about what UMBC is doing in response to the 
 		COVID-19 outbreak, visit <a href='https://covid19.umbc.edu'>this</a> page.<br/>
-		</b></h4>
+		</b></h4> -->
 		</p>
 		<br/>
 		<p>

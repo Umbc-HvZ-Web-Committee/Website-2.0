@@ -35,7 +35,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<h3><a href="editSidebar.php">Sidebar Editor</a></h3>
 			<h3><a href="editVoting.php">Election Editor</a></h3>
 			<h3><a href="training.php">Website Tutorial</a></h3>
-			<h3><a href="training.php">Update Vaccine Status</a></h3>
+			<h3><a href="vaccine.php">Update Vaccine Status</a></h3>
 			<br/>
 			<?php
 		}

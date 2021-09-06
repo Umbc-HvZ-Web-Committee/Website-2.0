@@ -138,6 +138,21 @@ if($_SESSION['isAdmin']>=1){
 							$missionsPlayed = $missionsPlayed + 1;
                             mysql_query("UPDATE `long_players` SET `missionsPlayed`='$missionsPlayed' WHERE `gameID`='{$curLongGame['gameID']}' AND `playerID`='$uid';");
 						}
+						
+						//Check vaccine status
+						//Please let me delete this block in the future please
+						
+						$vaccineStatus = $ret2['vaccineStatus'];
+						if($vaccineStatus == '0') {
+							$GLOBALS['meetingMessage']=$GLOBALS['meetingMessage']." This player has reported as unvaccinated to the officers. Please make sure $name wears a mask as required.";
+						} else if($vaccineStatus == '1') {
+							$GLOBALS['meetingMessage']=$GLOBALS['meetingMessage']." This player has received only one dose of the coronavirus vaccine.";
+						} else if($vaccineStatus >= '2') {
+							//$GLOBALS['meetingMessage']=$GLOBALS['meetingMessage']." This player is fully-vaccinated.";
+						} else {
+							$GLOBALS['meetingMessage']=$GLOBALS['meetingMessage']." This player has not reported vaccine status to the officer board. Please follow-up on this.";
+						}
+						
 					}else{
 						//update user sign in
 						mysql_query("UPDATE meeting_log SET startState=$state WHERE UID='$uid' AND meetingID='$meeting';");

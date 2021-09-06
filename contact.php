@@ -68,7 +68,7 @@ require_once('pageIncludes/contact.inc.php');
  			<td>(410)-202-9131</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Adam Fu</td>
+			<td>Kirby Fu</td>
 			<td>afu2@umbc.edu</td>
 			<td>(410)-564-6491</td></tr>
 		

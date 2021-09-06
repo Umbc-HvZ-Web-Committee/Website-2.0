@@ -35,9 +35,8 @@ $settings = get_settings();
 			<br/>
 			<input type="submit" name="submit" value="Update Vaccine Status"/></br>
 			</form><br/>
-			
-			
-		} else { ?>
+				
+		<? } else { ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php } ?>
 		</div>

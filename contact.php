@@ -104,7 +104,7 @@ require_once('pageIncludes/contact.inc.php');
 			<tr bgcolor="#C0C0C0" align="center">
 			<td>Alexis Mincolelli</td><td>Miles Campbell</td><td>Nick Molyneaux</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td></td>Charlie Hunter<td></td><td>Maria Fernanda Diaz</td></tr>
+			<td>Charlie Hunter</td><td></td><td>Maria Fernanda Diaz</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
 			<!--<td></td><td></td><td></td></tr>
 			<tr bgcolor="#C0C0C0" align="center">-->

@@ -94,19 +94,19 @@ require_once('pageIncludes/contact.inc.php');
 			<h2 style="text-align:center;">Due to the currrent pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/>
 			<!-- BEGIN TABLE CREATION FOR SUBOFFICERS -->
 			
-			<!--<table align="center" border="1" cellspacing="1" cellpadding="3">
+			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td></td><td>Travis Amtower</td><td></td></tr>
+			<td>Kyle Mosier</td><td></td><td>Travis Amtower</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Nancy Bolton</td><td>Dexter Kong</td><td>Joe Fusco</td></tr>
+			<td>Nancy Bolton</td><td>Dexter Kong</td><td>Brain Truppo</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td></td><td>Jack Burnett</td><td></td></tr>
+			<td>Luke Basom</td><td>Ryan Gutzat</td><td>Charlie Fox</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
+			<td>Alexis Mincolelli</td><td>Miles Campbell</td><td>Nick Molyneaux</td></tr>
+			<tr bgcolor="#FFFFFF" align="center">
+			<td></td>Charlie Hunter<td></td><td>Maria Fernanda Diaz</td></tr>
+			<tr bgcolor="#FFFFFF" align="center">
 			<!--<td></td><td></td><td></td></tr>
-			<tr bgcolor="#FFFFFF" align="center">
-			<!-- <td></td><td></td><td></td></tr>
-			<tr bgcolor="#FFFFFF" align="center">
-			<td></td><td></td><td></td></tr>
 			<tr bgcolor="#C0C0C0" align="center">-->
 			
 			</table>

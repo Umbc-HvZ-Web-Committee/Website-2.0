@@ -96,15 +96,15 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Kyle Mosier</td><td></td><td>Travis Amtower</td></tr>
+			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Brian Truppo</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Nancy Bolton</td><td>Dexter Kong</td><td>Brain Truppo</td></tr>
+			<td>Luke Basom</td><td>Dexter Kong</td><td>Maria Fernanda Diaz</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Luke Basom</td><td>Ryan Gutzat</td><td>Charlie Fox</td></tr>
+			<td>Alexis Mincolelli</td><td>Ryan Gutzat</td><td>Charlie Fox</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Alexis Mincolelli</td><td>Miles Campbell</td><td>Nick Molyneaux</td></tr>
+			<td>Charlie Hunter</td><td>Miles Campbell</td><td>Nick Molyneaux</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Charlie Hunter</td><td></td><td>Maria Fernanda Diaz</td></tr>
+			<!--<td></td><td></td><td></td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
 			<!--<td></td><td></td><td></td></tr>
 			<tr bgcolor="#C0C0C0" align="center">-->

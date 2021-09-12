@@ -91,7 +91,7 @@ require_once('pageIncludes/contact.inc.php');
 			<p/>
 			
 			<!--<h2 style="text-align:center;">Current Subofficers</h2><br/>-->
-			<h2 style="text-align:center;">Due to the currrent pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/>
+			<!--<h2 style="text-align:center;">Due to the currrent pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/> -->
 			<!-- BEGIN TABLE CREATION FOR SUBOFFICERS -->
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">

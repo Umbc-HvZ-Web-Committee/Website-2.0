@@ -310,7 +310,7 @@ if($_SESSION['isAdmin']>=1){
 			
 			mysql_query("UPDATE `meeting_list` SET `resolution` = '$meetingWinner', `isResolved` = '1' WHERE `meetingID` = '$meetingID';");
 			
-			$player = mysql_query("SELECT * FROM `users` WHERE `UID` = '$UID'");
+			$player = mysql_query("SELECT * FROM `users` WHERE `UID` = '$UID';");
 			$missions = $player['appearancesTotal'] - $player['adminMeetingsTotal'];
 			$attendance = $player['appearancesThisTerm'] + $player['appearancesLastTerm'];
 			

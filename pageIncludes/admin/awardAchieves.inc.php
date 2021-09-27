@@ -101,13 +101,15 @@ function generateList() {
 	}
 	echo "<option disabled></option></optgroup>";
 	
-	echo "<optgroup label='--- Legendary ---'>";
-	$sql = "SELECT * FROM `achievements_new` WHERE class='l';";
-	$ret = mysql_query($sql);
-	while($row = mysql_fetch_assoc($ret)) {
-		$value = $row['key'];
-		$name = $row['name'];
-		echo "<option value='$value'>$name</option>";
+	if($_SESSION['isAdmin'] >= 2) {
+		echo "<optgroup label='--- Legendary ---'>";
+		$sql = "SELECT * FROM `achievements_new` WHERE class='l';";
+		$ret = mysql_query($sql);
+		while($row = mysql_fetch_assoc($ret)) {
+			$value = $row['key'];
+			$name = $row['name'];
+			echo "<option value='$value'>$name</option>";
+		}
 	}
 	echo "</optgroup>";
 }

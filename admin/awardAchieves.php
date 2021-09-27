@@ -18,7 +18,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 	<?php pageHeader(); ?>
 	<div id="page" class="container">
 		<div id="content">
-		<?php if($_SESSION['isAdmin'] >= 2){ ?>
+		<?php if($_SESSION['isAdmin'] >= 1){ ?>
 
 			<h1 style="text-align:center">Award an Achievement</h1><br/>
 			<form action="" method="post">

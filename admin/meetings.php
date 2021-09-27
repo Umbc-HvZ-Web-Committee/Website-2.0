@@ -75,24 +75,26 @@ function load(){
 				<div>Meeting to check attendance for:</div><?php meetingSelect2(); ?><br/>
 				<input type="submit" name="submit" value="View Attendance"/>
 			</p></form>
-				<div><?php //echo $innerHTML; //I think this isn't doing anything; should delete this ?></div>
+		
 		<?php }else if ($_SESSION['isAdmin'] >= 1){ ?>
 			<h2>Meeting Sign In</h2>
 			<form action="" method="post"><p>
 				Meeting to sign into: <?php meetingSelect(); ?><br/>
 				QR Code, username, email address, or UMBC ID: <input type="text" name="playerID" id="signInID"/>
 				<?php if(!$curLongGame){?>
+					<!-- <br/>
+					<label for="unregistered"><input type="checkbox" name="unregistered" id="unregistered"/>Unregistered player (put their full name in the box)</label>-->
 					<br/>
-					<label for="unregistered"><input type="checkbox" name="unregistered" id="unregistered"/>Unregistered player (put their full name in the box)</label>
+					<label for="pregame"><input type="checkbox" name="pregame" id="pregame" <!--checked="checked-->"/>Also attending a pre-game for the next long game</label>
 					<br/>
-					<label for="pregame"><input type="checkbox" name="pregame" id="pregame"/>Also attending a pre-game for the next long game</label>
+					<label for="pregame"><input type="checkbox" name="holiday" id="holiday" <!--checked="checked-->"/>Also attending a holiday mission</label>
 					<br/>
 					<label for="state1"><input type="radio" name="state" value="1" id="state1" checked="checked"/>Human</label>
 					<label for="state2"><input type="radio" name="state" value="2" id="state2"/>OZ (Hidden)</label>
 					<label for="state-1"><input type="radio" name="state" value="-1" id="state-1"/>Zombie</label>
 					<label for="state4"><input type="radio" name="state" value="4" id="state4"/>Moderator</label>
 					<label for="state0"><input type="radio" name="state" value="0" id="state0"/>N/A / undecided</label><br/>
-				<?php }else{?>
+				<?php }else {?>
 					<br/>
 					<label for="state4"><input type="radio" name="state" value="4" id="state4"/>Moderator</label>
 					<label for="state-3"><input type="radio" name="state" value="-3" id="state-3"/>Player</label>
@@ -100,6 +102,24 @@ function load(){
 				<?php }?>
 				<input type="submit" name="submit" value="Sign player in"/>
 			</p></form>
+			<h2>Meeting Creation</h2>
+			<form action="" method="post"><p>
+				Remember that today's date is appended to the meeting name. Meetings will have their category (e.g. "[Mission] ") added to the beginning of the name.<br/><br/> 
+				Note: Nominal meetings will not count towards the total number of appearances but can be used to count towards the required semester total for membership<br/><br>
+				Name for meeting: <input type="text" name="meetingName"/><br/>
+				<label for="mission"><input type="radio" name="meetingType" value="mission" id="mission" checked="checked"/>HvZ Mission</label>
+				<label for="admin"><input type="radio" name="meetingType" value="admin" id="admin"/>Admin Meeting</label>
+				<label for="admin"><input type="radio" name="meetingType" value="nominal" id="nominal"/>Nominal Meeting</label>
+				<label for="mission"><input type="radio" name="meetingType" value="other" id="other"/>Other Meeting</label>
+				<br/>
+				<input type="submit" name="submit" value="Create new meeting"/>
+			</p></form>
+			<h2>Players in meeting</h2>
+			<form action="" method="post"><p>
+				<div>Meeting to check attendance for:</div><?php meetingSelect2(); ?><br/>
+				<input type="submit" name="submit" value="View Attendance"/>
+			</p></form>
+				<div>
 		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php } ?>

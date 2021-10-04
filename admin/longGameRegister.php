@@ -71,13 +71,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<br/>
 			<?php echo "$html";?>
 			<br/>
-			<h2>Sidebar settings</h2>
-			<form action="" method="post">
-				<label for="baseSlides"><input type="radio" name="setSlides" value="no"/>Display one-night slides on the sidebar</label></br>
-				<label for="longSlides"><input type="radio" name="setSlides" value="yes"/>Display weeklong slides on the sidebar</label></br>
-				<input type="submit" name="slides" value="Set slides"/></br>
-			</form>
-			</br>
+			
 		<?php }else if($playerData['isLongGameAuthed'] >= 1) {
 			?>
 			<h2>Register for a long game</h2>

@@ -63,14 +63,14 @@ if($_SESSION['isAdmin']>=2){
 					*/
 					
 					
-					//echo "gameID: ".$gameID."\n";
-					//echo "playerID: ".$uid."\n";
-					//echo "MK: ".$mainKill."\n";
-					//echo "FK1: ".$feedKill1."\n";
-					//echo "FK2: ".$feedKill2."\n";
-					//echo "inserting... ";
+					echo "gameID: ".$gameID."\n";
+					echo "playerID: ".$uid."\n";
+					echo "MK: ".$mainKill."\n";
+					echo "FK1: ".$feedKill1."\n";
+					echo "FK2: ".$feedKill2."\n";
+					echo "inserting... ";
 					mysql_query("INSERT INTO long_players(gameID, playerID, mainKill, feedKill1, feedKill2) VALUES ('$gameID','$uid','$mainKill','$feedKill1','$feedKill2');");
-					//echo "done!";
+					echo "done!";
 					
 					
 					//set waiver state
@@ -241,17 +241,6 @@ if($_SESSION['isAdmin']>=2){
 		
 	}elseif (isset($_REQUEST['clear'])) {
 		$html = "";
-	}
-	
-	elseif (isset($_REQUEST['slides'])) {
-		$displayLongGameSlides = requestVar('setSlides');
-		mysql_query("UPDATE `settings` SET `value` = '$displayLongGameSlides' WHERE `key` = 'displayLongGameSlides';");
-		/*if($displayLongGameSlides == "yes") {
-			echo "displaying weeklong slides on the sidebar";
-		}
-		else {
-			echo "displaying one-night slides on the sidebar";
-		}*/
 	}
 }
 ?>

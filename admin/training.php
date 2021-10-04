@@ -38,7 +38,7 @@ $settings = get_settings();
 			
 			<!-- The yt links are shitpost placeholders for future content to be put here -->
 			
-			<a href="https://www.youtube.com/watch?v=6Dh-RL__uN4"><h3>Weeklong Logistics Walkthrough</h3></a>
+			<a href="https://www.youtube.com/watch?v=6kI7kfcJpes"><h3>Weeklong Logistics Walkthrough</h3></a>
 			<p>A look through the various website pages that relate to weeklongs and a guide for weeklong moderators in using them</p><br/><br/>
 			
 			<a href="https://www.youtube.com/watch?v=U06jlgpMtQs"><h3>Election Logistics Walkthrough</h3></a>

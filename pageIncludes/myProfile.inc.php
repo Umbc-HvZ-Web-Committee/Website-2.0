@@ -89,6 +89,7 @@ if(isset($_REQUEST['betaSubmit'])){
 	mysql_query("UPDATE users SET isbetaTester=$betaOptIn WHERE UID='$uid'");
 	
 	$GLOBALS['profileMessage'] = "New feature preferences updated.";
+}
 
 if(isset($_REQUEST['ozSubmit'])){
 	$ozOpt = requestVar("ozOpt");

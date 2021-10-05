@@ -80,6 +80,16 @@ function longGameRegSelect($uid){
 }
 
 //POST request processing
+if(isset($_REQUEST['betaSubmit'])){
+	$betaOpt = requestVar("betaOpt");
+	$betaText = requestVar("betaText");
+	$betaOptIn = ($betaOpt=="in"?1:0);
+	$uid = $_SESSION['uid'];
+	
+	mysql_query("UPDATE users SET isbetaTester=$betaOptIn WHERE UID='$uid'");
+	
+	$GLOBALS['profileMessage'] = "New feature preferences updated.";
+
 if(isset($_REQUEST['ozSubmit'])){
 	$ozOpt = requestVar("ozOpt");
 	$ozText = requestVar("ozText");

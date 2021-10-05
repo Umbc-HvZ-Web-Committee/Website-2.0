@@ -275,6 +275,21 @@ require_once('includes/update.php');
 						?>
 					</form></div><br/>-->
 					
+					<!-- Beta Opt-In -->
+					<br/><h2><i>Opt-In To New Features</i></h2><br/>
+					<p>You may choose to opt-in to new features of the website that have not 
+					been thouroughly tested for bugs and other issues. Problems are more likely
+					to pop up while using the website, but the features themselves add useful
+					functionality and information. The choice is up to you.</p>
+					<form action="" method="post">
+						<label for="betaIn"><input type="radio" name="betaOpt" value="in" id="betaIn"<?php if($playerData['isBetaTester']==1) echo ' checked="checked"' ?>/>Yes, I want to opt into new beta features</label>
+						<label for="betaOut"><input type="radio" name="betaOpt" value="out" id="betaOut"<?php if($playerData['isBetaTester']==0) echo ' checked="checked"' ?>/>No, I do not want to see new features</label>
+
+						<br/>
+						<input type="submit" name="betaSubmit" value="Update New Feature Preferences"/>
+					</form>
+					
+					
 					<!-- Profile Pictures -->
 					<br/><h2><i>Change Your Profile Picture</i></h2><br/>
 					<h3>Upload photo</h3>

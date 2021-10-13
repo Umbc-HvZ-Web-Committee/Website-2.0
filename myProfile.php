@@ -287,8 +287,22 @@ require_once('includes/update.php');
 
 						<br/>
 						<input type="submit" name="betaSubmit" value="Update New Feature Preferences"/>
-					</form>
+					</form><br/>
 					
+					<!-- Change username/name -->
+					<br/><h2><i>Change Name/Username</i></h2><br/>
+					<p>Has your preferred first our last name changed? Do you want to change your username? 
+					If the answer to either of these questions is yes, then this is the place to fix that.
+					Update your first name, last name, and username in the boxes below and click the button below
+					to confirm your changes. Please note, officers and other website moderators reserve the right to
+					change inappropriate names and usernames without your consent. Abuse of this system will lead to 
+					loss of privileges to this functionality.</p>
+					<?php if ($playerData['canChangeName'] == 0) { 
+						echo "<p>You have been prohibted to change your name/username for abusing the system. 
+						Please contact the officer voard if you believe this is a mistake.</p>";
+					} else if ($playerData['canChangeName'] == 1) {
+						
+					} ?>
 					
 					<!-- Profile Pictures -->
 					<br/><h2><i>Change Your Profile Picture</i></h2><br/>

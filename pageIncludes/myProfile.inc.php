@@ -123,7 +123,7 @@ if(isset($_REQUEST['iDied'])){
 			$dummyID = "OZ".substr($uid, 2);
 			echo $dummyID;
 			echo "\n";
-			$dummy = mysql_query("SELECT * FROM `long_players` WHERE `gameID` = '$gameID' AND `playerID` = '$dummyID';");
+			$dummy = mysql_oneline("SELECT * FROM `long_players` WHERE `gameID` = '$gameID' AND `playerID` = '$dummyID';");
 			$kills = $dummy['kills'];
 			echo $kills;
 			echo "\n";

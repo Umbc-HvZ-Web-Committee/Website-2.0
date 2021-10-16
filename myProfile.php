@@ -292,8 +292,8 @@ require_once('includes/update.php');
 					<?php if($playerData['isBetaTester'] == '1') { //BEGIN BETA?>
 					
 						<!-- Change username/name -->
-						<br/><h2><i>BETA Change Name/Username</i></h2><br/>
-						<p>Has your preferred first our last name changed? Do you want to change your username? 
+						<br/><h2><i>UNDER CONSTRUCTION Change Name/Username</i></h2><br/>
+						<p>Has your preferred first or last name changed? Do you want to change your username? 
 						If the answer to either of these questions is yes, then this is the place to fix that.
 						Update your first name, last name, and username in the boxes below and click the button below
 						to confirm your changes. Please note, officers and other website moderators reserve the right to
@@ -319,10 +319,10 @@ require_once('includes/update.php');
 							<br/><br/>Update your information in the fields below and click the button below to confirm (leave a box blank for no change)<br/><br/>
 							<form action="" method="post">
 							Username: <input type="text" name="new_uname" id="new_uname"/></br><br/>
-							First Name: <input type="text" name="new_uname" id="new_uname"/></br><br/>
-							Last Name: <input type="text" name="new_uname" id="new_uname"/></br><br/>
-							<input type="submit" name="submit" value="Update Name/Username"/></br>
-							</form><br/><br/>
+							First Name: <input type="text" name="new_fname" id="new_fname"/></br><br/>
+							Last Name: <input type="text" name="new_lname" id="new_lname"/></br><br/>
+							<input type="submit" name="updateNames" value="Update Name/Username"/></br>
+							</form><br/>
 						<?php } ?>
 					
 					<?php } //Close out beta features block ?>

@@ -175,6 +175,23 @@ if($playerData && $curLongGame){
 	$longPlayerData = false;
 }
 
+if(isset($_REQUEST['updateNames'])) {
+	$new_uname = requestVar('new_uname');
+	$new_fname = requestVar('new_fname');
+	$new_lname = requestVar('new_lname');
+	
+	//TODO: Impliment checking for names and have them update
+	if($new_uname != NULL) {
+		//mysql_query("UPDATE mission_slide_headings SET headingName = '$mainHeading' WHERE headingTitle = 'mainHeading';");
+	}
+	if($new_fname != NULL) {
+		//mysql_query("UPDATE mission_slide_headings SET headingName = '$firstSlides' WHERE headingTitle = 'firstSlides';");
+	}
+	if($new_lname != NULL) {
+		//mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlides' WHERE headingTitle = 'secondSlides';");
+	}
+}
+
 if(isset($_REQUEST['profilePicture'])) {
 	
 	// Get image information

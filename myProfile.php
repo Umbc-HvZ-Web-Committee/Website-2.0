@@ -305,15 +305,15 @@ require_once('includes/update.php');
 						} else if ($playerData['canChangeName'] == 1) {
 							echo "Current username: ";
 							echo $playerData['uname'];
-							echo "\n";
+							echo "<br/>";
 							
 							echo "Current first name: ";
 							echo $playerData['fname'];
-							echo "\n";
+							echo "<br/>";
 							
 							echo "Current last name: ";
 							echo $playerData['lname'];
-							echo "\n";
+							echo "<br/>";
 							
 							?>
 							<br/><br/>Update your information in the fields below and click the button below to confirm (leave a box blank for no change)<br/><br/>

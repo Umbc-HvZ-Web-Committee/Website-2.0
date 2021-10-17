@@ -180,16 +180,28 @@ if(isset($_REQUEST['updateNames'])) {
 	$new_fname = requestVar('new_fname');
 	$new_lname = requestVar('new_lname');
 	
-	//TODO: Impliment checking for names and have them update
+	$old_uname = $playerData['uname'];
+	$old_fname = $playerData['fname'];
+	$old_lname = $playerData['lname'];
+	
+	$alphaRegex = "/[^A-Za-z- ]/";
+	$alphaNumRegex = "/[^A-Za-z0-9_-]/";
+	
 	if($new_uname != NULL) {
-		//mysql_query("UPDATE mission_slide_headings SET headingName = '$mainHeading' WHERE headingTitle = 'mainHeading';");
+		$new_uname = preg_replace($alphaNumRegex,"",$new_uname);
+		mysql_query("UPDATE users SET uname = '$new_uname' WHERE UID = '$uid';");
 	}
 	if($new_fname != NULL) {
-		//mysql_query("UPDATE mission_slide_headings SET headingName = '$firstSlides' WHERE headingTitle = 'firstSlides';");
+		$new_fname = preg_replace($alphaRegex,"",$new_fname);
+		mysql_query("UPDATE users SET fname = '$new_fname' WHERE UID = '$uid';");
 	}
 	if($new_lname != NULL) {
-		//mysql_query("UPDATE mission_slide_headings SET headingName = '$secondSlides' WHERE headingTitle = 'secondSlides';");
+		$new_lname = preg_replace($alphaRegex,"",$new_lname);
+		mysql_query("UPDATE users SET lname = '$new_lname' WHERE UID = '$uid';");
 	}
+	
+	//TODO: Write email from officer account to user acknowledging changes
+	//This creates a record the officers can view and acts as a confirmation to the user
 }
 
 if(isset($_REQUEST['profilePicture'])) {

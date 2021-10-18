@@ -124,6 +124,9 @@ if($_SESSION['isAdmin']>=1){
 						if($totalAttendance >= 100) {
 							updateAchieves($uid, null, "attendance3");
 						}
+						if($totalAttendance >= 250) {
+							updateAchieves($uid, null, "attendance4");
+						}
 						
 						
 						/*

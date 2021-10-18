@@ -200,7 +200,7 @@ require_once('includes/update.php');
 					echo "Officer Meetings Attended (Since January 2019): $admins </br>";
 					echo "<br/><b>NOTE:</b> Data regarding starting side may not be accurate with round-based missions or missions with random OZs. Mission attendance was also not accurately tracked until 2017. Therefore, these numbers may not be 100% accurate. It is impossible to retroactively correct every attendance error from the past. However, if you believe there is an error in your attendance records regarding a recent meeting, please contact an officer.</br></br>";
 
-					echo "If you have 5/25/50/100 missions but do not have the corresponding achievement, when you are signed in to your next meeting, the achievement should be awarded.<br/>";
+					echo "If you have 5/25/50/100/250 missions but do not have the corresponding achievement, when you are signed in to your next meeting, the achievement should be awarded.<br/>";
 
 					echo "</br><h3>Membership Status</h3></br>";
 					//Club members can vote. Nobody else can.

@@ -27,7 +27,7 @@ You have been awarded the achievement $achieveName! To set this achievement as y
 		
 Please note that artwork has not been chosen for all achievements and the image may still say 'Coming Soon'. If this is the case, hover your mouse over the image to verify the proper achievement was selected. The artwork will automatically update as it becomes available.
 		
-~ Kyle J Mosier, Travis Amtower, Charles Fox - UMBC HvZ Web Committee ~
+~ Kyle J Mosier, Travis Amtower, Patrick Gomes - UMBC HvZ Web Committee ~
 THIS IS AN AUTOMATED MESSAGE.
 EOF;
 		$emailLookup = mysql_query("SELECT email FROM `users` WHERE `UID`='$uid';");
@@ -125,6 +125,14 @@ function warExpert($uid, $event) {
 	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='warExpert';"));
 	$aid = $aid['AID'];
 	if($event == "attendance3") {
+		giveAchieve($aid, $uid);
+	}
+}
+
+function warExpert($uid, $event) {
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='warExpert';"));
+	$aid = $aid['AID'];
+	if($event == "attendance4") {
 		giveAchieve($aid, $uid);
 	}
 }

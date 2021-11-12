@@ -129,8 +129,8 @@ function warExpert($uid, $event) {
 	}
 }
 
-function warExpert($uid, $event) {
-	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='warExpert';"));
+function warMaster($uid, $event) {
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='warMaster';"));
 	$aid = $aid['AID'];
 	if($event == "attendance4") {
 		giveAchieve($aid, $uid);

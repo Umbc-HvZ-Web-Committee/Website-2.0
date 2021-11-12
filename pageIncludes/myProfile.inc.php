@@ -202,6 +202,8 @@ if(isset($_REQUEST['updateNames'])) {
 	
 	//TODO: Write email from officer account to user acknowledging changes
 	//This creates a record the officers can view and acts as a confirmation to the user
+	
+	
 }
 
 if(isset($_REQUEST['profilePicture'])) {

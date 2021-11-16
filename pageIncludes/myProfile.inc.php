@@ -137,6 +137,8 @@ if(isset($_REQUEST['iDied'])){
 			//Clear OZ's killcode
 			mysql_query("UPDATE `long_players` SET `mainKill` = '' WHERE `playerID` = '$uid' AND `gameID`='$gameID';");
 			$GLOBALS['profileMessage'] = "You are now marked as an OZ. You have also been credited with your OZ kills.";
+			//Remove the OZ dummy from long_players table
+			mysql_query("DELETE FROM `long_players` WHERE `playerID` = '$dummyID' AND `gameID`='$gameID';");
 			
 		}
 		else {

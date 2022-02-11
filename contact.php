@@ -90,19 +90,19 @@ require_once('pageIncludes/contact.inc.php');
 			<br/><br/>
 			<p/>
 			
-			<!--<h2 style="text-align:center;">Current Subofficers</h2><br/>-->
+			<h2 style="text-align:center;">Current Subofficers</h2><br/>
 			<!--<h2 style="text-align:center;">Due to the currrent pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/> -->
 			<!-- BEGIN TABLE CREATION FOR SUBOFFICERS -->
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Brian Truppo</td></tr>
+			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Ryan Kwak</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Luke Basom</td><td>Dexter Kong</td><td>Maria Fernanda Diaz</td></tr>
+			<td>Nancy Bolton</td><td>Patrick Gomes</td><td>Josh Ward</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alexis Mincolelli</td><td>Ryan Gutzat</td><td>Charlie Fox</td></tr>
+			<td>Alexis Mincolelli</td><td>Ethan</td><td>Charlie Fox</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Charlie Hunter</td><td>Miles Campbell</td><td>Nick Molyneaux</td></tr>
+			<td>Emma</td><td>Maya</td><td>Andrew Niles</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
 			<!--<td></td><td></td><td></td></tr>
 			<tr bgcolor="#FFFFFF" align="center">

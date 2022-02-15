@@ -31,7 +31,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<i><h4><center>~Check out our Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i>
 		<i><h4><center>~Check out our Discord server <a href="https://discord.gg/MCfXax2">here</a>~</center></h4></i>
-		<i><h4><center>~To submit mission feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYak5k4h5VcfaxG525fCYyWjusBqoE19YwBAx1rKElz52ZvA/viewform">click here</a>~</center></h4></i>
+		<i><h4><center>~To submit mission feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFp9ye_hHjd4wbiTkRoUH2Kt8qTSesuQa7LbFx9mkxhgOGrQ/viewform">click here</a>~</center></h4></i>
 		<!-- <i><h4><center>~To order a club T-shirt, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eRuP4zEuLcLSC1bXqZ9GzF8ZDZn1QHjSR_pS8lH6lHtsmQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To submit invitational feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSAfolSJBRFTghMTa3onH7dMgtcM94CWpcbJLT6tz8uqkTwQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To suggest features for the new website, <a href="https://docs.google.com/forms/d/e/1FAIpQLScKT4b50vOXx9j27lBiHEuiwlocDsEsMWFnCVVj0YmIuke0nw/viewform">click here</a>~</center></h4></i>

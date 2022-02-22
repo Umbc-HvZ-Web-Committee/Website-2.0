@@ -10,7 +10,7 @@ body{
 	margin-bottom: 100px;
 	font-size: 18px;
 	font-family: sans-serif;
-	color: #00e3cc;
+	color: #000000;
 	background-color: #9c5bde;
 	/*background: url(/invitational/images/board2.jpg);*/
 }
@@ -98,7 +98,7 @@ div.clearanceBadgeSmall{
 	text-shadow: 1px 1px #000000, 1px 1px #000000, 1px 1px #000000, 1px 1px #000000;
 	border-radius: 25px;
 	width: 100%;
-	background-color: #474747;
+	background-color: #fff269;
 	padding: 10px 10px 10px 10px;
 }
 .overlayBody{

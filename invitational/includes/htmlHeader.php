@@ -98,11 +98,11 @@ div.clearanceBadgeSmall{
 	text-shadow: 1px 1px #000000, 1px 1px #000000, 1px 1px #000000, 1px 1px #000000;
 	border-radius: 25px;
 	width: 100%;
-	background-color: #8ge809;
+	background-color: #474747;
 	padding: 10px 10px 10px 10px;
 }
 .overlayBody{
-	background-color: #6F6F6F;
+	background-color: #8ge809;
 	border-style: solid;
 	border-width: 2px;
 	border-color: black;

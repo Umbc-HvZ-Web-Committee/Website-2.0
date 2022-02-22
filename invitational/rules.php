@@ -12,7 +12,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
 <ul style="list-style-type:none">
 <li><b><h3>Schedule of Events</h3></b></li>
-<li><b>Friday, May 3rd:</b>
+<li><b>Friday, April 29th:</b>
     <ul style="list-style-type:none">
     <li>6:00pm<ul style="list-style-type:none"> First Pre-game Briefing / Check-in in Meyerhoff 030</ul></li>
     <li>7:00pm<ul style="list-style-type:none"> Second Pre-game Briefing / Check-in in Meyerhoff 030</ul></li></ul>
@@ -20,7 +20,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 </ul>
 <br/>
 <ul style="list-style-type:none">
-<li><b>Saturday, May 4th:</b>
+<li><b>Saturday, April 30th:</b>
     <ul style="list-style-type:none; text-align:">
     <li>8:00am - 9:00am <ul style="list-style-type:none;"> Day-of Registration / Check-in / Pre-game briefing in Meyerhoff 030</ul></li>
     <li>9:00am - Game Start <ul style="list-style-type:none;"> First Mission Briefing (at Check-in location)</ul></li></ul>

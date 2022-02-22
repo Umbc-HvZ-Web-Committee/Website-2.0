@@ -29,7 +29,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
 <p>The mysterious Rakghoul plague has begun wreaking havoc on the galaxy. Many familiar factions, once enemies, have joined together to fight it, but they’ll need you to help them!</p>
 
-<p>The game will be played at the main UMBC campus, located at 1000 Hilltop Circle, Baltimore, Maryland on Saturday, May 4th! Please arrive
+<p>The game will be played at the main UMBC campus, located at 1000 Hilltop Circle, Baltimore, Maryland on Saturday, April 30th! Please arrive
 by 8:00 AM. 
 
 <br><br><i><b>Please bring your zombie-fighting equipment with you</b></i>. 

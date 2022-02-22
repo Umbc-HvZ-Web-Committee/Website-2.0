@@ -85,7 +85,7 @@ div.clearanceBadgeSmall{
 	display: inline-block;
 }
 .overlay{
-   background-color: rgba(0,1,0,0.7);
+   background-color: rgba(0,1,0,0);
    position: absolute;
    top: 0;
    left: 0;

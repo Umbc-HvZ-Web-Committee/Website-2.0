@@ -25,9 +25,9 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
    
 
-<p><h2>Zombie Plague: A Star Wars Story</h2></p>
+<p><h2>Scooby Doo and the Zombie Plauge</h2></p>
 
-<p>The mysterious Rakghoul plague has begun wreaking havoc on the galaxy. Many familiar factions, once enemies, have joined together to fight it, but they’ll need you to help them!</p>
+<p>A mysterious air has fallen over Coolsville, and the dead are rising! Join Scooby Doo and the Mystery Inc. gang as they investigate the zombie plague.</p>
 
 <p>The game will be played at the main UMBC campus, located at 1000 Hilltop Circle, Baltimore, Maryland on Saturday, April 30th! Please arrive
 by 8:00 AM. 

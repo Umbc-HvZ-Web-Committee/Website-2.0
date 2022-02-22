@@ -11,7 +11,7 @@ body{
 	font-size: 18px;
 	font-family: sans-serif;
 	color: #00e3cc;
-	background-color: #A3A3A3;
+	background-color: #9c5bde;
 	/*background: url(/invitational/images/board2.jpg);*/
 }
 a:link{
@@ -98,7 +98,7 @@ div.clearanceBadgeSmall{
 	text-shadow: 1px 1px #000000, 1px 1px #000000, 1px 1px #000000, 1px 1px #000000;
 	border-radius: 25px;
 	width: 100%;
-	background-color: #9c5bde;
+	background-color: #474747;
 	padding: 10px 10px 10px 10px;
 }
 .overlayBody{

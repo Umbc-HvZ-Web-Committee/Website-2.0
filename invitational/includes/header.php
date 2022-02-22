@@ -36,7 +36,7 @@ if(array_key_exists("inv_uid", $_SESSION)){
 }
 ?>
 </div>
-<div style="background-color: #474747; color: #000000; text-align: center; width: 580px; vertical-align: middle; height: 127px; border: solid black 3px; font-weight: 700; margin-top: 20px;">
+<div style="background-color: #ff9f0f; color: #000000; text-align: center; width: 580px; vertical-align: middle; height: 127px; border: solid black 3px; font-weight: 700; margin-top: 20px;">
 <br/>UMBC Spring 2022 Invitational<br/>
 <br/><br/>
 <div style="height: 27px;">

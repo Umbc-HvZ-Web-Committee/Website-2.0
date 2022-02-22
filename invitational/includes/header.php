@@ -3,7 +3,7 @@ require_once(dirname(__FILE__)."/color.php");
 ?>
 <div style="height: 250px;">
 <span style="float: left;">
-<a href="<?php echo $config['folder'];?>"><img src="<?php echo $config['folder'];?>images/Star-Wars-HVZ.png" style="border-style: solid; border-radius:25px; border-width: 3px; border-color: #474747; width: 200px; height: 167px; margin-top: 75px;"></img></a>
+<a href="<?php echo $config['folder'];?>"><img src="<?php echo $config['folder'];?>images/Scooby Doo Transp.png" style="border-style: solid; border-radius:25px; border-width: 3px; border-color: #474747; width: 200px; height: 167px; margin-top: 75px;"></img></a>
 </span>
 <?php
 echo '<span style="float: right; margin-top: 20px;">';
@@ -37,7 +37,7 @@ if(array_key_exists("inv_uid", $_SESSION)){
 ?>
 </div>
 <div style="background-color: #474747; color: #000000; text-align: center; width: 580px; vertical-align: middle; height: 127px; border: solid black 3px; font-weight: 700; margin-top: 20px;">
-<br/>UMBC Spring 2019 Invitational<br/>
+<br/>UMBC Spring 2022 Invitational<br/>
 <br/><br/>
 <div style="height: 27px;">
 <a href="<?php echo $config['folder'];?>index.php" style="margin-right: 50px;" class="redLink">Home</a>

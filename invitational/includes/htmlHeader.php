@@ -15,10 +15,10 @@ body{
 	/*background: url(/invitational/images/board2.jpg);*/
 }
 a:link{
-	color: #ffe6b3;
+	color: ##FF33F0;
 }
 a:visited{
-	color: #ffe6b3;
+	color: ##FF33F0;
 }
 a:hover{
 	color: #ffcc66;

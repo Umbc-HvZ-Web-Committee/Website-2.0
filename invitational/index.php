@@ -25,7 +25,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
    
 
-<p><h2>Scooby Doo and the Zombie Plauge</h2></p>
+<p><h2>Scooby Doo and the Zombie Plague</h2></p>
 
 <p>A mysterious air has fallen over Coolsville, and the dead are rising! Join Scooby Doo and the Mystery Inc. gang as they investigate the zombie plague.</p>
 

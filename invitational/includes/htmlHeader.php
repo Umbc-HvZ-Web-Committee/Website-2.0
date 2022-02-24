@@ -10,8 +10,8 @@ body{
 	margin-bottom: 100px;
 	font-size: 18px;
 	font-family: sans-serif;
-	color: #fff385;
-	background-color: #9c5bde;
+	color: #000000;
+	background-color: #fff385;
 	/*background: url(/invitational/images/board2.jpg);*/
 }
 a:link{

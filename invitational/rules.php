@@ -8,7 +8,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <html>
 <head><?php placeTabIcon(); ?><?php include_once 'includes/htmlHeader.php';?></head>
 <body><?php include_once 'includes/header.php';?><div class="content">
-<body><?php include_once 'includes/footer.php';?>
+
 <div class="entry">
 
 <ul style="list-style-type:none">
@@ -179,6 +179,7 @@ INTENTIONAL USE OF EXCESSIVE FORCE.</p>
 <p><strong>Players Using Power Chairs:</strong></p>
 <p>If a human is hit by a sock specially marked as a “zombie sock,” although the specific wording may be slightly different, then that human is frozen for 10 seconds. &nbsp;These socks are only usable by players who need to use a power chair for mobility purposes.</p> -->
 </div></div></body>
+<body><?php include_once 'includes/footer.php';?>
 <?php 
 echo '<footer><div>';
 echo '<p style="text-align:center; font-size:75%; color:black;">All characters, events, and organizations appearing in this work are fictitious. Any resemblance to real persons, living or dead, real events, real organizations, or real partnerships made by UMBC are purely coincidental.</p>';

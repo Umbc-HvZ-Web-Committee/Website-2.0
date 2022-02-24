@@ -39,7 +39,7 @@ while($nonAdminRet = mysql_fetch_assoc($query)) {
 <html>
 <head><?php placeTabIcon(); ?><?php include_once 'includes/htmlHeader.php';?></head>
 <body><?php include_once 'includes/header.php';?><br><span style="color:black;">
-<body><?php include_once 'includes/footer.php';?>
+
 <?php
 if(array_key_exists("sid", $_GET)){  // Is "TRUE" if no sort options were selected by users
 	
@@ -87,6 +87,7 @@ foreach($data as $ret){
 ?>
 </table><?php }?>
 </div></body>
+<body><?php include_once 'includes/footer.php';?>
 <?php echo '<footer><div>';
 echo '<p style="text-align:center; font-size:75%; color:black;">All characters, events, and organizations appearing in this work are fictitious. Any resemblance to real persons, living or dead, real events, real organizations, or real partnerships made by UMBC are purely coincidental.</p>';
 echo '</div></footer>';?>

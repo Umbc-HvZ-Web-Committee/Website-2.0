@@ -9,7 +9,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <html>
 <head><?php placeTabIcon(); ?><?php include_once 'includes/htmlHeader.php';?></head>
 <body><?php include_once 'includes/header.php';?>
-<body><?php include_once 'includes/footer.php';?>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -49,7 +49,7 @@ the top of the page. If you would like to be part of the &#39;zombie horde&#39;,
 </div>
 </div>
 </body>
-
+<body><?php include_once 'includes/footer.php';?>
 <?php 
 echo '<footer><div>';
 echo '<p style="text-align:center; font-size:75%; color:black;">All characters, events, and organizations appearing in this work are fictitious. Any resemblance to real persons, living or dead, real events, real organizations, or real partnerships made by UMBC are purely coincidental.</p>';

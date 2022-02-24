@@ -39,6 +39,7 @@ while($nonAdminRet = mysql_fetch_assoc($query)) {
 <html>
 <head><?php placeTabIcon(); ?><?php include_once 'includes/htmlHeader.php';?></head>
 <body><?php include_once 'includes/header.php';?><br><span style="color:black;">
+<body><?php include_once 'includes/footer.php';?>
 <?php
 if(array_key_exists("sid", $_GET)){  // Is "TRUE" if no sort options were selected by users
 	

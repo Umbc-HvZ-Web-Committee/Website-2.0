@@ -9,6 +9,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <html>
 <head><?php placeTabIcon(); ?><?php include_once 'includes/htmlHeader.php';?></head>
 <body><?php include_once 'includes/header.php';?>
+<body><?php include_once 'includes/footer.php';?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

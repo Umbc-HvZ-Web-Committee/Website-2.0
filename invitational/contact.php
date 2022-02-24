@@ -9,6 +9,7 @@ if(!isset($loginUpdate)) include $_SERVER['DOCUMENT_ROOT'].$config['folder']."in
 <html>
 <head><?php placeTabIcon(); ?><?php include_once 'includes/htmlHeader.php';?></head>
 <body><?php include_once 'includes/header.php';?><div class="content">
+<body><?php include_once 'includes/footer.php';?>
 The UMBC HvZ Club<br/>
 1000 Hilltop Circle<br/>
 Baltimore, MD 21250<br/>

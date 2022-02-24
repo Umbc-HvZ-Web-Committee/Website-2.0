@@ -8,6 +8,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <html>
 <head><?php placeTabIcon(); ?><?php include_once 'includes/htmlHeader.php';?></head>
 <body><?php include_once 'includes/header.php';?><div class="content">
+<body><?php include_once 'includes/footer.php';?>
 <div class="entry">
 
 <ul style="list-style-type:none">

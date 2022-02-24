@@ -10,7 +10,7 @@ body{
 	margin-bottom: 100px;
 	font-size: 18px;
 	font-family: sans-serif;
-	color: #000000;
+	color: #fff385;
 	background-color: #9c5bde;
 	/*background: url(/invitational/images/board2.jpg);*/
 }

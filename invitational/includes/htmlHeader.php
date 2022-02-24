@@ -11,7 +11,7 @@ body{
 	font-size: 18px;
 	font-family: sans-serif;
 	color: #000000;
-	background-color: #9c5bde;
+	background-color: #eeeeee;
 	/*background: url(/invitational/images/board2.jpg);*/
 }
 a:link{

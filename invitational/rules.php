@@ -12,6 +12,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
 <ul style="list-style-type:none">
 <li><b><h3>Schedule of Events</h3></b></li>
+<li><b><h4>Due to COVID precautions, we are asking that individuals sign up for a time slot for briefing to control the amount of individuals within our lecture hall. UMBC STUDENTS/ALUMNI: If possible, PLEASE attend one of our Friday evening safety briefings. Details on how to do so will be forvide as soon as possible. </h4></b></li>
 <li><b>Friday, April 29th:</b>
     <ul style="list-style-type:none">
     <li>6:00pm<ul style="list-style-type:none"> First Pre-game Briefing / Check-in in Meyerhoff 030</ul></li>
@@ -22,7 +23,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <ul style="list-style-type:none">
 <li><b>Saturday, April 30th:</b>
     <ul style="list-style-type:none; text-align:">
-    <li>8:00am - 9:00am <ul style="list-style-type:none;"> Day-of Registration / Check-in / Pre-game briefing in Meyerhoff 030</ul></li>
+    <li>Stating at 7:20am, 7:50am, and 8:20am <ul style="list-style-type:none;"> Day-of Registration / Check-in / Pre-game briefing in Meyerhoff 030</ul></li>
     <li>9:00am - Game Start <ul style="list-style-type:none;"> First Mission Briefing (at Check-in location)</ul></li></ul>
 <b><h3> The final mission should end tentatively around 5pm</h3></b>
 

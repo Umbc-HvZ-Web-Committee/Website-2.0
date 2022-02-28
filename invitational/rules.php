@@ -13,7 +13,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
 <ul style="list-style-type:none">
 <li><b><h3>Schedule of Events</h3></b></li>
-<li><b><h4>Due to COVID precautions, we are asking that individuals sign up for a time slot for briefing to control the amount of individuals within our lecture hall. Please bear in mind that these time slots are subject to change depending on anticipated attendance. UMBC STUDENTS/ALUMNI: If possible, PLEASE attend one of our Friday evening safety briefings. Details on how to do so will be provided as soon as possible. </h4></b></li>
+<li><b><h4>Due to COVID precautions, we are asking that individuals <a href="https://www.signupgenius.com/go/10C0E4CAFA62FA2F8C43-umbc" target="_blank">sign up for a time slot</a> for briefing to control the amount of individuals within our lecture hall. Please bear in mind that these time slots are subject to change depending on anticipated attendance. UMBC STUDENTS/ALUMNI: If possible, PLEASE attend one of our Friday evening safety briefings. </h4></b></li>
 <li><b>Friday, April 29th:</b>
     <ul style="list-style-type:none">
     <li>6:00pm<ul style="list-style-type:none"> Registration / First Pre-game Briefing / Check-in in Meyerhoff 030</ul></li>

@@ -29,7 +29,7 @@ while($ret = mysql_fetch_assoc($query)){
 
 /* Reflecting an accurate player count discluding admins*/
 
-$sql = "SELECT * FROM `users` WHERE `isAdmin`!='1';";
+$sql = "SELECT * FROM `users` WHERE `SID`!='0';";
 $query = mysql_query($sql);
 while($nonAdminRet = mysql_fetch_assoc($query)) {
 	$nonAdmins[] = $nonAdminRet;

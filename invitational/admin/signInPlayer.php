@@ -28,6 +28,9 @@ if(array_key_exists("id", $_GET)){do{
 	$teamInfo = mysql_oneline("SELECT * FROM `teams` WHERE `code` = '$team'");
 	$teamName = $teamInfo['name'];
 	$msg = $name." is now ".$state.".<br>School: ".$ret['name']."<br>Team: ".$teamName;
+	
+	//Set moderators to be moderators, not humans
+	mysql_query("UPDATE `users` SET `state`=IF(`SID`=0,4,1) WHERE `UID`='$id';");
 }while(false);}
 
 $ret = mysql_oneline("SELECT COUNT(*) AS cnt FROM `users` WHERE `state`=1");

@@ -95,7 +95,6 @@ div.clearanceBadgeSmall{
 }
 .content{
 	text-align: left;
-	text-shadow: 1px 1px #000000, 1px 1px #000000, 1px 1px #000000, 1px 1px #000000;
 	border-radius: 25px;
 	width: 100%;
 	background-color: #fff385;

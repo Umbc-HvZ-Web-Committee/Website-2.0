@@ -103,7 +103,7 @@ if(!$isExistingSchool){
 	$schoolID = mysql_insert_id();
 }
 
-$displayName = $fname + " " + $lname;
+$displayName = $fname." ".$lname;
 
 $sql = "INSERT INTO `users` (`UID`, `uname`, `passwd`, `email`, `isAdmin`, `fname`, `lname`, `displayName`, `SID`, `isOver18`, `hasTurnedInWaiver`, `phoneNumber`, `housing`, `medicalConcerns`, `roommateRequest`, `emergencyContactName`, `emergencyContactRelation`, `emergencyContactPhone`) VALUES ('$uid', '$user', '$pass', '$email', '0', '$fname', '$lname', '$displayName', '$schoolID', '$isOld', '$hasTurnedInWaiver', '$phone', '$isHousing', '$medical', '$roommates', '$emergencyName', '$emergencyRelation', '$emergencyPhone');";
 debug_to_console($sql);
@@ -111,7 +111,7 @@ debug_to_console($sql);
 mysql_query($sql);
 
 //Make mods not count as players
-mysql_query("UPDATE `users` SET `isAdmin`='1' WHERE `SID` = '2';");
+mysql_query("UPDATE `users` SET `isAdmin`='1' WHERE `SID` = '0';");
 
 echo mysql_error();
 ?>

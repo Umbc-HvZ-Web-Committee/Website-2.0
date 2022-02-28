@@ -162,7 +162,7 @@ function register() {
 <tr><td>Name:</td><td style="text-align: center; width: 100px; border: 0px;"><input id="fname" name="fname" style="width: 100px;" onkeyup="updateOne();"></td><td style="text-align: center; width: 100px; border: 0px;"><input id="lname" name="lname" style="width: 100px;" onkeyup="updateOne();"></td></tr>\
 <tr><td>Email:</td><td colspan="2"><input type="text" id="email" name="email" onkeyup="updateOne();"></td></tr>\
 <tr><td>Phone number:<br>(optional, but encouraged)</td><td colspan="2"><input type="text" id="phone" name="phone" onkeyup="updateOne();"></td></tr>\
-<tr style="height: 28px;"><td>School:</td><td id="schoolTD" colspan="2"><select id="schoolSelect" name="school" onchange="schoolUpdate(); updateOne();">\
+<tr style="height: 28px;"><td>School/Group:</td><td id="schoolTD" colspan="2"><select id="schoolSelect" name="school" onchange="schoolUpdate(); updateOne();">\
 <option value="1">UMBC</option><?php
 
 $query = mysql_query("SELECT * FROM `schools` WHERE `SID`!='1' AND `name` != '' ORDER BY `name`;");

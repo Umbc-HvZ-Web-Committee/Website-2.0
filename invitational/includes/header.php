@@ -18,12 +18,12 @@ if(array_key_exists("inv_uid", $_SESSION)){
 	$name = $ret['displayName'];
 	$style = colorNameToCSS($ret['team']);
 	echo "<p style=\"color:black;\">Hello <a class='profile' href=\"".$config['folder']."myProfile.php\">".$name."!</a> ";
-	if($_SESSION['inv_isAdmin']==1) echo "<a class='profile' href=\"".$config['folder']."admin\">Admin Panel</a> ";
+	if($_SESSION['inv_isAdmin']>=1) echo "<a class='profile' href=\"".$config['folder']."admin\">Admin Panel</a> ";
 	echo"<a class='profile' href=\"".$config['folder']."logout.php?loc=".$_SERVER["REQUEST_URI"]."\">Logout</a></p>";
 }else{
 	include_once $_SERVER['DOCUMENT_ROOT'].$config['folder'].'/includes/saltGen.php';
 	$salt = $_SESSION['inv_salt'];?>
-<form method="post" action="" name="loginForm" id="loginForm" onsubmit="submitLogin();" style="width:570px; height:24px; border:solid black 3px; background-color:#474747; float:right; margin-top:28px;">
+<form method="post" action="" name="loginForm" id="loginForm" onsubmit="submitLogin();" style="width:570px; height:24px; border:solid black 3px; background-color:#FFF385; float:right; margin-top:28px;">
 	<?php if($GLOBALS['loginNotification']!="") echo $GLOBALS['loginNotification'];?>
 	<input type="hidden" id="salt" name="salt" value="<?php echo $salt;?>">
 	<input type="text" style="width:130px;" id="loginUsername" name="username" value="Username" onfocus="if(value=='Username') value=''; " onblur="if(value=='') value='Username'; ">

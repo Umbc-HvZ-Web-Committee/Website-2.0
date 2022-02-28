@@ -24,7 +24,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <ul style="list-style-type:none">
 <li><b>Saturday, April 30th:</b>
     <ul style="list-style-type:none; text-align:">
-    <li>Stating at 7:20am, 7:50am, and 8:20am <ul style="list-style-type:none;"> Day-of Registration / Check-in / Pre-game briefing in Meyerhoff 030</ul></li>
+    <li>Starting at 7:20am, 7:50am, and 8:20am <ul style="list-style-type:none;"> Day-of Registration / Check-in / Pre-game briefing in Meyerhoff 030</ul></li>
     <li>9:00am - Game Start <ul style="list-style-type:none;"> First Mission Briefing (at Check-in location)</ul></li></ul>
 <b><h3> The final mission should end tentatively around 5pm</h3></b>
 

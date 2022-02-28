@@ -50,7 +50,7 @@ There are currently <?php echo "$humans humans and $zombies zombies."?><br>
 </form></div>
 
 <?php
-	echo "If they exist in this table, then they have filled out a waiver, so we gucci yeet.";
+	echo "<br><br>If their name is not in bold, then they have filled out a waiver";
 
 	$html = $html."<table border=1>";
 		
@@ -58,9 +58,10 @@ There are currently <?php echo "$humans humans and $zombies zombies."?><br>
 	$html = $html."<td>Name</td>";
 	$html = $html."<td>Email Address</td>";
 	$html = $html."<td>Username</td>";
+	$html = $html."<td>Player ID (use to sign-in)</td>";
 	$html = $html."<tr>";
 		
-	$sql = "SELECT `fname`, `lname`, `email`, `uname`, `hasTurnedInWaiver` FROM `users` WHERE 1;";
+	$sql = "SELECT `fname`, `lname`, `email`, `uname`, `UID`, `hasTurnedInWaiver` FROM `users` WHERE 1;";
 	$ids = mysql_query($sql);
 	while($row = mysql_fetch_assoc($ids)) {
 		if($row['hasTurnedInWaiver'] == '1') {
@@ -68,15 +69,32 @@ There are currently <?php echo "$humans humans and $zombies zombies."?><br>
 			$lname = $row['lname'];
 			$email = $row['email'];
 			$uname = $row['uname'];
+			$playerID = $row['UID'];
 			
 			//$html = $html."<br/>$email $fname $lname $uname";
 			
 			$html = $html."<td>$fname $lname</td>";
 			$html = $html."<td>$email</td>";
 			$html = $html."<td>$uname</td>";
+			$html = $html."<td>$playerID</td>";
+			$html = $html."<tr>";
+		} else {
+			$fname = $row['fname'];
+			$lname = $row['lname'];
+			$email = $row['email'];
+			$uname = $row['uname'];
+			$playerID = $row['UID'];
+			
+			//$html = $html."<br/>$email $fname $lname $uname";
+			
+			$html = $html."<strong><td>$fname $lname</td>";
+			$html = $html."<td>$email</td>";
+			$html = $html."<td>$uname</td>";
+			$html = $html."<td>$playerID</td></strong>";
 			$html = $html."<tr>";
 		}
-		}
+		
+	}
 	$html = $html."</table><br/><br/>";
 	echo $html;
 ?>

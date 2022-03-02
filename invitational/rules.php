@@ -43,15 +43,19 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
 <h3><span style="text-decoration:underline;">UMBC Coronavirus Pandemic Rules</span>:</h3>
 <div>
-	<p>Please be aware of UMBC's COVID policies, available in full <a href = https://covid19.umbc.edu>here</a>/</p>
-	<p>In order to participate in our Invitational, we ask all players to read and understand UMBC's COVID-19 guidelines and abide by them while playing our game. These requireents were last updated as of February 27, 2022 and are likely to change between now and the day of the event. Please check back here closer to the event for updated information.</p>
+	<p>Please be aware of UMBC's COVID policies, available in full <a href = https://covid19.umbc.edu>here</a></p>
+	<p>In order to participate in our Invitational, we ask all players to read and understand UMBC's COVID-19 
+	guidelines and abide by them while playing our game. These requirements were last updated as of 
+	February 27, 2022 and are likely to change between now and the day of the event. Please check back here 
+	closer to the event for updated information.</p>
 	<ul>
 		<li>All individuals on campus must be fully immunized against COVID-19, including a booster (when eligible) at this time.</li>
 	<ul>
 		<li>Please bring your vaccination card or an easily-redable photograph of it for the moderator team to check your vaccination status
 		<li>If you are able to receive the vaccine, please contact the officers at the email the address listed above <strong>as soon as possible</strong></li>
 	</ul>
-		<li>KN95 or equivalent masks are required in any indoor space unless eating or drinking. Double surgical masks, N95s, and KF94s are considered KN95 equivalent.</li>
+		<li>KN95 or equivalent masks are required in any indoor space unless eating or drinking.</li>
+		<li>Double surgical masks, N95s, and KF94s are considered KN95 equivalent.</li>
 		<li>While indoors, individuals must social distance as much as possible.</li>
 		<li>The maximum density for indoor club meetings is 50 people.</li>
 		<li>If you are experiencing flu-like symptoms, please stay home.</li>

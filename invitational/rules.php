@@ -16,8 +16,9 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <li><b><h4>Due to COVID precautions, we are asking that individuals <a href="https://www.signupgenius.com/go/10C0E4CAFA62FA2F8C43-umbc" target="_blank">sign up for a time slot</a> for briefing to control the amount of individuals within our lecture hall. Please bear in mind that these time slots are subject to change depending on anticipated attendance. UMBC STUDENTS/ALUMNI: If possible, PLEASE attend one of our Friday evening safety briefings. </h4></b></li>
 <li><b>Friday, April 29th:</b>
     <ul style="list-style-type:none">
-    <li>6:00pm<ul style="list-style-type:none"> Registration / First Pre-game Briefing / Check-in in Meyerhoff 030</ul></li>
-    <li>7:00pm<ul style="list-style-type:none"> Registration / Second Pre-game Briefing / Check-in in Meyerhoff 030</ul></li></ul>
+		<li>6:00pm<ul style="list-style-type:none"> Registration / First Pre-game Briefing / Check-in in Meyerhoff 030</ul></li>
+		<li>7:00pm<ul style="list-style-type:none"> Registration / Second Pre-game Briefing / Check-in in Meyerhoff 030</ul></li>
+	</ul>
 </li>
 </ul>
 <br/>
@@ -28,52 +29,104 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
     <li>9:00am - Game Start <ul style="list-style-type:none;"> First Mission Briefing (at Check-in location)</ul></li></ul>
 <b><h3> The final mission should end tentatively around 5pm</h3></b>
 
-				<p>The schedule and these rules are subject to change as the date of the invitational draws closer. If you have questions, concerns, or suggestions, please email them to <a href="mailto:umbchvzofficers@gmail.com">umbchvzofficers@gmail.com</a>.</p>
+<p>The schedule and these rules are subject to change as the date of the invitational draws closer. If you have questions, concerns, or suggestions, please email them to <a href="mailto:umbchvzofficers@gmail.com">umbchvzofficers@gmail.com</a>.</p>
 <ul style="list-style-type:none">
-<li><strong>Rule #1 - Don&#39;t be a douchebag!</strong></li>
-<li>Rule #2 - Use common sense; think before you act</li>
-<li>Rule #3 - Ask if you have questions; don't assume</li>
-<li>Rule #4 - No realistic-looking weaponry</li>
-<li>Rule #5 - Don&#39;t use blasters indoors</li>
-<li>Rule #6 - No vehicles during gameplay</li>
+	<li><strong>Rule #1 - Don&#39;t be a douchebag!</strong></li>
+	<li>Rule #2 - Use common sense; think before you act</li>
+	<li>Rule #3 - Ask if you have questions; don't assume</li>
+	<li>Rule #4 - No realistic-looking weaponry</li>
+	<li>Rule #5 - Don&#39;t use blasters indoors</li>
+	<li>Rule #6 - No vehicles during gameplay</li>
 </ul>
 <p>
 &nbsp;</p>
+
+<h3><span style="text-decoration:underline;">UMBC Coronavirus Pandemic Rules</span>:</h3>
+<div>
+	<p>Please be aware of UMBC's COVID policies, available in full <a href = https://covid19.umbc.edu>here</a>/</p>
+	<p>In order to participate in our Invitational, we ask all players to read and understand UMBC's COVID-19 guidelines and abide by them while playing our game. These requireents were last updated as of February 27, 2022 and are likely to change between now and the day of the event. Please check back here closer to the event for updated information.</p>
+	<ul>
+		<li>All individuals on campus must be fully immunized against COVID-19, including a booster (when eligible) at this time.</li>
+	<ul>
+		<li>Please bring your vaccination card or an easily-redable photograph of it for the moderator team to check your vaccination status
+		<li>If you are able to receive the vaccine, please contact the officers at the email the address listed above <strong>as soon as possible</strong></li>
+	</ul>
+		<li>KN95 or equivalent masks are required in any indoor space unless eating or drinking. Double surgical masks, N95s, and KF94s are considered KN95 equivalent.</li>
+		<li>While indoors, individuals must social distance as much as possible.</li>
+		<li>The maximum density for indoor club meetings is 50 people.</li>
+		<li>If you are experiencing flu-like symptoms, please stay home.</li>
+	</ul>
+</div>
+
 <h3><span style="text-decoration:underline;">Required Equipment</span>:</h3>
 <div>
-<ul>
-<li>Bandanna (any contrasting color permitted)</li>
-<li>Foam darts/disks/rounds, dart/disk/round launcher and/or socks</li>
-<li>ID card/Team Card (provided at check-in)</li>
-</ul>
+	<ul>
+		<li>Bandanna (any contrasting color permitted)</li>
+		<li>Foam darts/disks/rounds, dart/disk/round launcher and/or socks</li>
+		<li>ID card/Team Card (provided at check-in)</li>
+	</ul>
 </div>
 <p>&nbsp;</p>
-<h3><span style="text-decoration:underline;">Blaster Requirements</span>:</h3>
+<h3><span style="text-decoration:underline;">Blaster and Ammo Requirements</span>:</h3>
 <div>
-<ul style="padding-left:30px;">
-<li>All blasters and other foam dart/disk launchers are permitted, provided:
-<ul>
-<li>The dart/disk is fired through mechanical means (this does not include blowguns)</li>
-<li>The blaster is brightly colored with an orange tip.
-<ul>
-<li>Tip: When painting stock blasters, try to make them brighter than the original color.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>The projectile fired from the blaster does not travel faster than 120 feet per second. We have a chronograph that we will use for testing this.</li>
-</ul>
-</li>
-<li>Darts may only be modified by cutting the foam of the dart. &nbsp;The foam end of the dart must at least twice the length of the tip of the dart.</li>
-<li>
-<ul>
-<li>The blaster must be brightly colored with an orange tip.</li>
-</ul>
-</li>
-<li>We do not allow melee weapons, such as foam NERF swords.</li>
-<li>All blasters and ammo MUST be approved at check-in.</li>
-<li>Hyper rounds and other similar and smaller ammo types are not permitted under any circumstances.</li>
-</ul>
+	<ul style="padding-left:30px;">
+		<li>All blasters and other foam dart/disk launchers are permitted, provided:
+			<ul>
+				<li>The dart/disk is fired through mechanical means (this does not include blowguns)</li>
+				<li>The blaster is brightly colored with an orange tip.
+					<ul>
+						<li>Tip: When painting stock blasters, try to make them brighter than the original color.</li>
+						<li>See Rule #4 -- No realistic-looking weaponry</li>
+					</ul>
+				</li>
+				<li>The projectile fired from the blaster does not travel faster than 120 feet per second. We have a chronograph that we will use for testing this.</li>
+			</ul>
+		</li>
+		<li>Acceptable ammo types include:
+			<ul>
+				<li>Nerf/Buzz Bee/Worker Darts</li>
+				<li>Nerf Rival Balls</li>
+				<li>Nerf Vortex Discs</li>
+				<li>Rolled and taped socks
+					<ul>
+						<li>"Socks" are defined as continuous pieces of cloth rolled and taped/folded accordingly in a ball-like fashion (minimum 1 inch in diameter) 
+						<li>If socks are unable to retain ball-like form without tape, tape is required</li>
+					</ul>
+				</li>
+				<li>"Other throwables" 
+					<ul>
+						<li>Must fit in a 4 inch x 4 inch x 4 inch area</li>
+						<li>Must be a minimum 1 inch in diameter in at least 2 perpendicular directions</li>
+						<li>Must be made of closed cell foam or cloth</li>
+						<li>Can be bound by tape, pursuant that you can still see the material underneath</li>
+					</ul>
+				</li>
+				
+			</ul>
+		</li>
+		<li>Unacceptable equipment includes:
+			<ul>
+				<li>FVJ Darts and any other "hard-tip" dart with a tip that does not compress</li>
+				<ul>
+					<li>Voberry and similar dart types such as Little Valentines are technically 
+					allowed but are <strong>strongly</strong> discouraged</li>
+				</ul>
+				<li>Hyper rounds and other similar and smaller ammo types</li>
+				<li>Homemade blaster ammo</li>
+				<li>Melee weapons, such as foam NERF swords.</li>
+				<li>Blowguns</li>
+				<li>CO2 and HPA blasters</li>
+				<li>Any blaster/ammo related to Airsoft or Paintball</li>
+			</ul>
+		</li>
+		<li>Darts may only be modified by cutting the foam of the dart.
+			<ul>
+				<li>The foam end of the dart must be at least twice the length of the tip of the dart.</li>
+				<li>Other dart modifcations are not allowed</li>
+			</ul>
+		
+		<li>All blasters and ammo MUST be approved at check-in.</li>
+	</ul>
 </div>
 <p>&nbsp;</p>
 <h3><span style="text-decoration:underline;">Area of Play</span>:</h3>
@@ -169,7 +222,9 @@ INTENTIONAL USE OF EXCESSIVE FORCE.</p>
 <ul>
 <li>Full-body tackles or body checks</li>
 <li>Anything that knocks a person off their feet</li>
-<li>Shots intentionally aimed or strikes at sensitive areas (Head, Crotch, etc.)</li>
+<li>Shots intentionally aimed or strikes at sensitive areas (Head, Crotch, etc.)
+<ul><li>Hits to these areas still count as hits but should be strongly avoided</li></ul>
+</li>
 </ul>
 <p><strong>PLEASE REPORT ANY VIOLENT INCIDENTS.</strong><br>
 &nbsp;</p>

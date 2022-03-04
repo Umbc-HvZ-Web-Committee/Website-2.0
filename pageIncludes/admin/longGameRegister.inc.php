@@ -187,12 +187,15 @@ if($_SESSION['isAdmin']>=2){
 		$sql = "";
 		if($_REQUEST['mailing']) {
 			$sql = "SELECT `playerID` FROM `long_players` WHERE `gameID`='$gameID' ORDER BY `playerID`;";
+			$sqlCount = "SELECT COUNT(*) AS 'cnt' FROM `long_players` WHERE `gameID`='$gameID';";
 		}
 		if($_REQUEST['mailing_h']) {
 			$sql = "SELECT `playerID` FROM `long_players` WHERE `gameID`='$gameID'  AND `state` > '0' ORDER BY `playerID`;";
+			$sqlCount = "SELECT COUNT(*) AS 'cnt' FROM `long_players` WHERE `gameID`='$gameID' AND `state` > '0';";
 		}
 		if($_REQUEST['mailing_z']) {
 			$sql = "SELECT `playerID` FROM `long_players` WHERE `gameID`='$gameID'  AND `state` != '1' ORDER BY `playerID`;";
+			$sqlCount = "SELECT COUNT(*) AS 'cnt' FROM `long_players` WHERE `gameID`='$gameID'; AND `state` != '1';";
 		}
 		
 		$html = $html."<table border=1>";
@@ -235,8 +238,11 @@ if($_SESSION['isAdmin']>=2){
 		
 		}
 		$html = $html."</table><br/><br/><br/>";
-		$html = $html.$email_chain;
+		$html = $html.$email_chain."</br></br>";
 		
+		$count = mysql_oneline($sqlCount);
+		$count = $count['cnt'];
+		$html = $html."Number of players included: ".$count."<br/><br/>";
 		
 		
 	}elseif (isset($_REQUEST['clear'])) {

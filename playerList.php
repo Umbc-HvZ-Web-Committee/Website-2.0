@@ -31,6 +31,7 @@ if (isset($_SESSION['UID'])) {
 			<input type="radio" name="order" value="name"/> Name
 			<input type="radio" name="order" value="kills"/> Kill Count
 			<input type="radio" name="order" value="survived"/> Days Survived
+			<input type="radio" name="order" value="creation"/> Account Creation Time
 			&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit" name="submit"/>
 			</form><br/>
 			<?php		

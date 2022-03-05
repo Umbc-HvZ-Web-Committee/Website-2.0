@@ -90,6 +90,8 @@ function printPlayerTable(){
 			$order = "state, lifetimeKills DESC";	
 		} else if ($orderBy == "survived") {
 			$order = "state, longestDaySurvived DESC";
+		} else if ($orderBy == "creation") {
+			$order = "state, UID";
 		} else {
 			$order = "state, lname";
 		}
@@ -109,6 +111,8 @@ function printPlayerTable(){
 			$order = "lifetimeKills DESC";
 		} else if ($orderBy == "survived") {
 			$order = "longestDaySurvived DESC";
+		} else if ($orderBy == "creation") {
+			$order = "UID";
 		} else {
 			$order = "lname";
 		}

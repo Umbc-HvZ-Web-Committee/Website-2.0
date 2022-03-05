@@ -63,7 +63,12 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 						}
 						
 						echo "<td>$para</td>";
-						echo "<td>{$ret['humanStartsTotal']}, {$ret['zombieStartsTotal']}, {$ret['gamesModdedTotal']}</td>";
+						
+						$humanStarts = $ret['humanStartsTotal'];
+						$zombieStarts = $ret['zombieStartsTotal'];
+						$modStarts = $ret['gamesModdedTotal'];
+						
+						echo "<td>".$humanStarts.", ".$zombieStarts.", ".$modStarts.", "."</td>";
 						
 						
 						

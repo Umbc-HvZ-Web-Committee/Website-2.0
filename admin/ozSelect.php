@@ -33,6 +33,8 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 					echo "<td>Starting Side</td>";
 					echo "<td>Name</td>";
 					echo "<td>OZ Paragraph</td>";
+					echo "<td>Missions Started Human, Zombie, Moderator</td>";
+					//echo "<td>Picture</td>";
 					echo "<tr>";
 						
 					$sql = "SELECT UID, fname, lname, ozParagraph, state FROM users, long_players WHERE "
@@ -53,8 +55,18 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 						else {
 							echo "<td>Human</td>";
 						}
-						echo "<td>{$ret['fname']} {$ret['lname']}</td>";
+						
+						if($ret['timesAsOZ'] > 0) {
+							echo "<td><strike>{$ret['fname']} {$ret['lname']}</strike></td>";
+						} else {
+							echo "<td>{$ret['fname']} {$ret['lname']}</td>";
+						}
+						
 						echo "<td>$para</td>";
+						echo "<td>{$ret['humanStartsTotal']}, {$ret['zombieStartsTotal']}, {$ret['gamesModdedTotal']}</td>";
+						
+						
+						
 						echo "<tr>";
 					}
 				?>
@@ -67,11 +79,13 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php } ?>
 		</div>
-		<div id="sidebar">
-			<div class="section1">
-				<?php displayLoginForm();?>
+		<?php if($playerData['isLongGameAuthed'] >= 1) { /*Don't show login form if already logged as a mod, allows table to occupy more space*/ ?>
+			<div id="sidebar">
+				<div class="section1">
+					<?php displayLoginForm();?>
+				</div>
 			</div>
-		</div>
+		<?php } ?>
 	<div class="clearfix">&nbsp;</div>
 	</div>
 	<div id="footer" class="container">

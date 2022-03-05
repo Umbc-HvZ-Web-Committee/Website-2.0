@@ -37,7 +37,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 					//echo "<td>Picture</td>";
 					echo "<tr>";
 						
-					$sql = "SELECT UID, fname, lname, ozParagraph, state FROM users, long_players WHERE "
+					$sql = "SELECT UID, fname, lname, ozParagraph, timesAsOZ, humanStartsTotal, zombieStartsTotal, gamesModdedTotal state FROM users, long_players WHERE "
 					."users.UID=long_players.playerID AND users.ozOptIn=1 AND long_players.gameID = '$gameID'"
 					."ORDER BY long_players.playerID";
 					$qury = mysql_query($sql);
@@ -68,7 +68,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 						$zombieStarts = $ret['zombieStartsTotal'];
 						$modStarts = $ret['gamesModdedTotal'];
 						
-						echo "<td>".$humanStarts.", ".$zombieStarts.", ".$modStarts.", "."</td>";
+						echo "<td>".$humanStarts.", ".$zombieStarts.", ".$modStarts."</td>";
 						
 						
 						

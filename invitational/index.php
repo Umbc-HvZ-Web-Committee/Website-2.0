@@ -30,7 +30,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 
 <p>A mysterious air has fallen over Coolsville, and the dead are rising! Join Scooby Doo and the Mystery Inc. gang as they investigate the zombie plague.</p>
 
-<p>The game will be played at the main UMBC campus, located at 1000 Hilltop Circle, Baltimore, Maryland on Saturday, April 30th! You <b>must</b> attend a rules and safety briefing in order to be allowed to play. 
+<p>The game will be played at the main UMBC campus, located at 1000 Hilltop Circle, Baltimore, Maryland on Saturday, April 30th! <b>You must attend a rules and safety briefing in order to be allowed to play.</b> 
 
 <br><br><i><b>Please bring your zombie-fighting equipment with you</b></i>. 
 </p>

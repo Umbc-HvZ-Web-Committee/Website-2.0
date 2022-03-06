@@ -84,13 +84,11 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php } ?>
 		</div>
-		<?php if(!($playerData['isLongGameAuthed'] >= 1)) { /*Don't show login form if already logged as a mod, allows table to occupy more space*/ ?>
-			<div id="sidebar">
-				<div class="section1">
-					<?php displayLoginForm();?>
-				</div>
+		<div id="sidebar">
+			<div class="section1">
+				<?php displayLoginForm();?>
 			</div>
-		<?php } ?>
+		</div>
 	<div class="clearfix">&nbsp;</div>
 	</div>
 	<div id="footer" class="container">

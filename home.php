@@ -42,8 +42,8 @@ require_once('pageIncludes/home.inc.php');
 		<i><h4><center>~For information on UMBC's reponse to the ongoing pandemic, <a href="https://covid19.umbc.edu'">click here</a>~</center></h4></i>
 		
 		<br/>
-		<b>Current Special Weeklong Rule</b>
-		From 12am to 6am, Melee Equipment is allowed for Human Use.<br/>
+		<b><font size="4">Current Special Weeklong Rule</b>
+		From 12am to 6am, Melee Equipment is allowed for Human Use.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

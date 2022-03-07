@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 6am to 12pm, Zombies/OZs cannot be stunned when standing on grass.</font><br/>
+		From 12pm to 6pm, Humans/OZs cannot use blasters while on grass.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

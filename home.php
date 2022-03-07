@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b>Current Special Weeklong Rule</b>
-		From 12am to 6am, Melee Equipment is allowed for Human Use.
+		From 12am to 6am, Melee Equipment is allowed for Human Use.<br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 12pm to 6pm, Humans/OZs cannot use blasters while on grass.</font><br/>
+		From 6pm to 12am, Humans/OZs that touch a tree will become reverse-merced for 30 seconds.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

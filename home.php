@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 6pm to 12am, Humans/OZs that touch a tree will become reverse-merced for 30 seconds. Please note that if you are participating in the night mission itself, the rule does not apply during that time.</font><br/>
+		From 12am to 6am, Zombies/OZs have a 1 min stun timer.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

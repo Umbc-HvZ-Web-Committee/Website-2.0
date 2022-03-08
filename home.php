@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 12am to 6am, Zombies/OZs have a 1 min stun timer.</font><br/>
+		From 12pm to 6pm, Zombies stunned by mega, must go touch PAHB in order for their stun timer to start.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

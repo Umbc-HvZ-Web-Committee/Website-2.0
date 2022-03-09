@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 6pm to 12am, The Lecture Hall for the night mission is a zombie respawn point, to 2 minutes Reminder that those participating in the night mission are not affected by the special rule.</font><br/>
+		From 12am to 6am, Zombies cannot be stunned while touching a tree.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

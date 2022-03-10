@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 12am to 6am, Zombies may only make tags while in line of sight of another zombie, the other zombie can be stunned or unstunned.</font><br/>
+		From 12pm to 6pm, Socks stun zombies for double the stun timer.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 6pm to 12am, Zombies cannot make tags while their feet are on or above grass. Note, if you are participating in the night mission, you are not affected by the Special Rule.</font><br/>
+		From 12am to 6am, Zombies may only make tags while in line of sight of another zombie, the other zombie can be stunned or unstunned.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

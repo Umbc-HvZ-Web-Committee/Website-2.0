@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 12am to 6am,  Melee equipment is allowed for Human use.</font><br/>
+		From 12pm to 6pm,  UC balcony is a safe zone for <b>EVERYONE</b>.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

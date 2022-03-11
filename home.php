@@ -43,7 +43,7 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Current Special Weeklong Rule</b>
-		From 6pm to 12am, Socks stun zombies for half the stun timer. Reminder that players participating in the night mission are <b>NOT</b> subject to the special rule.</font><br/>
+		From 12am to 6am,  Melee equipment is allowed for Human use.</font><br/>
 		<b><font size="4">Mission Info:</font></b><br/>
 		Mondays - 7:00 pm - TBD<br/>
 		Thursdays - 7:00 pm - TBD<br/>

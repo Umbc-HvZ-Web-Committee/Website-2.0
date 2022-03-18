@@ -180,9 +180,12 @@ $settings = get_settings();
 						echo "<h2 style=\"text-align:center\">Voting is currently closed.</h2>";
 					}
 					
-					echo "<br><br><b>Voting results:</b><br><br>";
-					$electionResults = getVotingResults();
-					echo $electionResults;
+					
+					if($_SESSION['isAdmin'] >= 2) {	
+						echo "<br><br><b>Voting results (Viewbale by admins only):</b><br><br>";
+						$electionResults = getVotingResults();
+						echo $electionResults;
+					}
 				}
 			}
 			?>

@@ -182,7 +182,7 @@ $settings = get_settings();
 					
 					
 					if($_SESSION['isAdmin'] >= 2) {	
-						echo "<br><br><b>Voting results (Viewbale by admins only):</b><br><br>";
+						echo "<br><br><b>Voting results (Viewable by admins only):</b><br><br>";
 						$electionResults = getVotingResults();
 						echo $electionResults;
 					}

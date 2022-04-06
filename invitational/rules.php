@@ -46,11 +46,11 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 	<p>Please be aware of UMBC's COVID policies, available in full <a href = https://covid19.umbc.edu>here</a></p>
 	<p>In order to participate in our Invitational, we ask all players to read and understand UMBC's COVID-19 
 	guidelines and abide by them while playing our game. These requirements were last updated as of 
-	March 3, 2022 and are likely to change between now and the day of the event. Please check back here 
+	April 5, 2022 and are likely to change between now and the day of the event. Please check back here 
 	closer to the event for updated information.</p>
 	<p>Despite UMBC relaxing it's restrictions, We are still requiring the following for the sake of the safety of all players.</p>
 	<ul>
-		<li>All individuals on campus must be fully immunized against COVID-19, including a booster (when eligible) at this time.</li>
+		<li>All individuals on campus must be fully immunized against COVID-19 at this time.</li>
 	<ul>
 		<li>Please bring your vaccination card or an easily-redable photograph of it for the moderator team to check your vaccination status
 		<li>If you are unable to receive the vaccine, please contact the officers at the email the address listed above <strong>as soon as possible</strong></li>

@@ -42,8 +42,8 @@ For participants aged 18 years or older, use
 </p>
 
 <center><p style="text-align:center;"><h3>If you have not already registered, please do so at 
-the top of the page. If you would like to be part of the &#39;zombie horde&#39;, please fill out 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScy34xuwrLJtTMm5kPgX-IzMQW0Up9PQWHfi8Hq_GSYDRxtsQ/viewform" target="_blank">this form</a> in addition to registering above.</h3></center>
+the top of the page. <!--If you would like to be part of the &#39;zombie horde&#39;, please fill out 
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScy34xuwrLJtTMm5kPgX-IzMQW0Up9PQWHfi8Hq_GSYDRxtsQ/viewform" target="_blank">this form</a> in addition to registering above.</h3></center>-->
 
 </div>
 </div>

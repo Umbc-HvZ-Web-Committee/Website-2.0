@@ -90,10 +90,10 @@ There are currently <?php echo "$humans humans and $zombies zombies."?><br>
 			
 			//$html = $html."<br/>$email $fname $lname $uname";
 			
-			$html = $html."<strong><td>$fname $lname</td>";
+			$html = $html."<td><strong>$fname $lname</strong></td>";
 			$html = $html."<td>$email</td>";
 			$html = $html."<td>$uname</td>";
-			$html = $html."<td>$playerID</td></strong>";
+			$html = $html."<td>$playerID</td>";
 			$html = $html."<tr>";
 		}
 		

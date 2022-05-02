@@ -58,29 +58,29 @@ require_once('pageIncludes/contact.inc.php');
 			<th><font color="white">Email</font></th><th><font color="white">Cell Phone Number</font></th></tr>
 
 			<tr bgcolor="#C0C0C0" align="center"><td>President</td>
-			<td>Chris Goodwin</td>
-			<td>c180@umbc.edu</td>
-			<td>(301)-401-6073</td></tr>
-		
-			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td>Nick Hestnes</td>
-			<td>nhestn1@umbc.edu</td>
- 			<td>(410)-202-9131</td></tr>
-		
-			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Kirby Fu</td>
-			<td>afu2@umbc.edu</td>
-			<td>(410)-564-6491</td></tr>
-		
-			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
-			<td>Henry Denny</td>
-			<td>hdenny1@umbc.edu</td>
-			<td>(443)-690-3362</td></tr>
-		
-			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
 			<td>David Gaiano</td>
 			<td>dgaiano1@umbc.edu</td>
 			<td>(443)-632-5900</td></tr>
+		
+			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
+			<td>Miles Campebll</td>
+			<td>gv18417@umbc.edu</td>
+ 			<td>(410)-202-9131</td></tr>
+		
+			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
+			<td>Brain Truppo</td>
+			<td>btruppo1@umbc.edu</td>
+			<td>(301)-828-5210</td></tr>
+		
+			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
+			<td>Chara Hunter</td>
+			<td>chunter1@umbc.edu</td>
+			<td>(410)-310-3672</td></tr>
+		
+			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
+			<td>Ethan Na</td>
+			<td>ethann1@umbc.edu</td>
+			<td>(443)-756-5946</td></tr>
 			</table><br/><br/>
 		
 			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->
@@ -100,9 +100,9 @@ require_once('pageIncludes/contact.inc.php');
 			<tr bgcolor="#C0C0C0" align="center">
 			<td>Nancy Bolton</td><td>Patrick Gomes</td><td>Josh Ward</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alexis Mincolelli</td><td>Ethan</td><td>Charlie Fox</td></tr>
+			<td>Alexis Mincolelli</td>Maya Clarke<td></td><td>Charlie Fox</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Emma</td><td>Maya</td><td>Andrew Niles</td></tr>
+			<td>Emma St. Croix</td><td></td><td>Andrew Niles</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
 			<!--<td></td><td></td><td></td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
@@ -129,7 +129,7 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->
 			
-			<br/><b>The officer liaison to Web Committee is our Vice President, Nick Hestnes.</b><br/>
+			<br/><b>The officer liaison to Web Committee is our Secretary, Chara Hunter.</b><br/>
 			
 			<br/><i>The Web Committee is responsible for maintaining and developing our club's website.
 			For technical help, please contact a web committee member (if you are in contact with them) or the officers.</i><br/>

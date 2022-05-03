@@ -63,9 +63,9 @@ require_once('pageIncludes/contact.inc.php');
 			<td>(443)-632-5900</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td>Miles Campebll</td>
-			<td>gv18417@umbc.edu</td>
- 			<td>(410)-202-9131</td></tr>
+			<td>Miles Campbell</td>
+			<td>milesacampbell@umbc.edu</td>
+ 			<td>(301)-802-1022</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
 			<td>Brain Truppo</td>

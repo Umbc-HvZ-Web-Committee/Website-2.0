@@ -76,7 +76,7 @@ if($_SESSION['isAdmin']>=1){
 					$uid = $ret['UID'];
 					$name = $ret['fname']." ".$ret['lname'];
 					
-					$vaccineStatus = $ret['vaccineStatus']);
+					$vaccineStatus = $ret['vaccineStatus'];
 					$vaccineStatus = denumerate('vaccineStatus', $vaccineStatus);
 					$waiverStatus = $ret['hasTurnedInWaiver'];
 					$waiverStatus = $denumerate('waiverStatus', $hasTurnedInWaiver);

@@ -30,7 +30,7 @@ if(isset($_REQUEST['submit'])){
 	}
 	if($func=="Update Waiver Record"){
 		$playerID = requestVar('playerID');
-		$vaccineStatus = requestVar('waiver');
+		$waiver = requestVar('waiver');
 		$ret = getUID($playerID);
 		if($ret) {
 			//found user

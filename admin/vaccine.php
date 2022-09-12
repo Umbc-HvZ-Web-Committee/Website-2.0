@@ -26,7 +26,7 @@ $settings = get_settings();
 			
 			<form action="" method="post">
 			Enter username of player below:<br/> 
-			<input type="text" name="user" id="user"/></br><br/>
+			<input type="text" name="playerID" id="playerID"/></br><br/>
 			Voting Link: <br/>
 			<label for="vaccineStatus"><input type="radio" name="vaccineStatus" value="0"/>Not vaccinated</label></br>
 			<label for="vaccineStatus"><input type="radio" name="vaccineStatus" value="1"/>Received single dose</label></br>

@@ -191,6 +191,52 @@ function canVote($uid){
 	return $ret['appearancesThisTerm'] + $ret['appearancesLastTerm'] >= 5;
 }
 
+function denumerate($enum, $number){
+	switch($enum) {
+		case 'vaccineStatus':
+			$full = mysql_oneline("SELECT MAX(`vaccineStatus`) AS `full` FROM users WHERE 1");
+			$full = $full['full'];
+			switch($number) {
+				case 0:
+					return "UNVACCINATED";
+				case $fullyVaccinated:
+					return "Fully-Vaccinated";
+				default:
+					return "PARTIALLY-VACCINATED";
+			}
+		break;
+		case 'waiverStatus':
+			switch($number) {
+				case 0:
+					return "NOT CLEARED";
+				case 1:
+					return "Cleared";
+				default:
+					return "UNABLE TO DENUMERATE VALUE $number";
+			}
+		break;
+		case 'gameState':
+			switch($number) {
+				case -2:
+					return "OZ";
+				case -1:
+					return "Zombie";
+				case 0:
+					return "Visitor";
+				case 1:
+					return "Human";
+				case 2:
+					return "Disguised OZ";
+				case 3:
+					return "Medkit";
+				case 4:
+					return "Moderator";
+			}
+		break;
+	}
+	return NULL;
+}
+
 //Misc. programming shortcuts
 function isLoggedIn(){
 	return (isset($_SESSION['uid']) && $_SESSION['uid']!="");

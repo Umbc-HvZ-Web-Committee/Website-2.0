@@ -208,7 +208,7 @@ function denumerate($enum, $number){
 			}
 		break;
 		case 'waiverStatus':
-			$echo $number;
+			echo $number;
 			switch($number) {
 				case 0:
 					return "NOT CLEARED";

@@ -1,5 +1,5 @@
 <?php
-require_once('../pageIncludes/admin/vaccine.inc.php');
+require_once('../pageIncludes/admin/playerRecord.inc.php');
 $settings = get_settings();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

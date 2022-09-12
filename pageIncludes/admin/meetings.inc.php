@@ -103,7 +103,7 @@ if($_SESSION['isAdmin']>=1){
 					if($ret['cnt']==0){
 						//add user to meeting
 						mysql_query("INSERT INTO meeting_log(meetingID, UID, startState) VALUES ('$meeting','$uid',$state);");
-						$GLOBALS['meetingMessage']="Sign in successful for player $name! <br/>Coronavirus status: $vaccineStatus; Waiver Status: $waiverStatus";
+						$GLOBALS['meetingMessage']="Sign in successful for player $name! <br/>Coronavirus status: $vaccineStatus<br/>Waiver Status: $waiverStatus";
 	
 						/*
 						//Increment attendance counter

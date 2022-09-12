@@ -75,6 +75,12 @@ function load(){
 				<div>Meeting to check attendance for:</div><?php meetingSelect2(); ?><br/>
 				<input type="submit" name="submit" value="View Attendance"/>
 			</p></form>
+		<?php }elseif{ ?>
+			<h2>Players in meeting</h2>
+			<form action="" method="post"><p>
+				<div>Meeting to check attendance for:</div><?php meetingSelect2(); ?><br/>
+				<input type="submit" name="submit" value="View Attendance"/>
+			</p></form>
 		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php } ?>

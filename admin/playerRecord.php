@@ -41,8 +41,8 @@ $settings = get_settings();
 			Enter username of player below:<br/> 
 			<input type="text" name="playerID" id="playerID"/></br><br/>
 			Voting Link: <br/>
-			<label for="waiver"><input type="radio" name="vaccineStatus" value="0"/>Not signed waiver for the year</label></br>
-			<label for="waiver"><input type="radio" name="vaccineStatus" value="1"/>Signed waiver for the year</label></br>
+			<label for="waiver"><input type="radio" name="waiver" value="0"/>Not signed waiver for the year</label></br>
+			<label for="waiver"><input type="radio" name="waiver" value="1"/>Signed waiver for the year</label></br>
 			<br/>
 			<input type="submit" name="submit" value="Update Waiver Record"/></br>
 			</form><br/>

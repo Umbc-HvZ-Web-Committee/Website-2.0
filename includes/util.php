@@ -196,16 +196,19 @@ function denumerate($enum, $number){
 		case 'vaccineStatus':
 			$full = mysql_oneline("SELECT MAX(`vaccineStatus`) AS `full` FROM users WHERE 1");
 			$full = $full['full'];
+			echo $full;
+			echo $number;
 			switch($number) {
 				case 0:
 					return "UNVACCINATED";
-				case $fullyVaccinated:
+				case $full:
 					return "Fully-Vaccinated";
 				default:
 					return "PARTIALLY-VACCINATED";
 			}
 		break;
 		case 'waiverStatus':
+			$echo $number;
 			switch($number) {
 				case 0:
 					return "NOT CLEARED";

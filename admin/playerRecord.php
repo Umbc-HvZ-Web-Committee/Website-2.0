@@ -27,7 +27,7 @@ $settings = get_settings();
 			<form action="" method="post">
 			Enter username of player below:<br/> 
 			<input type="text" name="playerID" id="playerID"/></br><br/>
-			Voting Link: <br/>
+			Vaccination Status: <br/>
 			<label for="vaccineStatus"><input type="radio" name="vaccineStatus" value="0"/>Not vaccinated</label></br>
 			<label for="vaccineStatus"><input type="radio" name="vaccineStatus" value="1"/>Received single dose</label></br>
 			<label for="vaccineStatus"><input type="radio" name="vaccineStatus" value="2"/>Double-vaccinated, or fully-vaccinated via one-shot vaccine</label></br>
@@ -35,7 +35,18 @@ $settings = get_settings();
 			<br/>
 			<input type="submit" name="submit" value="Update Vaccine Status"/></br>
 			</form><br/>
-				
+			
+			<h2>Update Waiver Records</h2>
+			<form action="" method="post">
+			Enter username of player below:<br/> 
+			<input type="text" name="playerID" id="playerID"/></br><br/>
+			Voting Link: <br/>
+			<label for="waiver"><input type="radio" name="vaccineStatus" value="0"/>Not signed waiver for the year</label></br>
+			<label for="waiver"><input type="radio" name="vaccineStatus" value="1"/>Signed waiver for the year</label></br>
+			<br/>
+			<input type="submit" name="submit" value="Update Waiver Record"/></br>
+			</form><br/>
+			
 		<?php } else { ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php } ?>

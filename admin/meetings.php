@@ -75,7 +75,7 @@ function load(){
 				<div>Meeting to check attendance for:</div><?php meetingSelect2(); ?><br/>
 				<input type="submit" name="submit" value="View Attendance"/>
 			</p></form>
-		<?php }elseif{ ?>
+		<?php }elseif ($_SESSION['isAdmin'] == 1){ //Subadmin access?> 
 			<h2>Players in meeting</h2>
 			<form action="" method="post"><p>
 				<div>Meeting to check attendance for:</div><?php meetingSelect2(); ?><br/>

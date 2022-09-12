@@ -24,4 +24,6 @@ if(isset($_REQUEST['submit'])){
 		} else {
 			$GLOBALS['meetingMessage']="I couldn't find player $playerID. MAke sure the username is correct";
 		}
+	}
+}
 ?>

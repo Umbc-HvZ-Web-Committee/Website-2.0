@@ -165,7 +165,15 @@ function getNextLongGame(){
 }
 
 function getCurrentSemester(){
-	return mysql_oneline("SELECT * FROM semesters WHERE CURRENT_TIMESTAMP < `endDate` AND CURRENT_TIMESTAMP > `startDate`");
+	return mysql_oneline("SELECT * FROM semesters WHERE CURRENT_TIMESTAMP < `endDate` AND CURRENT_TIMESTAMP > `startDate` LIMIT 1");
+}
+
+function getSemester($date){
+	return mysql_oneline("SELECT * FROM semesters WHERE $date < `endDate` AND $date > `startDate` LIMIT 1");
+}
+
+function getAllSemesters() {
+	return mysql_query("SELECT * FROM semesters WHERE CURRENT_TIMESTAMP > `startDate` DESC;");
 }
 
 //Currently irrelevant since semesters table is not used as of 1/22/2020

@@ -79,7 +79,7 @@ if($_SESSION['isAdmin']>=1){
 					$vaccineStatus = $ret['vaccineStatus'];
 					$vaccineStatus = denumerate('vaccineStatus', $vaccineStatus);
 					$waiverStatus = $ret['hasTurnedInWaiver'];
-					$waiverStatus = denumerate('waiverStatus', $hasTurnedInWaiver);
+					$waiverStatus = denumerate('waiverStatus', $waiverStatus);
 					
 					$ret2 = mysql_oneline("SELECT * FROM `users` WHERE `UID` = '$uid';");
 					$totalAttendance = $ret2['appearancesTotal'] - $ret2['adminMeetingsTotal'];

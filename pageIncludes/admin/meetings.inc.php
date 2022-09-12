@@ -77,9 +77,9 @@ if($_SESSION['isAdmin']>=1){
 					$name = $ret['fname']." ".$ret['lname'];
 					
 					$vaccineStatus = $ret['vaccineStatus'];
-					//$vaccineStatus = denumerate('vaccineStatus', $vaccineStatus);
+					$vaccineStatus = denumerate('vaccineStatus', $vaccineStatus);
 					$waiverStatus = $ret['hasTurnedInWaiver'];
-					//$waiverStatus = $denumerate('waiverStatus', $hasTurnedInWaiver);
+					$waiverStatus = denumerate('waiverStatus', $hasTurnedInWaiver);
 					
 					$ret2 = mysql_oneline("SELECT * FROM `users` WHERE `UID` = '$uid';");
 					$totalAttendance = $ret2['appearancesTotal'] - $ret2['adminMeetingsTotal'];
@@ -103,7 +103,7 @@ if($_SESSION['isAdmin']>=1){
 					if($ret['cnt']==0){
 						//add user to meeting
 						mysql_query("INSERT INTO meeting_log(meetingID, UID, startState) VALUES ('$meeting','$uid',$state);");
-						$GLOBALS['meetingMessage']="Sign in successful for player $name!\n Coronavirus status: $vaccineStatus; Waiver Status: $waiverStatus";
+						$GLOBALS['meetingMessage']="Sign in successful for player $name! <br/>Coronavirus status: $vaccineStatus; Waiver Status: $waiverStatus";
 	
 						/*
 						//Increment attendance counter

@@ -64,7 +64,7 @@ require_once('pageIncludes/contact.inc.php');
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
 			<td>Miles Campbell</td>
-			<td>milesacampbell@umbc.edu</td>
+			<td>milesacampbell1@umbc.edu</td>
  			<td>(301)-802-1022</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
@@ -96,15 +96,15 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Ryan Kwak</td></tr>
+			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Ian Moon</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Nancy Bolton</td><td>Patrick Gomes</td><td>Josh Ward</td></tr>
+			<td>Nancy Bolton</td><td>Patrick Gomes</td><td>Nick Molyneaux</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alexis Mincolelli</td><td>Maya Clarke</td><td>Charlie Fox</td></tr>
+			<td>Ryan Gutzat</td><td>Paul Dillingham</td><td>Alex Holtz</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Emma St. Croix</td><td></td><td>Andrew Niles</td></tr>
+			<td>Jay Buckwalter</td><td>Maddox Clarke</td><td>Fernando Chicas</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<!--<td></td><td></td><td></td></tr>
+			<td></td><td>Eli Kramer-Smyth</td><td></td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
 			<!--<td></td><td></td><td></td></tr>
 			<tr bgcolor="#C0C0C0" align="center">-->

@@ -231,6 +231,36 @@ function denumerate($enum, $number){
 					return "Medkit";
 				case 4:
 					return "Moderator";
+				default:
+					return "UNABLE TO DENUMERATE VALUE $number";
+			}
+		break;
+		case 'adminLevel':
+			switch($number) {
+				case 0:
+					return "Non-Administrator/Non-technical Subofficer";
+				case 1:
+					return "Technical Subofficer";
+				case 2:
+					return "Officer";
+				case 3:
+					return "Web Committee";
+				default:
+					return "UNABLE TO DENUMERATE VALUE $number";
+			}
+		break;
+		case 'WeeklongModerator':
+			switch($number) {
+				case 0:
+					return "Non-Administrator";
+				case 1:
+					return "Secondary Moderator";
+				case 2:
+					return "Officer/Primary Moderator";
+				case 3:
+					return "Web Committee";
+				default:
+					return "UNABLE TO DENUMERATE VALUE $number";
 			}
 		break;
 	}

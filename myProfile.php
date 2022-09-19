@@ -220,7 +220,7 @@ require_once('includes/update.php');
 					echo "</br><h3>Waiver Status</h3></br>";
 					$waiverStatus = $ret['hasTurnedInWaiver'];
 					$waiverStatus = denumerate('waiverStatus', $waiverStatus);
-					echo "Your waiver status is <strong>$waiverStatus<strong><br/><br/></strong>";
+					echo "Your waiver status is <strong>$waiverStatus</strong><br/><br/><";
 					echo "By UMBC rules, all players are required to have a waiver turned in each year to participate in UMBC HvZ games. If your waiver status is listed above as \"Waivered\", then our records indicate that you have filled out a waiver. Our records will not update right away, so it is posible that you have filled out a waiver, but your status above indicates otherwise. If you have <strong>not</strong> filled out a waiver, you can fill out an online waiver <a href=\"https://umbcorgs.dserec.com/online/clubsports_widget/club/84/registration\">here</a>. If you are unable to fill out an online waiver, you can request a paper waiver from an officer at one of our meetings.<br/>";
 					
 					echo "</br><h3>Vaccination Status</h3></br>";

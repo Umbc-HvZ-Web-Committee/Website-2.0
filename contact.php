@@ -68,7 +68,7 @@ require_once('pageIncludes/contact.inc.php');
  			<td>(301)-802-1022</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Brain Truppo</td>
+			<td>Bryn Truppo</td>
 			<td>btruppo1@umbc.edu</td>
 			<td>(301)-828-5210</td></tr>
 		

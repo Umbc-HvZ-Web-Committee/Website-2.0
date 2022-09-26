@@ -74,11 +74,17 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 		<?php if(!$display) { ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>
 		<?php }else{
+			$adminLevel = $_SESSION['isAdmin'];
+			$adminLevel = denumerate("adminLevel", $adminLevel);
+			
+			$weeklongLevel = $playerData['isLongGameAuthed'];
+			$weeklongLevel = denumerate("weeklongModerator", $weeklongLevel);
+			
 			echo "<br/><br/>";
 			echo "Your basic admin level is ";
-			echo $_SESSION['isAdmin'];
+			echo $adminLevel;
 			echo "<br/>Your long game admin level is ";
-			echo $playerData['isLongGameAuthed'];
+			echo $weeklongLevel;
 			echo "<br/>";
 		}?>
 		</div>

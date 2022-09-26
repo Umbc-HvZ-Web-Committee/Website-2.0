@@ -19,12 +19,6 @@ $MODERATOR_TAG = 4;
 $TERMINAL_TAG = -4;
 $GENERAL_PLAYER_TAG = -3;
 
-//Meeting type constants
-$MEETING_MISSION = 0;
-$MEETING_ADMIN = 1;
-$MEETING_OTHER = 2;
-$MEETING_NOMINAL = 3;
-
 //Uncomment if there are problems
 //echo("Hello!");
 //var_dump($_SESSION);
@@ -62,7 +56,7 @@ if($_SESSION['isAdmin']>=1){
 			$meetingType = mysql_oneline("SELECT * FROM `meeting_list` WHERE `meetingID` = '$meeting'");
 			$meetingType = $meetingType['meetingType'];
 			//echo $meetingType;
-			if ($meetingType != $MEETING_MISSION) { 
+			if (denumerate('meetingType', $meetingType) != "Mission") { 
 				//If the meeting is not a mission, there is no need for differentiation between states
 				//so the state for everyone will be 0
 				//echo "Hi lol";
@@ -207,7 +201,7 @@ if($_SESSION['isAdmin']>=1){
 			$ctr = $HUMAN_TAG;
 			
 			$zombieVictory = false; //used to award patient zero
-			if($meetingWinner == -1) {
+			if(denumerate('meetingWinner', $meetingWinner) == "Zombie") {
 				$zombieVictory = true;
 			}
 			
@@ -229,6 +223,7 @@ if($_SESSION['isAdmin']>=1){
 						$iterations += 1;
 						$ret3 = mysql_oneline("SELECT * FROM `meeting_list` WHERE `meetingID` = '$meetingID';");
 						$meetingID = $ret3['meetingID'];
+						$meetingType = $ret3['meetingType'];
 						//echo "Running inner loop using side number $ctr and UID $UID and meetingID $meetingID";
 						//echo $query2;
 						//$meetingsTerm = $query2['appearancesThisTerm']; //TODO: Check to see if this fixes it and apply elsewhere						
@@ -240,7 +235,7 @@ if($_SESSION['isAdmin']>=1){
 						mysql_query("UPDATE `users` SET `appearancesTotal` = `appearancesTotal` + 1 WHERE `UID`='$UID';");
 						mysql_query("UPDATE `users` SET `appearancesThisTerm` = `appearancesThisTerm` + 1 WHERE `UID`='$UID';");
 						//echo " E";
-						if($ret3['meetingType'] == $MEETING_MISSION) {
+						if(denumerate("meetingType", $meetingType) == "Mission") {
 							//echo " E";
 							if($ret['startState'] == $HUMAN_TAG) {
 								//$meetingsTotal = $query2['humanStartsTotal'];
@@ -271,7 +266,7 @@ if($_SESSION['isAdmin']>=1){
 								mysql_query("UPDATE `users` SET `gamesModdedThisTerm` = `gamesModdedThisTerm` + 1 WHERE `UID`='$UID';");
 							}
 						}
-						else if ($ret3['meetingType'] == $MEETING_ADMIN) {
+						else if (denumerate("meetingType", $meetingType) == "Admin") {
 							$meetingsTotal = $ret2['adminMeetingsTotal'];
 							$meetingsTotal = $meetingsTotal + 1;
 							$meetingsTerm = $ret2['adminMeetingsThisTerm'];
@@ -279,10 +274,10 @@ if($_SESSION['isAdmin']>=1){
 							mysql_query("UPDATE `users` SET `adminMeetingsTotal` = `adminMeetingsTotal` + 1 WHERE `UID`='$UID';");
 							mysql_query("UPDATE `users` SET `adminMeetingsThisTerm` = `adminMeetingsThisTerm` + 1 WHERE `UID`='$UID';");
 						}
-						else if ($ret3['meetingType'] == $MEETING_OTHER) {
+						else if (denumerate("meetingType", $meetingType) == "Other") {
 							continue;
 						}
-						else if ($ret3['meetingType'] == $MEETING_NOMINAL) {
+						else if (denumerate("meetingType", $meetingType) == "Nominal") {
 							mysql_query("UPDATE `users` SET `appearancesTotal` = `appearancesTotal` - 1 WHERE `UID`='$UID';");
 						}
 					//}
@@ -384,9 +379,9 @@ if($_SESSION['isAdmin']>=1){
 			$ctr = $HUMAN_TAG;
 			$zombieVictory = false; //used to award patient zero
 			$hasOZ = false;
-			if($meetingWinner == 1) {
+			if(denumerate('meetingWinner', $meetingWinner) == "Human") {
 				$meetingWinner = "Human Victory!";
-			} else if ($meetingWinner == -1) {
+			} else if (denumerate('meetingWinner', $meetingWinner) == "Zombie") {
 				$meetingWinner = "Zombie Victory!";
 				$zombieVictory = true;
 			} else {

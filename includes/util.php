@@ -217,6 +217,8 @@ function denumerate($enum, $number){
 		break;
 		case 'gameState':
 			switch($number) {
+				case -3:
+					return "Weeklong Player";
 				case -2:
 					return "OZ";
 				case -1:
@@ -249,7 +251,7 @@ function denumerate($enum, $number){
 					return "UNABLE TO DENUMERATE VALUE $number";
 			}
 		break;
-		case 'WeeklongModerator':
+		case 'weeklongModerator':
 			switch($number) {
 				case 0:
 					return "Non-Administrator";
@@ -259,6 +261,32 @@ function denumerate($enum, $number){
 					return "Officer/Primary Moderator";
 				case 3:
 					return "Web Committee";
+				default:
+					return "UNABLE TO DENUMERATE VALUE $number";
+			}
+		break;
+		case 'meetingType':
+			switch($number) {
+				case 0:
+					return "Mission";
+				case 1:
+					return "Admin";
+				case 2:
+					return "Other";
+				case 3:
+					return "Nominal";
+				default:
+					return "UNABLE TO DENUMERATE VALUE $number";
+			}
+		break;
+		case 'meetingWinner':
+			switch($number) {
+				case 0:
+					return "Other";
+				case 1:
+					return "Human";
+				case 2:
+					return "Zombie";
 				default:
 					return "UNABLE TO DENUMERATE VALUE $number";
 			}

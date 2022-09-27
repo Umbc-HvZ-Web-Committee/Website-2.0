@@ -45,7 +45,7 @@ if(isset($_REQUEST['submit'])){
 				}
 			}
 		}
-	}else if($func=="Group Achievement"){ /*
+	}else if($func=="Group Achievement"){ 
 		$whereClause = requestVar('whereClause');
 		
 		//Check for safe query before proceeding
@@ -59,7 +59,7 @@ if(isset($_REQUEST['submit'])){
 		//Thus, we may proceed.
 		if(strpos($whereClause, ";") != strpos($whereClause, "--")) {
 			//Bad query
-			status = "Illegal query provided!";
+			$status = "Illegal query provided!";
 			break;
 		}
 		

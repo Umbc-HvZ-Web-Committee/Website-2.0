@@ -59,8 +59,8 @@ if(isset($_REQUEST['submit'])){
 		//Thus, we may proceed.
 		if(strpos($whereClause, ";") != strpos($whereClause, "--")) {
 			//Bad query
-			/*$status = "</br><h3>Illegal query provided!</h3>";
-			break;*/
+			$status = "</br><h3>Illegal query provided!</h3>";
+			break;
 		}
 		
 		$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");

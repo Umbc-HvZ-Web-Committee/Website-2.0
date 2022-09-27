@@ -47,6 +47,7 @@ if(isset($_REQUEST['submit'])){
 		}
 	}else if($func=="Group Achievement"){ 
 		$whereClause = requestVar('whereClause');
+		echo $whereClause;
 		
 		//Check for safe query before proceeding
 		
@@ -60,12 +61,15 @@ if(isset($_REQUEST['submit'])){
 		if(strpos($whereClause, ";") != strpos($whereClause, "--")) {
 			//Bad query
 			$status = "</br><h3>Illegal query provided!</h3>";
+			echo "\nillegal query\n";
 		} else {
+			echo "\nlegal query\n";
 			$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
 			$status = "";
 			
 			foreach($players as $uname) {
 				$playerID = $uname['uname'];
+				$echo "iterating over player ".$playerID;
 				$ret = getUID($playerID);
 				if(!$ret) {
 					$status = $status."</br><h3>Player ".$playerID." not found.</h3>";

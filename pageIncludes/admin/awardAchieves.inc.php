@@ -99,7 +99,7 @@ if(isset($_REQUEST['submit'])){
 					}
 				}
 			}
-		}*/
+		}
 	}
 } else {
 	$status = "";

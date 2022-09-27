@@ -45,7 +45,7 @@ if(isset($_REQUEST['submit'])){
 				}
 			}
 		}
-	}else if($func=="Group Achievement"){
+	}else if($func=="Group Achievement"){ /*
 		$whereClause = requestVar('whereClause');
 		
 		//Check for safe query before proceeding
@@ -63,10 +63,11 @@ if(isset($_REQUEST['submit'])){
 			break;
 		}
 		
-		$unames = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
+		$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
 		$status = "";
 		
-		foreach($unames as $playerID) {
+		foreach($players as $uname) {
+			$playerID = $uname['uname'];
 			$ret = getUID($playerID);
 			if(!$ret) {
 				$status = $status."</br><h3>Player ".$playerID." not found.</h3>";
@@ -98,9 +99,7 @@ if(isset($_REQUEST['submit'])){
 					}
 				}
 			}
-		}
-		
-		
+		}*/
 	}
 } else {
 	$status = "";

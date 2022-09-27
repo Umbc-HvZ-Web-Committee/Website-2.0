@@ -60,42 +60,41 @@ if(isset($_REQUEST['submit'])){
 		if(strpos($whereClause, ";") != strpos($whereClause, "--")) {
 			//Bad query
 			$status = "</br><h3>Illegal query provided!</h3>";
-			break;
-		}
-		
-		$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
-		$status = "";
-		
-		foreach($players as $uname) {
-			$playerID = $uname['uname'];
-			$ret = getUID($playerID);
-			if(!$ret) {
-				$status = $status."</br><h3>Player ".$playerID." not found.</h3>";
-			} else {
-					
-				$uid = $ret['UID'];
-				$email = $ret['email'];
-				$name = $ret['fname']." ".$ret['lname'];
-				
-				$achieveLookupSql = "SELECT * FROM `achievements_new` WHERE `key`='$value'";
-				$achieveLookupRet = mysql_oneline($achieveLookupSql);
-				$achieveAID = $achieveLookupRet['AID'];
-				$achieveName = $achieveLookupRet['name'];
-				
-				if(!giveAchieve($achieveAID, $uid))
-				{
-					$status = $status."</br><h3>Player already has that achievement.</h3>";
+		} else {
+			$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
+			$status = "";
+			
+			foreach($players as $uname) {
+				$playerID = $uname['uname'];
+				$ret = getUID($playerID);
+				if(!$ret) {
+					$status = $status."</br><h3>Player ".$playerID." not found.</h3>";
 				} else {
-					$status = $status."</br><h3>".$name." has been awarded the achievement ".$achieveName.".</h3>";
-				}
-				
-				
-				$sql = "SELECT * FROM `userAchieveLink_new` WHERE UID='$uid'";
-				$retTwo = mysql_query($sql);
-				while($row = mysql_fetch_assoc($retTwo)) {
-					if($achieveAID == $row['AID']) {
-						$found = true;
-						break;
+						
+					$uid = $ret['UID'];
+					$email = $ret['email'];
+					$name = $ret['fname']." ".$ret['lname'];
+					
+					$achieveLookupSql = "SELECT * FROM `achievements_new` WHERE `key`='$value'";
+					$achieveLookupRet = mysql_oneline($achieveLookupSql);
+					$achieveAID = $achieveLookupRet['AID'];
+					$achieveName = $achieveLookupRet['name'];
+					
+					if(!giveAchieve($achieveAID, $uid))
+					{
+						$status = $status."</br><h3>Player already has that achievement.</h3>";
+					} else {
+						$status = $status."</br><h3>".$name." has been awarded the achievement ".$achieveName.".</h3>";
+					}
+					
+					
+					$sql = "SELECT * FROM `userAchieveLink_new` WHERE UID='$uid'";
+					$retTwo = mysql_query($sql);
+					while($row = mysql_fetch_assoc($retTwo)) {
+						if($achieveAID == $row['AID']) {
+							$found = true;
+							break;
+						}
 					}
 				}
 			}

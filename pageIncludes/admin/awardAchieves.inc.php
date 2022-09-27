@@ -102,6 +102,9 @@ if(isset($_REQUEST['submit'])){
 					}
 				}
 			}
+			if($status = "") {
+				$status = "</br><h3>Provided WHERE clause does not describe any players</h3>";
+			}
 		}
 	}
 } else {

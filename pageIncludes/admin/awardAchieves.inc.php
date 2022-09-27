@@ -66,7 +66,7 @@ if(isset($_REQUEST['submit'])){
 		$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
 		$status = "";
 		
-		foreach($players as $uname) {
+		/*foreach($players as $uname) {
 			$playerID = $uname['uname'];
 			$ret = getUID($playerID);
 			if(!$ret) {
@@ -99,7 +99,7 @@ if(isset($_REQUEST['submit'])){
 					}
 				}
 			}
-		}
+		}*/
 	}
 } else {
 	$status = "";

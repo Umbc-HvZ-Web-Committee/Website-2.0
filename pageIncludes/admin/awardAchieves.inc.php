@@ -69,7 +69,7 @@ if(isset($_REQUEST['submit'])){
 			
 			foreach($players as $uname) {
 				$playerID = $uname['uname'];
-				$echo "iterating over player ".$playerID;
+				echo "iterating over player ".$playerID;
 				$ret = getUID($playerID);
 				if(!$ret) {
 					$status = $status."</br><h3>Player ".$playerID." not found.</h3>";

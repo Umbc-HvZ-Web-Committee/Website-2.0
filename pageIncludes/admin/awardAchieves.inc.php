@@ -108,11 +108,10 @@ if(isset($_REQUEST['submit'])){
 				}
 				echo "<br/>iterated";
 			}
-			echo "end loop";
+			echo "<br/>end loop";
+			echo "<br/>".$status;
 			if($status = "") {
 				$status = "</br><h3>Provided WHERE clause does not describe any players</h3>";
-			}else {
-				echo "<br/>".$status;
 			}
 		}
 	}

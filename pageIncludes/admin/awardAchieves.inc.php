@@ -47,7 +47,7 @@ if(isset($_REQUEST['submit'])){
 		}
 	}else if($func=="Group Achievement"){ 
 		$whereClause = requestVar('whereClause');
-		echo $whereClause;
+		//echo $whereClause;
 		
 		//Check for safe query before proceeding
 		
@@ -61,18 +61,18 @@ if(isset($_REQUEST['submit'])){
 		if(strpos($whereClause, ";") != strpos($whereClause, "--") or substr($whereClause, 0, 1) == ";" or substr($whereClause, 0, 1) == "-") {
 			//Bad query
 			$status = "</br><h3>Illegal query provided!</h3>";
-			echo "<br/>illegal query<br/>";
+			//echo "<br/>illegal query<br/>";
 		} else {
-			echo "<br/>legal query";
-			echo "<br/>".strpos($whereClause, ";")." ".strpos($whereClause, "--");
+			//echo "<br/>legal query";
+			//echo "<br/>".strpos($whereClause, ";")." ".strpos($whereClause, "--");
 			$whereClause = str_replace("\'", "'", $whereClause);
-			echo "<br/>SELECT `uname` FROM `users` WHERE ".$whereClause;
+			//echo "<br/>SELECT `uname` FROM `users` WHERE ".$whereClause;
 			$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
 			$status = "";
 			
 			foreach($players as $uname) {
 				$playerID = $uname['uname'];
-				echo "<br/>iterating over player ".$playerID;
+				//echo "<br/>iterating over player ".$playerID;
 				$ret = getUID($playerID);
 				if(!$ret) {
 					$status = $status."</br><h3>Player ".$playerID." not found.</h3>";
@@ -90,10 +90,10 @@ if(isset($_REQUEST['submit'])){
 					if(!giveAchieve($achieveAID, $uid))
 					{
 						$status = $status."</br><h3>Player ".$name." already has that achievement.</h3>";
-						echo "<br/>Player has achievement";
+						//echo "<br/>Player has achievement";
 					} else {
 						$status = $status."</br><h3>".$name." has been awarded the achievement ".$achieveName.".</h3>";
-						echo "<br/>Player does not have achievement";
+						//echo "<br/>Player does not have achievement";
 					}
 					
 					
@@ -106,10 +106,10 @@ if(isset($_REQUEST['submit'])){
 						}
 					}
 				}
-				echo "<br/>iterated";
+				//echo "<br/>iterated";
 			}
-			echo "<br/>end loop";
-			echo "<br/>".$status;
+			//echo "<br/>end loop";
+			//echo "<br/>".$status;
 			if($status == "") {
 				$status = "</br><h3>Provided WHERE clause does not describe any players</h3>";
 			}

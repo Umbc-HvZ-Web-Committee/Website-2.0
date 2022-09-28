@@ -61,16 +61,18 @@ if(isset($_REQUEST['submit'])){
 		if(strpos($whereClause, ";") != strpos($whereClause, "--")) {
 			//Bad query
 			$status = "</br><h3>Illegal query provided!</h3>";
-			echo "\nillegal query\n";
+			echo "<br/>illegal query<br/>";
 		} else {
-			echo "\nlegal query\n";
+			echo "<br/>legal query";
+			echo "<br/>".strpos($whereClause, ";")." ".strpos($whereClause, "--");
 			$whereClause = str_replace("\'", "'", $whereClause);
+			$echo "<br/>SELECT `uname` FROM `users` WHERE ".$whereClause;
 			$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
 			$status = "";
 			
 			foreach($players as $uname) {
 				$playerID = $uname['uname'];
-				echo "iterating over player ".$playerID;
+				echo "<br/>iterating over player ".$playerID;
 				$ret = getUID($playerID);
 				if(!$ret) {
 					$status = $status."</br><h3>Player ".$playerID." not found.</h3>";
@@ -87,7 +89,7 @@ if(isset($_REQUEST['submit'])){
 					
 					if(!giveAchieve($achieveAID, $uid))
 					{
-						$status = $status."</br><h3>Player already has that achievement.</h3>";
+						$status = $status."</br><h3>Player ".$name." already has that achievement.</h3>";
 					} else {
 						$status = $status."</br><h3>".$name." has been awarded the achievement ".$achieveName.".</h3>";
 					}
@@ -102,6 +104,7 @@ if(isset($_REQUEST['submit'])){
 						}
 					}
 				}
+				echo "<br/>iterated";
 			}
 			if($status = "") {
 				$status = "</br><h3>Provided WHERE clause does not describe any players</h3>";

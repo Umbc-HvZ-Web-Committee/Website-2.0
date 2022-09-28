@@ -66,7 +66,7 @@ if(isset($_REQUEST['submit'])){
 			echo "<br/>legal query";
 			echo "<br/>".strpos($whereClause, ";")." ".strpos($whereClause, "--");
 			$whereClause = str_replace("\'", "'", $whereClause);
-			$echo "<br/>SELECT `uname` FROM `users` WHERE ".$whereClause;
+			echo "<br/>SELECT `uname` FROM `users` WHERE ".$whereClause;
 			$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
 			$status = "";
 			

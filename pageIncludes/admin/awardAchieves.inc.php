@@ -58,7 +58,7 @@ if(isset($_REQUEST['submit'])){
 		//which would return a value of false for both, and since false == false, that would indicate that neither
 		//SQL token of interest is in the provided input, making this query safe for the level of scrutiny we provide here.
 		//Thus, we may proceed.
-		if(strpos($whereClause, ";") != strpos($whereClause, "--") or substr($whereClause, 0, 1) != ";" or substr($whereClause, 0, 1) != "-") {
+		if(strpos($whereClause, ";") != strpos($whereClause, "--") or substr($whereClause, 0, 1) == ";" or substr($whereClause, 0, 1) == "-") {
 			//Bad query
 			$status = "</br><h3>Illegal query provided!</h3>";
 			echo "<br/>illegal query<br/>";

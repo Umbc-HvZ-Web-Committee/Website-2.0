@@ -30,7 +30,7 @@ if(isset($_REQUEST['submit'])){
 			
 			if(!giveAchieve($achieveAID, $uid))
 			{
-				$status = "</br><h3>Player already has that achievement.</h3>";
+				$status = "</br><h3>Player already has the achievement ".$achieveName.".</h3>";
 			} else {
 				$status = "</br><h3>".$name." has been awarded the achievement ".$achieveName.".</h3>";
 			}
@@ -89,7 +89,7 @@ if(isset($_REQUEST['submit'])){
 					
 					if(!giveAchieve($achieveAID, $uid))
 					{
-						$status = $status."</br><h3>Player ".$name." already has that achievement.</h3>";
+						$status = $status."</br><h3>Player ".$name." already has the achievement ".$achieveName.".</h3>";
 						//echo "<br/>Player has achievement";
 					} else {
 						$status = $status."</br><h3>".$name." has been awarded the achievement ".$achieveName.".</h3>";

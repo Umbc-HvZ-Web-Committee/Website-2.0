@@ -64,6 +64,7 @@ if(isset($_REQUEST['submit'])){
 			echo "\nillegal query\n";
 		} else {
 			echo "\nlegal query\n";
+			$whereClause = str_replace("\'", "'", $whereClause);
 			$players = mysql_query("SELECT `uname` FROM `users` WHERE $whereClause;");
 			$status = "";
 			

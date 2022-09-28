@@ -90,8 +90,10 @@ if(isset($_REQUEST['submit'])){
 					if(!giveAchieve($achieveAID, $uid))
 					{
 						$status = $status."</br><h3>Player ".$name." already has that achievement.</h3>";
+						echo "<br/>Player has achievement";
 					} else {
 						$status = $status."</br><h3>".$name." has been awarded the achievement ".$achieveName.".</h3>";
+						echo "<br/>Player does not have achievement";
 					}
 					
 					

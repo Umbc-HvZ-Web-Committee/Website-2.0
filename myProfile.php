@@ -269,7 +269,7 @@ require_once('includes/update.php');
 						?>
 						<h3>iDied</h3>
 						<p>
-						Please click this button ONLY if you were tagged and the kill <b>can't<b> be logged (killcode doesn't work or can't be found).
+						Please click this button ONLY if you were tagged and the kill <b>can't</b> be logged (killcode doesn't work or can't be found).
 						DO NOT USE THIS BUTTON TO SUICIDE - you will be caught if you do this!<br/>
 						OZs - use this button to reveal yourself after your 2 days or 2 kills are over.
 						</p>

@@ -168,6 +168,10 @@ function getCurrentSemester(){
 	return mysql_oneline("SELECT * FROM semesters WHERE CURRENT_TIMESTAMP < `endDate` AND CURRENT_TIMESTAMP > `startDate` LIMIT 1");
 }
 
+function getLastSemester(){
+	return mysql_oneline("SELECT * FROM semesters WHERE CURRENT_TIMESTAMP > `endDate` ORDER BY `endDate` DESC LIMIT 1");
+}
+
 function getSemester($date){
 	return mysql_oneline("SELECT * FROM semesters WHERE $date < `endDate` AND $date > `startDate` LIMIT 1");
 }
@@ -189,6 +193,81 @@ function getMeetingsAttendedInMembershipRange($uid){
 function canVote($uid){
 	$ret = mysql_oneline("SELECT * FROM `users` WHERE `UID`='$uid'");
 	return $ret['appearancesThisTerm'] + $ret['appearancesLastTerm'] >= 5;
+}
+
+function updateAttendance($uid) {
+	$thisSemester = getCurrentSemester();
+	$lastSemester = getLastSemester();
+	
+	$thisSemesterStart = $thisSemester['startDate'];
+	$thisSemesterEnd = $thisSemester['endDate'];
+	$lastSemesterStart = $lastSemester['startDate'];
+	$lastSemesterEnd = $lastSemester['endDate'];
+	
+	//echo $uid;
+	//echo " ";
+	$totalCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE `UID` = '$uid' AND `meetingType` != '3';");
+	$totalCount = $totalCount['cnt'];
+	//echo $totalCount;
+	//echo " ";
+	$termCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE `UID` = '$uid' AND `creationDate` > '$thisSemesterStart';");
+	$termCount = $termCount['cnt'];
+	//echo $termCount;
+	//echo " ";
+	$lastTermCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `creationDate` > '$lastSemesterStart' AND `creationDate` < '$lastSemesterEnd';");
+	$lastTermCount = $lastTermCount['cnt'];
+	//echo $lastTermCount;
+	//echo " ";
+	$humanCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '1';");
+	$humanCount = $humanCount['cnt'];
+	//echo $humanCount;
+	//echo " ";
+	$zombieCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` WHERE `UID` = '$uid' AND (`startState` < '0' OR `startState` = '2');");
+	$zombieCount = $zombieCount['cnt'];
+	//echo $zombieCount;
+	//echo " ";
+	$modCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` WHERE `UID` = '$uid' AND `startState` = '4';");
+	$modCount = $modCount['cnt'];
+	//echo $modCount;
+	//echo " ";
+	$adminCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
+		`UID` = '$uid' AND `meetingType` = '1';");
+	$adminCount = $adminCount['cnt'];
+	//echo $adminCount;
+	//echo " ";
+	$adminTerm = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE 
+		`UID` = '$uid' AND `meetingType` = '1' AND `creationDate` > '$thisSemesterStart';");
+	$adminTerm = $adminTerm['cnt'];
+	//echo $adminTerm;
+	//echo "<br/>";
+	
+	mysql_query("UPDATE `users` SET `zombieStartsTotal`='$zombieCount' WHERE `UID` = '$uid';");
+	mysql_query("UPDATE `users` SET `humanStartsTotal`='$humanCount' WHERE `UID` = '$uid';");
+	mysql_query("UPDATE `users` SET `gamesModdedTotal`='$modCount' WHERE `UID` = '$uid';");
+	
+	mysql_query("UPDATE `users` SET `adminMeetingsTotal`='$adminCount' WHERE `UID` = '$uid';");
+	mysql_query("UPDATE `users` SET `adminMeetingsThisTerm`='$adminTerm' WHERE `UID` = '$uid';");
+	
+	mysql_query("UPDATE `users` SET `appearancesTotal`='$totalCount' WHERE `UID` = '$uid';");
+	mysql_query("UPDATE `users` SET `appearancesThisTerm`='$termCount' WHERE `UID` = '$uid';");
+	mysql_query("UPDATE `users` SET `appearancesLastTerm`='$lastTermCount' WHERE `UID` = '$uid';");
+
+	//Human, zombie, mod counts again, but just for current term
+	$humanCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE `UID` = '$uid' AND `startState` = '1' AND `UID` = '$uid' AND `creationDate` > '$thisSemesterStart' AND `isResolved` = '1' ORDER BY `meetingID` DESC;");
+	$humanCount = $humanCount['cnt'];
+	//echo $humanCount;
+	//echo " ";
+	$zombieCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE `UID` = '$uid' AND (`startState` < '0' OR `startState` = '2') AND `UID` = '$uid' AND `creationDate` > '$thisSemesterStart' AND `isResolved` = '1' ORDER BY `meetingID` DESC;");
+	$zombieCount = $zombieCount['cnt'];
+	//echo $zombieCount;
+	//echo " ";
+	$modCount = mysql_oneline("SELECT COUNT(*) AS cnt FROM `meeting_log` NATURAL JOIN `meeting_list` WHERE `UID` = '$uid' AND `startState` = '4' AND `UID` = '$uid' AND `creationDate` > '$thisSemesterStart' AND `isResolved` = '1' ORDER BY `meetingID` DESC;");
+	$modCount = $modCount['cnt'];
+	//echo $modCount;
+	//echo "<br/>";
+	mysql_query("UPDATE `users` SET `zombieStartsThisTerm`='$zombieCount' WHERE `UID` = '$uid';");
+	mysql_query("UPDATE `users` SET `humanStartsThisTerm`='$humanCount' WHERE `UID` = '$uid';");
+	mysql_query("UPDATE `users` SET `gamesModdedThisTerm`='$modCount' WHERE `UID` = '$uid';");
 }
 
 function denumerate($enum, $number){

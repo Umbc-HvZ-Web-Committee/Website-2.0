@@ -18,6 +18,9 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		$me = $_SESSION['uid'];
 		$ret = mysql_oneline("SELECT `state` from `long_players` WHERE `playerID`='$me' AND `gameID`='$gameID';");
 		
+		mysql_query("UPDATE `users` SET `attendedPregame` = '0' WHERE `UID` = 'US003kd';");
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
+		
 		if($ret['state']==2){
 			//OMG UR THE OZ!!1!
 			//log this to the OZ dummy so you don't give identity away (ask an old-timer about the Avatar weeklong from Fall 2017)
@@ -31,12 +34,14 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			$GLOBALS['killNotification'] = "You're not a zombie, you can't log a kill!<br>";
 			break;
 		}
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 
 		//Check QR validity
 		if(substr($qr, 0, 2)!="MK"){
 			$GLOBALS['killNotification'] = "That's not a valid code. Valid codes start with 'MK', yours started with '".substr($eid, 0, 2)."'.<br>";
 			break;
 		}
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		
 		//Make sure that if the player is dead, logging this kill doesn't rez them by accident
 		//(that is, if the kill was made before they died, log it; if it was made after they died,
@@ -50,6 +55,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			break;
 		}
 		$uid = $ret['playerID'];
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		
 		
 		
@@ -69,6 +75,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			echo "\a";
 			break;
 		}
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		
 		//Make sure that an OZ's killcode is not being logged
 		$ret = mysql_oneline("SELECT * FROM `long_players` WHERE `playerID` = $uid;");
@@ -77,6 +84,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 			echo "\a";
 			break;
 		}
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		
 		//This gets the time of kill in UTC (Not US Eastern Standard/Daylight Time)
 		$deathTime = date_create()->format('Y-m-d H:i:s');
@@ -87,6 +95,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		$weeklongStart = date('Y-m-d H:i:s', strtotime($weeklongStart));
 
 		mysql_query("UPDATE `long_players` SET `deathTime`='$deathTime' WHERE `gameID`='$gameID' AND `playerID`='$uid'");
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		
 		if($newKill) {
 			// Check to see if they've lived longer than they have before
@@ -101,11 +110,13 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 				mysql_query("UPDATE `users` SET longestDaySurvived='$nowDead' WHERE UID='$uid';");
 			}
 		}
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 
 		//Log the kill time and the location of the kill if it is specified
 		$killLocation = requestVar("killLocation");
 		mysql_query("UPDATE `long_players` SET `killLocation` = '$killLocation', `deathTime` = '$deathTime' WHERE `playerID`='$uid' AND `gameID`='$gameID';");
 		//TODO: Time zone conversion from UTC into US EDT and EST
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		
 		//This does a lot.  It:
 		// - verifies that the given kill code is valid
@@ -117,6 +128,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		if($ret['state']==1) {
 			$newKill = true;
 		}
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		if($ret['cnt']==1){
 			if($ret['state']==3){
 				//medkit, so feed, but don't give kill point, and leave state as medkit.
@@ -154,6 +166,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 				}
 			}
 		}
+		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		$notes = "";
 		echo "your kill has been logged";
 		

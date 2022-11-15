@@ -78,7 +78,7 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		
 		//Make sure that an OZ's killcode is not being logged
-		$ret = mysql_oneline("SELECT * FROM `long_players` WHERE `playerID` = $uid;");
+		$ret = mysql_oneline("SELECT * FROM `long_players` WHERE `playerID` = $uid AND `gameID` = $gameID;");
 		if($ret['state'] == 2 || $ret['state'] == -2) {
 			$GLOBALS['killNotification'] =  "That player is an OZ. You cannot log their killcode because OZs cannot be killed. If you tagged an OZ, you will not be awarded credit for a kill. I don't make the rules, I just enforce them.";
 			echo "\a";

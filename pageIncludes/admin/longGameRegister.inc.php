@@ -195,7 +195,7 @@ if($_SESSION['isAdmin']>=2){
 		}
 		if($_REQUEST['mailing_z']) {
 			$sql = "SELECT `playerID` FROM `long_players` WHERE `gameID`='$gameID'  AND `state` != '1' ORDER BY `playerID`;";
-			$sqlCount = "SELECT COUNT(*) AS 'cnt' FROM `long_players` WHERE `gameID`='$gameID'; AND `state` != '1';";
+			$sqlCount = "SELECT COUNT(*) AS 'cnt' FROM `long_players` WHERE `gameID`='$gameID' AND `state` != '1';";
 		}
 		
 		$html = $html."<table border=1>";

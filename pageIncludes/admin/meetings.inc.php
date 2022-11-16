@@ -43,7 +43,7 @@ if($_SESSION['isAdmin']>=1){
 					if ($state == $GENERAL_PLAYER_TAG) {
 						$state = mysql_oneline("SELECT `state` FROM `long_players` WHERE `gameID` = '{$curLongGame['gameID']}' AND `playerID` = '{$ret['UID']}';");
 						$state = $state['state'];
-					}else if($state){
+					}else if($state != NULL & $state != 0){
 						$state = $state['state'];
 					}else{
 						$state = $OTHER_TAG;

@@ -70,7 +70,7 @@ require_once('pageIncludes/contact.inc.php');
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
 			<td>Fernando Chicas</td>
 			<td>fchicas1@umbc.edu</td>
-			<td>TBA</td></tr>
+			<td>(240)-280-4215</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
 			<td>Chara Hunter</td>

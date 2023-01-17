@@ -35,10 +35,10 @@ function verifyAndSubmit(){
 // 	}else if(document.getElementById("qrCode").value=="" || document.getElementById("qrCode").value=="PU"){
 // 		alert("A QR code is required; please contact an admin for a QR code.");
 // 		return false;
-	}else if(document.getElementById("tosAgree") != '1'){
+	/*}else if(document.getElementById("tosAgree") != '1'){
 		alert("You must accept the TOS to register.");
 		return false;
-	}else{	
+	*/}else{	
 		document.getElementById("registerForm").submit();
 		return true;
 	}

@@ -35,7 +35,7 @@ function verifyAndSubmit(){
 // 	}else if(document.getElementById("qrCode").value=="" || document.getElementById("qrCode").value=="PU"){
 // 		alert("A QR code is required; please contact an admin for a QR code.");
 // 		return false;
-	}else if(!document.getElementById("tosAgree").checked){
+	}else if(document.getElementById("tosAgree") != '1'){
 		alert("You must accept the TOS to register.");
 		return false;
 	}else{	
@@ -101,7 +101,7 @@ function genQR(){
 						<td>Don't have an ID card?<button type="button" onclick="genQR()">Generate a temporary QR code</button></td>
 					</tr> -->
 				</tbody></table>
-			<label for="tosAgree"><input id="tosAgree" type="checkbox" name="tosAgree" value=1/>I have read and agree to the <a href="TOS.php" target="_blank">Terms of Service</a> for this website.</label><br/>
+			<label for="tosAgree"><input id="tosAgree" type="checkbox" name="tosAgree" value='1'>I have read and agree to the <a href="TOS.php" target="_blank">Terms of Service</a> for this website.</label><br/>
 			<input type="submit" name="submit" value="Submit"/>
 			</form>
 		</div>

@@ -13,13 +13,13 @@ $emailRegex = "/[^A-Za-z0-9@.]/";
 
 $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
 
-if(array_key_exists("qr", $_GET)){
+/*if(array_key_exists("qr", $_GET)){
 	$qrCode = preg_replace($alphaNumRegex,"",$_GET['qr']);
 	if((substr($qrCode, 0, 2)!="PU" && substr($qrCode, 0, 6)!="ADMIN_" && substr($qrCode, 0, 5)!="LGCY_")||(strlen($qrCode)!=7)){
 		$notification = "That's not a valid QR code. Valid codes start with 'PU', yours started with '".substr($qrCode, 0, 2)."'.<br>";
 		$qrCode = "";
 	}
-}else $qrCode = "";
+}else $qrCode = "";*/
 
 $fname = "";
 $lname = "";
@@ -32,7 +32,7 @@ if(array_key_exists("submit", $_POST)){
 	$username = preg_replace($alphaNumRegex,"",$_POST['username']);
 	$password = preg_replace($alphaNumRegex,"",$_POST['password']);
 	$email = preg_replace($emailRegex,"",$_POST['email']);
-	$qrCode = preg_replace($alphaNumRegex,"",$_POST['qrCode']);
+	//$qrCode = preg_replace($alphaNumRegex,"",$_POST['qrCode']);
 
 	$ret = mysql_query("SELECT COUNT(*) FROM `users` WHERE `uname`='$username';");
 	$ret = mysql_fetch_assoc($ret);
@@ -100,7 +100,7 @@ if(array_key_exists("submit", $_POST)){
 		$password = hash("sha256", $password);
 
 		include "includes/update.php";
-		$sql = "INSERT INTO  `users` (`UID`, `fname`, `lname`, `uname`, `passwd`, `email`, `publicQR`) VALUES ('$uid',  '$fname',  '$lname',  '$username',  '$password', '$email', '$qrCode');";
+		$sql = "INSERT INTO  `users` (`UID`, `fname`, `lname`, `uname`, `passwd`, `email`, `publicQR`) VALUES ('$uid',  '$fname',  '$lname',  '$username',  '$password', '$email', '');";
 		updateAchieves($uid, null, "registered");
 
 		if(!mysql_query($sql)){

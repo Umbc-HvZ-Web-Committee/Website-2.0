@@ -124,7 +124,9 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Patrick Gomes</td><td>Chara Hunter</td></tr>
+			<td>Kyle Mosier</td><td>Patrick Gomes</td><td>Sarah Clarke</td></tr>
+			<tr bgcolor="#C0C0C0" align="center">
+			<td>Jay Buckwalter</td><td>Eli Kramer-Smyth</td><td>Seth Ramsland</td></tr>
 			</table>
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->

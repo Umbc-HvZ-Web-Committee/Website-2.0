@@ -28,9 +28,9 @@ require_once('pageIncludes/home.inc.php');
 	 	<!-- <p><center><h2><i><b>*Tonight's Mission has been canceled*</b></i></h2>
 		<h3><b>UMBC HvZ does not meet when campus is closed!</b></h3></br></center></p>
 		<p> -->
-		
-		<i><h4><center>~Check out our Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i>
 		<i><h4><center>~Check out our Discord server <a href="https://discord.gg/MCfXax2">here</a>~</center></h4></i>
+		<i><h4><center>~Check out our Instagram <a href="https://www.instagram.com/umbchvzclub/">here</a>~</center></h4></i>
+		<!-- <i><h4><center>~Check out our Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i> -->
 		<i><h4><center>~To submit mission feedback, <a href="https://forms.gle/1uueLvmE6uR1Sh8b9">click here</a>~</center></h4></i>
 		<!-- <i><h4><center>~To order a club T-shirt, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eRuP4zEuLcLSC1bXqZ9GzF8ZDZn1QHjSR_pS8lH6lHtsmQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To submit invitational feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSAfolSJBRFTghMTa3onH7dMgtcM94CWpcbJLT6tz8uqkTwQ/viewform">click here</a>~</center></h4></i> -->

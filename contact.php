@@ -102,7 +102,7 @@ require_once('pageIncludes/contact.inc.php');
 			<tr bgcolor="#FFFFFF" align="center">
 			<td>Mia Brazerol</td><td>Paul Dillingham</td><td>Ryan Gutzat</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Sasha Kleeman</td><td</td><td>Seth Ramsland</td></tr>
+			<td>Sasha Kleeman</td><td></td><td>Seth Ramsland</td></tr>
 			</table>
 			
 			<!-- END TABLE CREATION FOR SUBOFFICERS -->

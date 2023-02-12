@@ -37,7 +37,7 @@ require_once('pageIncludes/home.inc.php');
 		<!-- <i><h4><center>~To suggest features for the new website, <a href="https://docs.google.com/forms/d/e/1FAIpQLScKT4b50vOXx9j27lBiHEuiwlocDsEsMWFnCVVj0YmIuke0nw/viewform">click here</a>~</center></h4></i>
 		<i><h4><center>~To apply to be a Subofficer in the upcoming semester, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkAhWd5px2AqJIc6qgHsfo67o-eqJDljcuO3HQaEJnt9kMwQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To apply to be on the Web Committee in the upcoming semester, <a href="https://drive.google.com/open?id=1e_mzBN0uI7mbdW-3IWyCJ_KapFDEBo11ib43skbVJg0/viewform">click here</a>~</center></h4></i> -->
-		<i><h4><center>~To register for our annual invitational game, <a href="invitational/index.php">click here</a>~</center></h4></i>
+		<i><h4><center>~To register for our annual invitational game, <a href="https://www.marylandfoamalliance.com/umbchvzinvi">click here</a>~</center></h4></i>
 		<!--<i><h4><center>~To submit weeklong feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXxzvZDpIYisvHp0rphLwblbtqUEony5MH1dN55niz8wxn6Q/viewform">click here</a>~</center></h4></i>-->
 		<i><h4><center>~For information on UMBC's reponse to the ongoing pandemic, <a href="https://covid19.umbc.edu">click here</a>~</center></h4></i>
 		
@@ -59,7 +59,8 @@ require_once('pageIncludes/home.inc.php');
 		<br/>
 		<p>
 		<b><font size="4">Open Officer Meeting Info:</font></b><br/>
-		<!--Every Sunday (while spring & fall classes are in session) at 1:00 pm - Fine Arts 006--> Held online via our Discord, keep an eye out for more details in the club emails.<br/>
+		<!--Held online via our Discord, keep an eye out for more details in the club emails.--> 
+		Every Sunday (while spring & fall classes are in session) at 1:00 pm - Fine Arts 006. You can also attend online via our Discord. <br/>
 		</p>
 		<p>
 		<b><font size="4">Premise:</font></b><br/>

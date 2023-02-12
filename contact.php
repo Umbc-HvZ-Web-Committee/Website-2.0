@@ -96,19 +96,13 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Kyle Mosier</td><td>Travis Amtower</td><td>Ian Moon</td></tr>
+			<td>Alex Holtz</td><td>Eli Kramer-Smyth</td><td>Charlie Jonke</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Nancy Bolton</td><td>Patrick Gomes</td><td>Nick Molyneaux</td></tr>
+			<td>Ian Moon</td><td>Josh Ward</td><td>Maddox Clarke</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Ryan Gutzat</td><td>Paul Dillingham</td><td>Alex Holtz</td></tr>
+			<td>Mia Brazerol</td><td>Paul Dillingham</td><td>Ryan Gutzat</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Jay Buckwalter</td><td>Maddox Clarke</td><td>Fernando Chicas</td></tr>
-			<tr bgcolor="#FFFFFF" align="center">
-			<td></td><td>Eli Kramer-Smyth</td><td></td></tr>
-			<tr bgcolor="#FFFFFF" align="center">
-			<!--<td></td><td></td><td></td></tr>
-			<tr bgcolor="#C0C0C0" align="center">-->
-			
+			<td>Sasha Kleeman</td><td</td><td>Seth Ramsland</td></tr>
 			</table>
 			
 			<!-- END TABLE CREATION FOR SUBOFFICERS -->

@@ -68,19 +68,19 @@ require_once('pageIncludes/contact.inc.php');
  			<td>(301)-802-1022</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Fernando Chicas</td>
-			<td>fchicas1@umbc.edu</td>
-			<td>(240)-280-4215</td></tr>
+			<td>Ian Moon</td>
+			<td>tmoon2@umbc.edu</td>
+			<td>(240)-618-0268</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
-			<td>Chara Hunter</td>
-			<td>chunter1@umbc.edu</td>
-			<td>(410)-310-3672</td></tr>
+			<td>Alexandra (Sasha) Kleeman</td>
+			<td>k189@umbc.edu</td>
+			<td>(443)-863-0826</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
-			<td>Ethan Na</td>
-			<td>ethann1@umbc.edu</td>
-			<td>(443)-756-5946</td></tr>
+			<td>Charlie Jonke</td>
+			<td>ejonke1@umbc.edu</td>
+			<td>(410)-440-7860</td></tr>
 			</table><br/><br/>
 		
 			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->
@@ -96,12 +96,10 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alex Holtz</td><td>Eli Kramer-Smyth</td><td>Charlie Jonke</td></tr>
+			<td>Alex Holtz</td><td>Eli Kramer-Smyth</td><td>Mia Brazerol</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Ian Moon</td><td>Josh Ward</td><td>Sasha Kleeman</td></tr>
+			<td>Paul Dillingham</td><td>Josh Ward</td><td>Ryan Gutzat</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Mia Brazerol</td><td>Paul Dillingham</td><td>Ryan Gutzat</td></tr>
-			<tr bgcolor="#C0C0C0" align="center">
 			<td></td><td>Seth Ramsland</td><td></td></tr>
 			</table>
 			

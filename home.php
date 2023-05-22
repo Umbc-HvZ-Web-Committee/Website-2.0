@@ -58,7 +58,7 @@ require_once('pageIncludes/home.inc.php');
 		</p>
 		<br/>
 		<p>
-		<b><font size="4">Open Officer Meeting Info:</font></b><br/>
+		<b><font size="4">Open Community Meeting Info:</font></b><br/>
 		<!--Held online via our Discord, keep an eye out for more details in the club emails.--> 
 		Every Sunday (while spring & fall classes are in session) at 1:00 pm - Fine Arts 006. You can also attend online via our Discord. <br/>
 		</p>

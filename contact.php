@@ -116,14 +116,14 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Kyle Mosier</td><td>Patrick Gomes</td><td>Sarah Clarke</td></tr>
+			<td>Fernando Chicas</td><td>Sarah Clarke</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Jay Buckwalter</td><td>Eli Kramer-Smyth</td><td>Seth Ramsland</td></tr>
+			<td>Eli Kramer-Smyth</td><td>Seth Ramsland</td></tr>
 			</table>
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->
 			
-			<!-- <br/><b>The officer liaison to Web Committee is our Secretary, Chara Hunter.</b><br/> -->
+			<!-- <br/><b>The officer liaison to Web Committee is TBD.</b><br/> -->
 			
 			<br/><i>The Web Committee is responsible for maintaining and developing our club's website. 
 			For technical help, please contact a web committee member (if you are in contact with them) or the officers.</i><br/>

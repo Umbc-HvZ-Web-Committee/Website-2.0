@@ -54,10 +54,10 @@ if(isLoggedIn()){
 			<input type="hidden" id="loginPassword" name="password" />
 			<table><tr><td>
 			HvZ Handle: <br />
-			<input type="text" id="loginUsername" name="username" value="Username" onclick="if(value=='Username') value=''; " onblur="if(value=='') value='Username'; " />
+			<input type="text" id="loginUsername" name="username" value="Username" size="20" onclick="if(value=='Username') value=''; " onblur="if(value=='') value='Username'; " />
 			</td><td>
 			Password: <br />
-			<input type="password" id="loginPasswordTxt" value="password" onclick="if(value=='password') value=''; " onblur="if(value=='') value='password'; " />
+			<input type="password" id="loginPasswordTxt" value="password" size="20" onclick="if(value=='password') value=''; " onblur="if(value=='') value='password'; " />
 			</td></tr></table><br/>
 			<input type="submit" name="login" value="Login" onclick="submitLogin()" /> 
 			<button type="button" onclick="window.location = '/register.php'">Register</button><br/>

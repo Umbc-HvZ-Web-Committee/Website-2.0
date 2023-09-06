@@ -43,8 +43,10 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Mission Info:</font></b><br/>
-		Mondays - 7:00 pm - Location TBD<br/>
-		Thursdays - 7:00 pm - Location TBD<br/>
+		Our First Mission is Thursday, September 7th at Meyerhoff 030(location pending)<br/>
+		Blasters will be supplied, but feel free to bring your own.<br/>
+		Mondays - 7:00 pm - Meyerhoff 030 (pending)<br/>
+		Thursdays - 7:00 pm - Meyerhoff 030 (pending)<br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>

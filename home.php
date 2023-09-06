@@ -43,8 +43,8 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Mission Info:</font></b><br/>
-		Mondays - 7:00 pm - Fine Arts 306<br/>
-		Thursdays - 7:00 pm - Fine Arts 306<br/>
+		Mondays - 7:00 pm - Location TBD<br/>
+		Thursdays - 7:00 pm - Location TBD<br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>
@@ -60,7 +60,7 @@ require_once('pageIncludes/home.inc.php');
 		<p>
 		<b><font size="4">Open Community Meeting Info:</font></b><br/>
 		<!--Held online via our Discord, keep an eye out for more details in the club emails.--> 
-		Every Sunday (while spring & fall classes are in session) at 1:00 pm - Fine Arts 006. You can also attend online via our Discord. <br/>
+		Every Sunday (while spring & fall classes are in session) at 1:00 pm - Location TBD. You can also attend online via our Discord. <br/>
 		</p>
 		<p>
 		<b><font size="4">Premise:</font></b><br/>

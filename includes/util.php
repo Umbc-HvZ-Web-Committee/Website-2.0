@@ -631,7 +631,7 @@ function longGameSelect(){
 }
 
 function retrieveSlides() {
-	displayWeather();
+	//displayWeather();
 	
 	//Load slide headings
 	$mainHeading = mysql_oneline("SELECT * FROM mission_slide_headings WHERE headingTitle = 'mainHeading'");
@@ -675,12 +675,14 @@ function retrieveSlides() {
 	
 }
 
+/*
 //Weather part of the slides. Currently integrated into retrieveSlides() but will not be in retrieveSlidesNew()
 function displayWeather() {
 	$weather = "https://forecast.io/embed/#lat=39.254755&lon=-76.710972&name=UMBC";
 	echo "<br/><h2>Today's Weather</h2>";
 	echo "<iframe src=\"$weather\" frameborder=\"0\" height=\"200\" width=\"330\"></iframe>";
 }
+*/
 
 function placeTabIcon() {
 	echo '<link rel="icon" type="image/png" href="https://umbchvz.com/images/hvzLogo.png"/>';

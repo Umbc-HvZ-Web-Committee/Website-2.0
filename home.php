@@ -43,9 +43,8 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Mission Info:</font></b><br/>
-		Our first mission is on Thursday, September 7th, 7:00pm at Meyerhoff 030 (location pending). Blasters will be supplied, but feel free to bring your own!<br/><br/>
-		Mondays - 7:00 pm - Meyerhoff 030 (pending)<br/>
-		Thursdays - 7:00 pm - Meyerhoff 030 (pending)<br/>
+		Mondays - 7:00 pm - Meyerhoff 030<br/>
+		Thursdays - 7:00 pm - Meyerhoff 030<br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>
@@ -61,7 +60,7 @@ require_once('pageIncludes/home.inc.php');
 		<p>
 		<b><font size="4">Open Community Meeting Info:</font></b><br/>
 		<!--Held online via our Discord, keep an eye out for more details in the club emails.--> 
-		Every Sunday (while spring & fall classes are in session) at 1:00 pm - Location TBD. You can also attend online via our Discord. <br/>
+		Every Sunday (while spring & fall classes are in session) at 1:00 pm - Fine Arts 006. You can also attend online via our Discord. <br/>
 		</p>
 		<p>
 		<b><font size="4">Premise:</font></b><br/>

@@ -44,8 +44,8 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Mission Info:</font></b><br/>
-		Mondays - 7:00 pm - Meyerhoff 030 <br/>
-		Thursdays - 7:00 pm - Meyerhoff 030 <br/>
+		Mondays - 7:00 pm - Fine Arts 306 <br/>
+		Thursdays - 7:00 pm - Fine Arts 306 <br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>

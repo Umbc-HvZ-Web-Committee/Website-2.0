@@ -96,11 +96,10 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alex Holtz</td><td>Eli Kramer-Smyth</td><td>Mia Brazerol</td></tr>
+			<td>Alex Holtz</td><td>Eli Kramer-Smyth</td><td>Fernando Chicas</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Paul Dillingham</td><td>Josh Ward</td><td>Ryan Gutzat</td></tr>
+			<td>Pauly Dillingham</td><td>Josh Ward</td><td>Seth Ramsland</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td></td><td>Seth Ramsland</td><td></td></tr>
 			</table>
 			
 			<!-- END TABLE CREATION FOR SUBOFFICERS -->

@@ -1,4 +1,3 @@
-//we didn't start the fire
 <?php
 require_once('pageIncludes/home.inc.php');
 ?>

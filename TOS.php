@@ -1,4 +1,3 @@
-Will this work?
 <html><body><?php
 require_once('includes/load_config.php');
 require_once('includes/quick_con.php');

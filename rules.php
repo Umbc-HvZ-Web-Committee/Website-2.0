@@ -108,10 +108,10 @@ require_once('pageIncludes/rules.inc.php');
 			<i>Many missions contain super-zombies, these are the most common types:</i>
 			<p>
 			1.) Assassin: Self-stuns after killing a human, restrictions vary<br/>
-			2.) Merc: A tagged human must kneel for 30 seconds but can use equipment<br/>
-			3.) Reverse-Merc: A tagged human cannot use equipment for 30 seconds but can run<br/>
+			2.) Root: A tagged human must kneel for 30 seconds but can use equipment<br/>
+			3.) Disarm: A tagged human cannot use equipment for 30 seconds but can run<br/>
 			4.) Paralysis: A tagged human must kneel and cannot defend themself for 30 seconds<br/>
-			5.) Witches: Same as Mercs but scream before charging<br/>
+			5.) Witches: Same as Rooters but scream before charging<br/>
 			6.) Line-of-Sight: Will only chase humans it can see.<br/>
 			7.) Radius: Will only chase humans within a certain radius of it.<br/>
 			8.) Unrestricted: May chain-kill any number of humans and has no movement restrictions</br>

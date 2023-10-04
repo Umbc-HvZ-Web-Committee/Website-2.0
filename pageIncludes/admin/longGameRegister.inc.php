@@ -226,7 +226,7 @@ if($_SESSION['isAdmin']>=2){
 			$killcode = $killcodes['mainKill'];
 			
 			$email_chain = $email_chain.$email;
-			$email_chain = $email_chain." ";
+			$email_chain = $email_chain.", ";
 			
 			//$html = $html."<br/>$email $fname $lname $uname";
 			

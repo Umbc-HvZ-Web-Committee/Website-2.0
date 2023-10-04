@@ -237,6 +237,8 @@ if($_SESSION['isAdmin']>=2){
 			$html = $html."<tr>";
 		
 		}
+		$email_chain = rtrim($email_chain, ", ");
+		
 		$html = $html."</table><br/><br/><br/>";
 		$html = $html.$email_chain."</br></br>";
 		

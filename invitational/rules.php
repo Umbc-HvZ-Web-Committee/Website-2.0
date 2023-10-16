@@ -1,8 +1,4 @@
 <?php
-if (filter_var($_GET['www.marylandfoamalliance.com/umbchvzinvi'], FILTER_VALIDATE_URL)) {
-          header('Location: ' . $_GET['www.marylandfoamalliance.com/umbchvzinvi']);
-}
-exit;
 require_once('../includes/util.php');
 load_config('config.txt');
 my_quick_con($config);

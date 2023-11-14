@@ -39,13 +39,13 @@ if($_SESSION['isAdmin']>=1){
 			}else{
 				$unregistered = false;
 				//Determining player's state. Valid states are defined in the state constants
-				if($ret /* If $ret is not null, the player has a registered account*/){
+				if($ret){ // If $ret is not null, the player has a registered account
+					// Options are player, mod, or other.
 					if ($state == $GENERAL_PLAYER_TAG) {
 						$state = mysql_oneline("SELECT `state` FROM `long_players` WHERE `gameID` = '{$curLongGame['gameID']}' AND `playerID` = '{$ret['UID']}';");
 						$state = $state['state'];
-					}else if($state != NULL & $state != 0){
-						$state = $state['state'];
-					}else{
+					}else if($state != $MODERATOR_TAG){
+						// Not player or mod, force it to be other
 						$state = $OTHER_TAG;
 					}
 				}else{

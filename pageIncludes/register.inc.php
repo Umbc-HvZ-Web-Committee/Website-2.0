@@ -33,6 +33,19 @@ if(array_key_exists("submit", $_POST)){
 	$password = preg_replace($alphaNumRegex,"",$_POST['password']);
 	$email = preg_replace($emailRegex,"",$_POST['email']);
 	//$qrCode = preg_replace($alphaNumRegex,"",$_POST['qrCode']);
+	
+	if($username==''){
+		$notification .= "That's cute, but Charlie Fox already tried that. Please actually set a username.<br>";
+	}
+	if($fname==''){
+		$notication .= "First name is requred.<br>";
+	}
+	if($lname==''){
+		$notication .= "Last name is requred.<br>";
+	}
+	if($email==''){
+		$notication .= "Email is requred.<br>";
+	}
 
 	$ret = mysql_query("SELECT COUNT(*) FROM `users` WHERE `uname`='$username';");
 	$ret = mysql_fetch_assoc($ret);

@@ -32,9 +32,9 @@ function load(){
 					<!-- <br/>
 					<label for="unregistered"><input type="checkbox" name="unregistered" id="unregistered"/>Unregistered player (put their full name in the box)</label>-->
 					<br/>
-					<label for="pregame"><input type="checkbox" name="pregame" id="pregame" <!--checked="checked-->"/>Also attending a pre-game for the next long game</label>
+					<label for="pregame"><input type="checkbox" name="pregame" id="pregame" <!--checked="checked"-->/>Also attending a pre-game for the next long game</label>
 					<br/>
-					<label for="pregame"><input type="checkbox" name="holiday" id="holiday" <!--checked="checked-->"/>Also attending a holiday mission</label>
+					<label for="pregame"><input type="checkbox" name="holiday" id="holiday" <!--checked="checked"-->/>Also attending a holiday mission</label>
 					<br/>
 					<label for="state1"><input type="radio" name="state" value="1" id="state1" checked="checked"/>Human</label>
 					<label for="state2"><input type="radio" name="state" value="2" id="state2"/>OZ (Hidden)</label>

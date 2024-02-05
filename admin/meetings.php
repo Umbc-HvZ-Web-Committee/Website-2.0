@@ -55,7 +55,7 @@ function load(){
 				Note: Nominal meetings will not count towards the total number of appearances but can be used to count towards the required semester total for membership<br/><br>
 				Name for meeting: <input type="text" name="meetingName"/><br/>
 				<label for="mission"><input type="radio" name="meetingType" value="mission" id="mission" checked="checked"/>HvZ Mission</label>
-				<label for="admin"><input type="radio" name="meetingType" value="admin" id="admin"/>Admin Meeting</label>
+				<label for="admin"><input type="radio" name="meetingType" value="admin" id="admin"/>Community Meeting</label>
 				<label for="admin"><input type="radio" name="meetingType" value="nominal" id="nominal"/>Nominal Meeting</label>
 				<label for="mission"><input type="radio" name="meetingType" value="other" id="other"/>Other Meeting</label>
 				<br/>

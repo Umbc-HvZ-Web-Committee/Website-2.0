@@ -115,7 +115,6 @@ if(array_key_exists("submit", $_POST) && isLoggedIn()){
 		if($ret['state']==1) {
 			$newKill = true;
 		}
-		mysql_query("UPDATE `users` SET `attendedPregame` = `attendedPregame`+1 WHERE `UID` = 'US003kd';");
 		if($ret['cnt']==1){
 			if($ret['state']==3){
 				//medkit, so feed, but don't give kill point, and leave state as medkit.

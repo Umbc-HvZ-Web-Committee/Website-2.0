@@ -33,7 +33,7 @@ function printPlayerTable(){
 			}
 			else{
 			$currentTime = date_create();
-			$timeToDisplay = $deathTime->date_modify('+1 hour');
+			$timeToDisplay = $deathTime->modify('+1 hour');
 			}
 			if($currentTime > $timeToDisplay)
 			{

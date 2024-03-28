@@ -69,7 +69,7 @@ require_once('pageIncludes/contact.inc.php');
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
 			<td>Ian Moon</td>
-			<td>tmoon2@umbc.edu</td>
+			<td>supremeeviloverlord@umbc.edu</td>
 			<td>(240)-618-0268</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>

@@ -184,9 +184,10 @@ function printPlayerTable(){
 			$uid = array_pop($val);
 			
 			$profilePicture = mysql_fetch_assoc(mysql_query("SELECT `picture` FROM `profilePictures` WHERE `UID`='$uid';"));
-			$profilePicture = $profilePicture['picture'];
-			if($profilePicture == null) {		
+			if($profilePicture == null || $profilePicture['picture'] == null) {
 				$profilePicture = "anon.jpg";
+			} else {
+				$profilePicture = $profilePicture['picture'];
 			}
 			$profilePicture = "/images/profilePictures/".$profilePicture;
 			$profilePicture = "<center><img class=\"smallImg\" src=\"$profilePicture\"/></center>";

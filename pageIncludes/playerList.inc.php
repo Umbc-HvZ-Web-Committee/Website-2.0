@@ -16,7 +16,9 @@ function printPlayerTable(){
 	}
 	
 	$curGame = getCurrentLongGame();
-	$curGame = $curGame['gameID'];
+	if($curGame!=null){
+		$curGame = $curGame['gameID'];
+	}
 	
 	if($curGame!=null){
 		

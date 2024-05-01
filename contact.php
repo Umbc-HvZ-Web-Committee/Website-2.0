@@ -58,19 +58,19 @@ require_once('pageIncludes/contact.inc.php');
 			<th><font color="white">Email</font></th><th><font color="white">Cell Phone Number</font></th></tr>
 
 			<tr bgcolor="#C0C0C0" align="center"><td>President</td>
-			<td>David Gaiano</td>
-			<td>dgaiano1@umbc.edu</td>
-			<td>(443)-632-5900</td></tr>
+			<td>Fernando Chicas</td>
+			<td>fchicas1@umbc.edu</td>
+			<td>(240)-280-4215</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td>Miles Campbell</td>
-			<td>milesacampbell1@umbc.edu</td>
- 			<td>(301)-802-1022</td></tr>
-		
-			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
 			<td>Ian Moon</td>
 			<td>supremeeviloverlord@umbc.edu</td>
-			<td>(240)-618-0268</td></tr>
+ 			<td>(240)-618-0268</td></tr>
+		
+			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
+			<td>Seth Ramsland</td>
+			<td>sramsla1@umbc.edu</td>
+			<td>(443)-924-8732</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
 			<td>Alexandra (Sasha) Kleeman</td>
@@ -78,9 +78,9 @@ require_once('pageIncludes/contact.inc.php');
 			<td>(443)-863-0826</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
-			<td>Charlie Jonke</td>
-			<td>ejonke1@umbc.edu</td>
-			<td>(410)-440-7860</td></tr>
+			<td>Pauly Dillingham</td>
+			<td>pdillin1@umbc.edu</td>
+			<td>(443)-630-1393</td></tr>
 			</table><br/><br/>
 		
 			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->

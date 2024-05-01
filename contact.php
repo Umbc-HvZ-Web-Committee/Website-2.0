@@ -79,7 +79,7 @@ require_once('pageIncludes/contact.inc.php');
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
 			<td>Pauly Dillingham</td>
-			<td>pdillin1@umbc.edu</td>
+			<td>punkrevolutionnow@umbc.edu</td>
 			<td>(443)-630-1393</td></tr>
 			</table><br/><br/>
 		

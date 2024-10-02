@@ -94,13 +94,35 @@ require_once('pageIncludes/contact.inc.php');
 			<!--<h2 style="text-align:center;">Due to the currrent pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/> -->
 			<!-- BEGIN TABLE CREATION FOR SUBOFFICERS -->
 			
+			<?php
+    			// Define the array of names
+    			$names = array("Delia Teter", "Eli Kramer-Smyth", "Marisa Mengel", "Alex Holtz", "Miles Campbell", "Alvin Jecinta", "Vianne Stanford");
+
+				// Randomly select two names to repeat
+				$repeated_names = array_rand($names, 1);
+				//$names[] = $names[$repeated_names];
+				//$names[] = $names[$repeated_names];
+
+    			// Shuffle the names to randomize their positions
+   				shuffle($names);
+			?>
+
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
-			<tr bgcolor="#FFFFFF" align="center">
-			<td>Delia Teter</td><td>Eli Kramer-Smyth</td><td>Marisa Mengel</td></tr>
-			<tr bgcolor="#C0C0C0" align="center">
-			<td>Alex Holtz</td><td>Miles Campbell</td><td>Alvin Jecinta</td></tr>
-			<tr bgcolor="#FFFFFF" align="center">
-			<td>Marisa Mengel</td><td>Vianne Stanford</td><td>Marisa Mengel</td>
+				<tr bgcolor="#FFFFFF" align="center">
+					<td><?php echo $names[0]; ?></td>
+					<td><?php echo $names[1]; ?></td>
+					<td><?php echo $names[2]; ?></td>
+				</tr>
+				<tr bgcolor="#C0C0C0" align="center">
+					<td><?php echo $names[3]; ?></td>
+					<td><?php echo $names[4]; ?></td>
+					<td><?php echo $names[5]; ?></td>
+				</tr>
+				<tr bgcolor="#FFFFFF" align="center">
+					<td><?php echo $names[6]; ?></td>
+					<td><?php echo $names[7]; ?></td>
+					<td><?php echo $names[8]; ?></td>
+				</tr>
 			</table>
 			
 			<!-- END TABLE CREATION FOR SUBOFFICERS -->

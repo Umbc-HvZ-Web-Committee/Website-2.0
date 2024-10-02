@@ -100,8 +100,8 @@ require_once('pageIncludes/contact.inc.php');
 
 				// Randomly select two names to repeat
 				$repeated_names = array_rand($names, 1);
-				//$names[] = $names[$repeated_names];
-				//$names[] = $names[$repeated_names];
+				$names[] = $names[$repeated_names];
+				$names[] = $names[$repeated_names];
 
     			// Shuffle the names to randomize their positions
    				shuffle($names);

@@ -45,7 +45,7 @@ require_once('pageIncludes/achievements.inc.php');
 			<br/><br/>
 			<h2><b>Retired Achievements</b></h2>
 			<p>The achievement system was overhauled and restarted in the Spring 2016 semester after a long period of inactivity.
-			The following achievements belong to the old system and are displayed here in remeberance of the Veterans who earned them.
+			The following achievements belong to the old system and are displayed here in remembrance of the Veterans who earned them.
 			</p>
 			<p><center><b>~Note that, as they are retired, none of these achievements will be awarded~</b></center></p>
 			

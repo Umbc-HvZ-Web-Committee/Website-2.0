@@ -64,12 +64,12 @@ require_once('pageIncludes/rules.inc.php');
 			<p>
 			When a human is killed by a zombie, they become a super-human and are 'dying'; they wear their bandannas as humans. Super-humans are not 
 			considered human or zombie, and thus cannot complete human objectives or kill humans. However, super-humans may stun zombies or attempt 
-			to sneak into a group of humans in order to kill them when they become a zombie. After a specified period of time, a super-human becomes
+			to sneak into a group of humans in order to kill them when they become zombies. After a specified period of time, a super-human becomes
 			an unstunned zombie. If a super-human is tagged by an unstunned zombie, they instantly become a stunned zombie for the remainder of 
 			their death timer.
 			</p>
 			<br/>
-			<h4><i>NOTE: Bandannas must be brightly-colored and contrast with worn clothing.  They must be visible from as many angles as possible
+			<h4><i>NOTE: Bandannas must be brightly colored and contrast with worn clothing.  They must be visible from as many angles as possible
 			and not be obscured by hair or clothing</i></h4>
 			<br/><br/>
 			
@@ -116,7 +116,7 @@ require_once('pageIncludes/rules.inc.php');
 			7.) Radius: Will only chase humans within a certain radius of it.<br/>
 			8.) Unrestricted: May chain-kill any number of humans and has no movement restrictions</br>
 			</p>
-			<i>Other types exists, and may be used.</i>
+			<i>Other types exist, and may be used.</i>
 			
 			<br/><br/><br/>
 			<h3><center><b>Please remember that admins are volunteers. They are here for you. Please show them respect.</b></center></h3>

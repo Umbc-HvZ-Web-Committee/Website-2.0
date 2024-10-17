@@ -39,7 +39,7 @@ require_once('pageIncludes/home.inc.php');
 		<!-- <i><h4><center>~To apply to be on the Web Committee in the upcoming semester, <a href="https://drive.google.com/open?id=1e_mzBN0uI7mbdW-3IWyCJ_KapFDEBo11ib43skbVJg0/viewform">click here</a>~</center></h4></i> -->
 		<i><h4><center>~To register for our annual invitational game, <a href="https://www.marylandfoamalliance.com/umbchvzinvi">click here</a>~</center></h4></i>
 		<!--<i><h4><center>~To submit weeklong feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXxzvZDpIYisvHp0rphLwblbtqUEony5MH1dN55niz8wxn6Q/viewform">click here</a>~</center></h4></i>-->
-		<i><h4><center>~For information on UMBC's reponse to the ongoing pandemic, <a href="https://covid19.umbc.edu">click here</a>~</center></h4></i>
+		<i><h4><center>~For information on UMBC's response to the ongoing pandemic, <a href="https://covid19.umbc.edu">click here</a>~</center></h4></i>
 		
 		<br/>
 		<b><font size="4">Mission Info:</font></b><br/>

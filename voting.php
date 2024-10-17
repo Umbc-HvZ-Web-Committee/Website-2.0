@@ -59,7 +59,7 @@ $settings = get_settings();
 				
 				echo "<h4><b>$curPos:</b></h4>";
 				
-				//election candidates represents what the issues you're actually voting on. This syetem could be used to do polls the same way it works for candidates
+				//election candidates represents what the issues you're actually voting on. This system could be used to do polls the same way it works for candidates
 				//However, it is NOT dependent on the list of voteable options. The names of things are misleading...
 				$qury2 = mysql_query("SELECT * FROM election_candidates WHERE position='$curPos';");
 				if(mysql_num_rows($qury2) > 0) {

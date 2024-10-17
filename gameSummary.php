@@ -24,9 +24,9 @@ require_once('../pageIncludes/gameSummary.inc.php'); //MAKE SURE THIS FILE PATH 
 			
 			Select a long game from the menu below to view the log of that game. 
 			Due to a bug involving previous legacy mechanics, data on the time of kills from 2016-2021
-			is very likely innaccurate and possibly missing. For player status changes that have accurate 
+			is very likely inaccurate and possibly missing. For player status changes that have accurate 
 			time log data, the time recorded is the time that it was logged on this website, 
-			not necessarily the time that this change occured within the game.<br/>
+			not necessarily the time that this change occurred within the game.<br/>
 			
 			<?php
 			echo '<select name="longGameSelect" id="sel"/>';

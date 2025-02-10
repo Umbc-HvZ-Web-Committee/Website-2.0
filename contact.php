@@ -94,8 +94,8 @@ require_once('pageIncludes/contact.inc.php');
 			<!--<h2 style="text-align:center;">Due to the current pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/> -->
 			<!-- BEGIN FUNNY TABLE CREATION FOR SUBOFFICERS -->
 			
-			/*
-			<?php
+			
+			<!--<?php 
     			// Define the array of names
     			$names = array("Delia Teter", "Eli Kramer-Smyth", "Marisa Mengel", "Alex Holtz", "Miles Campbell", "Alvin Jecinta", "Vianne Stanford");
 
@@ -125,7 +125,7 @@ require_once('pageIncludes/contact.inc.php');
 					<td><?php echo $names[8]; ?></td>
 				</tr>
 			</table>
-			*/
+			*/-->
 			
 			<!-- END FUNNY TABLE CREATION FOR SUBOFFICERS -->
 

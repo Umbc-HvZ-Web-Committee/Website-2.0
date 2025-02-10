@@ -111,10 +111,9 @@ require_once('pageIncludes/rules.inc.php');
 			2.) Root: A tagged human must kneel for 30 seconds but can use equipment<br/>
 			3.) Disarm: A tagged human cannot use equipment for 30 seconds but can run<br/>
 			4.) Paralysis: A tagged human must kneel and cannot defend themself for 30 seconds<br/>
-			5.) Witches: Same as Rooters but scream before charging<br/>
-			6.) Line-of-Sight: Will only chase humans it can see.<br/>
-			7.) Radius: Will only chase humans within a certain radius of it.<br/>
-			8.) Unrestricted: May chain-kill any number of humans and has no movement restrictions</br>
+			5.) Line-of-Sight: Will only chase humans it can see.<br/>
+			6.) Radius: Will only chase humans within a certain radius of it.<br/>
+			7.) Unrestricted: May chain-kill any number of humans and has no movement restrictions</br>
 			</p>
 			<i>Other types exist, and may be used.</i>
 			
@@ -125,8 +124,10 @@ require_once('pageIncludes/rules.inc.php');
  			<br/><br/>
  			<h3><b>Full Presentation:</b></h3>
  			<iframe src="https://docs.google.com/presentation/d/1YnyDdnIM6lu5R71R1zCgcPe34gdebh_3LPCENH8mj9I/embed?start=false&loop=false&delayms=10000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			<br/>
+			<h3><b>Weeklong Rules:</b></h3>
 			<p/>
-			<iframe src="https://docs.google.com/presentation/d/12GRRVmyghjGOClY8J3TC_wv3X40DWsLCmMkkIZIHZFo/embed?start=false&loop=false&delayms=10000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			<iframe src="https://docs.google.com/presentation/d/11OleDh9nToAe7dqs1SzXTaBHXnJcwFO5i7jrUYYL5Y0/embed?start=false&loop=false&delayms=10000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 		</div>
 		<?php printSidebar(); ?>
 		<div class="clearfix">&nbsp;</div>

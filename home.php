@@ -31,7 +31,7 @@ require_once('pageIncludes/home.inc.php');
 		<i><h4><center>~Check out our Discord server <a href="https://discord.gg/MCfXax2">here</a>~</center></h4></i>
 		<i><h4><center>~Check out our Instagram <a href="https://www.instagram.com/umbchvzclub/">here</a>~</center></h4></i>
 		<!-- <i><h4><center>~Check out our Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i> -->
-		<i><h4><center>~To submit mission feedback, <a href="https://forms.gle/pWSkzHec6UEU6djY9">click here</a>~</center></h4></i>
+		<i><h4><center>~To submit mission feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0Uugg8rSaxfTJ6yvEFQIPxfRJJrCXXqt-c1PlVgqJo596Yg/viewform">click here</a>~</center></h4></i>
 		<!-- <i><h4><center>~To order a club T-shirt, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eRuP4zEuLcLSC1bXqZ9GzF8ZDZn1QHjSR_pS8lH6lHtsmQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To submit invitational feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSAfolSJBRFTghMTa3onH7dMgtcM94CWpcbJLT6tz8uqkTwQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To suggest features for the new website, <a href="https://docs.google.com/forms/d/e/1FAIpQLScKT4b50vOXx9j27lBiHEuiwlocDsEsMWFnCVVj0YmIuke0nw/viewform">click here</a>~</center></h4></i>
@@ -43,8 +43,8 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Mission Info:</font></b><br/>
-		Mondays - 7:00 pm - Meyerhoff 030 <br/>
-		Thursdays - 7:00 pm - Meyerhoff 030 <br/>
+		Mondays - 7:00 pm - ITE 104 <br/>
+		Thursdays - 7:00 pm - ITE 104 <br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>

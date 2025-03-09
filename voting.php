@@ -175,7 +175,7 @@ $settings = get_settings();
 					}
 					
 					if($settings['lockVoting'] == "unlock") {
-						echo "<p style='color: red'>By hitting the checkbox and submitting your vote, you are confirming you are a current UMBC student</p>";
+						echo "<p style='color: red'>By hitting the checkbox and submitting your vote, \nyou are confirming you are a current UMBC student</p>";
 						echo '<input type="checkbox" id="studentCheck" name="test">';
 						echo "<be>";
 						echo '<script type="text/javascript">' . 

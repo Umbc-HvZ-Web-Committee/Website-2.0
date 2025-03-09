@@ -44,7 +44,7 @@ $settings = get_settings();
 			$showVotesThreshold = $settings['showVotesThreshold']; 
 			
 			echo "<h1 style='text-align:center; margin-top: 10px;'><b>Meet the Candidates!</b></h1><br/>";
-			echo "<h1 style='text-align:center; margin-top: 8px;'><b>!!Only STUDENTS that are active members should vote!!</b></h1><br/>";
+			//echo "<h1 style='text-align:center; margin-top: 10px;'><b>Constitution Voting</b></h1><br/>";
 			
 			//The officer_positions table includes "Web Committee" because what the table actually represents is the set of positions to be voted on,
 			//rather than literal officer positions. Non-officers were never supposed to have elections, until we replaced webmaster with web committee,
@@ -175,6 +175,8 @@ $settings = get_settings();
 					}
 					
 					if($settings['lockVoting'] == "unlock") {
+						Checkbox: <input type="checkbox" id="studentCheck" name="test">
+						document.getElementById("studentCheck").required = true;
 						echo '<input type="submit" name="submit" value="Submit vote"></form>';
 					} else {
 						echo "<h2 style=\"text-align:center\">Voting is currently closed.</h2>";
@@ -185,6 +187,8 @@ $settings = get_settings();
 						echo "<br><br><b>Voting results (Viewable by admins only):</b><br><br>";
 						$electionResults = getVotingResults();
 						echo $electionResults;
+
+						
 					}
 				}
 			}
@@ -193,6 +197,7 @@ $settings = get_settings();
 		<div id="sidebar">
 		<?php printSidebar(); ?>
 		</div>
+	
 	<div class="clearfix">&nbsp;</div>
 	</div>
 	<div id="footer" class="container">

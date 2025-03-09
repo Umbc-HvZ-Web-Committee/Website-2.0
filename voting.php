@@ -44,7 +44,7 @@ $settings = get_settings();
 			$showVotesThreshold = $settings['showVotesThreshold']; 
 			
 			echo "<h1 style='text-align:center; margin-top: 10px;'><b>Meet the Candidates!</b></h1><br/>";
-			//echo "<h1 style='text-align:center; margin-top: 10px;'><b>Constitution Voting</b></h1><br/>";
+			echo "<h1 style='text-align:center; margin-top: 8px;'><b>!!Only STUDENTS that are active members should vote!!</b></h1><br/>";
 			
 			//The officer_positions table includes "Web Committee" because what the table actually represents is the set of positions to be voted on,
 			//rather than literal officer positions. Non-officers were never supposed to have elections, until we replaced webmaster with web committee,

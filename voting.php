@@ -175,7 +175,7 @@ $settings = get_settings();
 					}
 					
 					if($settings['lockVoting'] == "unlock") {
-						<input type="checkbox" id="studentCheck" name="test">
+						echo '<input type="checkbox" id="studentCheck" name="test">'
 						document.getElementById("studentCheck").required = true;
 						echo '<input type="submit" name="submit" value="Submit vote"></form>';
 					} else {

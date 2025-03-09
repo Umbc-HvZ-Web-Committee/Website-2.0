@@ -175,7 +175,7 @@ $settings = get_settings();
 					}
 					
 					if($settings['lockVoting'] == "unlock") {
-						echo "<h4 style=\"text-align: left\">Confirm you are a student:  </h4>";
+						echo "<h4 style=\"text-align: left\">By hitting the checkbox you are confirming you are a UMBC student</h4>";
 						echo '<input type="checkbox" id="studentCheck" name="test">';
 						echo "<be>";
 						echo '<script type="text/javascript">' . 

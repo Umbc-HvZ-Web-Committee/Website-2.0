@@ -177,6 +177,7 @@ $settings = get_settings();
 					if($settings['lockVoting'] == "unlock") {
 						echo "<h4 style=\"text-align: left\">Confirm you are a student:  </h4>";
 						echo '<input type="checkbox" id="studentCheck" name="test">';
+						echo "<be>";
 						echo '<script type="text/javascript">' . 
 							'document.getElementById("studentCheck").required = true;' .
 							'</script>';

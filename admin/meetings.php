@@ -23,7 +23,7 @@ function load(){
 	<div id="page" class="container">
 		<div id="content">
 		<?php if(array_key_exists('meetingMessage', $GLOBALS) && $GLOBALS['meetingMessage']!="") echo "<h3>".$GLOBALS['meetingMessage']."</h3><br/>"; ?>
-		<?php if($_SESSION['isAdmin'] >= 2){ ?>
+		<?php if($_SESSION['isAdmin'] >= 1){ ?>
 			<h2>Meeting Sign In</h2>
 			<form action="" method="post"><p>
 				Meeting to sign into: <?php meetingSelect(); ?><br/>

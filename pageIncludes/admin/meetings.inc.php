@@ -320,6 +320,9 @@ if($_SESSION['isAdmin']>=1){
 				updateAchieves($uid, null, "attendance3");
 				//echo "checking $uid for achievement war expert\n";
 			}
+			if($missions >= 250) {
+				updateAchieves($uid, null, "attendance4");
+			}   //echo "checking $uid for achievement war master\n";
 			echo " A Solid E!";
 			
 		}elseif($func=="Unresolve meeting"){ //Does not work

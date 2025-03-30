@@ -59,7 +59,7 @@ $settings = get_settings();
 				
 				echo "<h4><b>$curPos:</b></h4>";
 				
-				//election candidates represents what the issues you're actually voting on. This syetem could be used to do polls the same way it works for candidates
+				//election candidates represents what the issues you're actually voting on. This system could be used to do polls the same way it works for candidates
 				//However, it is NOT dependent on the list of voteable options. The names of things are misleading...
 				$qury2 = mysql_query("SELECT * FROM election_candidates WHERE position='$curPos';");
 				if(mysql_num_rows($qury2) > 0) {
@@ -175,6 +175,13 @@ $settings = get_settings();
 					}
 					
 					if($settings['lockVoting'] == "unlock") {
+						echo "<p style='color: red'>By hitting the checkbox and submitting your vote,</p>"; 
+						echo "<p style='color: red'> you are confirming you are a current UMBC student</p>";
+						echo '<input type="checkbox" id="studentCheck" name="test">';
+						echo "<be>";
+						echo '<script type="text/javascript">' . 
+							'document.getElementById("studentCheck").required = true;' .
+							'</script>';
 						echo '<input type="submit" name="submit" value="Submit vote"></form>';
 					} else {
 						echo "<h2 style=\"text-align:center\">Voting is currently closed.</h2>";
@@ -185,6 +192,8 @@ $settings = get_settings();
 						echo "<br><br><b>Voting results (Viewable by admins only):</b><br><br>";
 						$electionResults = getVotingResults();
 						echo $electionResults;
+
+						
 					}
 				}
 			}
@@ -193,6 +202,7 @@ $settings = get_settings();
 		<div id="sidebar">
 		<?php printSidebar(); ?>
 		</div>
+	
 	<div class="clearfix">&nbsp;</div>
 	</div>
 	<div id="footer" class="container">

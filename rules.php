@@ -64,12 +64,12 @@ require_once('pageIncludes/rules.inc.php');
 			<p>
 			When a human is killed by a zombie, they become a super-human and are 'dying'; they wear their bandannas as humans. Super-humans are not 
 			considered human or zombie, and thus cannot complete human objectives or kill humans. However, super-humans may stun zombies or attempt 
-			to sneak into a group of humans in order to kill them when they become a zombie. After a specified period of time, a super-human becomes
+			to sneak into a group of humans in order to kill them when they become zombies. After a specified period of time, a super-human becomes
 			an unstunned zombie. If a super-human is tagged by an unstunned zombie, they instantly become a stunned zombie for the remainder of 
 			their death timer.
 			</p>
 			<br/>
-			<h4><i>NOTE: Bandannas must be brightly-colored and contrast with worn clothing.  They must be visible from as many angles as possible
+			<h4><i>NOTE: Bandannas must be brightly colored and contrast with worn clothing.  They must be visible from as many angles as possible
 			and not be obscured by hair or clothing</i></h4>
 			<br/><br/>
 			
@@ -111,12 +111,11 @@ require_once('pageIncludes/rules.inc.php');
 			2.) Root: A tagged human must kneel for 30 seconds but can use equipment<br/>
 			3.) Disarm: A tagged human cannot use equipment for 30 seconds but can run<br/>
 			4.) Paralysis: A tagged human must kneel and cannot defend themself for 30 seconds<br/>
-			5.) Witches: Same as Rooters but scream before charging<br/>
-			6.) Line-of-Sight: Will only chase humans it can see.<br/>
-			7.) Radius: Will only chase humans within a certain radius of it.<br/>
-			8.) Unrestricted: May chain-kill any number of humans and has no movement restrictions</br>
+			5.) Line-of-Sight: Will only chase humans it can see.<br/>
+			6.) Radius: Will only chase humans within a certain radius of it.<br/>
+			7.) Unrestricted: May chain-kill any number of humans and has no movement restrictions</br>
 			</p>
-			<i>Other types exists, and may be used.</i>
+			<i>Other types exist, and may be used.</i>
 			
 			<br/><br/><br/>
 			<h3><center><b>Please remember that admins are volunteers. They are here for you. Please show them respect.</b></center></h3>
@@ -125,8 +124,10 @@ require_once('pageIncludes/rules.inc.php');
  			<br/><br/>
  			<h3><b>Full Presentation:</b></h3>
  			<iframe src="https://docs.google.com/presentation/d/1YnyDdnIM6lu5R71R1zCgcPe34gdebh_3LPCENH8mj9I/embed?start=false&loop=false&delayms=10000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			<br/>
+			<h3><b>Weeklong Rules:</b></h3>
 			<p/>
-			<iframe src="https://docs.google.com/presentation/d/12GRRVmyghjGOClY8J3TC_wv3X40DWsLCmMkkIZIHZFo/embed?start=false&loop=false&delayms=10000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			<iframe src="https://docs.google.com/presentation/d/11OleDh9nToAe7dqs1SzXTaBHXnJcwFO5i7jrUYYL5Y0/embed?start=false&loop=false&delayms=10000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 		</div>
 		<?php printSidebar(); ?>
 		<div class="clearfix">&nbsp;</div>

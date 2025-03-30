@@ -142,9 +142,15 @@ if($_SESSION['isAdmin']>=1){
 						}
 						
 					}else{
-						//update user sign in
-						mysql_query("UPDATE meeting_log SET startState=$state WHERE UID='$uid' AND meetingID='$meeting';");
-						$GLOBALS['meetingMessage']="$name is already signed in, but their sign in state has been updated.";
+						//get current state
+						$oldState = mysql_oneline("SELECT startState from meeting_log WHERE UID='$uid' AND meetingID='$meeting';");
+						//update user sign in if the new sign in has a new state
+						if($oldState['startState'] != $state) {
+							mysql_query("UPDATE meeting_log SET startState=$state WHERE UID='$uid' AND meetingID='$meeting';");
+							$GLOBALS['meetingMessage']="$name is already signed in, but their sign in state has been updated.";
+						} else {
+							$GLOBALS['meetingMessage']="$name was already signed in.";
+						}
 						
 						//Uncomment line below for special missions, set the function in achievementUpdateFunctions.php to award proper achievement
 						//updateAchieves($uid, null, "specialMission");

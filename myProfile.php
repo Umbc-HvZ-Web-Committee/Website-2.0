@@ -221,7 +221,7 @@ require_once('includes/update.php');
 					$waiverStatus = $ret['hasTurnedInWaiver'];
 					$waiverStatus = denumerate('waiverStatus', $waiverStatus);
 					echo "Your waiver status is <strong>$waiverStatus</strong><br/><br/>";
-					echo "By UMBC rules, all players are required to have a waiver turned in each year to participate in UMBC HvZ games. If your waiver status is listed above as \"Cleared\", then our records indicate that you have filled out a waiver. Our records will not update right away, so it is posible that you have filled out a waiver, but your status above indicates otherwise. If you have <strong>not</strong> filled out a waiver, you can fill out an online waiver <a href=\"https://umbcorgs.dserec.com/online/clubsports_widget/club/84/registration\">here</a>. If you are unable to fill out an online waiver, you can request a paper waiver from an officer at one of our meetings.<br/>";
+					echo "By UMBC rules, all players are required to have a waiver turned in each year to participate in UMBC HvZ games. If your waiver status is listed above as \"Cleared\", then our records indicate that you have filled out a waiver. Our records will not update right away, so it is possible that you have filled out a waiver, but your status above indicates otherwise. If you have <strong>not</strong> filled out a waiver, you can fill out an online waiver <a href=\"https://umbcorgs.dserec.com/online/clubsports_widget/club/84/registration\">here</a>. If you are unable to fill out an online waiver, you can request a paper waiver from an officer at one of our meetings.<br/>";
 					
 					/* No longer needed
 					echo "</br><h3>Vaccination Status</h3></br>";
@@ -293,7 +293,7 @@ require_once('includes/update.php');
 					<!-- Beta Opt-In -->
 					<br/><h2><i>Opt-In To New Features</i></h2><br/>
 					<p>You may choose to opt-in to new features of the website that have not 
-					been thouroughly tested for bugs and other issues. Problems are more likely
+					been thoroughly tested for bugs and other issues. Problems are more likely
 					to pop up while using the website, but the features themselves add useful
 					functionality and information. The choice is up to you.</p>
 					<form action="" method="post">
@@ -315,7 +315,7 @@ require_once('includes/update.php');
 						change inappropriate names and usernames without your consent. Abuse of this system will lead to 
 						loss of privileges to this functionality.</p>
 						<?php if ($playerData['canChangeName'] == 0) { 
-							echo "<p>You have been prohibted to change your name/username for abusing the system. 
+							echo "<p>You have been prohibited from changing your name/username for abusing the system. 
 							Please contact the officer voard if you believe this is a mistake.</p>";
 						} else if ($playerData['canChangeName'] == 1) {
 							echo "Current username: ";
@@ -351,7 +351,7 @@ require_once('includes/update.php');
 					<li>Suggestive imagery</li>
 					<li><strike>Memes</strike></li>
 					</ul>
-					This system is monitored and violation of the above rules will be cause for immediate warning upon the first offence, and
+					This system is monitored and violation of the above rules will be cause for immediate warning upon the first offense, and
 					loss of profile picture privileges upon the second.<br/><br/>
 					Note that the optimal image size is 100px by 100px.
 					Check the player list to see if your profile picture has updated, if it has not try updating it again.

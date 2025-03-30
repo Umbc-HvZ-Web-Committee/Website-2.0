@@ -91,10 +91,11 @@ require_once('pageIncludes/contact.inc.php');
 			<p/>
 			
 			<h2 style="text-align:center;">Current Subofficers</h2><br/>
-			<!--<h2 style="text-align:center;">Due to the currrent pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/> -->
-			<!-- BEGIN TABLE CREATION FOR SUBOFFICERS -->
+			<!--<h2 style="text-align:center;">Due to the current pandemic, the Officer Board has chosen to not appoint sub officers this semester.</h2><br/> -->
+			<!-- BEGIN FUNNY TABLE CREATION FOR SUBOFFICERS -->
 			
-			<?php
+			
+			<!--<?php 
     			// Define the array of names
     			$names = array("Delia Teter", "Eli Kramer-Smyth", "Marisa Mengel", "Alex Holtz", "Miles Campbell", "Alvin Jecinta", "Vianne Stanford");
 
@@ -124,8 +125,26 @@ require_once('pageIncludes/contact.inc.php');
 					<td><?php echo $names[8]; ?></td>
 				</tr>
 			</table>
+			*/-->
 			
-			<!-- END TABLE CREATION FOR SUBOFFICERS -->
+			<!-- END FUNNY TABLE CREATION FOR SUBOFFICERS -->
+
+			<!-- BEGIN STATIC TABLE CREATION FOR SUBOFFICERS -->
+
+			<table align="center" border="1" cellspacing="1" cellpadding="3">
+			<tr bgcolor="#FFFFFF" align="center">
+			<td>Alex Holtz</td><td>Alexis Schuster</td><td>Alvin Jecinta</td></tr>
+			<tr bgcolor="#C0C0C0" align="center">
+			<td>Cole Harding</td><td>David Lazarus</td><td>Delia Teter</td></tr>
+			<tr bgcolor="#FFFFFF" align="center">
+			<td>Ebere Onyeaghala</td><td>Eli Kramer-Smyth</td><td>Joseph Romanic</td>
+			<tr bgcolor="#C0C0C0" align="center">
+			<td>Josh Ward</td><td>Kevin Tankersley</td><td>Marisa Mengel</td></tr>
+			<tr bgcolor="#FFFFFF" align="center">
+			<td>Miles Campbell</td><td>Patrick O'Brien</td><td>Syncere Mason</td>
+			</table>
+
+			<!-- END STATIC TABLE CREATION FOR SUBOFFICERS -->
 			
 			<br/><i> Subofficers have the right to make calls on deaths, holds, etc, even when playing.</i><br/>
 			<i>If you believe a Subofficer has abused this power, please contact the officers.</i><br/>
@@ -138,9 +157,7 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Fernando Chicas</td><td>Sarah Clarke</td></tr>
-			<tr bgcolor="#C0C0C0" align="center">
-			<td>Eli Kramer-Smyth</td><td>Seth Ramsland</td></tr>
+			<td>Fernando Chicas</td><td>Ian Moon</td><td>Eli Kramer-Smyth</td></tr>
 			</table>
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->

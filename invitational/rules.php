@@ -51,12 +51,12 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 	guidelines and abide by them while playing our game. These requirements were last updated as of 
 	April 5, 2022 and are likely to change between now and the day of the event. Please check back here 
 	closer to the event for updated information.</p>
-	<p>Despite UMBC relaxing it's restrictions, We are still requiring the following for the sake of the safety of all players.</p>
+	<p>Despite UMBC relaxing its restrictions, We are still requiring the following for the sake of the safety of all players.</p>
 	<ul>
 		<li>All individuals on campus must be fully immunized against COVID-19 at this time.</li>
 	<ul>
-		<li>Please bring your vaccination card or an easily-redable photograph of it for the moderator team to check your vaccination status
-		<li>If you are unable to receive the vaccine, please contact the officers at the email the address listed above <strong>as soon as possible</strong></li>
+		<li>Please bring your vaccination card or an easily-readable photograph of it for the moderator team to check your vaccination status
+		<li>If you are unable to receive the vaccine, please contact the officers at the email address listed above <strong>as soon as possible</strong></li>
 	</ul>
 		<li>KN95 or equivalent masks are required in any indoor space unless eating or drinking.</li>
 		<li>Double surgical masks, N95s, and KF94s are considered KN95 equivalent.</li>
@@ -130,7 +130,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 		<li>Darts may only be modified by cutting the foam of the dart.
 			<ul>
 				<li>The foam end of the dart must be at least twice the length of the tip of the dart.</li>
-				<li>Other dart modifcations are not allowed</li>
+				<li>Other dart modifications are not allowed</li>
 			</ul>
 		
 		<li>All blasters and ammo MUST be approved at check-in.</li>
@@ -171,7 +171,7 @@ if(!isset($loginUpdate)) include "includes/loginUpdate.php";
 <ul>
 <li>Bandannas must be clearly visible from 10 feet on all sides.</li>
 <li>In a safe zone, you may either continue wearing your bandanna as if you were in play, or not at all.</li>
-<!---<li>If directly asked if you or your group is untaggedm commonly phrased as &#39;clean&#39;, &nbsp;you must tell the truth.</li> -->
+<!---<li>If directly asked if you or your group is untagged commonly phrased as &#39;clean&#39;, &nbsp;you must tell the truth.</li> -->
 <li><b>You may not wear your bandanna in a way that is misleading. Your bandanna should be clearly visible from as many angles as possible</b></li>
 </ul>
 </div>

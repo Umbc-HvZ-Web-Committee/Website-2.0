@@ -39,6 +39,6 @@ if($_SESSION['uid']){
 		}
 	}
 }else{
-	echo "Hey, you're not logged in any more; go back and log in.";
+	echo "Hey, you're not logged in anymore; go back and log in.";
 }
 ?>

@@ -45,7 +45,7 @@ require_once('pageIncludes/missionTools.inc.php');
 			<li>A title slide with "UMBC HvZ Missions Briefing", the mission's name, and the name of its creator(s)</li>
 			<li>A story slide that sets the scene, but doesn&apos;t go into mechanic details</li>
 			<li>A victory conditions slide that contains the win/loss conditions for both sides</li>
-			<li>A special rules slide that explains the specific details of mission's mechanics</li>
+			<li>A special rules slide that explains the specific details of the mission's mechanics</li>
 			<li>A summary slide with the map*, the objectives restated, stun and death timers**, and final hold information***.</li>
 			</ol>
 			<p>*You can find a list of our current maps and hold locations <a href="/maps" target="_blank">here</a>. However, if you want to make a 
@@ -54,7 +54,7 @@ require_once('pageIncludes/missionTools.inc.php');
 			and can be reused in the future.</p>
 			<p>**The stun timer is generally set by the officers when the mission is run, since it is
 			usually based on the number of players in attendance. You are more than welcome to use mechanics that require altering
-			the intial stun timer, but please note that in your submission (Using the presenter's notes on Google Slides is a great
+			the initial stun timer, but please note that in your submission (Using the presenter's notes on Google Slides is a great
 			way to do this).</p>
 			<p>***Final hold information should be structured in the format "for Xmins. - (nc./cm.) - last Ymins", where X is the length of the
 			final hold, Y is how long from the end of the mission the hold can be started, and (nc./cm.) is whether or not the hold is
@@ -67,23 +67,23 @@ require_once('pageIncludes/missionTools.inc.php');
 			<li>A pre-game set of slides* that contains:
 			<ol type="i">
 			<li>A title slide with "UMBC HvZ Missions Briefing", the weeklong's name, and the name of its creator(s)</li>
-			<li>A story slide that contains the overarching story of the weeklong, but doesn't go into mechanc details</li>
-			<li>A special rules slide that explains overaching special rules of the weeklong, such as blasters being locked</li>
+			<li>A story slide that contains the overarching story of the weeklong, but doesn't go into mechanic details</li>
+			<li>A special rules slide that explains overarching special rules of the weeklong, such as blasters being locked</li>
 			</ol>
 			</li>
-			<li>Five sets of missions slides (in the format of one-night missions), labeled with the day each one is supposed 
+			<li>Five sets of mission slides (in the format of one-night missions), labeled with the day each one is supposed 
 			to be run.**</li>
 			<li>A list of requirements for the weeklong in 
 			<a href=https://docs.google.com/document/d/1tmSqFP7wA4SX3xjIMgwzXCc9WvL_EHnIObKCTe5-QXI/edit?usp=sharing target="_blank">this format.</a> 
-			(This can be editted in the same way as the mission slide template).</li>
+			(This can be edited in the same way as the mission slide template).</li>
 			</ol>
 			<p>*The officers will add the pre-game rules to the slides.</p>
-			<p>**Every map for the weeklong should be the <a href="/maps/Weeklong Fall 2019" target="_blank">Full Campus Map</a>. However, 
-			you are allowed alter or divide this map into sections if the context of your weeklong requires it.</p><br/>
+			<p>**Every map for the weeklong should be the <a href="/maps/Full Campus Map 2024.png" target="_blank">Full Campus Map</a>. However, 
+			you are allowed to alter or divide this map into sections if the context of your weeklong requires it.</p><br/>
 			
 			<h3><b>~Submitting~</b></h3><br/>
 			<p>Once you have finished the slides for your mission, you can submit them to the officers at 
-			<a href="mailto:umbchvzofficers@gmail.com">umbchvzofficers@gmail.com</a>. Once recieved they will be reviewed by the
+			<a href="mailto:umbchvzofficers@gmail.com">umbchvzofficers@gmail.com</a>. Once received they will be reviewed by the
 			mission selection team within a reasonable amount of time.</p><br/>
 			
 			<p>That's enough to get you started. Something to keep in mind: <b>Don&apos;t change things in the middle of a mission.</b> 

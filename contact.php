@@ -157,7 +157,7 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Fernando Chicas</td><td>Ian Moon</td><td>Eli Kramer-Smyth</td></tr>
+			<td>Fernando Chicas</td><td>Ethan Gaver</td><td>Eli Kramer-Smyth</td></tr>
 			</table>
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->

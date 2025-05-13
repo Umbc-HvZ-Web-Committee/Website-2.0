@@ -58,29 +58,29 @@ require_once('pageIncludes/contact.inc.php');
 			<th><font color="white">Email</font></th><th><font color="white">Cell Phone Number</font></th></tr>
 
 			<tr bgcolor="#C0C0C0" align="center"><td>President</td>
-			<td>Fernando Chicas</td>
-			<td>fchicas1@umbc.edu</td>
-			<td>(240)-280-4215</td></tr>
+			<td>Patrick O'Brien</td>
+			<td>pobrien1@umbc.edu</td>
+			<td>(443)-707-7747</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td>Ian Moon</td>
-			<td>supremeeviloverlord@umbc.edu</td>
- 			<td>(240)-618-0268</td></tr>
+			<td>Joseph Romanic</td>
+			<td>sm46090@umbc.edu</td>
+ 			<td>(240)-651-4512</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
-			<td>Seth Ramsland</td>
-			<td>sramsla1@umbc.edu</td>
-			<td>(443)-924-8732</td></tr>
+			<td>Syncere Mason</td>
+			<td>Smason5@umbc.edu</td>
+			<td>(347)-665-5401</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
-			<td>Alexandra (Sasha) Kleeman</td>
-			<td>k189@umbc.edu</td>
-			<td>(443)-863-0826</td></tr>
+			<td>Alex Schuster</td>
+			<td>aschust4@umbc.edu</td>
+			<td>(520)-220-8327</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
-			<td>Pauly Dillingham</td>
-			<td>punkrevolutionnow@umbc.edu</td>
-			<td>(443)-630-1393</td></tr>
+			<td>Kevin Tankersley</td>
+			<td>ktanker1@umbc.edu</td>
+			<td>(301)-300-8298</td></tr>
 			</table><br/><br/>
 		
 			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->
@@ -157,7 +157,7 @@ require_once('pageIncludes/contact.inc.php');
 			
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Fernando Chicas</td><td>Ian Moon</td><td>Eli Kramer-Smyth</td></tr>
+			<td>Fernando Chicas</td><td>Ethan Gavers</td><td>Eli Kramer-Smyth</td></tr>
 			</table>
 			
 			<!-- END "TABLE" CREATION FOR WEB COMMITTEE -->

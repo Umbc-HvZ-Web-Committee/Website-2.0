@@ -3,7 +3,8 @@ require_once('pageIncludes/home.inc.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><?php placeTabIcon(); ?>
+<head>
+<?php placeTabIcon(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>UMBC HvZ</title>
 <meta name="keywords" content="" />
@@ -31,7 +32,7 @@ require_once('pageIncludes/home.inc.php');
 		<i><h4><center>~Check out our Discord server <a href="https://discord.gg/MCfXax2">here</a>~</center></h4></i>
 		<i><h4><center>~Check out our Instagram <a href="https://www.instagram.com/umbchvzclub/">here</a>~</center></h4></i>
 		<!-- <i><h4><center>~Check out our Facebook Player Forum <a href="https://www.facebook.com/groups/1761359610834884/">here</a>~</center></h4></i> -->
-		<i><h4><center>~To submit mission feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0Uugg8rSaxfTJ6yvEFQIPxfRJJrCXXqt-c1PlVgqJo596Yg/viewform">click here</a>~</center></h4></i>
+		<i><h4><center>~To submit mission feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSezwNYkhRPnGL-J7iQ6SAudrSNoiXXELAzOQdLtnGHo4dVAaA/viewform?usp=header">click here</a>~</center></h4></i>
 		<!-- <i><h4><center>~To order a club T-shirt, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6eRuP4zEuLcLSC1bXqZ9GzF8ZDZn1QHjSR_pS8lH6lHtsmQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To submit invitational feedback, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSAfolSJBRFTghMTa3onH7dMgtcM94CWpcbJLT6tz8uqkTwQ/viewform">click here</a>~</center></h4></i> -->
 		<!-- <i><h4><center>~To suggest features for the new website, <a href="https://docs.google.com/forms/d/e/1FAIpQLScKT4b50vOXx9j27lBiHEuiwlocDsEsMWFnCVVj0YmIuke0nw/viewform">click here</a>~</center></h4></i>

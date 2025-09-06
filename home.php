@@ -44,8 +44,8 @@ require_once('pageIncludes/home.inc.php');
 		
 		<br/>
 		<b><font size="4">Mission Info:</font></b><br/>
-		Mondays - 7:00 pm - ITE 104 <br/>
-		Thursdays - 7:00 pm - ITE 104 <br/>
+		Mondays - 7:00 pm - LH1 104 <br/>
+		Thursdays - 7:00 pm - LH1 104 <br/>
 		<i>Check the sidebar for this week's planned missions<br/></i>
 		<!-- <br/><b>These locations are tentative and are likely to change in the next few days</b><br/> -->
 		<br/>
@@ -56,6 +56,8 @@ require_once('pageIncludes/home.inc.php');
 		For more information about what UMBC is doing in response to the 
 		COVID-19 outbreak, visit <a href='https://covid19.umbc.edu'>this</a> page.<br/>
 		</b></h4> -->
+		<h4>ALL TOY BLASTERS are banned on UMBC campus as it regards our normal gameplay. Please do not bring a blaster to a club meeting as we will have to ask you to put it away and return it to your car or dorm. Our normal gameplay will for now consist of throwables and throwing darts. We are working on this, thank you.<b>
+		</b></h4>
 		</p>
 		<br/>
 		<p>

@@ -29,8 +29,8 @@ require_once('pageIncludes/rules.inc.php');
 			2.) Classes come first.<br/>
 			3.) Use common sense; think before you act.<br/>
 			4.) Ask if you have questions; don't assume.<br/>
-			5.) No realistic-looking weaponry.<br/>
-			6.) Don't use blasters indoors.<br/>
+			5.) <del>No realistic-looking weaponry.</del><br/>
+			6.) Don't play indoors.<br/>
 			7.) No vehicles during gameplay.<br/></p><br/>
 			
 			<h3><b>The Constitution</b></h3><br/>
@@ -49,7 +49,7 @@ require_once('pageIncludes/rules.inc.php');
 			
 			<h4><i>Human:</i></h4>
 			<p>
-			Humans wear a bandanna between their elbow and the shoulder and are equipped with blasters, socks, darts, etc.
+			Humans wear a bandanna between their elbow and the shoulder and are equipped with <del>blasters</del>, socks, darts, etc.
 			Humans attempt to complete mission objectives (outlined at the beginning of each mission) while surviving the horde
 			by stunning zombies with their equipment.</p><br/>
 			
@@ -76,11 +76,11 @@ require_once('pageIncludes/rules.inc.php');
 			<h4><b>Equipment:</b></h4>
 			<i>The following equipment is allowed:</i>
 			<ul>
-			<li>All off-the-shelf NERF/Buzz Bee/Worker blasters</li>	
-			<li>Modded NERF/Buzz Bee/Worker dart and disc blasters*</li>
+			<li><del>All off-the-shelf NERF/Buzz Bee/Worker blasters</del></li>	
+			<li><del>Modded NERF/Buzz Bee/Worker dart and disc blasters*</del></li>
 			<li>All off-the-shelf NERF/Buzz Bee/Worker darts, discs, and balls*</li>
 			<li>Modded NERF/Buzz Bee/Worker darts and discs*</li>
-			<li>Rolled and taped socks</li>
+			<li>Rolled and taped socks/cloth</li>
 			</ul>
 			
 			<i>The following equipment is <b>not</b> allowed:</i>

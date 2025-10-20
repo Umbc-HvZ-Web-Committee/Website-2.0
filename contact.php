@@ -137,9 +137,9 @@ require_once('pageIncludes/contact.inc.php');
 			<tr bgcolor="#C0C0C0" align="center">
 			<td>David Lazarus</td><td>Delia Teter</td><td>Eli Kramer-Smyth</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>NOT Fernando Chicas</td><td>Ian Moon</td><td>Marisa Mengal</td>
+			<td>NOT Fernando Chicas</td><td>Ian Moon</td><td>Marisa Mengel</td>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Miles Cambell</td><td>Marisa Prime</td><td>Riley Heath</td></tr>
+			<td>Miles Campbell</td><td>Marisa Prime</td><td>Riley Heath</td></tr>
 			</table>
 
 			<!-- END STATIC TABLE CREATION FOR SUBOFFICERS -->

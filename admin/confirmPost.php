@@ -24,6 +24,8 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 		$title = $_POST['title'];
 		$timestamp = date('Y-m-d G:i:s');
 		$content = $_POST['content'];
+		$content = htmlspecialchars($content);
+		$content = nl2br($content);
 		$content = mysql_real_escape_string($content);
 		$title = mysql_real_escape_string($title);
 		$sql = "INSERT into `blog_posts`(`title`, `author`, `posted`, `content`) VALUES ('$title', '$author', '$timestamp', '$content');";

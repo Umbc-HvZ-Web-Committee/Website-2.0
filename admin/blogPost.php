@@ -26,8 +26,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			Go to <a href="http://www.onlinehtmleditor.net/" target="_blank">this online html editor</a> to check your formatting</br>
 			(Plain text is also acceptable.)</h3><br/>
 			
-			<h3>Or use <a href="https://www.recoverytools.com/blog/export-gmail-to-html/">this tool</a> to convert a newsletter email into HTML format</h3></br>
-				
+			
 			<form action="confirmPost.php" method="post">
 			<h4>Author:  <?php echo $playerData['fname']; ?> <br/>
 			Title: <input type="text" name="title"></input> <br/>

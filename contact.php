@@ -133,15 +133,13 @@ require_once('pageIncludes/contact.inc.php');
 
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alex Holtz</td><td>Alexis Schuster</td><td>Alvin Jecinta</td></tr>
+			<td>Alvin Jecinta</td><td>Cole Harding</td><td>Coleman Mixon</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Cole Harding</td><td>David Lazarus</td><td>Delia Teter</td></tr>
+			<td>David Lazarus</td><td>Delia Teter</td><td>Eli Kramer-Smyth</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Ebere Onyeaghala</td><td>Eli Kramer-Smyth</td><td>Joseph Romanic</td>
+			<td>NOT Fernando Chicas</td><td>Ian Moon</td><td>Marisa Mengal</td>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Josh Ward</td><td>Kevin Tankersley</td><td>Marisa Mengel</td></tr>
-			<tr bgcolor="#FFFFFF" align="center">
-			<td>Miles Campbell</td><td>Patrick O'Brien</td><td>Syncere Mason</td>
+			<td>Miles Cambell</td><td>Marisa Prime</td><td>Riley Heath</td></tr>
 			</table>
 
 			<!-- END STATIC TABLE CREATION FOR SUBOFFICERS -->

@@ -20,16 +20,6 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 		<div id="content">
 		<?php if($GLOBALS['meetingMessage']!="") echo "<h3>".$GLOBALS['meetingMessage']."</h3><br/>"; ?>
 		<?php if($_SESSION['isAdmin'] >= 2){ ?>
-			<script type="module">
-				import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-				function fixMarkup() { 
-					var element = document.getElementsByName("content")[0];
-					var content = marked.parse(json_encode(element.value));
-					element.value = content;
-				}
-				document.querySelector("submit").addEventListener("click", fixMarkup);
-				window.fixMarkup = fixMarkup;
-			</script>
 		
 			<h1 style="text-align:center">Create a Blog Post</h1><br/>
 			<h3 style="text-align:center">Currently supports markup (or html) formatting<br/>
@@ -44,6 +34,17 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			</h4>
 			<input type="submit" name="submit" value="Submit"></input>
 			</form>
+
+			<script type="module">
+				import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+				function fixMarkup() { 
+					var element = document.getElementsByName("content")[0];
+					var content = marked.parse(element.value);
+					element.value = content;
+				}
+				document.querySelector(input[type="submit"]).addEventListener("click", fixMarkup);
+				window.fixMarkup = fixMarkup;
+			</script>
 		
 		<?php }else{ ?>
 			<h2>Hey, you're not an admin, get out of here!</h2>

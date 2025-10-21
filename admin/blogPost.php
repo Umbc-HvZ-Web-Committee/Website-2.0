@@ -27,6 +27,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 					var content = marked.parse(json_encode(element.value));
 					element.value = content;
 				}
+				document.querySelector("submit").addEventListener("click", fixMarkup);
 				window.fixMarkup = fixMarkup;
 			</script>
 		
@@ -41,7 +42,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 			Content:<br/>
 			<textarea rows="10" cols="60" name="content"></textarea>
 			</h4>
-			<input type="submit" name="submit" value="Submit" onclick="fixMarkup()"></input>
+			<input type="submit" name="submit" value="Submit"></input>
 			</form>
 		
 		<?php }else{ ?>

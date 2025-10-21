@@ -42,7 +42,7 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 					var content = marked.parse(element.value);
 					element.value = content;
 				}
-				document.querySelector(input[type="submit"]).addEventListener("click", fixMarkup);
+				document.querySelector(input[type="submit"]).addEventListener("submit", fixMarkup);
 				window.fixMarkup = fixMarkup;
 			</script>
 		

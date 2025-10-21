@@ -20,10 +20,17 @@ $playerData = mysql_oneline("SELECT * FROM users WHERE UID='{$_SESSION['uid']}'"
 		<div id="content">
 		<?php if($GLOBALS['meetingMessage']!="") echo "<h3>".$GLOBALS['meetingMessage']."</h3><br/>"; ?>
 		<?php if($_SESSION['isAdmin'] >= 2){ ?>
+			<script type="module">
+				import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+				function fixMarkup() { 
+					var element = document.getElementsByName("content")[0];
+					var content = marked.parse(json_encode(element.value));
+					element.value = content;
+				}
+			</script>
 		
 			<h1 style="text-align:center">Create a Blog Post</h1><br/>
-			<h3 style="text-align:center">Currently only supports html formatting<br/>
-			Go to <a href="http://www.onlinehtmleditor.net/" target="_blank">this online html editor</a> to check your formatting</br>
+			<h3 style="text-align:center">Currently supports markup (or html) formatting<br/>
 			(Plain text is also acceptable.)</h3><br/>
 			
 			

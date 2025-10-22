@@ -1,6 +1,6 @@
 <?php
 function displayPost($postID){
-	$ret = mysql_oneline("SELECT title, author, content, TIME_TO_SEC(TIMEDIFF(CURRENT_TIMESTAMP, posted)) AS postedDiff FROM blog_posts WHERE postID = '$postID';");
+	$ret = mysql_oneline("SELECT title, author, content, TIMESTAMPDIFF(SECOND, posted, CURRENT_TIMESTAMP) AS postedDiff FROM blog_posts WHERE postID = '$postID';");
 	$title = $ret['title'];
 	$authorID = $ret['author'];
 	$posted = secondsToHumanReadable($ret['postedDiff']);

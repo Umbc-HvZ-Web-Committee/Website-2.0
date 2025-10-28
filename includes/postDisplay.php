@@ -14,7 +14,13 @@ function displayPost($postID){
 	echo '<div class="post">';
 		echo '<div class="title">';
 			echo '<h2>'.$title.'</h2>';
-			echo '<p>Posted by <a href="#'.$username.'">'.$name.'</a> '.$posted.'</p>';
+			echo '<p>Posted by <a href="#'.$username.'">'.$name.'</a> '.$posted;
+			if($_SESSION['isAdmin'] >= 2){
+			echo '				';
+			echo '<button type="button" id="delete" onclick="">Delete Post</button>';
+			echo '<button type="button" id="confirm" style="visibility:hidden;" onclick="deletePost($row[\'postID\'])">Click this if you are sure.</button>';
+			}
+			echo '</p>';
 		echo '</div>';
 		echo '<div class="entry">';
 			echo $content;
@@ -28,4 +34,17 @@ function displayPosts($startIndex, $numPosts){
 		displayPost($row['postID']);
 	}
 }
+
+function deletePost($postID){
+	mysql_query("DELETE postID FROM blog_posts;");
+}
 ?>
+
+<script>
+	var delete = document.getElementById("delete");
+	var confirm = document.getElementById("confirm");
+
+	delete.onclick = function() {
+    	confirm.style.visibility = "visible";
+	}
+</script>

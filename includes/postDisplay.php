@@ -16,7 +16,7 @@ function displayPost($postID){
 			echo '<h2>'.$title.'</h2>';
 			echo '<p>Posted by <a href="#'.$username.'">'.$name.'</a> '.$posted;
 			if($_SESSION['isAdmin'] >= 2){
-			echo '				';
+			echo '&nbsp &nbsp &nbsp';
 			echo '<button type="button" id="delete" onclick="">Delete Post</button>';
 			echo '<button type="button" id="confirm" style="visibility:hidden;" onclick="deletePost($row[\'postID\'])">Click this if you are sure.</button>';
 			}

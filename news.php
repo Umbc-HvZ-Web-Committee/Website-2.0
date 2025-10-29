@@ -31,7 +31,7 @@ require_once('pageIncludes/home.inc.php');
 
 <script defer>
 	var deleteButtons = document.getElementsByClassName("delete");
-	var confirmButtons = document.querySelectorAll("confirm");
+	var confirmButtons = document.getElementsByClassName("confirm");
 
 	for(let i = 0; i < deleteButtons.length; i++) {
   		deleteButtons[i].id.onclick = function() {

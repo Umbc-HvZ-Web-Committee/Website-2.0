@@ -17,8 +17,8 @@ function displayPost($postID){
 			echo '<p>Posted by <a href="#'.$username.'">'.$name.'</a> '.$posted;
 			if($_SESSION['isAdmin'] >= 2){
 			echo '&nbsp';
-			echo '<button type="button" id="delete">Delete Post</button>';
-			echo '<button type="button" id="confirm" style="display:none;" onclick="deletePost('.$postID.')">Click this if you are sure.</button>';
+			echo '<button type="button" class="delete">Delete Post</button>';
+			echo '<button type="button" id='.$postID.'class="confirm" style="display:none;">Click this if you are sure.</button>';
 			}
 			echo '</p>';
 		echo '</div>';
@@ -41,14 +41,3 @@ function deletePost($postID){
 	}
 }
 ?>
-
-<script defer>
-	var deleteButtons = document.querySelectorAll("[id='delete']");
-	var confirmButtons = document.querySelectorAll("[id='confirm']");
-
-	for(let i = 0; i < deleteButtons.length; i++) {
-  		deleteButtons[i].onclick = function() {
-    		confirmButtons[i].style.display = "inline-block";
-		}
-	}
-</script>

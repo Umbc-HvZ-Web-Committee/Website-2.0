@@ -34,7 +34,7 @@ require_once('pageIncludes/home.inc.php');
 	var confirmButtons = document.querySelectorAll("confirm");
 
 	for(let i = 0; i < deleteButtons.length; i++) {
-  		deleteButtons[i].id.onclick = function() {
+  		deleteButtons[i].onclick = function() {
     		confirmButtons[i].id.style.display = "inline-block";
 		}
 

@@ -34,11 +34,11 @@ require_once('pageIncludes/home.inc.php');
 	var confirmButtons = document.querySelectorAll("confirm");
 
 	for(let i = 0; i < deleteButtons.length; i++) {
-  		deleteButtons[i].onclick = function() {
-    		confirmButtons[i].style.display = "inline-block";
+  		deleteButtons[i].id.onclick = function() {
+    		confirmButtons[i].id.style.display = "inline-block";
 		}
 
-		confirmButtons[i].onclick = function() {
+		confirmButtons[i].id.onclick = function() {
     		deletePost(confirmButtons[i].id);
 		}
 	}

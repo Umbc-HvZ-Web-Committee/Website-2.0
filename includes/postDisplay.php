@@ -3,7 +3,8 @@ function displayPost($postID){
 	$ret = mysql_oneline("SELECT title, author, content, TIMESTAMPDIFF(SECOND, posted, CURRENT_TIMESTAMP) AS postedDiff FROM blog_posts WHERE postID = '$postID';");
 	$title = $ret['title'];
 	$authorID = $ret['author'];
-	$posted = secondsToHumanReadable($ret['postedDiff']);
+	$postedSecs = $ret['postedDiff'];
+	$posted = secondsToHumanReadable($postedSecs);
 	$content = $ret['content'];
 	
 	$ret = mysql_oneline("SELECT fname, uname FROM users WHERE UID='$authorID';");
@@ -17,8 +18,8 @@ function displayPost($postID){
 			echo '<p>Posted by <a href="#'.$username.'">'.$name.'</a> '.$posted;
 			if($_SESSION['isAdmin'] >= 2){
 			echo '&nbsp';
-			echo '<button type="button" id='.$ret['postedDiff'].'class="delete">Delete Post</button>';
-			echo '<button type="button" id='.$postID.'class="confirm" style="display:none;">Click this if you are sure.</button>';
+			echo '<button type="button" id="'.$postedSecs.'"class="delete">Delete Post</button>';
+			echo '<button type="button" id="'.$postID.'"class="confirm" style="display:none;">Click this if you are sure.</button>';
 			}
 			echo '</p>';
 		echo '</div>';

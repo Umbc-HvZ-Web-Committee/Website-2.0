@@ -16,9 +16,9 @@ function displayPost($postID){
 			echo '<h2>'.$title.'</h2>';
 			echo '<p>Posted by <a href="#'.$username.'">'.$name.'</a> '.$posted;
 			if($_SESSION['isAdmin'] >= 2){
-			echo '&nbsp &nbsp &nbsp';
+			echo '&nbsp';
 			echo '<button type="button" id="delete">Delete Post</button>';
-			echo '<button type="button" id="confirm" style="visibility:hidden;" onclick="deletePost($row[\'postID\'])">Click this if you are sure.</button>';
+			echo '<button type="button" id="confirm" style="display:none;" onclick="deletePost('.$postID.')">Click this if you are sure.</button>';
 			}
 			echo '</p>';
 		echo '</div>';
@@ -36,17 +36,19 @@ function displayPosts($startIndex, $numPosts){
 }
 
 function deletePost($postID){
-	mysql_query("DELETE postID FROM blog_posts;");
+	if($_SESSION['isAdmin'] >= 2){
+		mysql_query("DELETE FROM blog_posts WHERE postID = $postID;");
+	}
 }
 ?>
 
 <script defer>
-	var delete = document.querySelectorAll("[id='delete']");
-	var confirm = document.querySelectorAll("[id='confirm']");
+	var deleteButtons = document.querySelectorAll("[id='delete']");
+	var confirmButtons = document.querySelectorAll("[id='confirm']");
 
-	for(var i = 0; i < delete.length; i++) {
-  		delete[i].onclick = function() {
-    		confirm[i].style.visibility = "visible";
+	for(let i = 0; i < deleteButtons.length; i++) {
+  		deleteButtons[i].onclick = function() {
+    		confirmButtons[i].style.display = "inline-block";
 		}
 	}
 </script>

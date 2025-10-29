@@ -28,3 +28,15 @@ require_once('pageIncludes/home.inc.php');
 </div>
 </body>
 </html>
+
+
+<script defer>
+	var deleteButtons = document.querySelectorAll("[id='delete']");
+	var confirmButtons = document.querySelectorAll("[id='confirm']");
+
+	for(let i = 0; i < deleteButtons.length; i++) {
+  		deleteButtons[i].onclick = function() {
+    		confirmButtons[i].style.display = "inline-block";
+		}
+	}
+</script>

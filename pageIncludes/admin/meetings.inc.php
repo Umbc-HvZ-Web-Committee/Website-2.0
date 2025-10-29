@@ -88,6 +88,11 @@ if($_SESSION['isAdmin']>=1){
 					if($isPregame) {
 						mysql_query("UPDATE `users` SET `attendedPregame`= 1 WHERE `UID` = '$uid';");
 					}
+
+					$isZBash = requestVar('zbash');
+					if($isZBash) {
+						updateAchieves($uid, null, "zbashMission");
+					}
 					
 					$isHoliday = requestVar('holiday');
 					if($isHoliday) {

@@ -34,6 +34,8 @@ function load(){
 					<br/>
 					<label for="pregame"><input type="checkbox" name="pregame" id="pregame" <!--checked="checked"-->/>Also attending a pre-game for the next long game</label>
 					<br/>
+					<label for="pregame"><input type="checkbox" name="zbash" id="zbash" <!--checked="checked"-->/>Also attending a Zombie Bash mission in costume</label>
+					<br/>
 					<label for="pregame"><input type="checkbox" name="holiday" id="holiday" <!--checked="checked"-->/>Also attending a holiday mission</label>
 					<br/>
 					<label for="state1"><input type="radio" name="state" value="1" id="state1" checked="checked"/>Human</label>

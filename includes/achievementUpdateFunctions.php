@@ -78,6 +78,15 @@ function specialMission($uid, $event) {
 	}
 }
 
+function zbashMission($uid, $event) {
+	//make sure to change key to proper achievement
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='2Spooky';")); 
+	$aid = $aid['AID'];
+	if($event == "zbashMission") {
+		giveAchieve($aid, $uid);
+	}
+}
+
 function holidayMission($uid, $event) {
 	//make sure to change key to proper achievement
 	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='holidayCheer';")); 

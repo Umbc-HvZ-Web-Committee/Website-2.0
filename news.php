@@ -39,7 +39,9 @@ require_once('pageIncludes/home.inc.php');
 		}
 
 		confirmButtons[i].onclick = function() {
-    		deletePost(confirmButtons[i].id);
+			if($_SESSION['isAdmin'] >= 2){
+				mysql_query("DELETE FROM blog_posts WHERE postID = ".confirmButtons[i].id.";");
+			}
 		}
 	}
 </script>

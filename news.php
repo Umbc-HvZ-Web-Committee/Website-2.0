@@ -54,10 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['postID'])) {
 
 		confirmButtons[i].onclick = function() {
 			if (!isAdmin) return;
-			if($_SESSION['isAdmin'] >= 2){
-				document.getElementById('deletePostID').value = confirmButtons[i].id;
-            	document.getElementById('deleteForm').submit();
-			}
+			document.getElementById('deletePostID').value = confirmButtons[i].id;
+			document.getElementById('deleteForm').submit();
 		}
 	}
 </script>

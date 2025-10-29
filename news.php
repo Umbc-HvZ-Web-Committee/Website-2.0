@@ -3,7 +3,7 @@ require_once('pageIncludes/home.inc.php');
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['postID'])) {
     if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] >= 2) {
-        $id = $_POST['postID'];
+        $id = mysql_real_escape_string($_POST['postID']);
         mysql_query("DELETE FROM blog_posts WHERE postID = " . $id);
         header('Location: '.$_SERVER['PHP_SELF']);
         exit;

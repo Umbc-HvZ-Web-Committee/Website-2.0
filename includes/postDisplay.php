@@ -19,7 +19,7 @@ function displayPost($postID){
 			if($_SESSION['isAdmin'] >= 2){
 			echo '&nbsp';
 			echo '<button type="button" id="'.$postedSecs.'"class="delete">Delete Post</button>';
-			echo '<button type="button" id="'.$postID.'"class="confirm" style="display:none;">Click this if you are sure.</button>';
+			echo '<button type="button" id="'.$postID.'"class="confirm" style="display:none;">Confirm Deletion.</button>';
 			}
 			echo '</p>';
 		echo '</div>';

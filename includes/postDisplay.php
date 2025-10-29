@@ -17,7 +17,7 @@ function displayPost($postID){
 			echo '<p>Posted by <a href="#'.$username.'">'.$name.'</a> '.$posted;
 			if($_SESSION['isAdmin'] >= 2){
 			echo '&nbsp &nbsp &nbsp';
-			echo '<button type="button" id="delete" onclick="">Delete Post</button>';
+			echo '<button type="button" id="delete">Delete Post</button>';
 			echo '<button type="button" id="confirm" style="visibility:hidden;" onclick="deletePost($row[\'postID\'])">Click this if you are sure.</button>';
 			}
 			echo '</p>';
@@ -40,11 +40,13 @@ function deletePost($postID){
 }
 ?>
 
-<script>
-	var delete = document.getElementById("delete");
-	var confirm = document.getElementById("confirm");
+<script defer>
+	var delete = document.querySelectorAll("[id='delete']");
+	var confirm = document.querySelectorAll("[id='confirm']");
 
-	delete.onclick = function() {
-    	confirm.style.visibility = "visible";
+	for(var i = 0; i < delete.length; i++) {
+  		delete[i].onclick = function() {
+    		confirm[i].style.visibility = "visible";
+		}
 	}
 </script>

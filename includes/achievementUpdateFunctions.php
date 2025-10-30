@@ -27,7 +27,7 @@ You have been awarded the achievement $achieveName! To set this achievement as y
 		
 Please note that artwork has not been chosen for all achievements and the image may still say 'Coming Soon'. If this is the case, hover your mouse over the image to verify the proper achievement was selected. The artwork will automatically update as it becomes available.
 		
-~ Fernando Chicas, Ian Moon, Eli Kramer-Smyth - UMBC HvZ Web Committee ~
+~ Fernando Chicas, Ethan Gavers, Eli Kramer-Smyth - UMBC HvZ Web Committee ~
 THIS IS AN AUTOMATED MESSAGE.
 EOF;
 		$emailLookup = mysql_query("SELECT email FROM `users` WHERE `UID`='$uid';");
@@ -67,6 +67,8 @@ function takeAchieve($aid, $uid) {
 //[[UID]] is replaced in the database by the UID
 //[[EVENT]] is replaced by the event text
 //an event type of "all" should force you to check always
+
+//Make sure to set the updateFunction value for the achievement in question (learned from experience). Also set the isAuto value to 1.
 
 
 function specialMission($uid, $event) {

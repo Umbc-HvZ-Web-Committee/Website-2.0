@@ -1,6 +1,6 @@
 <?php
 require_once('pageIncludes/home.inc.php');
-session_start();
+if(!isset($_SESSION)) session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['postID'])) {
     if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] >= 2) {
         $id = mysql_real_escape_string($_POST['postID']);

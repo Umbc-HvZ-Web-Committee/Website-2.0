@@ -148,6 +148,38 @@ function warMaster($uid, $event) {
 	}
 }
 
+function idRatherDie($uid, $event) {
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='idRatherDie';"));
+	$aid = $aid['AID'];
+	if($event == "attendanceZ1") {
+		giveAchieve($aid, $uid);
+	}
+}
+
+function liveLaughStun($uid, $event) {
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='liveLaughStun';"));
+	$aid = $aid['AID'];
+	if($event == "attendanceH1") {
+		giveAchieve($aid, $uid);
+	}
+}
+
+function moderationMachine($uid, $event) {
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='moderationMachine';"));
+	$aid = $aid['AID'];
+	if($event == "attendanceM1") {
+		giveAchieve($aid, $uid);
+	}
+}
+
+function communityConcious($uid, $event) {
+	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='communityConcious';"));
+	$aid = $aid['AID'];
+	if($event == "attendanceC1") {
+		giveAchieve($aid, $uid);
+	}
+}
+
 //Does not work
 function legendaryHunter($uid, $event) {
 	$aid = mysql_fetch_assoc(mysql_query("SELECT `AID` FROM `achievements_new` WHERE `key`='legendaryHunter';"));

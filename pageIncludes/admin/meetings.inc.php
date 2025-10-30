@@ -77,6 +77,10 @@ if($_SESSION['isAdmin']>=1){
 					
 					$ret2 = mysql_oneline("SELECT * FROM `users` WHERE `UID` = '$uid';");
 					$totalAttendance = $ret2['appearancesTotal'] - $ret2['adminMeetingsTotal'];
+					$zombieAttendance = $ret2['zombieStartsTotal'];
+					$humanAttendance = $ret2['humanStartsTotal'];
+					$modAttendance = $ret2['gamesModdedTotal'];
+					$communityAttendance = $ret2['adminMeetingsTotal'];
 					$attendance = $ret2['appearancesThisTerm'] + $ret2['appearancesLastTerm'];
 					//echo "BEFORE ATTENDENCE: $attendance";
 					
@@ -130,6 +134,22 @@ if($_SESSION['isAdmin']>=1){
 						}
 						if($totalAttendance >= 250) {
 							updateAchieves($uid, null, "attendance4");
+						}
+
+						if($zombieAttendance >= 50) {
+							updateAchieves($uid, null, "attendanceZ1");
+						}
+
+						if($humanAttendance >= 50) {
+							updateAchieves($uid, null, "attendanceH1");
+						}
+
+						if($modAttendance >= 50) {
+							updateAchieves($uid, null, "attendanceM1");
+						}
+
+						if($communityAttendance >= 50) {
+							updateAchieves($uid, null, "attendanceC1");
 						}
 						
 						

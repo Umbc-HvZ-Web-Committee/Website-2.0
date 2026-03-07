@@ -1,4 +1,4 @@
-<?php header("Location: https://www.marylandfoamalliance.com/umbchvzinvi", true, 301);
+<?php header("Location: https://forms.gle/LFJcg9Kjm8ut1Cuz7", true, 301);
 exit();
 ?>
 <?php

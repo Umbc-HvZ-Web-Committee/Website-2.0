@@ -26,7 +26,7 @@ if (isset($_SESSION['UID'])) {
 	<div id="page" class="container">
 		<div id="content">
 			<h1 style="text-align:center; margin-top: 10px;"><b>Player List</b></h1>
-			<p style="text-align:center;"><a href="/killTree.php">View Kill Trees</a></p>
+			<p style="text-align:center;"><a href="/killTree.php">View Kill Trees (beta)</a></p>
 			<br/>
 			<form>
 			<b>Order By:</b>

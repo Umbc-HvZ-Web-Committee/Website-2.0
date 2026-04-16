@@ -1,5 +1,5 @@
 <?php
-require_once('pageIncludes/playerList.inc.php');
+require_once('pageIncludes/killTree.inc.php');
 if (isset($_SESSION['UID'])) {
     $UID = $_SESSION['UID'];
     $playerData = mysql_oneline("SELECT * FROM `users` WHERE `UID`='$UID'");
@@ -13,11 +13,12 @@ if (isset($_SESSION['UID'])) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><?php placeTabIcon(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>UMBC HvZ - Player List</title>
+<title>UMBC HvZ - Kill Trees</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <?php htmlHeader(); ?>
 </head>
 <body>
@@ -25,20 +26,10 @@ if (isset($_SESSION['UID'])) {
 	<?php pageHeader(); ?>
 	<div id="page" class="container">
 		<div id="content">
-			<h1 style="text-align:center; margin-top: 10px;"><b>Player List</b></h1>
-			<p style="text-align:center;"><a href="/killTree.php">View Kill Trees (beta)</a></p>
+			<h1 style="text-align:center; margin-top: 10px;"><b>Kill Trees</b></h1>
+			<p style="text-align:center;"><a href="/playerList.php">&larr; Back to Player List</a></p>
 			<br/>
-			<form>
-			<b>Order By:</b>
-			<input type="radio" name="order" value="name"/> Name
-			<input type="radio" name="order" value="kills"/> Kill Count
-			<input type="radio" name="order" value="survived"/> Days Survived
-			<input type="radio" name="order" value="creation"/> Account Creation Time
-			&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit" name="submit"/>
-			</form><br/>
-			<?php		
-			printPlayerTable();
-			?>
+			<?php printKillTrees(); ?>
 		</div>
 		<div id="sidebar">
 			<div class="section1">
@@ -55,5 +46,6 @@ if (isset($_SESSION['UID'])) {
 		<?php printFooter(); ?>
 	</div>
 </div>
+<script>mermaid.initialize({ startOnLoad: true });</script>
 </body>
 </html>

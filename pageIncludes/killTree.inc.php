@@ -131,7 +131,7 @@ CSS;
 				lp.playerID,
 				lp.killerID,
 				DAYNAME(lp.deathTime)    AS dayName,
-				DAYOFWEEK(lp.deathTime)  AS dayNum,
+				DATE(lp.deathTime)       AS killDate,
 				TRIM(CONCAT(COALESCE(ku.fname,''), ' ', COALESCE(ku.lname,''))) AS killerName,
 				TRIM(CONCAT(COALESCE(pu.fname,''), ' ', COALESCE(pu.lname,''))) AS victimName
 			FROM long_players lp
@@ -141,7 +141,7 @@ CSS;
 			  AND lp.killerID IS NOT NULL
 			  AND lp.killerID != ''
 			  AND lp.deathTime != '0000-00-00 00:00:00'
-			ORDER BY DAYOFWEEK(lp.deathTime), lp.deathTime
+			ORDER BY lp.deathTime
 		");
 
 		$killsByDay = array();

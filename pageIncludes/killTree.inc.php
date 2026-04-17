@@ -7,95 +7,6 @@ if(!isset($loginUpdate)) require_once('includes/loginUpdate.php');
 $settings = get_settings();
 
 function printKillTrees() {
-	$dayAbbr = array(
-		'Sunday'    => 'Sun',
-		'Monday'    => 'Mon',
-		'Tuesday'   => 'Tue',
-		'Wednesday' => 'Wed',
-		'Thursday'  => 'Thu',
-		'Friday'    => 'Fri',
-		'Saturday'  => 'Sat',
-	);
-
-	echo <<<CSS
-<style>
-.kill-timeline {
-    width: 100%;
-    margin-bottom: 30px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.kill-day-section {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    min-height: 120px;
-    overflow: hidden;
-}
-
-.kill-day-sidebar {
-    position: relative;
-    width: 72px;
-    min-height: 100%;
-    flex-shrink: 0;
-    background: rgba(139, 0, 0, 0.07);
-    border-right: 2px dashed #999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    z-index: 2;
-}
-
-.kill-day-sidebar span {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    font-size: 13px;
-    font-weight: bold;
-    color: #8E0000;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    white-space: nowrap;
-}
-
-.kill-day-watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    font-weight: 900;
-    color: rgba(139, 0, 0, 0.04);
-    pointer-events: none;
-    z-index: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
-    user-select: none;
-}
-
-.kill-day-content {
-    position: relative;
-    z-index: 1;
-    flex: 1;
-    padding: 16px;
-    overflow-x: auto;
-}
-
-.kill-day-divider {
-    border: none;
-    border-top: 2px dashed #bbb;
-    margin: 0;
-}
-
-.kill-day-content .mermaid {
-    text-align: center;
-}
-</style>
-CSS;
-
 	$ret = mysql_query(
 		"SELECT DISTINCT lp.gameID, COALESCE(lg.title, lp.gameID) AS title
 		 FROM long_players lp
@@ -130,8 +41,8 @@ CSS;
 			SELECT
 				lp.playerID,
 				lp.killerID,
-				DAYNAME(lp.deathTime)    AS dayName,
-				DATE(lp.deathTime)       AS killDate,
+				DAYNAME(lp.deathTime)  AS dayName,
+				DATE(lp.deathTime)     AS killDate,
 				TRIM(CONCAT(COALESCE(ku.fname,''), ' ', COALESCE(ku.lname,''))) AS killerName,
 				TRIM(CONCAT(COALESCE(pu.fname,''), ' ', COALESCE(pu.lname,''))) AS victimName
 			FROM long_players lp
@@ -144,57 +55,96 @@ CSS;
 			ORDER BY lp.deathTime
 		");
 
-		$killsByDay = array();
+		// $players: UID => ['name', 'deathDate', 'dayName']
+		// $days:    killDate => dayName  (in chronological order)
+		// $edges:   [ [killerUID, victimUID], ... ]
+		$players = array();
+		$days    = array();
+		$edges   = array();
+
 		while ($row = mysql_fetch_assoc($kills)) {
-			$day = $row['dayName'];
-			if (!isset($killsByDay[$day])) {
-				$killsByDay[$day] = array();
+			$vid  = $row['playerID'];
+			$kid  = $row['killerID'];
+			$date = $row['killDate'];
+
+			// Victim gains a death record (first kill wins if somehow duplicated)
+			if (!isset($players[$vid])) {
+				$players[$vid] = array(
+					'name'      => trim($row['victimName'])  ?: $vid,
+					'deathDate' => $date,
+					'dayName'   => $row['dayName'],
+				);
 			}
-			$killsByDay[$day][] = $row;
+
+			// Killer may not have died yet — record them as a survivor for now
+			if (!isset($players[$kid])) {
+				$players[$kid] = array(
+					'name'      => trim($row['killerName']) ?: $kid,
+					'deathDate' => null,
+					'dayName'   => null,
+				);
+			}
+
+			// Track dates in the order first seen (already sorted by deathTime)
+			if (!isset($days[$date])) {
+				$days[$date] = $row['dayName'];
+			}
+
+			$edges[] = array($kid, $vid);
 		}
 
-		if (empty($killsByDay)) {
+		if (empty($players)) {
 			echo "<p>No kills recorded in this game.</p>";
 			continue;
 		}
 
-		$dayList = array_keys($killsByDay);
-		$lastDay = end($dayList);
-
-		echo "<div class=\"kill-timeline\">\n";
-
-		foreach ($killsByDay as $day => $dayKills) {
-			$abbr = isset($dayAbbr[$day]) ? $dayAbbr[$day] : substr($day, 0, 3);
-			$dayEsc = htmlspecialchars($day);
-
-			echo "  <div class=\"kill-day-section\">\n";
-			echo "    <div class=\"kill-day-sidebar\"><span>$dayEsc</span></div>\n";
-			echo "    <div class=\"kill-day-watermark\">$dayEsc</div>\n";
-			echo "    <div class=\"kill-day-content\">\n";
-
-			$lines = array("graph TD");
-
-			foreach ($dayKills as $kill) {
-				$killerNodeId = $abbr . '_' . preg_replace('/[^a-zA-Z0-9]/', '_', $kill['killerID']);
-				$victimNodeId  = $abbr . '_' . preg_replace('/[^a-zA-Z0-9]/', '_', $kill['playerID']);
-
-				$killerLabel = str_replace('"', "'", trim($kill['killerName']) ?: $kill['killerID']);
-				$victimLabel  = str_replace('"', "'", trim($kill['victimName'])  ?: $kill['playerID']);
-
-				$lines[] = "  {$killerNodeId}[\"{$killerLabel}\"] --> {$victimNodeId}[\"{$victimLabel}\"]";
-			}
-
-			$mermaidText = implode("\n", $lines);
-			echo "      <div class=\"mermaid\">\n$mermaidText\n      </div>\n";
-			echo "    </div>\n";
-			echo "  </div>\n";
-
-			if ($day !== $lastDay) {
-				echo "  <hr class=\"kill-day-divider\">\n";
+		// Group victims by death date for subgraph placement
+		$byDate = array();
+		foreach ($players as $uid => $p) {
+			if ($p['deathDate'] !== null) {
+				$byDate[$p['deathDate']][] = $uid;
 			}
 		}
 
-		echo "</div>\n<br/>\n";
+		$lines = array("graph TD");
+
+		// Survivors (never died) declared above all subgraphs so they sit at the top
+		foreach ($players as $uid => $p) {
+			if ($p['deathDate'] === null) {
+				$nid   = preg_replace('/[^a-zA-Z0-9]/', '_', $uid);
+				$label = str_replace('"', "'", $p['name']);
+				$lines[] = "  {$nid}[\"{$label}\"]";
+			}
+		}
+
+		// One subgraph per calendar date — each victim node lives in the day they died.
+		// Using the date string as the subgraph ID avoids collisions when the same
+		// weekday name occurs in multiple weeks.
+		foreach ($days as $date => $dayName) {
+			$sgId    = 'day_' . str_replace('-', '_', $date);
+			$sgLabel = str_replace('"', "'", $dayName);
+			$lines[] = "  subgraph {$sgId}[\"{$sgLabel}\"]";
+
+			if (!empty($byDate[$date])) {
+				foreach ($byDate[$date] as $uid) {
+					$nid   = preg_replace('/[^a-zA-Z0-9]/', '_', $uid);
+					$label = str_replace('"', "'", $players[$uid]['name']);
+					$lines[] = "    {$nid}[\"{$label}\"]";
+				}
+			}
+
+			$lines[] = "  end";
+		}
+
+		// Kill edges — node IDs are global so chains flow continuously across subgraphs
+		foreach ($edges as $edge) {
+			$kn = preg_replace('/[^a-zA-Z0-9]/', '_', $edge[0]);
+			$vn = preg_replace('/[^a-zA-Z0-9]/', '_', $edge[1]);
+			$lines[] = "  {$kn} --> {$vn}";
+		}
+
+		$mermaid = implode("\n", $lines);
+		echo "<div class=\"mermaid\">\n{$mermaid}\n</div>\n<br/>\n";
 	}
 }
 ?>

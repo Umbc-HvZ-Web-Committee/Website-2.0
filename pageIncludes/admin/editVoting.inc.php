@@ -104,7 +104,7 @@ Happy officering!
 THIS IS AN AUTOMATED MESSAGE.
 EOF;
 			
-			mail("ekramer1@umbc.edu", "Election Results", $msg);
+			mail("umbchvzofficers@gmail.com", "Election Results", $msg);
 		}
 		
 		if($func == "Clear Election"){

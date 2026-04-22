@@ -26,12 +26,12 @@ if($_SESSION['isAdmin'] >= 2) {
 				$GLOBALS['submitMessage'] = "Cannot insert bio left blank. Enter \"".$blankBio."\" to give candidate a blank bio";
 			} else {
 				if($bio == $blankBio) {
-					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '');");
-					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name');");
+					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '')");
+					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
 					$GLOBALS['submitMessage'] = "Added candidate with a blank bio";
 				} else {
-					mysql_query("INSERT INTO `election_candidates` (`position`, `name`) VALUES ('$position', '$name');");
-					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name');");
+					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '$bio')");
+					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
 					$GLOBALS['submitMessage'] = "Added candidate and bio";
 				}
 			}

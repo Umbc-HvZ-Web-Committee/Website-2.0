@@ -28,7 +28,7 @@ $settings = get_settings();
 		
 			<?php if($GLOBALS['submitMessage']!="") echo "<h4><b>${GLOBALS['submitMessage']}</b></h4><br/><br/>" ?>
 			
-			<h3>Inserting Bios</h3>
+			<h3>Add Candidate to Election</h3>
 			<br/><br/>
 			
 			<form action="" method="post">
@@ -43,7 +43,7 @@ $settings = get_settings();
 			</select><br/><br/>
 			Name: <input type="text" name="candidateName" id="candidateName"/></br><br/>
 			Bio: <input type="text" name="candidateBio" id="candidateBio"/></br><br/>
-			<input type="submit" name="submit" value="Insert Bio"/></br><br/>
+			<input type="submit" name="submit" value="Add Candidate"/></br><br/>
 			</form><br/>
 			<br/>
 			

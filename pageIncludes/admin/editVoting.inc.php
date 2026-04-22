@@ -13,17 +13,17 @@ if($_SESSION['isAdmin'] >= 2) {
 	if(isset($_REQUEST['submit'])) {
 		$func = $_REQUEST['submit'];
 		//echo($func."<br/>");
-		if($func=="Insert Bio"){
+		if($func=="Add Candidate"){
 			$position = requestVar('position');
 			$name = requestVar('candidateName');
 			$bio = requestVar('candidateBio');
 			
 			if($position == "none") {
-				$GLOBALS['submitMessage'] = "Cannot insert bio for an unspecified position";
+				$GLOBALS['submitMessage'] = "Cannot add candidate with an unspecified position";
 			} else if($name == "") {
-				$GLOBALS['submitMessage'] = "Cannot insert bio for an unspecified candidate";
+				$GLOBALS['submitMessage'] = "Cannot add candidate for an unspecified name";
 			} else if($bio == "") {
-				$GLOBALS['submitMessage'] = "Cannot insert bio left blank. Enter \"".$blankBio."\" to give candidate a blank bio";
+				$GLOBALS['submitMessage'] = "Bio was left blank. Enter \"".$blankBio."\" to give candidate a blank bio";
 			} else {
 				if($bio == $blankBio) {
 					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '')");

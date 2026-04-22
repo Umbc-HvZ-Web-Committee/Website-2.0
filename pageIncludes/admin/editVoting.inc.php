@@ -17,7 +17,6 @@ if($_SESSION['isAdmin'] >= 2) {
 			$position = requestVar('position');
 			$name = requestVar('candidateName');
 			$bio = requestVar('candidateBio');
-			$bio = "hardcoded test bio";
 			
 			if($position == "none") {
 				$GLOBALS['submitMessage'] = "Cannot insert bio for an unspecified position";
@@ -31,7 +30,7 @@ if($_SESSION['isAdmin'] >= 2) {
 					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name');");
 					$GLOBALS['submitMessage'] = "Added candidate with a blank bio";
 				} else {
-					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '$bio');");
+					mysql_query("INSERT INTO `election_candidates` (`position`, `name`) VALUES ('$position', '$name');");
 					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name');");
 					$GLOBALS['submitMessage'] = "Added candidate and bio";
 				}

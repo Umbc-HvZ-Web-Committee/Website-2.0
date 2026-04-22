@@ -47,7 +47,7 @@ $settings = get_settings();
 			</form><br/>
 			<br/>
 			
-			<h3>Inserting Voting Options (Candidates)</h3>
+			<!-- <h3>Inserting Voting Options (Candidates)</h3>
 			<br/><br/>
 			
 			<form action="" method="post">
@@ -55,7 +55,7 @@ $settings = get_settings();
 			Voting Response (Candidate): <input type="text" name="voteResponse" id="voteResponse"/></br><br/>
 			<input type="submit" name="submit" value="Insert Voting Option"/></br><br/>
 			</form><br/>
-			<br/>
+			<br/> -->
 			
 			<h3>Voting Settings</h3>
 			<br/><br/>

@@ -37,20 +37,20 @@ if($_SESSION['isAdmin'] >= 2) {
 			}
 		}
 		
-		if($func=="Insert Voting Option"){
-			$prompt = requestVar('votePrompt');
-			$response = requestVar('voteResponse');
+		// if($func=="Insert Voting Option"){
+		// 	$prompt = requestVar('votePrompt');
+		// 	$response = requestVar('voteResponse');
 			
-			echo $prompt." ".$response;
+		// 	echo $prompt." ".$response;
 			
-			if($prompt == "" || $response == "") {
-				$GLOBALS['submitMessage'] = "Cannot insert voting option. Voting prompt and/or response was left blank";
-			} else {
-				$nullUID = $settings['nullUID'];
-				mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$prompt', '$response');");
-				$GLOBALS['submitMessage'] = "Inserted voting option";
-			}
-		}
+		// 	if($prompt == "" || $response == "") {
+		// 		$GLOBALS['submitMessage'] = "Cannot insert voting option. Voting prompt and/or response was left blank";
+		// 	} else {
+		// 		$nullUID = $settings['nullUID'];
+		// 		mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$prompt', '$response');");
+		// 		$GLOBALS['submitMessage'] = "Inserted voting option";
+		// 	}
+		// }
 		
 		if($func=="Update Settings"){
 			$writeInThreshold = requestVar('writeInThreshold');

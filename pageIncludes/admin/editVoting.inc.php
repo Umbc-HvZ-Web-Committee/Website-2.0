@@ -17,6 +17,7 @@ if($_SESSION['isAdmin'] >= 2) {
 			$position = requestVar('position');
 			$name = requestVar('candidateName');
 			$bio = requestVar('candidateBio');
+			$bio = "hardcoded test bio";
 			
 			if($position == "none") {
 				$GLOBALS['submitMessage'] = "Cannot insert bio for an unspecified position";

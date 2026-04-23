@@ -27,11 +27,21 @@ if($_SESSION['isAdmin'] >= 2) {
 			} else {
 				if($bio == $blankBio) {
 					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '')");
-					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
+					if($position == "Web Committee"){
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position'.' - '.'$name', 'Vote of Confidence')");
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position'.' - '.'$name', 'Vote of No Confidence')");
+					} else {
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
+					}
 					$GLOBALS['submitMessage'] = "Added candidate with a blank bio";
 				} else {
 					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '$bio')");
-					mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
+					if($position == "Web Committee"){
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position'.' - '.'$name', 'Vote of Confidence')");
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position'.' - '.'$name', 'Vote of No Confidence')");
+					} else {
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
+					}
 					$GLOBALS['submitMessage'] = "Added candidate and bio";
 				}
 			}

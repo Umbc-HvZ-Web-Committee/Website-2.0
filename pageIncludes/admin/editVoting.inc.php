@@ -29,9 +29,8 @@ if($_SESSION['isAdmin'] >= 2) {
 					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '')");
 					if($position == "Web Committee"){
 						$committeeName = $position . ' - ' . $name;
-						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', $committeeName, 'Vote of Affirmative Confidence')");
-						time_nanosleep(0.1, 0);
-						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', $committeeName, 'Vote of No Confidence')");
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$committeeName', 'Vote of Affirmative Confidence')");
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$committeeName', 'Vote of No Confidence')");
 					} else {
 						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
 					}
@@ -39,9 +38,9 @@ if($_SESSION['isAdmin'] >= 2) {
 				} else {
 					mysql_query("INSERT INTO `election_candidates` (`position`, `name`, `bio`) VALUES ('$position', '$name', '$bio')");
 					if($position == "Web Committee"){
-						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', $committeeName, 'Vote of Affirmative Confidence')");
-						time_nanosleep(0.1, 0);
-						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', $committeeName, 'Vote of No Confidence')");
+						$committeeName = $position . ' - ' . $name;
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$committeeName', 'Vote of Affirmative Confidence')");
+						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$committeeName', 'Vote of No Confidence')");
 					} else {
 						mysql_query("INSERT INTO `election_votes` (`uid`, `position`, `voteFor`) VALUES ('$nullUID', '$position', '$name')");
 					}

@@ -188,17 +188,17 @@ if(isset($_REQUEST['updateNames'])) {
 	
 	$alphaRegex = "/[^A-Za-z- ]/";
 	$alphaNumRegex = "/[^A-Za-z0-9_-]/";
-	
-	if($new_uname != NULL) {
-		$new_uname = preg_replace($alphaNumRegex,"",$new_uname);
+	$new_uname = preg_replace($alphaNumRegex,"",$new_uname);
+	$new_fname = preg_replace($alphaRegex,"",$new_fname);
+	$new_lname = preg_replace($alphaRegex,"",$new_lname);
+
+	if(strlen($new_uname) != 0) {
 		mysql_query("UPDATE users SET uname = '$new_uname' WHERE UID = '$uid';");
 	}
-	if($new_fname != NULL) {
-		$new_fname = preg_replace($alphaRegex,"",$new_fname);
+	if(strlen($new_fname) != 0) {
 		mysql_query("UPDATE users SET fname = '$new_fname' WHERE UID = '$uid';");
 	}
-	if($new_lname != NULL) {
-		$new_lname = preg_replace($alphaRegex,"",$new_lname);
+	if(strlen($new_lname) != 0) {
 		mysql_query("UPDATE users SET lname = '$new_lname' WHERE UID = '$uid';");
 	}
 	

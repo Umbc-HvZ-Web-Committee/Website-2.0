@@ -63,9 +63,9 @@ require_once('pageIncludes/contact.inc.php');
 			<td>(443)-707-7747</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Vice President</font></td>
-			<td>Joseph Romanic</td>
-			<td>sm46090@umbc.edu</td>
- 			<td>(240)-651-4512</td></tr>
+			<td>Kevin Tankersley</td>
+			<td>ktanker1@umbc.edu</td>
+			<td>(301)-300-8298</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Treasurer</td>
 			<td>Syncere Mason</td>
@@ -73,14 +73,14 @@ require_once('pageIncludes/contact.inc.php');
 			<td>(347)-665-5401</td></tr>
 		
 			<tr bgcolor="#FFFFFF" align="center"><td><font>Secretary</font></td>
-			<td>Alex Schuster</td>
-			<td>aschust4@umbc.edu</td>
-			<td>(520)-220-8327</td></tr>
+			<td>Eli Kramer-Smyth</td>
+			<td>ekramer1@umbc.edu</td>
+			<td>(301)-768-1404</td></tr>
 		
 			<tr bgcolor="#C0C0C0" align="center"><td>Recruitment & Advertising</td>
-			<td>Kevin Tankersley</td>
-			<td>ktanker1@umbc.edu</td>
-			<td>(301)-300-8298</td></tr>
+			<td>Riley Heath</td>
+			<td>rheath1@umbc.edu</td>
+			<td>(240)-517-8004</td></tr>
 			</table><br/><br/>
 		
 			<!-- END BIG UGLY TABLE CREATION FOR OFFICERS -->
@@ -133,13 +133,13 @@ require_once('pageIncludes/contact.inc.php');
 
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alvin Jecinta</td><td>Cole Harding</td><td>Coleman Mixon</td></tr>
+			<td>Alvin Jecinta</td><td>Chris Belony</td><td>David Lazarus</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>David Lazarus</td><td>Delia Teter</td><td>Eli Kramer-Smyth</td></tr>
+			<td>Ian Moon</td><td>Joshua Ward</td><td>Marisa Mengel</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>NOT Fernando Chicas</td><td>Ian Moon</td><td>Marisa Mengel</td>
+			<!-- <td>NOT Fernando Chicas</td><td>Ian Moon</td><td>Marisa Mengel</td>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Miles Campbell</td><td>Marisa Prime</td><td>Riley Heath</td></tr>
+			<td>Miles Campbell</td><td>Marisa Prime</td><td>Riley Heath</td></tr> -->
 			</table>
 
 			<!-- END STATIC TABLE CREATION FOR SUBOFFICERS -->

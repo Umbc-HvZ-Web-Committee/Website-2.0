@@ -9,9 +9,10 @@ jobs:
     name: Update umbchvz.com
     steps:
     - name: SSH Commands
-      uses: appleboy/ssh-action@v0.0.7
+      uses: appleboy/ssh-action@v1.2.5
       with:
         host: "umbchvz.com"
+        port: 8622
         username: "www-data"
         password: ${{ secrets.WWW_DATA_PASSWORD }}
         script: "cd /var/www && git pull"

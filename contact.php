@@ -133,9 +133,9 @@ require_once('pageIncludes/contact.inc.php');
 
 			<table align="center" border="1" cellspacing="1" cellpadding="3">
 			<tr bgcolor="#FFFFFF" align="center">
-			<td>Alvin Jecinta</td><td>Chris Belony</td><td>David Lazarus</td></tr>
+			<td>Christian Jadra</td><td>Joseph Romanic</td><td>Alvin Jecinta</td></tr>
 			<tr bgcolor="#C0C0C0" align="center">
-			<td>Ian Moon</td><td>Joshua Ward</td><td>Marisa Mengel</td></tr>
+			<td>Alexis Schuster</td><td>Marisa Mengel</td><td>David Gaiano</td></tr>
 			<tr bgcolor="#FFFFFF" align="center">
 			<!-- <td>NOT Fernando Chicas</td><td>Ian Moon</td><td>Marisa Mengel</td>
 			<tr bgcolor="#C0C0C0" align="center">
